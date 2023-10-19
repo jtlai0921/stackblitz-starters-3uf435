@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="150" viewBox="0 0 150 150">
-  <defs>
-    <clipPath id="clip-i__navigation">
-      <rect width="150" height="150"/>
-    </clipPath>
-  </defs>
-  <g id="i__navigation" data-name="i_ navigation" clip-path="url(#clip-i__navigation)">
-    <g id="Symbols" transform="translate(14 4)">
-      <g id="icon_i_-navigation" data-name="icon/i_-navigation" transform="translate(-14 -4)">
-        <path id="i_-navigation" d="M135.547,26.537l-33.92,52.421a5.209,5.209,0,0,1-9.108-1.324c0-.529-.628-3.283-3.56-19.274-.838.318-23.137,8.472-22.561,8.313A31.749,31.749,0,0,0,45.46,96.538v45.167A5.265,5.265,0,0,1,40.225,147H19.235A5.265,5.265,0,0,1,14,141.705V92.779A58.216,58.216,0,0,1,51.951,38.028L78.124,28.5,68.911,11.923a5.349,5.349,0,0,1-.149-4.846,5.243,5.243,0,0,1,3.814-2.937c1.623-.371-2.67-1.377,61.716,18.374a2.688,2.688,0,0,1,1.585,1.707,2.722,2.722,0,0,1-.329,2.318Z" fill="#fff"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="150" viewBox="0 0 150 150"><defs><clipPath id="clip-i__navigation"><rect width="150" height="150"/></clipPath></defs><g id="i__navigation" clip-path="url(#clip-i__navigation)" data-name="i_ navigation"><g id="Symbols" transform="translate(14 4)"><g id="icon_i_-navigation" data-name="icon/i_-navigation" transform="translate(-14 -4)"><path id="i_-navigation" fill="#fff" d="M135.547,26.537l-33.92,52.421a5.209,5.209,0,0,1-9.108-1.324c0-.529-.628-3.283-3.56-19.274-.838.318-23.137,8.472-22.561,8.313A31.749,31.749,0,0,0,45.46,96.538v45.167A5.265,5.265,0,0,1,40.225,147H19.235A5.265,5.265,0,0,1,14,141.705V92.779A58.216,58.216,0,0,1,51.951,38.028L78.124,28.5,68.911,11.923a5.349,5.349,0,0,1-.149-4.846,5.243,5.243,0,0,1,3.814-2.937c1.623-.371-2.67-1.377,61.716,18.374a2.688,2.688,0,0,1,1.585,1.707,2.722,2.722,0,0,1-.329,2.318Z"/></g></g></g></svg>
