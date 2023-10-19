@@ -1,0 +1,105 @@
+<div class="exchange-rate-custom-currency">
+  <!-- Page type start -->
+  <div class="sub-title">
+    {{('CUSTOM_CURRENCY.PAGE_TYPE_' + pageType) | translate}}
+  </div>
+  <!-- Page type end -->
+
+
+  <!-- Country + search bar start -->
+  <div class="select-pop-group-style select-pop-group-style-row pref-currency-select-style">
+    <!-- Country selector start-->
+    <div (click)="onCountryClick()" class="select-pop-form-group pop-form-group-l pop-form-group-50">
+      <div class="select-pop-bt-wrapper bt-wrapper-100">
+        <button type="button" class="btn btn-default dropdown-toggle btn-selectline-pop" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <!-- <select selectForpop class="country-selector" [(ngModel)]="modifiedExchangeRateModel.selectedCountry" (ngModelChange)="modifiedExchangeRateModel.onCountrySelected($event)">
+            <ng-container *ngFor="let item of modifiedExchangeRateModel.countryList">
+              <option class="select-pop-content" [value]="item.country">{{item.country}} ({{item.currency}})</option>
+            </ng-container>
+          </select> -->
+          <span class="select-pop-content">{{selCountryCurName | translate}}</span>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Country selector end -->
+
+    <!-- Search bar start -->
+    <div class="select-pop-form-group pop-form-group pop-form-group-50">
+      <div class="select-date-input-wrapper">
+        <div class="input-group search search-input-group" id="search">
+          <span class="input-group-addon select-search-input">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </span>
+          <input maxlength="255" type="search" class="form-control select-search-input" placeholder="{{'EXCHANGE_RATE.INPUT_CURRENCY_HINT' | translate}}"
+            id="search" [(ngModel)]="modifiedExchangeRateModel.inputKeyword">
+        </div>
+      </div>
+
+
+      <!-- Autocomplete start -->
+      <div class="autocomplete-outbounds" (click)="modifiedExchangeRateModel.onAutocompleteOutboundsClick()" *ngIf="modifiedExchangeRateModel.isAutocompletedShown"></div>
+      <div class="autocomplete" *ngIf="modifiedExchangeRateModel.isAutocompletedShown">
+        <ul>
+          <li *ngFor="let item of modifiedExchangeRateModel.autocompleteList" (click)="modifiedExchangeRateModel.onAutocompleteClick(item)">
+            {{item}}
+          </li>
+        </ul>
+      </div>
+      <!-- Autocomplete end -->
+    </div>
+    <!-- Search bar end -->
+  </div>
+  <!-- Country + search bar end -->
+
+
+  <!-- Currency list header start -->
+  <div class="ct-table-title-section pref-cur-title-section">
+    <div class="ct-table-title-wrapper pref-cur-title-wrapper">
+      <div class="ct-table-title-col1 pref-cur-title-col1">
+        <p>{{'CUSTOM_CURRENCY.MOVE' | translate}}</p>
+      </div>
+      <div class="ct-table-title-col3 pref-cur-title-col3">
+        <p>{{'CUSTOM_CURRENCY.CURRENCY' | translate}}</p>
+      </div>
+      <div class="ct-table-title-col4 pref-cur-title-col4">
+        <p>{{'CUSTOM_CURRENCY.DELETE' | translate}}</p>
+      </div>
+    </div>
+  </div>
+  <!-- Currency list header end -->
+
+
+  <!-- Currency list start -->
+  <div class="ct-table-content-section pref-cur-content-section">
+    <div class="ct-table-content-wrapper pref-cur-content-wrapper">
+      <ul id="sortable">
+        <ng-container *ngFor="let item of modifiedExchangeRateModel.selectedCurrencyList;let i = index;">
+          <li index="i">
+            <div class="ct-table-content-col1 pref-cur-content-col1">
+              <div class="icon-drag"></div>
+            </div>
+            <div class="ct-table-content-col3 pref-cur-content-col3">
+              <p>{{item}}</p>
+            </div>
+            <div class="ct-table-content-col4 pref-cur-content-col4" (click)="onDeleteCurrencyClick(item)">
+              <div class="icon-delete"></div>
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+  <!-- Currency list end -->
+
+
+  <!-- Save button start -->
+  <div class="bt-center-group bt-group-pgTop">
+    <div class="bt-inner-group-xl">
+      <button type="submit" class="btn btn-inner-group-s btn-confirm" (click)="onBackEvent(true,true)">{{'CUSTOM_CURRENCY.CONFIRM'
+        | translate}}</button>
+    </div>
+  </div>
+  <!-- Save button end -->
+</div>

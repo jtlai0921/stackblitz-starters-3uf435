@@ -1,0 +1,39 @@
+{
+  "HeaderRs": {
+      "TxnId": "CCMPTX000184Rs",
+      "RqUID": "20180731151530",
+      "Timestamp": "20180731151545",
+      "Result": 4001,
+      "Desc": ""
+  },
+  "BodyRs": {
+      "DataType": 0,
+      "Compressed": 0,
+      "Data": {  
+        "TxnId": "CCMPTX000184Rs",
+        "Result": 4001,
+        "Desc": "",
+        "ProductId": "定存",
+        "CertNo": "1100299",
+        "TDIssueDate": "2018/2/12",
+        "Count": "1",
+        "TermUnit": "M",
+        "DueDate": "2019/2/12",
+        "InterestType": "牌告固定",
+        "InterestRate": "0.72",
+        "PrincipalAmt": "2,600,000",
+        "LastInterestPaidDt": "2018/5/12",
+        "IntStartDt": "",
+        "INTERESTPAIDBYBANKTILLDATE": "",
+        "TaxDeductedSrc": "0",
+        "StampDuty": "",
+        "TDStatus": "正常",
+        "TDIntAcctNo": "928192182192嘉義分行",
+        "Pledged": "",
+        "LoanAcctNo": "",
+        "LoanAmt": "0",
+        "LoanRate": "0%",
+        "IntPaidAmt": "100"  
+      }
+  }
+}

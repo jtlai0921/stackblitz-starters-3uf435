@@ -1,0 +1,9 @@
+.bg-fixed-105 {
+    background: #f0f2f3;
+    margin-top: 108px;
+    height: 90vh;
+    width: 100vw;
+    display: block;
+    position: absolute;
+    top: 50px;
+}

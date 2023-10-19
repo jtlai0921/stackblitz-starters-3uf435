@@ -1,0 +1,251 @@
+<div class="pop_mask" *ngIf="isOpen">
+    <div class="shadow active"></div>
+    <div class="pop-box-container active" *ngIf="NowStatus == 0">
+        <div class="pop-box-area">
+            <div class="pop-close-bt" (click)="onCancelClick()">
+                <div class="i-close"></div>
+            </div>
+            <div class="pop-content-wrapper">
+                <!-- pop-tab 種類1 - 兩欄 -->
+                <div class="nav-l3 pop-nav-l3">
+                    <a (click)="onTxnTypeClick('1')" class="col-xs-6 tab-l3-set-2 tab-l3-set-l {{txnType == '1' ? 'active':''}}">{{'POPUP_TRANSQUERY.TXN_TYPE_1'
+                        | translate}}</a>
+                    <a (click)="onTxnTypeClick('2')" class="col-xs-6 tab-l3-set-2 tab-l3-set-r {{txnType == '2' ? 'active':''}}">{{'POPUP_TRANSQUERY.TXN_TYPE_2'
+                        | translate}}</a>
+                </div>
+                <!-- Date picker start -->
+                <div class="pop-content" *ngIf="txnType == '1'">
+                    <div class="date_area" style="padding-left:5%;padding-right:5%;">
+                        <div class="calendar_title_date">
+                            <div class="year">
+                                {{selectedDay.Year}}
+                            </div>
+                            <div class="date">
+                                {{selectedDay.Month}}/{{selectedDay.Date}}
+                            </div>
+                        </div>
+                        <!-- Year and month start -->
+                        <div class="date_bar" style="margin-top: 3%">
+                            <!-- Previous year button start -->
+                            <div class="arrow_left_db" id="tran_arrow_left_db" (click)="onPreviousYearClick()" [ngClass]="{'disable': !isPreviousYearButtonEnable}"></div>
+                            <!-- Previous year button end -->
+                            <!-- Previous month button start -->
+                            <div class="arrow_left" id="tran_arrow_left" (click)="onPreviousMonthClick()" [ngClass]="{'disable': !isPreviousMonthButtonEnable}"></div>
+                            <!-- Previous month button end -->
+                            <div class="calendar_year_month">
+                                <!-- 英文選擇日期時月份欄要顯示縮寫(EX:1月=Jun.),簡中跟英文則統一只顯示月就好 -->
+                                <div *ngIf="selectedMonth+1 == 1">{{selectedYear}} {{'POPUP_TRANSQUERY.JANUARY' | translate}}</div>
+                                <div *ngIf="selectedMonth+1 == 2">{{selectedYear}} {{'POPUP_TRANSQUERY.FEBRUARY' | translate}}</div>
+                                <div *ngIf="selectedMonth+1 == 3">{{selectedYear}} {{'POPUP_TRANSQUERY.MARCH' | translate}}</div>
+                                <div *ngIf="selectedMonth+1 == 4">{{selectedYear}} {{'POPUP_TRANSQUERY.APRIL' | translate}}</div>
+                                <div *ngIf="selectedMonth+1 == 5">{{selectedYear}} {{'POPUP_TRANSQUERY.MAY' | translate}}</div>
+                                <div *ngIf="selectedMonth+1 == 6">{{selectedYear}} {{'POPUP_TRANSQUERY.JUNE' | translate}}</div>
+                                <div *ngIf="selectedMonth+1 == 7">{{selectedYear}} {{'POPUP_TRANSQUERY.JULY' | translate}}</div>
+                                <div *ngIf="selectedMonth+1 == 8">{{selectedYear}} {{'POPUP_TRANSQUERY.AUGUST' | translate}}</div>
+                                <div *ngIf="selectedMonth+1 == 9">{{selectedYear}} {{'POPUP_TRANSQUERY.SEPTEMBER' | translate}}</div>
+                                <div *ngIf="selectedMonth+1 == 10">{{selectedYear}} {{'POPUP_TRANSQUERY.OCTOBER' | translate}}</div>
+                                <div *ngIf="selectedMonth+1 == 11">{{selectedYear}} {{'POPUP_TRANSQUERY.NOVEMBER' | translate}}</div>
+                                <div *ngIf="selectedMonth+1 == 12">{{selectedYear}} {{'POPUP_TRANSQUERY.DECEMBER' | translate}}</div>
+                     
+                            </div>
+                            <!-- Next year button start -->
+                            <div class="arrow_right_db" id="tran_arrow_right_db" (click)="onNextYearClick()" [ngClass]="{'disable': !isNextYearButtonEnable}"></div>
+                            <!-- Next year button end -->
+                            <!-- Next month button start -->
+                            <div class="arrow_right" id="tran_arrow_right" (click)="onNextMonthClick()" [ngClass]="{'disable': !isNextMonthButtonEnable}"></div>
+                            <!-- Next month button end -->
+                        </div>
+                        <!-- Year and month end -->
+
+
+                        <!-- Date list start -->
+                        <div class="calendar_area">
+                            <ng-container *ngFor="let week of weekArray;">
+                                <div>
+                                    <span>{{week | translate}}</span>
+                                </div>
+                            </ng-container>
+                            <ng-container *ngFor="let date of dateArray;">
+                                <div (click)="onDateSelectedEvent(date)">
+                                    <span [ngClass]="{'active': date.today, 'disable': !date.enable}">{{date.display}}</span>
+                                </div>
+                            </ng-container>
+                        </div>
+                        <!-- Date list end -->
+                    </div>
+                </div>
+                <!-- Cycle  start -->
+                <div class="pop-content" *ngIf="txnType == '2'">
+                    <!--pop視窗內容開始-->
+
+                    <!-- pop-sub-title 種類1 - 黑字灰線 -->
+                    <div class="pop-sub-title">
+                        <p class="">{{'POPUP_TRANSQUERY.NAME' | translate}}</p>
+                    </div>
+                    <!-- //pop-sub-title 種類1 - 黑字灰線 -->
+
+                    <!-- 表單popup種類 - 單列 ＋ input -->
+
+                    <div class="pop-li-flex">
+                        <div class="select-pop-form-group pop-form-group pop-form-group-100">
+                            <div class="select-date-input-wrapper">
+                                <div class="input-group date select-date-input-group" id="">
+                                    <input type="text" class="form-control select-date-input" placeholder="{{'POPUP_TRANSQUERY.MEMO_HINT' | translate}}" maxlength="7"
+                                        [(ngModel)]="memo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- //表單popup種類 - 單列 ＋ input -->
+
+                    <!-- pop-sub-title 種類1 - 黑字灰線 -->
+                    <div class="pop-sub-title">
+                        <p class="">{{'POPUP_TRANSQUERY.CYCLE' | translate}}</p>
+                    </div>
+                    <!-- //pop-sub-title 種類1 - 黑字灰線 -->
+
+                    <!-- 表單popup種類13 輸入框＋checkbox -->
+                    <div class="pop-input-flex-group pop-li-flex">
+                        <div class="pop-input-l-30">
+                            <div class="pop-checkbox">
+                                <span>
+                                    <input class="ct-checkbox" type="checkbox" name="option1" id="1" value="option1" [(ngModel)]="isMonthChecked" (change)="checkMonthValue(isMonthChecked)">
+                                    <label class="pull-left" for="1"></label>
+                                </span>
+                            </div>
+                            <p>{{'POPUP_TRANSQUERY.MONTHLY' | translate}}</p>
+                        </div>
+                        <div class="pop-input-r-70">
+                            <div class="select-pop-form-group pop-form-group-100">
+                                <div class="select-date-input-wrapper">
+                                    <div class="input-group select-date-input-group" id="">
+                                        <input type="text" class="form-control select-date-input" placeholder="{{'POPUP_TRANSQUERY.MONTHLY_INPUT_HINT' | translate}}"
+                                            maxlength="2" [(ngModel)]="selectedMonthly">
+                                    </div>
+                                </div>
+                            </div>
+                            <p>{{'POPUP_TRANSQUERY.DAY' | translate}}</p>
+                        </div>
+                    </div>
+                    <!-- 表單popup種類13 //End----------------------------------------------------------------------->
+                    <!-- 表單popup種類14 - checkbox + 星期選擇 -->
+                    <div class="pop-input-flex-group pop-li-flex">
+                        <div class="pop-input-l-60">
+                            <div class="pop-checkbox">
+                                <span>
+                                    <input class="ct-checkbox" type="checkbox" name="option1" id="2" value="option2" [(ngModel)]="isWeekChecked" (change)="checkWeekValue(isWeekChecked)">
+                                    <label class="pull-left" for="2"></label>
+                                </span>
+                            </div>
+                            <p>{{'POPUP_TRANSQUERY.WEEKLY' | translate}}</p>
+                        </div>
+                        <div class="pop-input-r-40" (click)="ShowsWeekSelect()">
+                            <p>{{getWeekValue()}}</p>
+                            <div class="pop-right-icon-wrap right-icon-ellipsis">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 表單popup種類14 //End----------------------------------------------------------------------->
+                    <!-- pop-li-section 種類1 - 左右兩側文字 -->
+
+                    <div class="pop-li-section" (click)="onDatePickerButtonClick('from')">
+                        <div class="pop-li-l-50">
+                            <div class="pop-li-l-option">
+                                <p>{{'POPUP_TRANSQUERY.DATE_FROM' | translate}}</p>
+                            </div>
+                        </div>
+                        <div class="pop-li-r-50">
+                            <div class="pop-li-r-option">
+                                <p>{{getSelectedDateFromValue()}}</p>
+                            </div>
+                            <div class="pop-right-icon-wrap right-icon-ellipsis">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- //pop-li-section 種類1 - 左右兩側文字 -->
+
+                    <!-- pop-li-section 種類1 - 左右兩側文字 -->
+
+                    <div class="pop-li-section" (click)="onDatePickerButtonClick('to')">
+                        <div class="pop-li-l-50">
+                            <div class="pop-li-l-option">
+                                <p>{{'POPUP_TRANSQUERY.DATE_TO' | translate}}</p>
+                            </div>
+                        </div>
+                        <div class="pop-li-r-50">
+                            <div class="pop-li-r-option">
+                                <p>{{getSelectedDateToValue()}}</p>
+                            </div>
+                            <div class="pop-right-icon-wrap right-icon-ellipsis">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- //pop-li-section 種類1 - 左右兩側文字 -->
+
+                    <!-- 注意事項 -->
+                    <div class="memo-info">
+                        <ol class="memo-info-list">
+                            <li>{{'POPUP_TRANSQUERY.NOTICE_1' | translate}}</li>
+                            <li>{{'POPUP_TRANSQUERY.NOTICE_2' | translate}}</li>
+                        </ol>
+                    </div>
+                    <!-- //注意事項 -->
+                </div>
+                <!--pop視窗內容結束-->
+
+            </div>
+
+            <!--pop-bt-group- 一個 -->
+            <div class="pop-bt-group">
+                <button type="submit" class="btn btn-confirm btn-pop-confirm" (click)="onSubmitClick()">{{'POPUP_TRANSQUERY.CONFIRM'
+                    | translate}}</button>
+            </div>
+            <!--//pop-bt-group-一個-->
+
+        </div>
+    </div>
+    <div class="row" *ngIf="NowStatus == 88">
+        <div class="shadow active"></div>
+        <div class="pop-box-container active">
+            <div class="pop-box-area">
+                <div class="pop-content-wrapper">
+                    <div class="pop-title-l2">
+
+                        <div class="pop-pageback-bt" (click)="CloseSelect()">
+                            <a href="javascript:void(0)">
+                                <img src="assets/design/image/icon/i-pop-pageback.svg" alt="">
+                            </a>
+                        </div>
+                        <p>{{'BTN.SELECT_PLEASE' | translate}}</p>
+                    </div>
+                    <div class="pop-content-l2">
+                        <!--pop視窗內容開始-->
+
+                        <!-- pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+
+                        <div class="pop-li-section pop-li-border {{item.value == selectedWeekly ? 'pop-li-default':''}}" *ngFor="let item of WeekList; let listIndex = index"
+                            (click)="onWeekChange(item)">
+                            <div class="pop-li-l-100">
+                                <div class="pop-li-l-option">
+                                    <p>{{'POPUP_TRANSQUERY.'+item.key | translate}}</p>
+                                </div>
+                            </div>
+                            <div class="pop-right-icon-wrap">
+                                <img class="check-icon" src="assets/design/image/icon/check-icon.png" alt="">
+                            </div>
+                        </div>
+                        <!-- //pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+                    </div>
+                    <!--pop視窗內容結束-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

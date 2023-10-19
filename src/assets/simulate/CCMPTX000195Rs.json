@@ -1,0 +1,21 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000195Rs",
+    "RqUID": "20180709111612",
+    "Timestamp": "20180709111645",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000195Rs",
+      "Result": 4001,
+      "Desc": "",
+      "PeriodCount": "1",
+      "TxnDate": "20180810",
+      "BatchId": "123456789098765432123456789098766"
+    }
+  }
+}

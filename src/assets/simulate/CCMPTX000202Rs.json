@@ -1,0 +1,244 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000202Rs",
+    "RqUID": "20180821100000",
+    "Timestamp": "20180821100000",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+	  "TxnId": "CCMPTX000202Rs",
+	  "Result": 4001,
+	  "Desc": "",
+	  "ForExRateDetailsList": [
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "30.952",
+				"SellRate": "31.352",
+				"CurCodeFrom": "USD",
+				"RateType": "C"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "31.102",
+				"SellRate": "31.202",
+				"CurCodeFrom": "USD",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "0.2565",
+				"SellRate": "0.2635",
+				"CurCodeFrom": "JPY",
+				"RateType": "C"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "0.258",
+				"SellRate": "0.262",
+				"CurCodeFrom": "JPY",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "3.949",
+				"SellRate": "4.089",
+				"CurCodeFrom": "HKD",
+				"RateType": "C"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "3.989",
+				"SellRate": "4.049",
+				"CurCodeFrom": "HKD",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "46.21",
+				"SellRate": "46.61",
+				"CurCodeFrom": "GBP",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "32.422",
+				"SellRate": "32.682",
+				"CurCodeFrom": "CHF",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "22.885",
+				"SellRate": "23.085",
+				"CurCodeFrom": "SGD",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "2.584",
+				"SellRate": "2.684",
+				"CurCodeFrom": "ZAR",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "3.589",
+				"SellRate": "3.689",
+				"CurCodeFrom": "SEK",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "23.802",
+				"SellRate": "24.022",
+				"CurCodeFrom": "AUD",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "24.87",
+				"SellRate": "25.07",
+				"CurCodeFrom": "CAD",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "8.36",
+				"SellRate": "8.78",
+				"CurCodeFrom": "MYR",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "23.347",
+				"SellRate": "23.567",
+				"CurCodeFrom": "NZD",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "0.937",
+				"SellRate": "0.977",
+				"CurCodeFrom": "THB",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "0.6834",
+				"SellRate": "0.7174",
+				"CurCodeFrom": "PHP",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "33.521",
+				"SellRate": "34.521",
+				"CurCodeFrom": "EUR",
+				"RateType": "C"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "33.821",
+				"SellRate": "34.221",
+				"CurCodeFrom": "EUR",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "0.0022",
+				"SellRate": "0.0026",
+				"CurCodeFrom": "IDR",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "0.027",
+				"SellRate": "0.0302",
+				"CurCodeFrom": "KRW",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "0.48",
+				"SellRate": "0.52",
+				"CurCodeFrom": "INR",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "0.0012",
+				"SellRate": "0.0016",
+				"CurCodeFrom": "VND",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "4.86",
+				"SellRate": "5.066",
+				"CurCodeFrom": "CNY",
+				"RateType": "C"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "5.004",
+				"SellRate": "5.052",
+				"CurCodeFrom": "CNY",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "7.9123",
+				"SellRate": "7.9123",
+				"CurCodeFrom": "ILS",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "4.5324",
+				"SellRate": "4.5324",
+				"CurCodeFrom": "DKK",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "8.335",
+				"SellRate": "8.335",
+				"CurCodeFrom": "PLN",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "1.2291",
+				"SellRate": "1.2291",
+				"CurCodeFrom": "CZK",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "0.1134",
+				"SellRate": "0.1134",
+				"CurCodeFrom": "HUF",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "3.9208",
+				"SellRate": "3.9208",
+				"CurCodeFrom": "NOK",
+				"RateType": "S"
+			},
+			{
+				"CurCodeTo": "TWD",
+				"BuyRate": "5.003",
+				"SellRate": "5.051",
+				"CurCodeFrom": "CNH",
+				"RateType": "S"
+			}
+		]
+	}
+  }
+}

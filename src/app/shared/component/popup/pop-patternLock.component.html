@@ -1,0 +1,25 @@
+<style>
+  .pattern_message {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+    font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+  }
+</style>
+<!-- Pattern lock popup start -->
+<div class="pop_mask" *ngIf="Isopen">
+  <div class="shadow active"></div>
+  <div class="pop-box-container active">
+    <div class="pop-box-area" style="background:none">s
+      <div (click)="Cancel()" class="pop-close-bt" style="right: 10px;">
+        <div class="i-close"></div>
+      </div>
+      <div class="pattern_message">{{ title | translate}}</div>
+      <div id="patternHolder" style="margin: auto;"></div>
+    </div>
+  </div>
+</div>
+<!-- Pattern lock popup end -->

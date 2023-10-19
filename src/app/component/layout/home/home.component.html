@@ -1,0 +1,307 @@
+<!-- <div id="home_root" class="" style="display: none;height:80vh;overflow-y: scroll;margin-top: 10vh"> -->
+<div id="homeOutsideBlock">
+    <div class="{{ simpleView? 'bg-fixed-208' : 'bg-fixed-420' }}"></div>
+    <!-- <div class="bg-fixed-208" *ngIf="simpleView"></div> -->
+    <!-- 表單popup種類4 - 100% - 單列 線條  -->
+    <div class="row">
+        <div class="index-pop-group-style">
+            <div (click)="onTopSelectClick()" class="select-pop-form-group pop-form-group pop-form-group-100 ">
+                <!-- 下拉 Start-->
+                <div class="select-pop-bt-wrapper bt-wrapper-100">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-selectline-pop" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <!-- <select selectForpop class="country-selector" [(ngModel)]="selectedOptionIndex" (ngModelChange)="onOptionChange($event)"
+                            style="color: #ffffff;">
+                            <ng-container *ngFor="let item of selectOptions; let listIndex = index">
+                                <option class="select-pop-content" value="{{listIndex}}">{{item.value}}</option>
+                            </ng-container>
+                        </select> -->
+                        <span class="select-pop-content">{{ TopDropContent | translate}}</span>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <!-- 下拉 End -->
+            </div>
+        </div>
+    </div>
+
+    <div gestures id="homeBall" class="row">
+        <div class="chart-ball" *ngIf="!simpleView">
+            <!-- 存款 -->
+            <div class="chart-ball-title" *ngIf="nowIndex == 0">{{'HOME.DEPOSIT' | translate}}</div>
+            <!-- 放款 -->
+            <div class="chart-ball-title" *ngIf="nowIndex == 1">{{'HOME.LOAN' | translate}}</div>
+            <!-- 存放比 -->
+            <div class="chart-ball-title" *ngIf="nowIndex == 2">{{'HOME.DEPOSIT_LOAN_PROPOR' | translate}}</div>
+            <ul class="chart">
+                <li class="center deposit-ball" *ngIf="nowIndex == 0">
+                    <!-- 約當新台幣 -->
+                    <div class="chart-content-title">
+                        <p>{{'HOME.ABOUT' | translate}}{{nowCurrency}}</p>
+                    </div>
+                    <div class="chart-content-amount">
+                        <p>{{totalAmount | _currency}}</p>
+                    </div>
+                </li>
+                <li class="center loan-ball" *ngIf="nowIndex == 1">
+                    <!-- 約當新台幣 -->
+                    <div class="chart-content-title">
+                        <p>{{'HOME.ABOUT' | translate}}{{nowCurrency}}</p>
+                    </div>
+                    <div class="chart-content-amount">
+                        <p>{{totalLoanAmount | _currency}}</p>
+                    </div>
+                </li>
+                <li class="center dl-ball" *ngIf="nowIndex == 2">
+                    <div class="chart-content-title">
+                        <p>{{saveLoansPercent}}</p>
+                    </div>
+                    <div class="loan-to-deposit-ratio-chart">
+                        <!--存放比圖表-->
+                        <div>
+                            <!-- 放款 -->
+                            <p>{{'HOME.LOAN' | translate}}</p>
+                            <!-- 存款 -->
+                            <p>{{'HOME.DEPOSIT' | translate}}</p>
+                        </div>
+                        <div class="chartBox">
+                            <div class="loanBar" [ngStyle]="{'width':loanBarSize }">{{totalLoanAmount |
+                                _currency}}</div>
+                            <div class="depositBar" [ngStyle]="{'width':depositBarSize }">{{totalAmount |
+                                _currency}}</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="deposit-dot {{ (nowIndex == 0)? 'active' : '' }}" (click)="active(0)" style="transform: rotate(0deg) translate(18em) rotate(0deg);">
+                    <span class="point" *ngIf="nowIndex == 0"></span>
+                </li>
+                <li class="loan-dot {{ (nowIndex == 1)? 'active' : '' }}" (click)="active(1)" style="transform: rotate(15deg) translate(18em) rotate(-15deg);">
+                    <span class="point" *ngIf="nowIndex == 1"></span>
+                </li>
+                <li class="dl-dot {{ (nowIndex == 2)? 'active' : '' }}" (click)="active(2)" style="transform: rotate(30deg) translate(18em) rotate(-30deg);">
+                    <span class="point" *ngIf="nowIndex == 2"></span>
+                </li>
+            </ul>
+            <!-- arc travelled by the pointer -->
+            <svg x="150" y="0" width="240" height="240" viewBox="0 0 500 500" class="chart-circle">
+                <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="250.2542" y1="496.283" x2="250.2542" y2="-.2102">
+                    <stop offset="0" stop-color="#41bfc7" />
+                    <stop offset="1" stop-color="#3DDEED" stop-opacity="0" />
+                </linearGradient>
+                <path fill="url(#a)" d="M250.3 0c137 0 248.1 111.1 248.1 248.1S387.3 496.2 250.3 496.2 2.2 385.1 2.2 248.1 113.2 0 250.3 0C112.5 0 .8 111.7.8 249.5S112.5 499 250.3 499s249.5-111.7 249.5-249.5S388 0 250.3 0z" />
+            </svg>
+        </div>
+        <div class="list-card-style index-result" *ngIf="simpleView">
+            <ul>
+                <li class="card-li-style">
+                    <!-- 存款 -->
+                    <div class="index-result-title" *ngIf="nowIndex == 0">
+                        <p>{{'HOME.DEPOSIT' | translate}}</p>
+                    </div>
+                    <!-- 放款 -->
+                    <div class="index-result-title" *ngIf="nowIndex == 1">
+                        <p>{{'HOME.LOAN' | translate}}</p>
+                    </div>
+                    <!-- 存放比 -->
+                    <div class="index-result-title" *ngIf="nowIndex == 2">
+                        <p>{{'HOME.DEPOSIT_LOAN_PROPOR' | translate}}</p>
+                    </div>
+                </li>
+                <li class="index-result-li align-two-side" *ngIf="nowIndex == 0">
+                    <div class="index-result-li-left font-500-style">
+                        <p>{{'HOME.ABOUT' | translate}}{{nowCurrency}}</p>
+                    </div>
+                    <div class="index-result-li-right amount-l2-bold-style">
+                        <b class="amount-number">{{totalAmount | _currency}}</b>
+                    </div>
+                </li>
+                <li class="index-result-li align-two-side" *ngIf="nowIndex == 1">
+                    <div class="index-result-li-left font-500-style">
+                        <p>{{'HOME.ABOUT' | translate}}{{nowCurrency}}</p>
+                    </div>
+                    <div class="index-result-li-right amount-l2-bold-style">
+                        <b class="amount-number">{{totalLoanAmount | _currency}}</b>
+                    </div>
+                </li>
+                <li class="index-result-li align-two-side" *ngIf="nowIndex == 2">
+                    <div class="index-result-li-left font-500-style">
+                        <!-- 存放比 -->
+                        <p>{{saveLoansPercent}}</p>
+                    </div>
+                    <div class="index-result-li-right amount-l2-bold-style">
+                        <b class="amount-number"></b>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <section gestures scrollTop id="homeSection" class="col-xs-12 section-content-index {{ simpleView? 'section-content-index-scroll' : '' }} {{ simpleView? '' : 'active' }} index-pg">
+        <div class="row">
+            <div class="card-index-wrapper">
+                <!--首頁說明與時間資訊 + 下拉欄位 種類2 -->
+                <div class="info-instruction-group" *ngIf="nowIndex != 3">
+                    <div class="align-two-side">
+                        <div (click)="onBottomSelectClick()" class="select-pop-form-group pop-form-group-l pop-form-group-50"
+                            *ngIf="nowIndex== 0 || nowIndex== 1">
+                            <!-- 下拉1 Start-->
+                            <div class="select-pop-bt-wrapper bt-wrapper-100">
+                                <button type="button" class="btn btn-default dropdown-toggle btn-selectline-pop"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <!-- <select selectForpop class="country-selector" [(ngModel)]="selectedGroupIndex" (ngModelChange)="onGroupChange($event)">
+                                        <ng-container *ngFor="let item of selectGroups; let listIndex = index">
+                                            <option class="select-pop-content" value="{{listIndex}}">{{item.value | translate}}
+                                            </option>
+                                        </ng-container>
+                                    </select> -->
+                                    <!-- <p class="select-pop-content">依公司別</p> -->
+                                    <span class="select-pop-content">{{ BottomDropContent | translate}}</span>
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <!-- 下拉1 End -->
+                        </div>
+                        <div class="info-left text-left info-instr-group-50" *ngIf="nowIndex == 2">
+                            <!-- *存放比=(總放款金額/總存款金額)*100% -->
+                            <p>*{{'HOME.DEPOSIT_LOAN_PROPOR' | translate}}=({{'HOME.DEPOSIT_AMOUNT' |
+                                translate}}/{{'HOME.LOAN_AMOUNT'
+                                | translate}})*100%</p>
+                        </div>
+                        <div class="info-right text-right info-instr-group-50">
+                            <ul>
+                                <li>{{queryDate}}</li>
+                                <!-- 單位：約當本幣 -->
+                                <li *ngIf="selectedGroup.id != 1 || nowIndex == 2">
+                                    <p>{{'HOME.ABOUT' | translate}}{{nowCurrency}}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--首頁說明與時間資訊 ＋ 下拉欄位 種類2  -->
+                <!--首頁存款卡片 種類1 -->
+                <ng-container *ngIf="nowIndex == 0 && cardSource != undefined && cardSource.length > 0">
+                    <div class="list-card-style card-deposit-result" *ngFor="let card of cardSource" (click)="cardClick(card)">
+                        <div class="align-two-side">
+                            <div class="card-left-wrap-2">
+                                <ul>
+                                    <li class="card-li-style" *ngIf="selectedGroup.id == 2">
+                                        <div class="deposit-text-style">
+                                            <p>{{ card.subType}}</p>
+                                        </div>
+                                    </li>
+                                    <li class="card-li-style align-two-side" *ngIf="selectedGroup.id != 2">
+                                        <p class="card-tag-wrap">
+                                            <span class="card-tag-green" *ngIf="selectedGroup.id != 0">{{
+                                                card.subType}}
+                                            </span>
+                                            <span class="card-tag-green" *ngIf="selectedGroup.id == 0">{{
+                                                getTypeName(card.subType)
+                                                | translate}}</span>
+                                        </p>
+                                        <p class="card-text-right-l2 card-font-s" *ngIf="selectedGroup.id == 1">1 {{card.currency}} = {{card.exRate}} {{nowCurrency}}</p>
+                                    </li>
+                                    <li class="card-li-style align-two-side">
+                                        <div class="card-text-left-l2 card-per-style">
+                                            <p>{{card.percent}}%</p>
+                                        </div>
+                                        <p class="card-text-right-l2">{{card.amount | _currency}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-right-icon-wrap right-icon-ellipsis" *ngIf="cardRightArrow"> <i class="fa fa-chevron-right"
+                                    aria-hidden="true"></i> </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <!--首頁存款卡片 種類1-->
+                <!--首頁放款卡片 種類1 -->
+                <ng-container *ngIf="nowIndex == 1 && loanCardSource != undefined && loanCardSource.length > 0">
+                    <div class="list-card-style card-loan-result" *ngFor="let card of loanCardSource" (click)="cardClick(card)">
+                        <div class="align-two-side">
+                            <div class="card-left-wrap-2">
+                                <ul>
+                                    <li class="card-li-style" *ngIf="selectedGroup.id == 2">
+                                        <div class="deposit-text-style">
+                                            <p>{{ card.subType}}</p>
+                                        </div>
+                                    </li>
+                                    <li class="card-li-style align-two-side" *ngIf="selectedGroup.id != 2">
+                                        <p class="card-tag-wrap">
+                                            <span class="card-tag-green">{{card.subType}}
+                                            </span>
+                                        </p>
+                                        <p class="card-text-right-l2 card-font-s" *ngIf="selectedGroup.id == 1">{{card.currency}}/{{nowCurrency}}：{{card.exRate}}</p>
+                                    </li>
+                                    <li class="card-li-style align-two-side">
+                                        <div class="card-text-left-l2 card-per-style">
+                                            <p>{{card.percent}}%</p>
+                                        </div>
+                                        <p class="card-text-right-l2">{{card.amount | _currency}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-right-icon-wrap right-icon-ellipsis" *ngIf="cardRightArrow"> <i class="fa fa-chevron-right"
+                                    aria-hidden="true"></i> </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <!--首頁放款卡片 種類1-->
+                <!--無資料-->
+                <div class="status-noResult" *ngIf="(nowIndex == 0 && cardSource != undefined && cardSource.length == 0) || (nowIndex == 1 && loanCardSource != undefined && loanCardSource.length == 0)">
+                    <p>{{'BTN.HOME_NO_CARD' | translate}}</p>
+                </div>
+                <!--無資料-->
+                <!--首頁存放比卡片 種類1 -->
+                <div class="list-card-style card-dl-result" *ngIf="nowIndex == 2" (click)="cardClick(0)">
+                    <div class="align-two-side">
+                        <div class="card-left-wrap-2">
+                            <ul>
+                                <li class="card-li-style align-two-side">
+                                    <p class="card-tag-wrap"> <span class="card-tag-green">{{ 'HOME.LOAN' | translate}}</span>
+                                    </p>
+                                    <p class="card-text-right-l2">{{loansAmount | _currency}}</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-right-icon-wrap right-icon-ellipsis" *ngIf="isSumm"> <i class="fa fa-chevron-right"
+                                aria-hidden="true"></i> </div>
+                    </div>
+                </div>
+                <!--首頁存放比卡片 種類1-->
+                <!--首頁存放比卡片 種類1 -->
+                <div class="list-card-style card-dl-result" *ngIf="nowIndex == 2" (click)="cardClick(1)">
+                    <div class="align-two-side">
+                        <div class="card-left-wrap-2">
+                            <ul>
+                                <li class="card-li-style align-two-side">
+                                    <p class="card-tag-wrap"> <span class="card-tag-green">{{ 'HOME.DEPOSIT' |
+                                            translate}}</span>
+                                    </p>
+                                    <p class="card-text-right-l2">{{saveAmount | _currency}}</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-right-icon-wrap right-icon-ellipsis" *ngIf="isSumm"> <i class="fa fa-chevron-right"
+                                aria-hidden="true"></i> </div>
+                    </div>
+                </div>
+                <!--首頁存放比卡片 種類1-->
+                <!-- Memo start -->
+                <div class="memo-info">
+                    <ol class="memo-info-list">
+                    <li>{{'HOME.MEMO_TITLE' | translate}}</li>
+                    <li>{{'HOME.MEMO_LINE_1' | translate}}</li>
+                    <li>{{'HOME.MEMO_LINE_2' | translate}}</li>
+                    <li>{{'HOME.MEMO_LINE_3' | translate}}</li>
+                    <li>{{'HOME.MEMO_LINE_4' | translate}}</li>
+                    <li>{{'HOME.MEMO_LINE_5' | translate}}</li>
+                    </ol>
+                </div>
+                <!-- Memo end -->
+            </div>
+        </div>
+    </section>
+
+</div>
+<!-- </div> -->

@@ -1,0 +1,220 @@
+<div class="pop_mask" *ngIf="isOpen">
+    <div class="pop_mid">
+        <div class="pop_block" style="background:white">
+            <div class="pop_content">
+                <!-- Header start -->
+                <div class="title" style="color:green">篩選條件</div>
+                <hr style="height:2px; background-color:green;">
+                <!-- Header end -->
+
+                <!-- Form start -->
+                <div>
+                    <!-- Country start -->
+                    <div style="margin-bottom:10px;">
+                        <div style="display:flex;">國別</div>
+                        <hr style="margin:0;">                        
+                        <tr>
+                            <td>
+                                <select selectForpop [(ngModel)]="selectedCountry">
+                                    <option *ngFor="let countryItem of searchCountry;" value="{{ countryItem.value }}">{{ countryItem.name }}</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </div>
+                    <!-- Country end -->
+
+                    <!-- Currency start -->
+                    <div style="margin-bottom:10px;">
+                        <div style="display:flex;">幣別</div>
+                        <hr style="margin:0;">
+                        <!-- quick button -->
+                        <div class="filter_board" style="padding: 3px 0px;">                            
+                            <tr>
+                                <td style="text-align:left;">
+                                    <ng-container *ngFor="let currencyItem of currencyType;">
+                                        <span [ngClass]="(currencyItem.select)?'active':''" (click)="SelectType('currency',currencyItem)">{{ currencyItem.name }}</span>
+                                    </ng-container>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                    <!-- Currency end -->
+
+                    <!-- Product start -->
+                    <div style="margin-bottom:10px;">
+                        <div style="display:flex;">產品別</div>
+                        <hr style="margin:0;">
+                        <!-- quick button -->
+                        <div class="filter_board" style="padding: 3px 0px;">                            
+                            <tr>
+                                <td>
+                                    <ng-container *ngFor="let productItem of productType;">
+                                        <span [ngClass]="(productItem.select)?'active':''" (click)="SelectType('product',productItem)">{{ productItem.name }}</span>
+                                    </ng-container>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                    <!-- Product end -->
+
+                    <!-- Length start -->
+                    <div style="margin-bottom:10px;">
+                        <div style="display:flex;">期別</div>
+                        <hr style="margin:0;"> 
+                        <!-- quick button -->
+                        <div class="filter_board" style="padding: 3px 0px;">                            
+                            <tr>
+                                <td>
+                                    <ng-container *ngFor="let lengthItem of lengthType;">
+                                        <span [ngClass]="(lengthItem.select)?'active':''" (click)="SelectType('length',lengthItem)">{{ lengthItem.name }}</span>
+                                    </ng-container>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                    <!-- Length end -->
+
+                    <!-- Status start -->
+                    <div style="margin-bottom:10px;">
+                        <div style="display:flex;">狀態</div>
+                        <hr style="margin:0;">
+                        <tr>
+                            <td>
+                                <select selectForpop [(ngModel)]="selectedStatus">
+                                    <option *ngFor="let statusItem of searchStatus;" value="{{ statusItem.value }}">{{ statusItem.name }}</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </div>
+                    <!-- Status end -->
+
+                    <!-- Date start -->
+                    <div style="margin-bottom:10px;">
+                        <div style="display:flex;">日期</div>
+                        <hr style="margin:0;">
+                        <div class="filter_board" style="padding: 3px 0px;">
+                            <tr>
+                                <td>
+                                    <ng-container *ngFor="let dateItem of dateType;">
+                                        <span [ngClass]="(dateItem.select)?'active':''" (click)="SelectType('date',dateItem)">{{ dateItem.name }}</span>
+                                    </ng-container>
+                                </td>
+                            </tr>
+                        </div>
+                        <!-- Date from start -->
+                        <tr>
+                            <td colspan="2">
+                                <div class="_datearea">
+                                    <label>{{'POPUP_TRANSQUERY.DATE_FROM' | translate}}</label>
+                                    <input maxlength="255" type="text" [(ngModel)]="selectedDateFrom" style="width:70%; margin:5px 0;"/>
+                                    <img src="assets/ui/images/u6538.png" (click)="onDatePickerButtonClick('from')" />
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Date from end -->
+                        <!-- Date to start -->
+                        <tr>
+                            <td colspan="2">
+                                <div class="_datearea">
+                                    <label>{{'POPUP_TRANSQUERY.DATE_TO' | translate}}</label>
+                                    <input maxlength="255" type="text" [(ngModel)]="selectedDateTo" style="width:70%; margin:5px 0;"/>
+                                    <img src="assets/ui/images/u6538.png" (click)="onDatePickerButtonClick('to')" />
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Date to end -->
+                    </div>
+                    <!-- Date end -->
+
+                    <!-- Maturity start -->
+                    <div style="margin-bottom:10px;">
+                        <div style="display:flex;">到期日</div>
+                        <hr style="margin:0;">
+                        <div class="filter_board" style="padding: 3px 0px;">
+                            <tr>
+                                <td>
+                                    <ng-container *ngFor="let maturityItem of maturityType;">
+                                        <span [ngClass]="(maturityItem.select)?'active':''" (click)="SelectType('maturity',maturityItem)">{{ maturityItem.name }}</span>
+                                    </ng-container>
+                                </td>
+                            </tr>
+                        </div>
+                        <!-- Maturity from start -->
+                        <tr>
+                            <td colspan="2">
+                                <div class="_datearea">
+                                    <label>{{'POPUP_TRANSQUERY.DATE_FROM' | translate}}</label>
+                                    <input maxlength="255" type="text" [(ngModel)]="selectedMaturityFrom" style="width:70%; margin:5px 0;"/>
+                                    <img src="assets/ui/images/u6538.png" (click)="onDatePickerButtonClick('from')" />
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Maturity from end -->
+                        <!-- Maturity to start -->
+                        <tr>
+                            <td colspan="2">
+                                <div class="_datearea">
+                                    <label>{{'POPUP_TRANSQUERY.DATE_TO' | translate}}</label>
+                                    <input maxlength="255" type="text" [(ngModel)]="selectedMaturityTo" style="width:70%; margin:5px 0;"/>
+                                    <img src="assets/ui/images/u6538.png" (click)="onDatePickerButtonClick('to')" />
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Maturity to end -->
+                    </div>
+                    <!-- Maturity end -->
+
+                    <!-- Transaction Type start -->
+                    <div style="margin-bottom:10px;">
+                        <div style="display:flex;">交易類型</div>
+                        <hr style="margin:0;">                        
+                        <tr>
+                            <td>
+                                <select selectForpop [(ngModel)]="selectedTransactionType">
+                                    <option *ngFor="let transactionItem of transactionType;" value="{{ transactionItem.value }}">{{ transactionItem.name }}</option>
+                                </select>
+                            </td>
+                        </tr>                        
+                    </div>
+                    <!-- Transaction Type end -->
+
+                    <!-- D Amnt start -->
+                    <div style="margin-bottom:10px;" *ngIf="selectedTransactionType === 'D'">
+                        <div style="display:flex;">扣帳金額</div>
+                        <hr style="margin:0;">
+                        <div>
+                            <input type="tel" maxlength="10" [(ngModel)]="dAmntFrom" style="width:30%;"/>萬元 ~ 
+                            <input type="tel" maxlength="10" [(ngModel)]="dAmntTo" style="width:30%;"/>萬元
+                        </div>                       
+                    </div>
+                    <!-- D Amnt end -->
+                    
+                    <!-- C Amnt start -->
+                    <div style="margin-bottom:10px;" *ngIf="selectedTransactionType === 'C'">
+                        <div style="display:flex;">入帳金額</div>
+                        <hr style="margin:0;">
+                        <div>
+                            <input type="tel" maxlength="10" [(ngModel)]="cAmntFrom" style="width:30%;"/>萬元 ~ 
+                            <input type="tel" maxlength="10" [(ngModel)]="cAmntTo" style="width:30%;"/>萬元
+                        </div>                       
+                    </div>
+                    <!-- C Amnt end -->
+
+                    <!-- Buttons start -->
+                    <table class="query_table">                        
+                        <tr>
+                            <td colspan="2">
+                                <div class="cycle_btn">
+                                    <div style="border:solid 1px green; background-color:white; color:green;" (click)="onCancelClick()">重設</div>
+                                    <div style="border-color:green; background:green" (click)="onSubmitClick()">套用</div>
+                                </div>
+                            </td>
+                        </tr>                       
+                    </table>
+                    <!-- Buttons end -->
+                </div>
+                <!-- Form end -->
+            </div>
+        </div>
+    </div>
+</div>

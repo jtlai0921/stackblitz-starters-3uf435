@@ -1,0 +1,118 @@
+<!-- container -->
+<!-- 最新公告列表 -->
+<div class="container-fluid container-bk-gree" *ngIf="IsOpen">
+    <!-- 置頂區域 -->
+    <!--最新公告卡片種類1 - 置頂 黃色卡片 右icon - 黑色箭頭-->
+    <div class="row" *ngIf="hasTop">
+        <div class="list-card-style card-news-top">
+            <div class="align-two-side">
+                <div class="card-left-wrap">
+                    <ul>
+                        <li class="card-li-style align-two-side">
+                            <div class="card-tag-wrap news-tag-wrap"> <span class="card-tag-yellow">置頂</span> <span
+                                    class="card-tag-green">系統</span> </div>
+                        </li>
+                        <li class="card-li-style">
+                            <div class="card-text-left-announce news-title ">
+                                <p>【置頂範例】</p>
+                            </div>
+                        </li>
+                        <li class="card-li-style">
+                            <div class="card-text-left-announce news-content">
+                                <p [innerHtml]="">由於銀行系統機房搬遷，於端午連假107年06月16日(六)-107年06月18(一)，本行部分系統於以下日期之部分時段暫停服務。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-right-icon-wrap right-icon-ellipsis"> <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--最新公告卡片種類1 - 置頂 黃色卡片 右icon - 黑色箭頭 //END-->
+
+    <!-- 一般區域 -->
+    <div>
+        <div class="row">
+            <div class="bg-fixed-185"></div>
+            <!-- 有置頂消息需加上 section-content-news-->
+            <section class="col-xs-12 {{ hasTop ? 'section-content-news' : 'section-content' }} news-pg bg-lightgray"
+                scrollTop dropReload>
+                <div class="news-wrap">
+                    <!--最新公告卡片種類2 - 綠色卡片 右icon - 黑色箭頭-->
+                    <div class="row" *ngFor="let item of pagerData; let i = index">
+                        <div class="list-card-style card-news-group" (click)="onSelect(item)">
+                            <div class="align-two-side">
+                                <div class="card-left-wrap">
+                                    <ul>
+                                        <li class="card-li-style align-two-side">
+                                            <div class="card-tag-wrap news-tag-wrap"> 
+                                                <!-- <span class="card-tag-green">{{ item.Category }}</span>  -->
+                                                <span class="card-tag-green">{{ item.Category | _custom:'ANNOUNCEMENT_CATEGORY' | translate }}</span>    
+                                            </div>
+                                            <span class="card-text-left-announce">
+                                                <p>{{ item.PostDate.toString() | _datetime:'yyyy/MM/dd' }}</p>
+                                            </span>
+                                        </li>
+                                        <li class="card-li-style">
+                                            <div class="card-text-left-announce news-content">
+                                                <p>【{{ item.Subject }}】</p>
+                                            </div>
+                                        </li>
+                                        <li class="card-li-style">
+                                            <div class="card-text-left-announce news-content">
+                                                <p [innerHtml]="item.ListContent" ></p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-right-icon-wrap right-icon-ellipsis" >
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--最新公告卡片種類2 - 綠色卡片 右icon - 黑色箭頭-->
+
+                    <!-- 載入更多按鈕 置於ngFor的最後一個 -->
+                    <!-- 按鈕- 載入更多 -->
+                    <div (click)="LoadPage()" *ngIf="showLoad" class="bt-more-group">
+                        <div class="bt-inner-group-xl">
+                            <button type="button" class="btn btn-inner-group-s btn-more-load">
+                                {{ 'BTN.RELOAD_MORE' | translate }}</button>
+                        </div>
+                    </div>
+                    <!-- //按鈕- 載入更多 -->
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- end of container-->
+
+<!-- container-->
+<!-- 最新公告內頁 -->
+<div *ngIf="!IsOpen">
+    <div class="row">
+        <div class="bg-fixed-60"></div>
+        <section class="col-xs-12 section-content ann-content-pg">
+            <div class="row">
+                <div class="ann-container align-two-side">
+                    <div class="ann-wrap">
+                        <div class="ann-title-group align-two-side">
+                            <div class="ann-tag-wrap">
+                                <!-- <span class="ann-tag-green">{{ selected.Category }}</span> -->
+                                <span class="ann-tag-green">{{ selected.Category | _custom:'ANNOUNCEMENT_CATEGORY' | translate }}</span>
+                            </div>
+                            <div class="ann-date-style">
+                                <p>{{ selected.PostDate.toString() | _datetime:'yyyy/MM/dd' }}</p>
+                            </div>
+                        </div>
+                        <div class="ann-content" [innerHTML]="selected.Content"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- end of container-->

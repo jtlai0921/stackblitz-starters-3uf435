@@ -1,0 +1,269 @@
+<!-- 篩選popup -->
+<div *ngIf="filterBlock" class="row">
+    <div class="shadow active"></div>
+
+    <div class="pop-box-container active">
+        <div class="pop-box-area">
+            <div (click)="onFilterCloseClick()" *ngIf="closeBtnChange" class="pop-close-bt">
+                <div class="i-close"></div>
+            </div>
+            <div class="pop-content-wrapper">
+
+                <div class="pop-title">
+                    <p>{{'AUTH.FILTER_TITLE' | translate}}</p>
+                </div>
+
+                <div class="pop-content">
+                    <app-option [filterKey]="'nCustomerCountry'" [view]="viewCountryData" (filterData)="result1($event)"
+                        (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+                    <app-option [filterKey]="'nTxnType'" [view]="viewTrnTypeData" (filterData)="result2($event)"
+                        (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+                    <app-option [filterKey]="'nTxnStatus'" [view]="viewTxnStatusData" (filterData)="result3($event)"
+                        (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+                    <app-option [filterKey]="'nTxnChannel'" [view]="viewChannelIdData" (filterData)="result4($event)"
+                        (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+
+                    <!-- D Amnt start -->
+                    <div class="pop-sub-title">
+                        <p class="">{{'AUTH.FILTER_FIELD_DEBIT_AMT' | translate}}</p>
+                    </div>
+
+                    <div class="pop-input-flex-group pop-li-flex">
+                        <div class="select-pop-form-group pop-form-group-30">
+                            <div class="select-date-input-wrapper">
+                                <div class="input-group pop-select-bk-style" id="">
+                                    <input maxlength="30" [(ngModel)]="dAmntFrom" type="tel" class="form-control select-date-input"
+                                        placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <p> {{'AUTH.FILTER_UNIT_TEN_THOUSAND' | translate}} {{'AUTH.FILTER_UNIT_TO' | translate}} </p>
+                        <div class="select-pop-form-group pop-form-group-30">
+                            <div class="select-date-input-wrapper">
+                                <div class="input-group pop-select-bk-style" id="">
+                                    <input maxlength="30" [(ngModel)]="dAmntTo" type="tel" class="form-control select-date-input"
+                                        placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <p> {{'AUTH.FILTER_UNIT_TEN_THOUSAND' | translate}} </p>
+                    </div>
+                    <!-- D Amnt end -->
+
+                    <app-option [filterKey]="'nDebitCurrency'" [view]="viewDebitCurData" (filterData)="result5($event)"
+                        (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+
+                    <!-- D Amnt start -->
+                    <div class="pop-sub-title">
+                        <p class="">{{'AUTH.FILTER_FIELD_CREDIT_AMT' | translate}}</p>
+                    </div>
+
+                    <div class="pop-input-flex-group pop-li-flex">
+                        <div class="select-pop-form-group pop-form-group-30">
+                            <div class="select-date-input-wrapper">
+                                <div class="input-group pop-select-bk-style" id="">
+                                    <input maxlength="30" [(ngModel)]="cAmntFrom" type="tel" class="form-control select-date-input"
+                                        placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <p> {{'AUTH.FILTER_UNIT_TEN_THOUSAND' | translate}} {{'AUTH.FILTER_UNIT_TO' | translate}} </p>
+                        <div class="select-pop-form-group pop-form-group-30">
+                            <div class="select-date-input-wrapper">
+                                <div class="input-group pop-select-bk-style" id="">
+                                    <input maxlength="30" [(ngModel)]="cAmntTo" type="tel" class="form-control select-date-input" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <p> {{'AUTH.FILTER_UNIT_TEN_THOUSAND' | translate}} </p>
+                    </div>
+
+                    <app-option [filterKey]="'nCreditCurrency'" [view]="viewCreditCurData" (filterData)="result6($event)"
+                        (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+
+                    <!-- D Amnt end -->
+                    <app-quickselect [filterKey]="'nTxnRecords'" [view]="viewTOTALRECORDData"
+                        (filterData)="result7($event)"></app-quickselect>
+                    <app-option [filterKey]="'nTxnPurpose'" [view]="viewREMITTANCEPURPOSEData"
+                        (filterData)="result8($event)" (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+
+                    <app-datefilter [view]="viewDateData" (filterData)="result9($event)" (closeBtnFlag)="closeBtnFlag($event)"></app-datefilter>
+
+                </div>
+                <!--pop視窗內容結束-->
+
+            </div>
+
+            <!--pop-bt-group- 兩個 -->
+            <div class="pop-bt-group">
+                <button type="button" class="btn btn-cancel btn-pop-cancel" (click)="filterClick(true)">{{'AUTH.FILTER_BTN_RESET' | translate}}</button>
+                <button type="submit" class="btn btn-confirm btn-pop-confirm" (click)="onFilterClick()">{{'AUTH.FILTER_BTN_APPLY' | translate}}</button>
+            </div>
+            <!--//pop-bt-group-兩個一組-->
+
+
+        </div>
+    </div>
+</div>
+<!-- 篩選popup -->
+
+
+
+<ng-container [ngSwitch]="pageType">
+
+    <!-- 授權明細頁 -->
+    <ng-container *ngSwitchCase="'detailPage'">
+        <app-auth-detail [isAuth]="isAuth" [showOperationBtn]="showOperationBtn" [detailData]="detailData"
+            (callbackData)="onDetailCallback($event)"></app-auth-detail>
+    </ng-container>
+
+    <!-- 授權確認頁 -->
+    <ng-container *ngSwitchCase="'confirmedPage'">
+        <app-auth-confirmed [authOperationData]="authOperationData" (cardClick)="onCardClickCallback($event)" (authResultData)="onAuthFinishCallback($event)"></app-auth-confirmed>
+    </ng-container>
+
+    <!-- 授權結果頁 -->
+    <ng-container *ngSwitchCase="'resultPage'">
+        <app-auth-result [action]="action" [authResultData]="authResultData" (authListClick)="onAuthListClickCallBack($event)"></app-auth-result>
+    </ng-container>
+
+</ng-container>
+
+<div [hidden]="pageType != 'list'">    
+    <div class="">
+        <div id="l2-tab-wrapper" class="l2-tab-wrapper">
+            <div class="l2-tab-container">
+                <div class="col-xs-6 l2-tab-set {{isAuth ? '' : 'active'}}" (click)="isAuthClick(false)">
+                    <div class="l2-tab-single">
+                        <a href="javascript:void(0)" class="">{{'AUTH.NONAUTH' | translate}}</a>
+                    </div>
+                </div>
+                <div class="col-xs-6 l2-tab-set {{isAuth ? 'active' : ''}}" (click)="isAuthClick(true)">
+                    <div class="l2-tab-single">
+                        <a href="javascript:void(0)" class="">{{'SUB_MENU.AUTH' | translate}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-fixed-105 "></div>
+
+    <section class="col-xs-12 section-content-tab-auth wau-pg" scrollTop dropReload>
+        <!-- <div *ngIf="isAuth" class="row">
+            <div class="nav-l3">
+                <a (click)="whoAuthClick(true)" href="javascript:void(0)" class="col-xs-6 tab-l3-set-2 tab-l3-set-l {{isMyAuth ? 'active' : ''}}">
+                    {{'AUTH.MINE_AUTH' | translate}}
+                </a>
+                <a (click)="whoAuthClick(false)" href="javascript:void(0)" class="col-xs-6 tab-l3-set-2 tab-l3-set-r {{!isMyAuth ? 'active' : ''}}">
+                    {{'AUTH.OTHER_AUTH' | translate}}
+                </a>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="select-pop-group-style pop-input-flex-group">
+                <div *ngIf="!isAuth" class="tag-wrap">
+                    <span (click)="onCheckAllClick()" class="tag-grey" style="margin-right:5px">{{'BTN.SELECT_ALL' | translate}}</span>
+                    <span (click)="onUncheckAllClick()" class="tag-grey">{{'BTN.CANCEL_ALL' | translate}}</span>
+                </div>
+                <!-- 搜尋bar -->
+                <app-search [source]="searchSource" [column]="filterArray" (filterData)="search_result($event)" class = "{{isAuth? '' :'search'}}"></app-search>
+
+                <div (click)="filterClick()" class="select-pop-form-group pop-form-group-10">
+                    <div class="select-pop-input-wrapper link-wrapper">
+                        <p class="content-li-text-ct-style"><i class="icon-filter"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="pagerData && pagerData.length > 0" class="row">
+            <form class="bs-example bs-example-form" data-example-id="input-group-with-checkbox-radio">
+
+                <section class="cd-timeline js-cd-timeline">
+                    <div class="cd-timeline__container">  
+                        <div *ngFor="let data of pagerData; let i = index" class="cd-timeline__block js-cd-block">
+                            
+                            <div *ngIf="data.dTxnYear" class="timeline-year-title">
+                                {{ data.dTxnYear }}
+                            </div>
+
+                            <div *ngIf="isAuth" class="cd-timeline__img cd-timeline__img--picture js-cd-img timeline-date-bk">
+                                <p>{{ data.nTxnDate | _datetime:'MM' }}/{{ data.nTxnDate | _datetime:'dd' }}</p>
+                            </div>
+                            <div *ngIf="!isAuth" class="cd-timeline__img cd-timeline__img--picture js-cd-img timeline-wau-date-bk">
+                                <p>{{ data.nTxnDate | _datetime:'MM' }}/{{ data.nTxnDate | _datetime:'dd' }}</p>
+                                <div class="timeline-checkbox">
+                                    <div class="title-left-icon">
+                                        <span (click)="onCheckboxClick(data.aFlag, i)">
+                                            <input [checked]="data.aFlag" class="ct-timeline-checkbox" type="checkbox" name="date_+{{i}}" id="date_+{{i}}" value="date_+{{i}}">
+                                            <label class="pull-left" for="date_{{i}}"></label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cd-timeline__content js-cd-content">
+                                <app-auth-card [isAuth]="isAuth" [isMyAuth]="isMyAuth" [showDetailBtn]="true" [isResultTag] = "false" [data]="data" (click)="onDetailClick(i)"></app-auth-card>
+                            </div>
+
+                        </div>
+
+                        <div (click)="LoadPage()" *ngIf="showLoad" class="bt-more-group">
+                            <div class="bt-inner-group-xl">
+                                <button type="button" class="btn btn-inner-group-s btn-more-load">
+                                    {{ 'BTN.RELOAD_MORE' | translate }}
+                                </button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </section>
+
+            </form>
+        </div>
+
+        <app-no-data *ngIf="pagerData && pagerData.length == 0"></app-no-data>
+
+        <!-- Memo start -->
+        <div class="memo-info" *ngIf="isAuth">
+            <ol class="memo-info-list">
+            <li>{{'AUTH.MEMO_TITLE' | translate}}</li>
+            <li>{{'AUTH.MEMO_LINE_1' | translate}}</li>
+            </ol>
+        </div>
+        <!-- Memo end -->
+
+    </section>
+    <!-- <div *ngIf="!isAuth && btnShowFlag" class="row">
+            <div class="bt-center-group-three align-two-side ">
+                <div class="bt-inner-group-l">
+                    <button (click)="onCancelClick()" type="button" class="btn btn-inner-group-s btn-cancel btn-cancel-l" style="width:100%">
+                        {{ 'BTN.CANCEL' | translate }}
+                    </button>
+                    <button (click)="onRefundClick()" type="button" class="btn btn-inner-group-s btn-cancel btn-cancel-r">
+                        {{ 'BTN.RETURN' | translate }}
+                    </button>
+                </div>
+                <div class="bt-inner-group-r">
+                    <button (click)="onAuthClick()" type="button" class="btn btn-inner-group-s btn-confirm">
+                        {{ 'AUTH.AUTH' | translate }}
+                    </button>
+                </div>
+            </div>
+        </div> -->
+
+    <div *ngIf="!isAuth && btnShowFlag" class="row">
+        <div class="bt-group-pgBottom">
+            <button (click)="onCancelClick()" type="button" class="btn btn-cancel  btn-pgBottom-cancel" style="width:100%">
+                {{ 'BTN.CANCEL' | translate }}
+            </button>
+            <button (click)="onAuthClick()" type="button" class="btn btn-confirm btn-pgBottom-confirm">
+                {{ 'AUTH.AUTH' | translate }}
+            </button>
+        </div>
+    </div>
+</div>

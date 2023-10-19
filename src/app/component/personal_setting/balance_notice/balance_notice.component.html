@@ -1,0 +1,68 @@
+<!-- container-->
+<div class="container-fluid noPaddingTop">
+
+    <div class="row">
+        <div class="bg-fixed-60 bg-lightgray"></div>
+        <section class="col-xs-12 section-content block-trade-pg">
+      
+            <!-- button-set種類5 - 1個按鈕 -->
+            <div class="row">
+                <div class="bt-center-group bt-group-pgTop margin_top_30">
+                    <div class="bt-inner-group-xl" (click)="onEditClick(null)">
+                        <button type="submit" class="btn btn-inner-group-s btn-confirm">{{ 'BALANCE_LIMIT.BTN_ADD' | translate }}</button>
+                    </div>
+                </div>
+            </div>
+            <!-- button-set種類5 - 1個按鈕 - Disable//End -->
+      
+            <!-- 副標題-種類1 - 黑字黃底線 - 單列 -->
+            <div class="row">
+                <div class="sub-title">
+                  <p>{{ 'BALANCE_LIMIT.TITLE_L2_SETTINGS' | translate }}</p>
+                </div>
+            </div>
+            <!-- 副標題-種類1 - 黑字黃底線 - 單列 //END -->
+      
+            <!-- ct-表格 種類3 - 2欄 -->
+            <div class="row">
+                <div class="ct-table-title-section bl-trade-title-section">
+                    <div class="ct-table-title-wrapper bl-trade-title-wrapper">
+      
+                        <div class="ct-table-title-col1 bl-trade-title-col1">
+                            <p>{{ 'BALANCE_LIMIT.BALANCE_NOTICE' | translate }}</p>
+                        </div>
+      
+                        <div class="ct-table-title-col4 bl-trade-title-col4">
+                            <p>{{ 'BALANCE_LIMIT.EDIT' | translate }}</p>
+                        </div>
+      
+                    </div>
+                </div>
+      
+                <div class="ct-table-content-section bl-trade-content-section">
+                    <div class="ct-table-content-wrapper bl-trade-content-wrapper">
+                        <ul>
+                            <li *ngFor="let account of settings;">
+                                <div class="ct-table-content-col1 bl-trade-content-col1">
+                                    <p>{{ account['AcctCur'] }}-{{ account['AcctNo'] }}</p>
+                                    <p class="content-inside-line"></p>
+                                    <p>
+                                        <ng-container *ngIf="account['MaxAmount'] !='' ">{{ 'BALANCE_LIMIT.EXCEED' | translate }}{{ account['MaxAmount'] }}</ng-container>
+                                        <ng-container *ngIf="account['MaxAmount'] !='' && account['MinAmount'] !='' "> {{ 'BALANCE_LIMIT.OR' | translate }} </ng-container>
+                                        <ng-container *ngIf="account['MinAmount'] !='' ">{{ 'BALANCE_LIMIT.BELOW' | translate }}{{ account['MinAmount'] }}</ng-container>
+                                    </p>
+                                </div>
+                                <div class="ct-table-content-col4 bl-trade-content-col4"  (click)="onEditClick(account)">
+                                    <div class="icon-edit"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- //ct-表格 種類3 - 2欄 -->
+      
+        </section>
+    </div>
+
+</div>

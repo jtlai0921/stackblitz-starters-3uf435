@@ -1,0 +1,52 @@
+.exchange-rate-custom-currency {
+    padding-bottom: 14px;
+}
+
+.btn-selectline-pop {
+    padding: 6px 10px;
+    position: relative;
+}
+
+.pref-cur-title-section {
+    background-color: #ffffff;
+    padding: 14px 0 10px 0;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.pref-cur-content-section {
+    padding-bottom: 12px;
+    background-color: #f0f2f3;
+}
+
+.pref-cur-title-col1 p, .pref-cur-title-col3 p, .pref-cur-title-col4 p {
+    color: #3d4953;
+}
+
+.pref-cur-title-wrapper .pref-cur-title-col3, .pref-cur-content-wrapper .pref-cur-content-col3 {
+    text-align: left;
+}
+
+.pref-cur-content-wrapper ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 20px;
+}
+
+.pref-cur-content-col1 {
+    width: 40%;
+}
+
+.pref-cur-content-col3 {
+    width: 45%;
+}
+
+.pref-cur-content-col4 {
+    width: 15%;
+}
+
+.bt-center-group.bt-group-pgTop {
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+}

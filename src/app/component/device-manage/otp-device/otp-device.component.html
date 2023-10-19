@@ -1,0 +1,56 @@
+      <!-- OTP設定圖示 -->
+
+      <div class="row">
+
+          <div class="status-setOtp">
+              <div class="status-setOtp-bk {{isClicked ? 'active' : ''}}">
+                <img src="assets/design/image/settingPg-otpBk.svg">
+              </div>
+              <div class="status-setOtp-image">
+                <img src="assets/design/image/settingPg-smartphone.svg">
+              </div>
+
+              <!-- 翻轉卡片- container-->
+              <div class="otp-flip-wrap">
+                  <!--实现容器翻转-->
+                  <div class="otp-flip {{isClicked ? 'active' : ''}}">
+                      <!--正面-->
+                      <div class="otp-flip-side front">
+                        <img src="assets/design/image/otp-flip-front.svg">
+                      </div>
+                      <!--反面-->
+                      <div class="otp-flip-side back">
+                        <img src="assets/design/image/otp-flip-back.svg">
+                      </div>
+                  </div>
+              </div>
+              <!-- 翻轉卡片- container // END -->
+
+          </div>
+
+          <div id="status-setOtp-content" class="status-setOtp-content {{isClicked ? 'active' : ''}}">
+            <!-- 本機尚未設定 -->
+            <p *ngIf = "!isClicked">{{'DEVICE_MANAGE.NOT_BEEN_SET' | translate}}</p>
+            <!-- 本機已成為你的OTP裝置 -->
+            <p *ngIf = "isClicked">{{'DEVICE_MANAGE.LOCAL_OTP_DEVICE' | translate}}</p>
+          </div>
+
+          <!-- button-set種類5 - 1個按鈕 -->
+
+          <div class="bt-center-group {{isClicked ? 'active' : ''}}">
+              <div class="bt-inner-group-xl">
+                    <!-- 設置本機為你的OTP裝置 -->
+                  <button  (click)="onRegisterClick()"  type="submit" class="btn btn-inner-group-s btn-confirm ">{{'DEVICE_MANAGE.SET_LOACL_OTP_DEVICE' | translate}}</button>
+              </div>
+          </div>
+
+          <!-- button-set種類5 - 1個按鈕 //End----------------------------------------------------------------------->
+          <!-- 使用本裝置產生隨機碼(OTP)，快速授權，安全放行！ -->
+          <div class="status-setOtp-info"><p>{{'DEVICE_MANAGE.LOCAL_RANDOM_GET_OTP' | translate}}</p></div>
+
+
+      </div>
+
+
+      <!-- OTP設定圖示 // END -->
+      

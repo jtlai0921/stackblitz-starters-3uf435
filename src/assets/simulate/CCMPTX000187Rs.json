@@ -1,0 +1,38 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000187Rs",
+    "RqUID": "20180709111612",
+    "Timestamp": "20180709111645",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000187Rq",
+      "Result": 4001,
+      "Desc": "",
+      "AcctOverviewList": [
+        {
+          "AcctCurrency": "TWD",
+          "AcctType": "S",
+          "Balance": "123,456,000",
+          "ExRate": ""
+        },
+        {
+          "AcctCurrency": "TWD",
+          "AcctType": "C",
+          "Balance": "1,000,000",
+          "ExRate": ""
+        },
+        {
+          "AcctCurrency": "TWD",
+          "AcctType": "T",
+          "Balance": "30,000,000",
+          "ExRate": ""
+        }
+      ]
+    }
+  }
+}

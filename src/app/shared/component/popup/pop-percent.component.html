@@ -1,0 +1,17 @@
+<div class="pop_mask" *ngIf="Isopen">
+    <div class="pop_mid">
+        <div class="pop_block">
+            <h3 *ngIf="!(title == '')">{{title | translate}}</h3>
+            <div class="pop_content">
+                <div class="percent" [style.width.%]="percent"></div>
+                <div class="percent_base"></div>
+                <span class="percent_msg" [innerHTML]="content"></span>
+                <span class="percent_no">{{percent}}%</span>
+            </div>
+            <div class="btn_group">
+                <div class="cancel" (click)="Cancel()" *ngIf="!(cancelTxt == '')">{{cancelTxt | translate}}</div>
+                <div class="check" (click)="Submit()"*ngIf="!(checkTxt == '')">{{checkTxt | translate}}</div>
+            </div>
+        </div>
+    </div>
+</div>

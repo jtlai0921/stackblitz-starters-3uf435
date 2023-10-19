@@ -1,0 +1,2595 @@
+/*共用-------------------------------------------------------------------------------------------------------------*/
+/*基本設定 樣式 -------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, input { font-family: Arial, 微軟正黑體 ; -webkit-font-smoothing: antialiased;text-size-adjust: 100%; }
+
+html{
+	font-size: 65%;
+	
+}
+/*游標設定*/
+input { caret-color: #107778; } 
+@supports (-webkit-mask: none) and (not (caret-color: #107778)) 
+{ input { color: #107778; } input::first-line { color: #107778; } } 
+input,textarea {
+   color: #107778; /* 游標的顏色*/ 
+	text-shadow: 0px 0px 0px #838383; /* 文字顏色 */ 
+	-webkit-text-fill-color: transparent;
+	/*ios*/
+	-webkit-user-select:auto;
+} 
+
+
+/*解除row*/
+.fixed { margin-left:0; margin-right:0;  }
+
+/*general 樣式*/
+
+*, ol, ul, p {
+	margin: 0;
+	padding: 0;
+}
+
+.btn {
+	outline-width: 0;
+	outline-style: none;
+	outline: none !important;
+}
+
+.container-fluid {
+    height: 100vh;
+    padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+    padding-top: env(safe-area-inset-top); /* iOS 11.2 */
+}
+
+.noPaddingTop.container-fluid {
+    padding-top: initial;
+}
+
+body {
+	/* lock左右bar */
+	overflow-x: hidden;
+	position: relative;
+	/* 禁止複製與選取 */
+	-moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    -khtml-user-select: none; 
+    user-select: none; 
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, input {
+	font-family: Arial, 微軟正黑體;
+	-webkit-font-smoothing: antialiased;
+	text-size-adjust: 100%;
+
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+h1, .h1 {
+  font-size: 2rem;
+}
+
+h2, .h2 {
+  font-size: 1.8rem;
+}
+
+h3, .h3 {
+  font-size: 1.6rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.4rem;
+}
+
+h6, .h6 {
+  font-size: 1.2rem;
+}
+
+p{
+    color: #3d4953;
+
+}
+
+        /* 字型尺寸 統一樣式 --------------------------------- */
+
+        .font-size-14 {
+            font-size: 1.4rem;
+        }
+
+        .font-size-16 {
+            font-size: 1.6rem;
+        }
+
+        /* // 字型尺寸 統一樣式 --------------------------------- */
+
+/*bg 樣式-------------------------------*/
+.container-bk-gree {
+	background: url(../image/bg-green.jpg) top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.bg-fixed-20 {
+	background: #fff;
+	margin-top: 20vh;
+	height: 80vh;
+	display: block;
+}
+.bg-fixed-60 {
+    background: #fff;
+    margin-top: 60px;
+    height: 100vh;
+    display: block;
+}
+.bg-fixed-105 {
+    background: #f0f2f3;
+    margin-top: 108px;
+    height: 90vh;
+    display: block;
+}
+.bg-fixed-185 {
+    background: #f0f2f3;
+    margin-top: 185px;
+    height: 90vh;
+    display: block;
+}
+.bg-fixed-195 {
+    background: #fff;
+    margin-top: 195px;
+    height: 100vh;
+    display: block;
+}
+
+
+.bg-fixed-208{
+     background: #fff;
+     margin-top: 208px;
+     height: 100vh;
+     display: block;
+ }
+.bg-fixed-340{
+    background: #fff;
+    margin-top: 340px;
+    height: 80vh;
+    display: block;
+}
+.bg-fixed-370 {
+	background: #fff;
+	margin-top: 370px;
+	height: 80vh;
+	display: block;
+}
+
+.bg-fixed-400 {
+    background: #fff;
+    margin-top: 400px;
+    height: 80vh;
+    display: block;
+}
+.bg-fixed-420 {
+    background: #fff;
+    margin-top: 420px;
+    height: 80vh;
+    display: block;
+    transition: margin-top .3s;
+}
+
+/*20180816*/
+.bg-sub-pic-wrapper{
+            width: 100%;
+            height: 148px;
+        }
+
+        .bg-sub-pic {
+            width: 100%;
+            height: 100%;
+        }
+
+        .bg-sub-personal{
+            background-image: url(../image/bg-sub-personalsetting.svg);
+            background-size: 220px auto;
+            background-position: top center;
+            background-repeat: no-repeat;
+
+        }
+        .section-content-sub{
+            position: absolute;
+            top: 60px;
+            bottom: 64px;
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+       .section-content-index { 
+            position: absolute;
+            top: 420px;
+            bottom: 64px;
+            overflow: scroll; 
+            transition: top .3s;
+            z-index: 15;
+        }
+
+        .section-content-index.active {
+            overflow: hidden;
+        }
+
+        .section-content-index-scroll  { position: absolute;
+            top: 208px;
+            bottom: 64px;
+            overflow: scroll; 
+}
+        .section-content-sub.fast-log-setting-pg {
+            /*background-color: #F0F2F3;*/
+        }
+
+/* 20180816 副標題 版型共用classname ------------------------------------------*/
+
+.bg-color-lightgray{  background-color: #F0F2F3;  }
+.bg-color-gradient {  background-image: linear-gradient(-135deg, #FFFFFF 0%, #F6F6F6 100%); }
+
+
+/* 20180816 副標題 版型共用classname ------------------------------------------*/
+
+/* 201808 下方灰色背景 版型共用classname ------------------------------------------*/
+.section-content.bg-lightgray, .bg-lightgray {
+    background-color: #F0F2F3;
+}
+/* 201808 下方灰色背景 版型共用classname ------------------------------------------*/
+
+/* 20180903 內容白色背景 版型共用classname ------------------------------------------*/
+.bg-white {
+    background-color: #ffffff;
+}
+/* 20180903 內容白色背景 版型共用classname ------------------------------------------*/
+
+/*Header 樣式-------------------------------*/
+
+header.main-navbar {
+	position: fixed;
+	z-index: 999;
+	width: 100vw;
+	height: 54px;
+	line-height: 60px;
+	display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+	display: -moz-box; /* Firefox 17- */
+	display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+	display: -moz-flex; /* Firefox 18+ */
+	display: -ms-flexbox; /* IE 10 */
+	display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+	/* 解決各裝置與IOS8以上 flex問題 --------------------END */
+	flex-direction: row;
+	-webkit-flex-direction: row; /* Safari 6.1+ */
+	/* 解決各裝置與IOS8以上 flex問題 --------------------END */
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	/* 解決各裝置與IOS8以上 flex問題 --------------------END */
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;/* 解決各裝置與IOS8以上 flex問題 --------------------END */
+}
+header.main_nav {
+	width: 100vw;
+    height: 60px;
+	line-height: normal;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+    padding: 0 15px;
+}
+header.main_nav {
+	position: absolute;
+    z-index: 999;
+    top: constant(safe-area-inset-top); /* iOS 11.0 */
+    top: env(safe-area-inset-top); /* iOS 11.2 */
+}
+.fixed {
+	margin-left: 0;
+	margin-right: 0;
+}
+.page_title    { 
+	display: block; 
+	text-align: center; 
+	color: #ffffff; 
+	min-width: 220px; 
+	box-sizing: border-box; 
+	margin: 0 auto; 
+	padding-left: 0; 
+	height:auto;  
+}
+.page_title img  { 
+	width: 40px;
+    height: 40px; 
+}
+
+.page_title_location    { 
+	display: block; 
+	text-align: center; 
+    color: #ffffff; 
+    font-weight: bold;
+	min-width: 220px; 
+	box-sizing: border-box; 
+	margin: 0 auto; 
+	padding-left: 30px; 
+    height:auto;
+}
+.page_title_location img  { 
+	width: 40px;
+    height: 40px; 
+}
+
+
+
+
+.sidemenu {
+	position: absolute;
+	left: 0;
+	width: 70px;
+	cursor: pointer;
+	text-align: center;
+}
+.sidemenu a {
+	display: block;
+	text-decoration: none;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+}
+.notice {
+	position: absolute;
+	right: 0;
+	width: 70px;
+	text-align: center;
+	cursor: pointer;
+}
+.notice a {
+	display: block;
+	text-decoration: none;
+	height: 60px;
+	width: 100%;
+	line-height: 60px;
+}
+   .notice.active a:before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffc107;
+    border: 2px solid rgba(52, 125, 128, 0.9);
+   }
+
+.locationmap {
+	position: absolute;
+	right: 0;
+	width: 70px;
+	text-align: center;
+	cursor: pointer;
+}
+.locationmap a {
+	display: block;
+	text-decoration: none;
+	height: 60px;
+	width: 100%;
+	line-height: 60px;
+}
+
+/* 20180815 header-樣式2 統一共同設定 -------------------------------*/
+/* 20180815 header-樣式2 統一共同設定 -------------------------------*/
+
+
+.pageback{
+  position: absolute;
+  left: 0;
+  width: 70px;
+  cursor: pointer;
+  text-align: center;
+}
+.pageback a {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+}
+.pageback img{
+  margin-left: -7px;
+}
+
+/* // 20180815 header-樣式2 統一共同設定 -------------------------------*/
+/* // s20180815 header-樣式2 統一共同設定 ———————————————*/
+
+
+
+/* 20180815 L3共同設定 -------------------------------------------*/
+    /* 20180815 L3共同設定 -------------------------------------------*/
+
+    .nav-l3 {
+      height: 40px;
+      padding: 0 20px;
+      margin: 15px 0;
+    }
+
+    .tab-l3-set-2 {
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      font-weight: bold;
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: #689D9E;
+    }
+    .tab-l3-set-3 {
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      font-weight: bold;
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: #689D9E;
+    }
+    .tab-l3-set-l{
+      border-top-left-radius:     10px 10px;
+      border-bottom-left-radius:  10px 10px;
+      border: 1px solid #689D9E;
+    }
+    .tab-l3-set-m{
+	  border-bottom: 1px solid #689D9E;
+      border-top: 1px solid #689D9E;
+    }
+    .tab-l3-set-r{
+      border-top-right-radius:     10px 10px;
+      border-bottom-right-radius:  10px 10px;
+      border: 1px solid #689D9E;
+    }
+
+
+    .nav-l3 a:hover, .nav-l3 a:visited, .nav-l3 a:link {
+      text-decoration: none;
+      color: #689D9E;
+    }
+
+
+    .nav-l3 .tab-l3-set-2.active {
+      background-color:#71B7B8;
+      border: 1px solid #71B7B8;
+      color: #ffffff;
+    }
+
+    .nav-l3 .tab-l3-set-3.active {
+      background-color:#71B7B8;
+      border: 1px solid #71B7B8;
+      color: #ffffff;
+    }
+
+
+.rate-nav-fix { margin: 10px 0;}
+    /* //20180815 L3共同設定 -------------------------------------------*/
+    /* //20180815 L3共同設定 -------------------------------------------*/
+
+
+/*footer 樣式-------------------------------*/
+.footer-wrap { position: fixed; bottom: 0;z-index: 888;}
+.footer-info{ width: 109vw; height: 64px; background-color: #ffffff; box-shadow: 0 -1px 2px 0 rgba(61, 73, 83, 0.24);}
+.footer-icon{ text-align: center;padding: 0; height: 64px; padding: 8px 0 7px; cursor: pointer;}
+.footer-info .active{ color: #4585c1;}
+
+
+footer .footer-info {
+    padding-right: 7px;
+    padding-left: 7px;
+    box-sizing: initial;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+footer .footer-info .footer-icon:last-child{
+    padding-right: 5px;
+}
+
+footer .footer-info .footer-icon          { width:19.3%; display:inline-block; overflow-y: hidden; white-space: nowrap; text-overflow: ellipsis; }
+footer .footer-info .footer-icon p        { font-size:1.4rem; }
+footer .footer-info .footer-icon p.active { color:#2b686a;  }
+
+/*Footer按鈕 樣式-------------------------------*/
+
+.i-account               { background: url(../image/icon/i-account.svg) no-repeat center 0;}
+.i-account.active        { background: url(../image/icon/i-account-active.svg) no-repeat center 0; }
+.i-authorization         { background: url(../image/icon/i-authorization.svg) no-repeat center 0; }
+.i-authorization.active  { background: url(../image/icon/i-authorization-active.svg) no-repeat center 0; }
+.i-home                  { background: url(../image/icon/i-home.svg) no-repeat center 0;}
+.i-home.active           { background: url(../image/icon/i-home.svg) no-repeat center 0; }
+.i-transaction           { background: url(../image/icon/i-transaction.svg) no-repeat center 0; }
+.i-transaction.active    { background: url(../image/icon/i-transaction-active.svg) no-repeat center 0; }
+.i-financial             { background: url(../image/icon/i-financial.svg) no-repeat center 0; }
+.i-financial.active      { background: url(../image/icon/i-financial-active.svg) no-repeat center 0; }
+.i-announcement          { background: url(../image/icon/i-announcement.svg) no-repeat center 0;}
+.i-announcement.active   { background: url(../image/icon/i-left-announcement.svg) no-repeat center 0;}
+.i-otp                   { background: url(../image/icon/i-otp.svg) no-repeat center 0;}
+.i-otp.active            { background: url(../image/icon/i-left-otp.svg) no-repeat center 0;}
+.i-setting               { background: url(../image/icon/i-setting.svg) no-repeat center 0;}
+.i-setting.active        { background: url(../image/icon/i-left-setting.svg) no-repeat center 0;}
+
+
+
+.i-home,.i-account,
+.i-authorization,
+.i-transaction,
+.i-financial,
+.i-home.active,
+.i-setting,
+.i-otp,
+.i-announcement,
+.i-account.active,
+.i-authorization.active,
+.i-transaction.active,
+.i-financial.active {
+    height: 23px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    display:block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-size:100% 100%;
+}
+.i-home,
+.i-home.active
+ {
+    height: 27px;
+    margin-top: 0px;
+}
+
+.tab_outer_wrap{
+    padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: white;
+}
+
+/*tab分頁  樣式*/
+
+.tab_nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+
+    /*圓弧形樣式*/
+    border: solid 1px #9b9b9b;
+    border-radius: 30px;
+    padding:0;
+}
+
+
+.tab_nav div {
+    line-height: 35px;
+    text-align: center;
+    height: 35px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    /**/
+}
+
+.tab_nav{  background: white; margin-top: -10px }
+.tab_nav div {padding-left: 5px; padding-right: 5px;}
+.active_button { font-weight: normal !important;}
+
+
+/* Tab 選擇項目有4組時*/
+
+.tab_nav_disabled {  opacity: 0.3;  }
+.tab_nav_disabled:hover{  opacity: 0.3;  }
+.tab_disabled { color: rgba(61, 73, 83, .3);}
+
+
+
+.tab_nav div { line-height: 40px; height: 40px; border-radius: 40px;}
+
+
+.tab_wrap{
+
+    height: 54px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-left: -15px;
+    padding: 0 40px;
+    background: white;
+    margin-top: -1px;
+}
+
+
+/**/
+
+.tab_outer_wrap{
+    padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: white;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* 20180716 tab-swiper 共用-------------------------------------------------------------------------*/
+/* 20180716 tab-swiper 共用-------------------------------------------------------------------------*/
+
+.container-ct-slider {
+    margin: 0 auto;
+    width: 100%;
+    color: #333;
+    background: transparent;
+    position: absolute;
+    top: 58px;
+}
+
+.slick-list{
+    padding: 0 !important;
+    /*background: transparent;*/
+}
+
+.ct-slid-nav .slick-slide{
+    border-bottom: 5px solid rgba(86, 180, 191, 0.31);
+    text-align: center;
+    color: white;
+    background: transparent;
+
+}
+.ct-slid-nav .slick-slide.slick-current{
+    border-bottom: 5px solid #ffb400;
+
+}
+
+.ct-slid-nav {
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: white;
+
+}
+
+
+/* //20180716 tab-swiper 共用-------------------------------------------------------------------------*/
+/* //20180716 tab-swiper 共用-------------------------------------------------------------------------*/
+
+
+
+
+/* 20180716 card-timeline頁---------------------------------------------------------------------------------*/
+/* 20180716 card-timeline頁---------------------------------------------------------------------------------*/
+
+
+/* 20180716 timeline-卡片樣式--------------------------*/
+/* 20180716 timeline-卡片樣式--------------------------*/
+
+.card-timeline {
+    margin:0px;
+    background-color: white;
+    border-radius: 5px;
+    border-left: 5px solid #1e696b;
+    box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+}
+
+/* 20180716 timeline-卡片 checkbox樣式 清除/設定--------------------------*/
+
+
+.ct-radio, .ct-checkbox {
+    position: absolute;
+    display: none;
+}
+.ct-radio + label, .ct-checkbox + label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.item-title-style .ct-radio + label:before, .ct-checkbox + label:before {
+    background: transparent;
+}
+.ct-checkbox + label:before {
+    border-radius: 2px;
+}
+.ct-radio + label:before, .ct-checkbox + label:before {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    content: '';
+    background: #fff;
+    border: 2px solid #777;
+}
+.item-title-style .ct-radio + label:before, .ct-checkbox + label:before {
+    background: transparent;
+}
+.ct-checkbox + label:before {
+    border-radius: 5px;
+}
+.ct-radio + label:before, .ct-checkbox + label:before {
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    content: '';
+    background: #009688;
+    border: 2px solid #0a776d;
+
+    box-shadow: 0 0 0 4px #ffffff;
+
+}
+.ct-radio:checked + label:after, .ct-checkbox:checked + label:after {
+    display: block;
+}
+.ct-checkbox + label:after {
+    top: 7px;
+    right: 10px;
+    box-sizing: border-box;
+    width: 9px;
+    height: 18px;
+    transform: rotate(45deg);
+    -WEBKIT-transform: rotate(45deg);
+    border-width: 2px;
+    border-style: solid;
+    border-color: #fff;
+    border-top: 0;
+    border-left: 0;
+}
+.ct-radio + label:after, .ct-checkbox + label:after {
+    position: absolute;
+    display: none;
+    content: '';
+}
+
+
+/* 20180716 timeline-chekbox樣式--------------------------*/
+
+.timeline-year-title {
+     display: block;
+     width: 40px;
+     position: absolute;
+     top: 0px;
+     font-size: 1.6rem;
+     font-weight: bold;
+     color: #1A7778;
+     background-color: #f0f2f3;
+     box-sizing: border-box;
+     text-align: center;
+ }
+
+.timeline-checkbox-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.timeline-checkbox{
+    position: relative;
+    left: 8px;
+    top: 0px;
+}
+
+.timeline-date-bk{
+    text-align: center;
+    line-height: 42px;
+}
+.timeline-date-bk p{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #0a776d;
+    padding:0;
+    color: #ffffff;
+}
+
+
+.timeline-checkbox .ct-checkbox + label, .timeline-checkbox .ct-checkbox + label {
+    line-height: 32px;
+    height:32px;
+}
+
+/* //END  20180716 card-timeline頁---------------------------------------------------------------------------------*/
+/* //END  20180716 card-timeline頁---------------------------------------------------------------------------------*/
+
+
+/* 20180832 timeline-checkbox-樣式-----------------------------------------------------*/
+/* 20180832 timeline-checkbox-樣式-----------------------------------------------------*/
+
+
+.ct-timeline-checkbox{
+    position: absolute;
+    display: none;
+}
+.ct-timeline-checkbox + label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.timeline-checkbox .ct-timeline-checkbox + label, .timeline-checkbox .ct-timeline-checkbox + label {
+    line-height: 32px;
+    height: 32px;
+}
+.ct-timeline-checkbox + label:before {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    content: '';
+    border-radius: 6px;
+    background-color: #ffffff;
+
+    box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2), inset 0px 1.5px 3.5px 0 rgba(0, 0, 0, 0.21), 0 10px 0 0 #f0f2f3, 0 -10px 0 0 #f0f2f3;
+    border: solid 1.5px #107778;
+}
+.ct-timeline-checkbox + label:after {
+    top: 7px;
+    right: 10px;
+    box-sizing: border-box;
+    width: 9px;
+    height: 18px;
+    transform: rotate(45deg);
+    -WEBKIT-transform: rotate(45deg);
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-top: 0;
+    border-left: 0;
+}
+.ct-timeline-checkbox + label:after {
+    position: absolute;
+    display: none;
+    content: '';
+}
+
+.ct-timeline-checkbox:checked + label:after {
+    display: block;
+}
+
+/* timeline-checkbox- 設定選取後的底色改變 */
+.ct-timeline-checkbox[type=checkbox]:checked + label:before {
+    background-color: #1A7778;
+}
+
+
+/*//20180832 timeline-checkbox-樣式-----------------------------------------------------*/
+/*//20180832 timeline-checkbox-樣式-----------------------------------------------------*/
+
+
+
+/* 20180832 待授權/已授權頁 樣式----------------------------------------------------------*/
+/* 20180832 待授權/已授權頁 樣式----------------------------------------------------------*/
+
+.tag-wrap {
+    padding: 5px 0;
+}
+span.tag-grey {
+    padding: 3px 8px;
+    border: 2px solid #212b31;
+    color: #212b31;
+    font-weight: normal;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.cd-timeline__img.cd-timeline__img--picture.timeline-date-bk {
+    border-radius: 50%;
+    background-color: #1A7778;
+	margin-top: -25px; 
+}
+
+
+.cd-timeline__img.timeline-wau-date-bk{
+    background: #f0f2f3;
+}
+
+.timeline-wau-date-bk p{
+    font-size: 1.4rem;
+    text-align: center;
+    color: #107778;
+    font-weight: bold;
+    padding:5px 0;
+}
+
+/* //20180832 待授權/已授權頁 樣式----------------------------------------------------------*/
+/* //20180832 待授權/已授權頁 樣式----------------------------------------------------------*/
+
+
+
+
+/* 20180716 card-卡片共用樣式---------------------------------------------------------------------------------*/
+/* 20180716 card-卡片共用樣式---------------------------------------------------------------------------------*/
+
+
+/* 20180716 ctbc-tag共用-------------------*/
+.card-tag-wrap { /* 20180823 */
+    padding: 5px 0;
+    max-width: 26rem;
+}
+
+.card-tag-wrap span {
+    word-wrap: break-word;
+    overflow: hidden;
+    line-height: 2.5rem;
+}
+
+span.card-tag-yellow {
+    padding: 2px 13px;
+    border: 2px solid #ffd100;
+    background-color: #ffd100;
+    color: #000;
+    font-weight: normal;
+    border-radius: 10px;
+    margin-right: 5px;
+    font-size: 1.5rem;
+}
+span.card-tag-red {
+    padding: 2px 13px;
+    border: 2px solid #FB4F6E;
+    background-color: #FB4F6E;
+    color: #fff;
+    font-weight: normal;
+    border-radius: 10px;
+    margin-right: 5px;
+    font-size: 1.5rem;
+}
+span.card-tag-currency{
+    padding: 2px 13px;
+    border: 2px solid #107778;
+    background-color: #ffffff;
+    color: #107778;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-right: 5px;
+    font-size: 1.5rem;
+
+}
+span.card-tag-green {
+    padding: 2px 13px;
+    border: 2px solid #107778;
+    background-color: #ffffff;
+    color: #107778;
+    font-weight: normal;
+    border-radius: 10px;
+    margin-right: 5px;
+    font-size: 1.5rem;
+}
+
+
+/* 20180716 ctbc-卡片小字共用-------------------*/
+
+.card-font-s{
+    max-width: 8em;
+    font-size: 1.4rem;
+}
+ /* 20180823 卡片內文li文字 highlight顏色*/
+
+    .card-li-style .font-blue-highlight{
+      color: #2461aa;
+    }
+
+
+/* //END  20180716 card-卡片共用樣式---------------------------------------------------------------------------------*/
+/* //END  20180716 card-卡片共用樣式---------------------------------------------------------------------------------*/
+
+
+
+/* 20180716 待授權頁---------------------------------------------------------------------------------*/
+/* 20180716 待授權頁---------------------------------------------------------------------------------*/
+
+.section-content-tab {
+    position: absolute;
+    top: 108px;
+    bottom: 64px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 51px;
+}
+
+.section-content-tab-billcollection {
+    position: absolute;
+    top: 108px;
+    bottom: 64px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.section-content-tab-auth {
+    position: absolute;
+    top: 108px;
+    bottom: 64px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 51px;
+}
+
+
+
+.section-content-tab.wau-pg::after {
+
+    padding-bottom: 55px;
+    content: "";
+    display: block;
+
+}
+
+/* // 20180716 待授權頁---------------------------------------------------------------------------------*/
+/* // 20180716 待授權頁---------------------------------------------------------------------------------*/
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* 20180719 統一共用設定---------------------------------------------------------------------------------*/
+/* 20180719 統一共用設定---------------------------------------------------------------------------------*/
+
+
+
+/* 20180719 content-li 統一共用設定---------------------------------------------------------------------------------*/
+
+
+.content-li-container {
+	margin-top: 15px;
+	background: #ffffff;
+}
+/* 20180801 增加樣式 --------------------------------- */
+   .content-li-seperator-line {
+            border: .5px solid #8AA1AC;
+            margin: 5px 10px;
+   }
+
+.wrapper-padding-25 {
+    padding: 10px 10px;
+}
+
+.card-detail {
+    margin: 5px 20px;
+    background-color: white;
+    border-radius: 5px;
+    /* border-left: 5px solid #1e696b; */
+    box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+    /* border-bottom: 5px solid #1e696b; */
+    line-height: 24px;
+}
+
+
+.content-li-title-style {
+    padding: 17px 0 5px 0;
+    font-size: 1.7rem;
+    align-items: center;
+    border-bottom: solid 3px #FFD100;
+    font-weight: 500;
+    margin: 0;
+}
+
+.content-li-title-style p{
+    padding: 0 20px;
+}
+
+.content-li-detail-style {
+	padding: 5px 10px;
+	font-size: 1.6rem;
+	align-items: flex-start;
+}
+.content-li-detail-style .content-li-text-right.text-overflow-50 p{
+    color: #5b6c7a
+}
+.content-li-title-tag {
+	padding: 10px 5px;
+}
+.content-li-tag-left {
+	text-align: left;
+}
+.li-tag-green {
+    padding: 2px 12px;
+    border: 2px solid #107778;
+    background-color: #ffffff;
+    color: #107778;
+    font-size: 1.5rem;
+    font-weight: normal;
+    border-radius: 17px;
+}
+.li-font-s {
+	font-size: 1.4rem;
+}
+.content-li-rectangle {
+	border: 1.5px solid #bfbfbf;
+	border-radius: 2.5px;
+	padding: 5px 10px;
+}
+.content-li-text-left.text-overflow-50 {
+	width: 10em;/*11*/
+    word-break: break-all;
+    font-size: 16px;
+}
+.content-li-text-right.text-overflow-50 {
+	max-width: 11em;
+    word-break: break-all;
+}
+.content-li-text-right p{
+    font-size : 16px;
+}
+.content-li-text-left p{
+    font-size : 16px;
+}
+/* 20180719 ct 統一共用設定---------------------------------------------------------------------------------*/
+
+.bt-center-group {
+    text-align: center;
+    padding: 15px 0 25px 0;
+    margin: 0 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bt-more-group {
+    text-align: center;
+    padding: 15px 10px 15px 40px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.btn-more-load {
+    background-color: #e5f8f7;
+    border: 1px solid #74b4b5;
+    color: #74b4b5;
+    border-radius: 20px;
+}
+
+
+.bt-center-group-three {
+    text-align: center;
+    padding: 15px 0px 25px 0;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 頁面最上方若為按鈕 bt-group ，在bt-center-group後面加 bt-group-pgTop >>>   -------------- */
+
+.bt-group-pgTop{
+  padding: 15px 0 0 0;
+}
+
+.bt-group-pgCenter{  
+    padding: 12px 0 12px 0;  
+}
+
+.bt-group-pgBottom {
+    width: 100%;
+    height: 46px;
+    position: absolute;
+    bottom: 64px;
+    left: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 301;
+
+    /*透明度設定------------------------------------------*/
+    opacity: .9;
+
+}
+
+/* //頁面最上方若為按鈕 bt-group ，在bt-center-group後面加 bt-group-pgTop >>>   -------------- */
+
+        /* 20181114 裝置管理頁 -OTP 樣式----------------------------------------------------------*/
+        /* 20181114 裝置管理頁 -OTP 樣式----------------------------------------------------------*/
+
+        .status-setOtp {
+            width: 100%;
+            height: 160px;
+            position: relative;
+        }
+
+        .status-setOtp-bk {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center bottom;
+            position: absolute;
+            opacity: .3;
+        }
+
+        .status-setOtp-bk img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .status-setOtp-bk.active {
+            opacity: 1;
+            transition: all 1s ease;
+
+        }
+
+        .status-setOtp-image {
+            width: 120px;
+            height: 120px;
+            margin-top: 30px;
+            margin-bottom: 16px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center bottom;
+            position: absolute;
+            left: 50%;
+            margin-left: -65px;
+        }
+
+        .status-setOtp-content, .status-setOtp-info {
+            padding: 6px 50px;
+        }
+
+        .status-setOtp-content {  padding-top: 20px;  }
+
+        .status-setOtp-content p, .status-setOtp-info p {
+            text-align: center;
+            font-size: 1.6rem;
+            word-wrap: break-word;
+        }
+
+        .status-setOtp-content p {
+            color: #979797;
+        }
+
+        .status-setOtp-content.active p {
+            color: #107778;
+        }
+
+        /* 裝置管理頁 -OTP - 圖示翻轉----------------------------------------------------------*/
+
+        .otp-flip-wrap {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            perspective: 800px;
+            box-sizing: border-box;
+            position: absolute;
+            left: 50%;
+            margin-left: -15px;
+            top: 60px;
+        }
+
+        .otp-flip {
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transition: all 1s ease;
+            -webkit-transform-style: preserve-3d;
+        }
+
+        .otp-flip-side {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 1;
+        }
+
+        .front {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            /*width: 50%;*/
+            height: 70px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center bottom;
+
+        }
+
+        .back {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: rotateY(180deg);
+            box-sizing: border-box;
+            height: 70px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center bottom;
+        }
+
+        .otp-flip.active {
+            -webkit-transform: rotateY(180deg);
+            -webkit-transform-origin: center;
+        }
+
+.btn{
+    outline-width: 0;
+    outline-style: none;
+    outline: none !important;
+}
+.btn.focus, .btn:focus, .btn:hover {
+    color: #fff;
+    text-decoration: none;
+	background-color: transparent;
+}
+
+.btn-confirm, .btn-confirm, .btn-cancel, .btn-disable, .btn-more-load {
+    padding: 10px 0;
+    width: 100%;
+    line-height: normal;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+.btn-cancel {
+    border-radius: 10px;
+    background: #fff;
+    border-left: 1px solid #107778;
+	border-right: 1px solid #107778;
+    border-top: 1px solid #107778;
+    border-bottom: 1px solid #107778;
+    color: #107778;
+}
+
+
+
+.btn-confirm {
+    border-radius: 10px;
+    background-color: #107778;
+    color: #fff;
+    float: none;
+}
+
+.btn-confirm:hover {
+    color: #fff;
+}
+
+.btn-confirm:hover, .btn-confirm:active, .btn-confirm:focus {
+    background-color: #107778;
+    color: #fff;
+    outline: none;
+    /* padding: 10px 55px; */
+}
+
+.btn-cancel:hover, .btn-cancel:active, .btn-cancel:focus {
+    background: #fff;
+    /* padding: 10px 55px; */
+    color: #107778;
+}
+
+
+.btn-disable{    
+	border-radius: 10px;
+    background-color: #bfbfbf;
+    color: #fff;
+    float: none;
+}
+
+.btn-disable:hover, .btn-disable:active, .btn-disable:focus {
+    background: #bfbfbf;
+    /* padding: 10px 55px; */
+    color: white;
+}
+.bt-inner-group-l {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bt-inner-group-r{  width: 45%;  }
+
+
+.bt-inner-group-r{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.btn-inner-group-s{
+    padding: 10px 0;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+.btn-inner-group-s.btn-cancel {
+    padding: 10px 0;
+    width: 50%;
+    margin: 0;
+    /*border-radius: 0;*/
+}
+
+
+.bt-center-group .btn-disable, .bt-center-group .btn-confirm {
+    margin-right: 10px;
+}
+.btn-inner-group-s.btn-disable {
+    padding: 10px 0;
+    width: 50%;
+    margin: 0;
+    border-radius: 0;
+}
+.btn-inner-group-s.btn-disable.btn-cancel-l {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+   margin-right: 0px;
+    border-right: 1px solid #fff;
+}
+
+.btn-inner-group-s.btn-disable.btn-cancel-r {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.btn-inner-group-s.btn-confirm{  width: 100%;  }
+.btn-inner-group-s.btn-cancel { width: 100%;}
+
+
+.btn-inner-group-s.btn-confirm:hover, .btn-inner-group-s.btn-confirm:active, .btn-inner-group-s.btn-confirm:focus {
+    background-color: #107778;
+    color: #fff;
+    outline: none;
+    padding: 10px 0;
+    width: 100%;
+
+}
+
+.btn-inner-group-s.btn-cancel:hover, .btn-inner-group-s.btn-cancel:active, .btn-inner-group-s.btn-cancel:focus {
+    background: #fff;
+    padding: 10px 0;
+	outline: none;
+    width: 100%;
+    color: #107778;
+}
+.btn-inner-group-s.btn-disable:hover, .btn-inner-group-s.btn-disable:active, .btn-inner-group-s.btn-disable:focus {
+    background: #bfbfbf;
+    padding: 10px 0px;
+	outline: none;
+    width: 50%;
+    color: #fff;
+}
+.btn-inner-group-s.btn-more-load:hover, .btn-inner-group-s.btn-more-load:active, .btn-inner-group-s.btn-more-load:focus {
+    background: #e3f5f4;
+    padding: 10px 0;
+	outline: none;
+    width: 100%;
+    color: #71b7b8;
+}
+
+
+/*新增*/
+.bt-center-group .btn-cancel{
+    margin-right: 10px;
+}
+
+.bt-center-group-three .bt-inner-group-l{
+    margin-right: 10px;
+
+}
+
+.btn-inner-group-s.btn-cancel.btn-cancel-l{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 0;
+    margin-right: -1px;
+	width: 50%;
+}
+
+.btn-inner-group-s.btn-cancel.btn-cancel-r{
+    border-top-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 10px;
+    width: 50%;
+}
+
+.btn-pgBottom-cancel{
+
+    border: 1px solid #107778;
+    border-radius: 0;
+    color: #107778;
+
+}
+
+.btn-pgBottom-confirm{
+    border: 1px solid #107778;
+    border-radius: 0;
+    background-color: #107778;
+    color: #FFFFFF;
+}
+
+/* 20180725 accordion 共用設定 --------------------------------------*/
+
+/*accordion 套件 --------------------------------------*/
+
+.accordion-outer-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.accordion {
+    /*原設定*/
+    /*margin: 15px 0;*/
+    /*padding: 0;*/
+    /*color: #373737;*/
+    /*box-sizing: border-box;*/
+    /*background-color: white;*/
+
+    /*新設定*/
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+    min-height: 45px;
+    height: auto;
+    padding: 0 15px 0 15px;
+    /* background: #8e44ad; */
+    border-bottom: 1px solid #f0f2f3;
+    border-top: 1px solid #f0f2f3;
+    cursor: pointer;
+
+}
+
+.accordion-title h3 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-size: 1.5rem;
+    text-decoration: none !important;
+    font-weight: 500;
+}
+
+.accordion-title .tick {
+    font-size: 0;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 9px solid black;
+    margin-left: auto;
+}
+
+.accordion-title.active .tick {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 9px solid black;
+    margin-top: 7px;
+}
+
+.accordion-content {
+    /*padding: 10px 12px 10px 12px;*/
+    /*margin: 10px 0 10px 0*/
+
+    box-sizing: inherit;
+
+    display: none;
+
+    /*顯示動態效果------------*/
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+    /*max-height: 0;*/
+    /*margin: 0;*/
+    /*transition: all .2s linear;*/
+    /*moz-transition:all .2s linear; !* Firefox 4 *!*/
+    /*-webkit-transition:all .2s linear; !* Safari and Chrome *!*/
+    /*-o-transition:all .2s linear; !* Opera *!*/
+    /*  /// 顯示動態效果------------*/
+
+
+
+}
+
+.accordion-content.active {
+
+    display: flex;
+
+    /*顯示動態效果------------*/
+    /*max-height: 100%;*/
+    /*visibility: visible;*/
+    /*opacity: 1;*/
+    /*  /// 顯示動態效果------------*/
+    padding: 0 15px;
+
+}
+
+.accordion-content p {
+    padding: 0 0;
+    margin: 0 0 0 0;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+/*accordion 套件  //END--------------------------------------*/
+
+.accordion div.accordion-title:nth-child(4n+1) {
+    background-color: #dcf2f1;
+}
+.accordion-inner-detail {
+    padding: 10px 10px 10px 0;
+    text-align: left;
+    /* padding-right: 15px; */
+}
+
+.accordion-inner-detail li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+.accordion-title-date {
+    padding: 0;
+    text-align: left;
+    padding-right: 6px;
+}
+
+.accordion-title-name {
+    padding: 0;
+    text-align: left;
+    padding-right: 6px;
+}
+
+.accordion-title-amount {
+    padding: 0;
+    text-align: right;
+    padding-right: 15px;
+    font-weight: normal;
+}
+
+
+.accordion-title-amount.font-blue-highlight p {
+    color: #2461aa;
+}
+
+.accordion-title-amount.font-red-highlight p {
+    color: #ff0000;
+}
+
+
+i.fa-angle-up {
+    font-size: 2.6rem;
+    color: #3d4953;
+}
+
+i.fa-angle-down {
+    font-size: 2.6rem;
+    color: #3d4953;
+}
+
+
+.accordion-title-icon {
+    margin-left: auto;
+}
+
+.accordion-title.active .accordion-title-icon {
+    margin-top: 0;
+    transform: rotate(180deg);
+}
+
+.accordion-month-title{
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.86;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: #006a6a;
+    background-color: transparent;
+}
+/* 20180823 文字折行設定--------------------*/
+
+.accordion-li-text-l{
+    padding: 0;
+    max-width: 5em;
+    padding-right: 6px;
+}
+
+.accordion-li-text-l p{
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.accordion-li-text-r{
+    padding: 0;
+    min-width: 9em;
+    max-width: 11em;
+    padding-right: 5px;
+}
+
+.accordion-li-text-r p{
+    word-wrap: break-word;
+    text-align: right;
+}
+.accordion-month-title-text{
+    max-width: 100%;
+}
+
+.accordion-month-title-text b {
+    color: #1A7778;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.accordion-month-title-time {
+    max-width: 12rem;
+}
+
+.accordion-month-title-time p{
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+/*.accordion-title-date p ,.accordion-title-name p, .accordion-title-amount p {  width: 100%;  }*/
+
+.accordion-title-date p ,.accordion-title-name p{
+    word-wrap: break-word;
+    overflow: hidden;
+}
+/* // 20180823 文字折行設定--------------------*/
+
+/* 20180824 accordion 種類2 共用設定 --------------------------------------*/
+/* 20180824 accordion 種類2 共用設定 --------------------------------------*/
+
+.accordion2-section {
+    margin-top: 10px;
+}
+
+.accordion2-sub-title{
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.86;
+    text-align: left;
+    background-color: transparent;
+}
+
+.accordion2-sub-title-col1 {
+    padding: 0;
+    text-align: left;
+    padding-right: 6px;
+}
+
+.accordion2-sub-title-col2 {
+    padding: 0;
+    text-align: left;
+    padding-right: 6px;
+}
+
+.accordion2-sub-title-col3 {
+    padding: 0;
+    text-align: right;
+    padding-right: 15px;
+    font-weight: normal;
+}
+
+.accordion2-sub-title-col4 {
+    padding: 0;
+    text-align: right;
+    font-weight: normal;
+}
+
+.accordion2-sub-title-col1 p, .accordion2-sub-title-col2 p,.accordion2-sub-title-col3 p {
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.accordion2-inner-detail {
+    padding: 10px 10px 10px 0;
+    text-align: left;
+    /* padding-right: 15px; */
+}
+
+.accordion2-inner-detail li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.accordion2-inner-detail .accordion-li-text-l{
+    max-width: 6em;
+}
+
+
+/* //20180824 accordion 種類2 共用設定 --------------------------------------*/
+/* //20180824 accordion 種類2 共用設定 --------------------------------------*/
+
+/* // accordion 共用設定 --------------------------------------*/
+/* 20180824 accordion 種類3 共用設定 --------------------------------------*/
+/* 20180824 accordion 種類3 共用設定 --------------------------------------*/
+
+.accordion3-outer-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.accordion3 {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion3 div.accordion-title:nth-child(odd){
+    background-color: #dcf2f1;
+}
+
+.accordion3 .accordion-title:nth-child(even){
+    background-color: #ffffff;
+}
+
+.accordion3-section {
+    margin-top: 20px;
+}
+
+.accordion3-sub-title {
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.86;
+    text-align: left;
+    background-color: transparent;
+}
+
+.accordion3-sub-title-col1 {
+    padding: 0;
+    text-align: left;
+    padding-right: 6px;
+}
+
+.accordion3-sub-title-col2 {
+    padding: 0;
+    text-align: right;
+    font-weight: normal;
+}
+
+.accordion3-title-num {
+    padding: 0;
+    text-align: left;
+    padding-right: 6px;
+}
+
+.accordion3-title-amount {
+    padding: 0;
+    text-align: right;
+    font-weight: normal;
+}
+
+.accordion3-sub-title-col1 p, .accordion3-sub-title-col2 p,.accordion3-title-num p, .accordion3-title-amount p{
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+
+/* //20180824 accordion 種類3 共用設定 --------------------------------------*/
+/* //20180824 accordion 種類3 共用設定 --------------------------------------*/
+
+
+
+
+/* // accordion 共用設定 --------------------------------------*/
+
+
+
+/* 20180727 版面共用classname 共用設定 --------------------------------------*/
+
+/* 版面共用classname  */
+
+
+
+
+.page-separator-35{
+    width: 100%;
+    height: 35px;
+    background-color: #F0F2F3;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+/* // 20180727 版面共用classname 共用設定 --------------------------------------*/
+
+/* 20180804 版面共用classname 共用設定 --------------------------------------*/
+.form-seperator-line {
+      border: 1px solid #8AA1AC;
+      margin: 0 20px;
+    }
+ /* ct 備註樣式 共用設定--------------------------------- */
+    .memo-info {
+      width: 100%;
+      padding: 10px 20px 25px 20px;
+      height: auto;
+      min-height: 133px;
+    }
+    .memo-info-list{
+      list-style-type: none;
+    }
+    .memo-info-list li{
+      font-size: 1.4rem;
+      line-height: 1.43;
+      color: #606a6f;
+      text-align: left;
+    }
+    .memo-info-list-title{
+      font-weight: bold;
+		padding-bottom: 5px;
+    }
+
+ 
+
+
+
+    /* // ct 備註樣式 共用設定--------------------------------- */
+
+/* //20180804 版面共用classname 共用設定 --------------------------------------*/
+
+
+/* 20180815 版面共用classname 共用設定 --------------------------------------*/
+  /*  select pop樣式 共用設定--------------------------------- */
+.form-control { color:#979797;}
+.form-control:focus {
+    background-color: transparent;
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+.select-pop-label {
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: #3d4953;
+	margin-bottom: 2px;
+	margin-left: 10px;
+}
+
+.select-inline-label {
+    font-size: 1.6rem;
+	line-height: 1.6rem;
+    font-weight: normal;
+    color: #3b4650;
+    margin-right: 25px;
+	margin-bottom: 0;
+}
+
+    .input-group {
+    border-radius: 6px;
+    font-size: 1.6rem;
+    text-align: left;
+    padding-left: 0;
+    padding: 12px 15px;
+    width: 100%;
+}
+   .select-date-input {
+    background: transparent;
+    border: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 1.6rem;
+	text-align: left;
+    font-weight: normal;
+    height: auto;
+    padding: 0;
+}
+
+.select-date-input-group, .select-amount-input-group{
+border: #107778 1px solid;	
+}
+
+/* 搜尋列 */
+
+.select-search-input {
+    background: transparent;
+    border: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 1.6rem;
+    text-align: left;
+    font-weight: normal;
+    height: auto;
+    padding: 0 10px 0 0;
+	
+}
+.select-icon-input {
+    background: transparent;
+    border: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 1.6rem;
+    text-align: left;
+    font-weight: normal;
+    height: auto;
+    padding: 0 ;
+}
+.search-input-group {
+    width: 100%;
+    text-align: left;
+	border-bottom: 2px solid #979797;
+    border-radius: 0;
+	padding: 6px 10px;
+}
+
+/* 新增幣別特殊樣式 */
+.currency-style {
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    padding: 10px;
+    background: #ebecee;
+    border-radius: 20px;
+	border-bottom: none;
+}
+.currency-style .input-group-addon {
+
+    color: #838383;
+
+}
+
+
+/* 篩選按鈕 */
+
+.filter {
+	width: 50px;
+	cursor: pointer;
+}
+.filter a {
+	display: block;
+	text-decoration: none;
+	height: 50px;
+	width: 100%;
+	line-height: normal;
+}
+
+
+/* //20180815 版面共用classname 共用設定 --------------------------------------*/
+/* 20180816 ct-content-card 滿版卡片共同版型-------------------------------------*/
+        /* 20180816 ct-content-card 滿版卡片共同版型-------------------------------------*/
+        .ct-content-card{
+            background-color: white;
+            padding: 10px 20px;
+            width: 100%;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .ct-content-card-row{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .content-card-l-wrap{
+            margin-right:20px;
+        }
+        .content-card-m-wrap{
+            width: 64%;
+            margin-right: 6px;
+        }
+        .content-card-r-wrap{
+            margin-left: 4px;
+        }
+        /* //ctbc-info-list 共同版型-------------------------------------*/
+        /* //ctbc-info-list 共同版型-------------------------------------*/
+
+
+/* 20180817 tab 共用版型---------------------------------------------*/
+/* 20180817 tab 共用版型---------------------------------------------*/
+
+/* 此版型文字字數有限制 ---------------------------------------------*/
+
+a:hover, a:visited, a:link, a:active {
+    /*做到只设置一次，就可以使所有a标签的四种状态都和本身颜色保持一致，样式代码该怎么写*/
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.l2-tab-wrapper{
+    background-color: transparent;
+    position: absolute;
+    top: 58px;
+    width: 100%;
+}
+
+.l2-tab-container{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.l2-tab-container__overflowhidden {
+    width: 90%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 50px;
+}
+
+.l2-tab-container__block {
+    height: 100%;
+    width: 169%;
+    display: flex;
+}
+
+.l2-tab-set{
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.7rem;
+    border-bottom: 5px solid rgba(86, 180, 191, 0.31);
+    color: white;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    display: block;
+}
+
+.l2-tab-single{
+    display: inline-block;
+    width: 100%;
+}
+
+.l2-tab-set.active{
+    border-bottom: 5px solid #FFD100;
+    font-weight: bold;
+}
+
+.l2-tab-wrapper .l2-tab-container .l2-tab-set a{
+    display: block;
+    margin-top: 0;
+    line-height: 1.2;
+    color: inherit;
+}
+
+/* // 20180817 tab 共用版型---------------------------------------------*/
+/* // 20180817 tab 共用版型---------------------------------------------*/
+
+/*  20180824 L2 tab 3個以上 共用版型---------------------------------------------*/
+/*  20180824 L2 tab 3個以上 共用版型---------------------------------------------*/
+
+	.col-tab-30 { width: 30%;}
+    .col-tab-10 { width: 10%;}
+
+    .l2-tab-more {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+		height: 50px;
+		border-bottom: 5px solid rgba(86, 180, 191, 0.31);
+      }
+    .l2-tab-more .fa-chevron-right {
+        width: 23px;
+        height: 23px;
+        line-height: 23px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 2.3rem;
+        -webkit-text-stroke: 3px #107778;
+        position: absolute;
+        top: 50%;
+        margin-top: -12px;
+        right: 50%;
+        margin-right: -12px;
+}
+
+.l2-tab-more .fa-chevron-down {
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 2.3rem;
+    -webkit-text-stroke: 3px #107778;
+    position: absolute;
+    /* top: 50%; */
+    margin-top: -12px;
+    right: 50%;
+    margin-right: -12px;
+    color: #fff;
+    top: 45%;
+}
+
+/*  //20180824  L2 tab 3個以上 共用版型---------------------------------------------*/
+/*  //20180824  L2 tab 3個以上 共用版型---------------------------------------------*/
+
+
+/* 20180828   CT-POPUP共用架構  -----------------------------------------*/
+/* 20180828   CT-POPUP共用架構  -----------------------------------------*/
+
+.shadow {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition:  all .5s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+}
+
+.shadow.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.pop-box-container {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10002;
+            /* display: none; */
+            visibility: hidden;
+            opacity: 0;
+            /* transition: all .5s cubic-bezier(0.000, 0.995, 0.990, 1.000); */
+        }
+.pop-box-container.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.pop-box-area {
+    position: absolute;
+    left: 0;
+    top: 90px;
+    width: 100%;
+    bottom: 0;
+    background-color: white;
+    /* border: 3px solid pink; */
+}
+
+.pop-close-bt {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: -50px;
+
+    /*border: 1px solid navy;*/
+
+}
+
+/* 非滿版置中pop */
+.pop-middle-box-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 10002;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.pop-middle-box-container.active{
+    visibility: visible;
+    opacity: 1;
+}
+.pop-middle-box-container .pop-bt-group {
+    position: relative; 
+
+}
+.pop-middle-box-area {
+    left: 0;
+    top: 0;
+    align-self: center;
+    width: 85%;
+    margin: 20px auto;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+}
+
+.i-close {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../assets/design/image/icon/i-close-bt.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.pop-bt-group{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 46px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.pop-content-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/*pop標題設定  pop-title為第一層所使用  pop-title-l2為第二層所使用 pop-title-default為第二層所使用*/
+.pop-title,.pop-title-l2,.pop-title-default {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 3px solid #107778;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.pop-title p {
+    font-size: 1.7rem;
+    color: #107778;
+    font-weight:bold;
+}
+
+.pop-title-l2 p {
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #107778;
+    font-weight: bold;
+    padding-left: 50px;
+    width: 100%;
+    position: relative;
+    left: -20px;
+}
+.pop-title-default p {
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #107778;
+    font-weight: bold;
+    padding-left: 50px;
+    width: 100%;
+    position: relative;
+    left: -20px;
+}
+
+.pop-nav-l3 {  width: 100%;  }
+.pop-content {
+    width: 100%;
+    /* margin: 0; */
+    /* padding: 0; */
+    overflow: scroll;
+    /* height: 100%; */
+    /* margin-top: 45px; */
+    position: relative;
+    top: 0;
+    margin-bottom: 46px;
+}
+
+
+.btn-pop-cancel{
+    border: 1px solid #1e9fa0;
+    border-radius: 0;
+    color: #1e9fa0;
+}
+
+.btn-pop-confirm{
+    border: 1px solid #1e9fa0;
+    border-radius: 0;
+    background-color: #1e9fa0;
+    color: #FFFFFF;
+}
+
+/* //20180828   CT-POPUP共用架構  -----------------------------------------*/
+/* //20180828   CT-POPUP共用架構  -----------------------------------------*/
+
+
+/* 20180903   明細頁 公司資訊共用架構  -----------------------------------------*/
+/* 20180903   明細頁 公司資訊共用架構  -----------------------------------------*/
+
+.info-li-wrapper {
+
+}
+
+.info-li-title-style {
+    padding: 17px 0 5px 0;
+    font-size: 1.6rem;
+    align-items: center;
+    border-bottom: solid 3px #ffc107;
+    font-weight: 500;
+    margin: 0;
+}
+
+.info-li-title-style p{
+    padding: 0 20px;
+}
+
+.info-li-detail-style {
+	padding: 3px 10px;
+	font-size: 1.5rem;
+	align-items: flex-start;
+}
+.info-li-detail-style .info-li-text-right.text-overflow-50 p{
+    color: #5b6c7a
+}
+.info-li-title-tag {
+	padding: 8px 5px;
+}
+
+.info-li-text-left {
+    /* max-width: 6rem; */
+}
+
+.info-li-title-style .info-li-text-left{
+   max-width: 100%;
+}
+
+.info-li-text-right {
+  text-align: right;
+  max-width: 21rem;
+}
+.info-li-text-left p,.info-li-text-right p{
+   word-wrap: break-word;overflow: hidden
+}
+.info-li-tag-left {
+	text-align: left;
+}
+.info-tag-green {
+    padding: 4px 12px;
+    border: 1px solid #107778;
+    color: #107778;
+    background: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 12px;
+}
+
+/* //20180903   明細頁 公司資訊共用架構  -----------------------------------------*/
+/* //20180903   明細頁 公司資訊共用架構  -----------------------------------------*/
+
+
+/* 20181222 ipad header  文字調整 -----------------------------------------*/
+/* 20181222 ipad header  文字調整 -----------------------------------------*/
+
+
+@media only screen and (min-width:415px){
+    header.main_nav{
+        /* height: 75px; */
+        /* line-height: 73px; */
+    }
+    .sidemenu a {
+        line-height: 75px;
+        }
+
+    .page_title {
+        margin: 15px auto 0 auto;    
+    }
+
+    .notice a {
+        line-height: 75px;
+    }
+
+    .notice.active a:before {
+        top: 20px;
+    }
+
+    .page_title.header_bg {
+        margin: 20px auto 0 auto;
+    }
+
+    .pageback a {
+        line-height: 75px;
+    }
+}
+
+/* //20181222 ipad header  文字調整 -----------------------------------------*/
+/* //20181222 ipad header  文字調整 -----------------------------------------*/

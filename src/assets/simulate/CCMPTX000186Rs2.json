@@ -1,0 +1,97 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000186Rs",
+    "RqUID": "20180802180922",
+    "Timestamp": "20180802180922",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": { 
+              "TxnId": "CCMPTX000186Rs",
+              "Result": 4001,
+              "Desc": "結果說明",
+              "UserParaList" : 
+              [
+                {
+                  "Id":"S001_idUser",
+                  "Value":"zhTW"
+                }, 
+                {
+                  "Id":"S002_idUser",
+                  "Value":"TWD"
+                },
+                {
+                  "Id":"T001_NA01_idUser",
+                  "Value":"1"
+                },
+                {
+                  "Id":"T001_NA02_idUser",
+                  "Value":"1"
+                },
+                {
+                  "Id":"T001_NA03_idUser",
+                  "Value":"0"
+                },
+                {
+                  "Id":"T001_NB01_idUser",
+                  "Value":"1"
+                },
+                {
+                  "Id":"T001_NB02_idUser",
+                  "Value":"1"
+                },
+                {
+                  "Id":"T001_NB03_idUser",
+                  "Value":"1"
+                },
+                {
+                  "Id":"T001_NB04_idUser",
+                  "Value":"0"
+                },
+                {
+                  "Id":"T001_NB05_idUser",
+                  "Value":"1"
+                },
+                {
+                  "Id":"T001_NB06_idUser_12345000_MAX",
+                  "Value":"1000000"
+                },
+                {
+                  "Id":"T001_NB06_idUser_12345000_MIN",
+                  "Value":"10000"
+                },
+                {
+                  "Id":"T001_NB06_idUser_12345600_MAX",
+                  "Value":"2000000"
+                },
+                {
+                  "Id":"T001_NB06_idUser_12345600_MIN",
+                  "Value":"20000"
+                },
+                {
+                  "Id":"T001_NB06_idUser_12345670_MAX",
+                  "Value":"3000000"
+                },
+                {
+                  "Id":"T001_NB06_idUser_12345670_MIN",
+                  "Value":"30000"
+                },
+                {
+                  "Id":"T001_NC01_idUser",
+                  "Value":"0"
+                },
+                {
+                  "Id":"T001_NC02_idUser",
+                  "Value":"0"
+                },
+                {
+                  "Id":"T001_NU01_idUser",
+                  "Value":"0"
+                }
+              ]
+            }
+  }
+}

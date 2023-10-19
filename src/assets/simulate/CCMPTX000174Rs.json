@@ -1,0 +1,122 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000174Rs",
+    "RqUID": "20180906180000",
+    "Timestamp": "20180906180000",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000174Rs",
+      "Result": 4001,
+      "Desc": "nothing",
+      "NotifyInfoList": [
+        {
+          "Status": "0",
+          "ProductId": "MS02",
+          "UDFList": [
+            {
+              "AcctCur": "TWD",
+              "Amount": "1000",
+              "AcctNo": "0000000000000000"
+            }
+          ]
+        },
+        {
+          "Status": "1",
+          "ProductId": "MS02",
+          "UDFList": [
+            {
+              "AcctCur": "TWD",
+              "Amount": "1000",
+              "AcctNo": "00000011100000000"
+            }
+          ]
+        },
+        {
+          "Status": "0",
+          "ProductId": "MS01",
+          "UDFList": [
+            {
+              "AcctCur": "TWD",
+              "MinAmount": "10000",
+              "AcctNo": "0000000000000000",
+              "MaxAmount": "1000000"
+            }
+          ]
+        },
+        {
+          "Status": "1",
+          "ProductId": "MS01",
+          "UDFList": [
+            {
+              "AcctCur": "TWD",
+              "MinAmount": "10000",
+              "AcctNo": "12345000",
+              "MaxAmount": "1000000"
+            },
+            {
+              "AcctCur": "TWD",
+              "MinAmount": "20000",
+              "AcctNo": "12345600",
+              "MaxAmount": ""
+            },
+            {
+              "AcctCur": "TWD",
+              "MinAmount": "",
+              "AcctNo": "12345670",
+              "MaxAmount": "3000000"
+            },
+            {
+              "AcctCur": "JPY",
+              "MinAmount": "",
+              "AcctNo": "12345678",
+              "MaxAmount": ""
+            },
+            {
+              "AcctCur": "USD",
+              "MinAmount": "",
+              "AcctNo": "09876543",
+              "MaxAmount": ""
+            }
+          ]
+        },
+        {
+          "Status": "1",
+          "ProductId": "MS03",
+          "UDFList": [
+            {
+              "AcctCur": "TWD",
+              "AcctNo": "0000000000000000",
+              "Amount": "1000"
+            }
+          ]
+        },
+        {
+          "Status": "1",
+          "ProductId": "MS04",
+          "UDFList": [
+            {
+              "AcctCur": "TWD",
+              "AcctNo": "0000000000000000"
+            }
+          ]
+        }
+        ,
+        {
+          "Status": "1",
+          "ProductId": "MS05",
+          "UDFList": [
+            {
+              "AcctCur": "TWD",
+              "AcctNo": "0000000000000000"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

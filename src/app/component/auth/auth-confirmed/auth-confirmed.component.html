@@ -1,0 +1,118 @@
+<!-- 背景固定長度無法適應統計數據、卡片長度的彈性變化 -->
+<div class="bg-fixed-340 bg-color-lightgray"></div>
+
+<section class="col-xs-12 section-content trans-result-pg" scrollTop>
+
+  <div class="row">
+    <div class="trans-result-sub-wrapper">
+      <div class="wau-sub-title">
+        <p>
+          {{'AUTH.EXPECT_AUTH_TRANS' | translate}}
+        </p>
+      </div>
+
+    </div>
+    <div class="trans-result-container">
+    <div class="list-card-style card-result" *ngIf="authOperationData.length == 1 ? false : true">
+      <ul>
+        <li class="card-li-style align-two-side">
+          <div class="card-text-left font-500-style">
+            <p>{{ 'AUTH.FIELD_TOTAL_RECORD' | translate }}</p>
+          </div>
+          <div class="card-text-right font-500-style">
+            <p>{{ authOperationData.length }}{{ 'AUTH.UNIT_RECORD' | translate }}</p>
+          </div>
+        </li>
+
+        <li class="card-inside-line-white"></li>
+
+        
+        <li class="card-li-money-l2 money-l2-space align-two-side" id = "pd-left-0"> 
+          <div class="card-li-money-l2-left font-500-style font-size-16">
+            <p>{{'AUTH.TOTAL_AMT' | translate}}({{'AUTH.ABOUT' | translate}}{{equivalentCurrency}})</p>
+          </div>
+          <div class="card-li-money-l2-right amount-l2-bold-style">
+            <b class="amount-number">{{ equivalentAmount | _currency:2 }}{{ exchangeError ? '(無法計算)' : ''}}</b>
+          </div>
+        </li>
+        
+        <li class="card-li-style">
+          <div class="card-text-left text-overflow-width-l-all font-500-style">
+            <p>{{'AUTH.ORIGINAL_CUR' | translate}}</p>
+          </div>
+        </li>
+
+        <li *ngFor="let key of keys" class="card-li-money-l2 money-l2-space align-two-side">
+          <div class="card-li-money-l2-left">
+            <p>∙ {{ key }}</p>
+          </div>
+          <div class="card-li-money-l2-right">
+            <b class="amount-number">{{ currencyStatistic[key] }}</b>
+          </div>
+        </li>
+
+        <li class="card-li-style">
+          <div class="card-text-right text-overflow-width-r-all font-size-14">
+            <p *ngFor="let key of keys">
+              {{ key == equivalentCurrency ? '' : ('1 ' + key + ' =')}}
+              {{ key == equivalentCurrency ? '' : exchangeTable[equivalentCurrency][key] | _currency:4 }}
+              {{ key == equivalentCurrency ? '' : (equivalentCurrency)}}
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="card-auth-result-wrapper">
+      <div class="card-text-right text-overflow-width-r-all font-size-14" id = "pd-right-20">
+        <p>{{ datetimeNow | _datetime:'yyyy/MM/dd hh:mm:ss' }}</p>
+      </div>
+    <ng-container *ngFor="let data of authOperationData; let i = index">
+        <app-auth-card [isAuthResult]="true" [isAuth]="false" [isMyAuth]="false" [isResultTag] = "false" [showDetailBtn]="true" [data]="data" (click)="onCardClick(i)"></app-auth-card>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="pop-li-flex row bg-color-lightgray">
+    <div class="select-pop-form-group pop-form-group pop-form-group-100">
+      <div class="select-date-input-wrapper">
+        <div class="input-group date select-date-input-group" id="">
+          <input maxlength="255" type="text" class="form-control select-date-input" [(ngModel)]="authReason" placeholder="{{'AUTH.DESCRIPTION' | translate}}">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row bg-color-lightgray" *ngIf="hasEtrustBatch">
+    <div class="rate-select-wrap select-flex-group">
+      <div class="select-row-group-up">
+        <div class="pop-checkbox"> <span>
+            <input class="ct-checkbox" type="checkbox" id="eTrust" [checked]="allowAuth" (click)="onETrustClick()" />
+            <label for="eTrust"></label>
+          </span> </div>
+        <p>
+          {{'AUTH.HAVED_LOGIN_INFO' | translate}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row bg-color-lightgray">
+    <div class="bt-center-group align-two-side">
+      <button type="button" class="btn btn-group-sm btn-cancel" (click)="onPreviousClick()">
+        {{'BTN.PREVIOUS' | translate}}
+      </button>
+      <button type="submit" class="btn btn-group-sm btn-confirm" [disabled]="!allowAuth" (click)="onAuthClick()">
+        {{'AUTH.CONFIRM_AUTH' | translate}}
+      </button>
+    </div>
+    <br>
+    <br>
+    <br>
+  </div>
+
+</section>

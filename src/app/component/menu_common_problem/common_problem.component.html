@@ -1,0 +1,105 @@
+<!-- <div class="fullscreen"> -->
+<!-- <div class="container-fluid container-bk-gree"> -->
+<!-- <div class="row"> -->
+<div class="bg-fixed-60 bg-color-lightgray">
+    <section class="col-xs-12 section-content qa-page" scrollTop dropReload>
+        <!-- FAQ Type List -->
+        <div class="row">
+            <div class="select-pop-group-style ">
+                <div (click)="onQAClick()" class="select-pop-form-group pop-form-group pop-form-group-100 ">
+                    <!-- 下拉 Start-->
+                    <div class="select-pop-bt-wrapper bt-wrapper-100">
+                        <button type="button" class="btn btn-default dropdown-toggle btn-selectline-pop" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <!-- 問題類型 -->
+                            <label class="select-inline-label">{{'PROBLEM.QA_TYPE' | translate}}</label>
+                            <!-- <select selectForpop class="select-pop-content" [(ngModel)]="QATypeSelected" (ngModelChange)="QATypeSelectChange()" 
+                                style="background:transparent;border-width:0px;appearance:none;-moz-appearance:none;-webkit-appearance:none;">
+                                全部
+                                <option [value]="'0'">{{'PROBLEM.ALL' | translate}}</option>
+                                <option *ngFor="let item of QATypeList" [value]="item">{{ item | _custom:'FAQ_QUESTTYPE'
+                                    | translate }}</option>
+                            </select> -->
+                            <span class="select-pop-content">{{selQAName | translate}}</span>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <!-- 下拉 End -->
+                </div>
+            </div>
+        </div>
+        <!-- 關鍵字搜尋 -->
+        <div class="row">
+            <div class="select-pop-group-style">
+                <div class="select-pop-form-group pop-form-group pop-form-group-100">
+                    <div class="select-date-input-wrapper">
+                        <div class="input-group search search-input-group" id="search">
+                            <span class="input-group-addon select-search-input">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </span>
+                            <form >
+                                <input maxlength="255" type="search" name="KeyWordInput" [(ngModel)]="KeyWord" (ngModelChange)="keyWordSearch()"  class="form-control select-search-input" placeholder="{{'PROBLEM.PLACEHOLDER_KEYWORD' | translate}}"
+                                    id="search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- FAQ Title -->
+        <div class="row">
+            <div class="sub-title">
+                <p>{{ QATypeTitle | _custom:'FAQ_QUESTTYPE' | translate }}</p>
+            </div>
+        </div>
+        <!-- FAQ List -->
+        <div *ngIf="pagerData!=undefined && pagerData.length > 0" >
+            <div class="row" *ngFor="let item of pagerData; let listIndex = index">
+                <div class="list-card-style card-ques-accordion">
+                    <div class="align-two-side">
+                        <div class="card-left-wrap-2">
+                            <ul>
+                                <li class="card-li-style">
+                                    <div class="card-tag-wrap">
+                                        <span class="card-tag-green">{{ item.QuestType | _custom:'FAQ_QUESTTYPE' | translate}}</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-right-icon-wrap-2 right-icon-ellipsis" (click)="ToggleClick(item)">
+                            <i class="{{item.ToggleClass}}" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="ques-pg-q" *ngIf="item.Question != ''">
+                        <p>Q：{{item.Question}}</p>
+                    </div>
+                    <div class="{{item.Class}}">
+                        <div class="ques-pg-a">
+                            <p>A：{{item.Answer}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!-- 沒有資料 -->
+        <app-no-data *ngIf="pagerData!=undefined && pagerData.length == 0"></app-no-data>
+        <!-- 載入更多按鈕 置於ngFor的最後一個 -->
+
+        <!-- 按鈕- 載入更多 -->
+        <div (click)="LoadPage()" *ngIf="showLoad" class="bt-more-group">
+            <div class="bt-inner-group-xl">
+                <button type="button" class="btn btn-inner-group-s btn-more-load">
+                    {{ 'BTN.RELOAD_MORE' | translate }}</button>
+            </div>
+        </div>
+        <!-- //按鈕- 載入更多 -->
+        <!-- 載入更多... -->
+
+    </section>
+</div>
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->

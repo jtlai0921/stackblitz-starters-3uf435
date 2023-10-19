@@ -1,0 +1,201 @@
+<!-- APP交易紀錄 start -->
+<div class="bg-fixed-105"></div>
+<section *ngIf="displayPage == 'Translog'" class="col-xs-12 section-content-tab cheque-deposit-pg" scrollTop dropReload>
+  <!-- TAB-L3 - 二選項 -->
+  <div class="row">
+
+    <div class="nav-l3">
+      <a href="javascript:void(0)" (click)="onSwitchClick('1')" class="col-xs-6 tab-l3-set-2 tab-l3-set-l active">
+        {{'TRANS_LOG.APP_TRANS_LOG' | translate}}
+      </a>
+      <a href="javascript:void(0)" (click)="onSwitchClick('2')" class="col-xs-6 tab-l3-set-2 tab-l3-set-r">
+        {{'TRANS_LOG.PRE_DESIGNATED_TRANSFER' | translate}}
+      </a>
+    </div>
+  </div>
+  <!-- // TAB-L3 - 二選項 ----------->
+
+  <!--表單popup種類9 - 90%+Filter -->
+  <div class="row">
+    <div class="select-pop-group-style select-pop-group-style-row">
+      <!-- Filter top start -->
+      <div (click)="onCompanyClick()" class="select-pop-form-group pop-form-group-l pop-form-group-90">
+        <!-- 下拉 Start-->
+        <div class="select-pop-bt-wrapper bt-wrapper-100">
+          <button type="button" class="btn btn-default dropdown-toggle btn-selectline-pop" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span class="select-pop-content">{{selAccount | translate}}</span>
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+        <!-- 下拉 End -->
+      </div>
+      <!-- Filter top end -->
+
+      <!-- Filter bottom start -->
+      <!-- Filter icon start -->
+      <div class="select-pop-form-group pop-form-group-r pop-form-group-10" (click)="filterClick()">
+        <div class="select-pop-input-wrapper link-wrapper">
+          <p class="content-li-text-ct-style"><i class="icon-filter"></i></p>
+        </div>
+      </div>
+      <!-- Filter icon end -->
+      <!-- Filter bottom end -->
+
+    </div>
+  </div>
+
+  <!--accordion 外框架 -->
+  <div class="row">
+    <div class="accordion-section" *ngIf="txnRecMonthlyGroupArray != undefined && txnRecMonthlyGroupArray.length > 0">
+
+      <ng-container *ngFor="let group of txnRecMonthlyGroupArray;let i = index">
+        <!-- accordion 種類1 -->
+        <!-- accordion 月份title -->
+        <div class="col-xs-12 align-two-side accordion-month-title">
+          <div class="accordion-month-title-text">
+            <b>{{group.Year}}{{'TRANS_LOG.YEAR' | translate}}{{group.Month}}{{'TRANS_LOG.MONTH' | translate}}</b>
+          </div>
+          <div class="accordion-month-title-time" *ngIf="group.IsFirstMonth">
+            <p>{{queryDate}}</p>
+          </div>
+        </div>
+        <!-- //accordion 月份title -->
+
+        <div class="accordion-outer-container">
+          <div class="accordion">
+
+            <ng-container *ngFor="let transaction of group.Transactions;let j = index">
+              <!--詳細資料單筆-->
+              <div class="accordion-title {{ transaction.openFlag ? 'active' : '' }}" (click)="onTransactionSelected(i, j)">
+                <div class="col-xs-2 accordion-title-date">
+                  <p>{{transaction.DisplayDate}}</p>
+                </div>
+
+                <div class="col-xs-12 accordion-title-amount font-blue-highlight info-li-tag-left">
+                  <!-- 交易類型 + 交易狀態 -->
+                  <div>{{transaction.DisplayType}} {{ 'TXN_STATUS.TXN_STATUS_' + transaction.TxnRec.TxnDetList[0].TxnStatus | translate}}</div>
+                  <!-- 幣別 + 金額 -->
+                  <p>{{transaction.TxnRec.TxnDetList[0].DebitCur}} {{transaction.Amount | _currency}}</p>
+                </div>
+                <div class="accordion-title-icon">
+                  <i class="fa fa-angle-right " aria-hidden="true"></i>
+                </div>
+
+              </div>
+
+              <div class="accordion-content {{ transaction.openFlag ? 'active' : '' }}">
+                <ul class="col-xs-9 col-xs-offset-2 accordion-inner-detail">
+                  <li>
+                    <div class="col-xs-4 accordion-li-text-l">
+                      <p>備註</p>
+                    </div>
+                    <div class="col-xs-8 accordion-li-text-r">
+                      <p>{{transaction.TxnRec.Remark ? transaction.TxnRec.Remark.trim() : ""}}</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- // 詳細資料單筆-->
+            </ng-container>
+          </div>
+        </div>
+        <!-- accordion 種類1 //END -->
+      </ng-container>
+
+    </div>
+    <app-no-data *ngIf="txnRecMonthlyGroupArray != undefined && txnRecMonthlyGroupArray.length == 0"></app-no-data>
+
+  </div>
+  <!--//accordion 外框架 -->
+</section>
+<!-- APP交易紀錄 end -->
+
+<!-- APP交易紀錄詳細資料 start -->
+<ng-container *ngIf="displayPage == 'TranslogDetail'">
+  <app-translog-detail [txnRec]="selectedTxnRec"></app-translog-detail>
+</ng-container>
+<!-- APP交易紀錄詳細資料 end -->
+
+
+<!-- 篩選popup -->
+<div *ngIf="filterBlock" class="row">
+  <div class="shadow active"></div>
+
+  <div class="pop-box-container active">
+    <div class="pop-box-area">
+      <div (click)="filterCloseBtn()" *ngIf="closeBtnChange" class="pop-close-bt">
+        <div class="i-close"></div>
+      </div>
+      <div class="pop-content-wrapper">
+
+        <div class="pop-title">
+          <p>{{'TRANSACTION.FILTER_TITLE' | translate}}</p>
+        </div>
+
+        <div class="pop-content">
+          <!--pop視窗內容開始-->
+          <app-option [source]="originalData" [filterKey]="'TxnCode'" [view]="viewTxnCodeData" (filterData)="result1($event)" (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+          <app-option [source]="originalData" [filterKey]="'TxnRecord'" [view]="viewTxnRecordData" (filterData)="result2($event)" (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+          <app-datefilter [source]="originalData" [view]="viewDateData" (filterData)="result3($event)" (closeBtnFlag)="closeBtnFlag($event)"></app-datefilter>
+          <div>
+            <div class="pop-sub-title">
+              <p class="">{{ 'TRANSACTION.DEBITUNG_AMOUNT' | translate}}</p>
+            </div>
+            <div class="pop-li-section">
+              <div class="pop-li-l-50">
+                <div class="input-group pop-select-bk-style">
+                  <input maxlength="30" type="tel" class="form-control select-date-input" [(ngModel)]="rDebitAmtStart">
+                </div>
+              </div>
+              <div class="pop-li-r-option-tranlog">
+                <p> ~ </p>
+              </div>
+              <div class="pop-li-r-50">
+
+                <div class="input-group pop-select-bk-style">
+                  <input maxlength="30" type="tel" class="form-control select-date-input" [(ngModel)]="rDebitAmtEnd">
+                </div>
+              </div>
+            </div>
+          </div>
+          <app-option [source]="originalData" [filterKey]="'DebitCur'" [view]="viewDebitCurData" (filterData)="result5($event)" (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+          <div>
+            <div class="pop-sub-title">
+              <p class="">{{ 'TRANSACTION.PAYEE_AMOUNT' | translate}}</p>
+            </div>
+            <div class="pop-li-section">
+              <div class="pop-li-l-50">
+                <div class="input-group pop-select-bk-style">
+                  <input maxlength="30" type="tel" class="form-control select-date-input" [(ngModel)]="rCreditAmtStart">
+                </div>
+              </div>
+              <div class="pop-li-r-option-tranlog">
+                <p> ~ </p>
+              </div>
+              <div class="pop-li-r-50">
+
+                <div class="input-group pop-select-bk-style">
+                  <input maxlength="30" type="tel" class="form-control select-date-input" [(ngModel)]="rCreditAmtEnd">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--pop視窗內容結束-->
+      </div>
+
+      <!--pop-bt-group- 兩個 -->
+      <div class="pop-bt-group">
+        <button type="button" class="btn btn-cancel btn-pop-cancel" (click)="filterClick(true)">{{ 'TRANSACTION.FILTER_RESET'
+          | translate}}</button>
+        <button type="submit" class="btn btn-confirm btn-pop-confirm" (click)="onFilterClick()">{{ 'TRANSACTION.FILTER_COMFIRM'
+          | translate}}</button>
+      </div>
+      <!--//pop-bt-group-兩個一組-->
+
+
+    </div>
+  </div>
+</div>
+<!-- 篩選popup -->

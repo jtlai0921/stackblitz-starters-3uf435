@@ -1,0 +1,229 @@
+<!-- Root start -->
+
+<div class="fullscreen" style="overflow:hidden;">
+  <!-- Quick login page start -->
+  <div class="">
+    <div class="bg-fixed-60 bg-color-lightgray"></div>
+    <section class="col-xs-12 section-content fast-log-setting-pg">
+      <!-- Tab bar 快速登入/交易驗證 start -->
+      <div class="row">
+        <div class="nav-l3 fast-log-setting-pg-l3">
+          <a (click)="changeGroups(0)" class="col-xs-6 tab-l3-set-2 tab-l3-set-l {{selectedGroupIndex == 0 ? 'active':''}}">{{'MENU.QUICK_LOGIN'
+            | translate}}</a>
+          <a (click)="changeGroups(1)" class="col-xs-6 tab-l3-set-2 tab-l3-set-r {{selectedGroupIndex == 1 ? 'active':''}}">{{'QUICKLOGIN.TRANS_VERIFICATION'
+            | translate}}</a>
+        </div>
+      </div>
+      <!-- Tab bar 快速登入/交易驗證 end -->
+
+
+      <!-- Form content start -->
+      <form method="post">
+        <!--  預設登入 start  -->
+        <div class="row">
+          <div class="fastlog-li-section" (click)="onChangeDefaultClick()">
+            <div class="fastlog-li-l-50">
+              <div class="fastlog-li-l-option">
+                <p>{{'QUICKLOGIN.DEFAULT_QUICK' | translate}}</p>
+              </div>
+            </div>
+            <div class="fastlog-li-r-50" *ngIf="selectedGroup!=undefined">
+              <div class="fastlog-li-r-option">
+                <p>{{getDefaultQuickValue(selectedGroup.defaultKey) | translate}}</p>
+              </div>
+              <div class="fastlog-right-icon-wrap right-icon-ellipsis">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  預設登入 end  -->
+
+
+        <!--  圖形碼變更 start  -->
+        <div class="row">
+          <div class="fastlog-li-section" (click)="onPatternModifyClick()">
+            <div class="fastlog-li-l-50">
+              <div class="fastlog-li-l-option">
+                <p>{{'QUICKLOGIN.MODIFY_PATTERN_LOCK_TITLE' | translate}}</p>
+              </div>
+            </div>
+            <div class="fastlog-li-r-50">
+              <div class="fastlog-li-r-option">
+                <p></p>
+              </div>
+              <div class="fastlog-right-icon-wrap right-icon-ellipsis">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  圖形碼變更 end  -->
+
+
+        <!-- 啟用狀態 start -->
+        <div class="row">
+          <div class="sub-title">
+            <p>{{'QUICKLOGIN.QUICK_STATUS' | translate}}</p>
+          </div>
+        </div>
+        <!-- 啟用狀態 end -->
+
+
+        <!-- Switch group start -->
+        <div class="row">
+          <div class="switch-group-wrapper" *ngIf="selectedGroup != undefined">
+            <div class="ct-switch-option-group switch-group-style-100" *ngFor="let checkbox of selectedGroup.checkboxList;">
+              <!-- 判斷有無生物辨識功能 -->
+              <div class="switch-inner-container align-two-side {{checkbox.isWork ? '': 'disabled'}}">
+                <div class="ct-switch-left-wrap">
+                  <p>{{checkbox.title | translate}}</p>
+                </div>
+                <div class="ct-switch-right-wrap">
+                  <div class="ct-onoffswitch">
+                    <input type="checkbox" name="{{checkbox.key}}" [disabled]="!checkbox.isWork" class="ct-onoffswitch-checkbox " id="{{checkbox.key}}" [(ngModel)]="checkbox.isChecked"
+                      (change)="onCheckboxClick(checkbox)">
+                    <label class="ct-onoffswitch-label" for="{{checkbox.key}}"></label>
+                  </div>
+                </div>
+              </div>
+              <ng-container *ngIf="checkbox.biometricStatus == 'lock' || checkbox.biometricStatus == 'none'">
+                <!-- 沒有支援生物辨識   -->
+                <div *ngIf="checkbox.biometricStatus == 'none'" class="disable-memo">
+                    {{"QUICKLOGIN.NOSUPPORT" | translate }}
+                </div>
+                <!-- 有支援生物辨識但被鎖定，且之前預設為開啟 -->
+                <div *ngIf="checkbox.biometricStatus == 'lock' && checkbox.isChecked == false" class="disable-memo">
+                  {{"QUICKLOGIN.TEMPOLOCK" | translate }}
+                </div>
+                <!-- 有支援生物辨識但被鎖定，且之前預設為關閉 -->
+                <div *ngIf="checkbox.biometricStatus == 'lock' && checkbox.isChecked == true" class="disable-memo">
+                  {{"QUICKLOGIN.TEMPDISABLE" | translate }}
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+        <!-- Switch group end -->
+      </form>
+      <!-- Form content end -->
+    </section>
+  </div>
+  <!-- Quick login page end -->
+
+
+  <!-- Agreement page start -->
+  <div class="" *ngIf="isAgreementShown">
+    <div class="bg-fixed-60-full-height bg-color-lightgray"></div>
+    <section class="col-xs-12 section-content bg-white fast-log-provision-pg">
+      <form method="post">
+        <!-- Subtitle start -->
+        <div class="row">
+          <div class="sub-title">
+            <p>{{'QUICKLOGIN.READ_TERMS' | translate}}</p>
+          </div>
+        </div>
+        <!-- Subtitle end -->
+
+        <!-- 同意條款區塊 start -->
+        <div class="row">
+          <div class="provision-frame">
+            <!-- 同意條款 start -->
+            <div class="provision-box" [innerHtml]="Term_Content">
+              
+            </div>
+            <!-- 同意條款 end -->
+
+
+            <!-- Checkbox start -->
+            <div class="provision-check-group">
+              <div class="pop-checkbox"> <span>
+                  <input class="ct-checkbox" type="checkbox" name="option1" id="1" value="option1" [(ngModel)]="isAgreementChecked">
+                  <label class="pull-left" for="1"></label>
+                </span> </div>
+              <p><b>{{'QUICKLOGIN.HAVE_READ_TERMS' | translate}}{{'QUICKLOGIN.QUICK_BIO_LOGIN_TERMS' | translate}}</b></p>
+            </div>
+            <!-- Checkbox end -->
+          </div>
+        </div>
+        <!-- 同意條款區塊 end -->
+
+
+        <!-- Button set start -->
+        <div class="row">
+          <div class="bt-center-group bt-provision-group align-two-side">
+            <button type="button" (click)="onBackClick()" class="btn btn-group-sm btn-cancel">{{'QUICKLOGIN.PREVIOUS_PAGE'
+              | translate}}</button>
+            <button type="submit" (click)="onAgreeClick()" class="btn btn-group-sm {{isAgreementChecked ? 'btn-confirm' :'btn-disable'}}">{{'QUICKLOGIN.AGREE_SETTING'
+              | translate}}</button>
+          </div>
+        </div>
+        <!-- Button set end -->
+      </form>
+
+    </section>
+  </div>
+  <!-- Agreement page end -->
+
+
+  <!-- Change default popup start -->
+  <div class="" *ngIf="isChangeDefaultShown">
+    <div class="shadow active"></div>
+    <div class="pop-middle-box-container active">
+      <div class="pop-middle-box-area">
+        <div class="pop-content-wrapper">
+          <!--Title start-->
+          <div class="pop-title-default">
+            <p>{{'QUICKLOGIN.CHOSE_DEFAULT_QUICK_LOGIN' | translate}}</p>
+          </div>
+          <!--Title end-->
+
+
+          <!--Content start-->
+          <div class="pop-content-l2">
+            <div class="pop-li-section pop-li-border pop-li-default" *ngFor="let checkbox of popupCheckboxItems; let ind = index;" (click)="onPoupCheckboxClick(ind)">
+
+              <div class="pop-li-l-100">
+                <div class="pop-li-l-option">
+                  <p>{{checkbox.title |translate}}</p>
+                </div>
+              </div>
+
+              <div class="pop-right-icon-wrap" *ngIf="checkbox.isChecked">
+                <img class="check-icon" src="assets/design/image/icon/check-icon.png" alt="">
+              </div>
+
+            </div>
+
+            <div class="pop-bt-group">
+              <button type="button" (click)="onPopupConfirmClick()" class="btn btn-cancel btn-pop-cancel">{{'BTN.DETERMINE_CHOSE'
+                | translate}}</button>
+              <button type="submit" (click)="onPopupCancelClick()" class="btn btn-confirm btn-pop-confirm">{{'BTN.CANCEL'
+                | translate}}</button>
+            </div>
+          </div>
+          <!--Content end-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Change default popup end -->
+
+
+  <!-- Pattern lock popup start -->
+  <div class="div_quick_login" [ngClass]="{'hidden': !isPatternLockShown}">
+    <div class="shadow active"></div>
+    <div class="pop-box-container active">
+      <div class="pop-box-area no_background">
+        <div (click)="onPatternCancelClick()" class="pop-close-bt">
+          <div class="i-close"></div>
+        </div>
+        <div class="pattern_message">{{patternLockMessage | translate}}</div>
+        <div id="patternHolder" style="margin: auto;"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Pattern lock popup end -->
+</div>
+
+<!-- Root end -->

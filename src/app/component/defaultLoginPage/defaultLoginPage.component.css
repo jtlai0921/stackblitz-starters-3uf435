@@ -1,0 +1,37 @@
+.default-login-page {
+    position: absolute;
+    overflow-y: scroll;
+    top: 60px;
+    bottom: 64px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.option-list-accordion-inner {
+    position: relative;
+    margin-top: 12px;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+}
+.option-list-accordion-inner.active {
+    max-height: 100%;
+    overflow: visible;
+}
+.option-list-accordion-inner ul{
+    position: relative;
+    margin-top: 12px;
+    width: 100%;
+
+    overflow: hidden;
+    max-height: 0;
+}
+
+.option-list-accordion-inner ul.active{
+    max-height: 100%;
+}
+
+.insideScreen {
+    margin-bottom: constant(safe-area-inset-bottom);
+    margin-bottom: env(safe-area-inset-bottom);
+}

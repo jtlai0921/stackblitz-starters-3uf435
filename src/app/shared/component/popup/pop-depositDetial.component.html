@@ -1,0 +1,244 @@
+<div class="row" *ngIf="isOpen">
+    <div class="shadow active"></div>
+
+    <div class="pop-box-container active">
+        <div class="pop-box-area">
+            <div (click)="onCancelClick()" class="pop-close-bt">
+                <div class="i-close"></div>
+            </div>
+            <div class="pop-content-wrapper">
+
+                <div class="pop-title">
+                    <p>{{'DEPOSITDETAIL.FILTER_TITLE' | translate}}</p>
+                </div>
+
+                <div class="pop-content">
+                    <!--pop視窗內容開始-->
+
+                    <!-- 日期 -->
+                    <div class="pop-sub-title">
+                        <p class="">{{'DEPOSITDETAIL.DATE' | translate}}</p>
+                    </div>
+                    <div class="pop-tag-wrapper">
+                        <div *ngFor="let dateItem of dateType;" (click)="SelectDateType(dateItem)" class="pop-date-tag {{(dateItem.select)?'active':''}}">
+                            <p>{{ dateItem.name |translate }}</p>
+                        </div>
+                    </div>
+                    <div (click)="onDatePickerButtonClick('from')" class="pop-li-section">
+                        <div class="pop-li-l-50">
+                            <div class="pop-li-l-option">
+                                <!-- 起日 -->
+                                <p>{{'POPUP_TRANSQUERY.DATE_FROM' | translate}}</p>
+                            </div>
+                        </div>
+                        <div class="pop-li-r-50">
+                            <div class="pop-li-r-option">
+                                <p>{{selectedDateFrom}}</p>
+                            </div>
+                            <div class="pop-right-icon-wrap right-icon-ellipsis">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div (click)="onDatePickerButtonClick('to')" class="pop-li-section">
+                        <div class="pop-li-l-50">
+                            <div class="pop-li-l-option">
+                                <!-- 迄日 -->
+                                <p>{{'POPUP_TRANSQUERY.DATE_TO' | translate}}</p>
+                            </div>
+                        </div>
+                        <div class="pop-li-r-50">
+                            <div class="pop-li-r-option">
+                                <p>{{selectedDateTo}}</p>
+                            </div>
+                            <div class="pop-right-icon-wrap right-icon-ellipsis">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 日期 -->
+
+                    <!-- Search Type start -->
+                    <ng-container *ngIf="searchTypePage">
+                        <div class="pop-sub-title">
+                            <p class="">{{'DEPOSITDETAIL.TRANS_TYPE' | translate}}</p>
+                        </div>
+                        <div class="pop-li-section" (click)="searchTypePage = !searchTypePage">
+
+                            <div class="pop-li-l-100">
+                                <div class="pop-li-l-option">
+                                    <p>{{searchType[selectedType-1].name | translate}}</p>
+                                </div>
+                            </div>
+
+                            <div class="pop-right-icon-wrap right-icon-ellipsis">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <div class="row" *ngIf="!searchTypePage">
+                        <div class="shadow active"></div>
+                        <div class="pop-box-container active">
+                            <div class="pop-box-area">
+                                <div class="pop-content-wrapper">
+                                    <div class="pop-title-l2">
+                                        <div (click)="searchTypePage = !searchTypePage" class="pop-pageback-bt">
+                                            <a href="javascript:void(0)">
+                                                <img src="assets/design/image/icon/i-pop-pageback.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <p>{{'BTN.SELECT_PLEASE' | translate}}</p>
+                                    </div>
+                                    <div class="pop-content-l2">
+                                        <!--pop視窗內容開始-->
+                                        <div *ngFor="let searchItem of searchType;" (click)="onClickSearchItem(searchItem.value)"
+                                            class="pop-li-section pop-li-border {{ searchItem.value == selectedType ? 'pop-li-default' : ''}}">
+
+                                            <div class="pop-li-l-100">
+                                                <div class="pop-li-l-option">
+                                                    <p>{{ searchItem.name | translate }}</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="pop-right-icon-wrap">
+                                                <img class="check-icon" src="assets/design/image/icon/check-icon.png"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--pop視窗內容結束-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Search Type end -->
+
+                    <!-- 扣入帳  start -->
+                    <ng-container *ngIf="TransTypePage">
+                        <div class="pop-sub-title">
+                            <p class="">{{'DEPOSITDETAIL.DEBITUNG_PAYEE' | translate}}</p>
+                        </div>
+                        <div class="pop-li-section" (click)="TransTypePage = !TransTypePage">
+
+                            <div class="pop-li-l-100">
+                                <div class="pop-li-l-option">
+                                    <p>{{ selectedTransactionName | translate}}</p>
+                                </div>
+                            </div>
+
+                            <div class="pop-right-icon-wrap right-icon-ellipsis">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <div class="row" *ngIf="!TransTypePage">
+                        <div class="shadow active"></div>
+                        <div class="pop-box-container active">
+                            <div class="pop-box-area">
+                                <div class="pop-content-wrapper">
+                                    <div class="pop-title-l2">
+                                        <div (click)="TransTypePage = !TransTypePage" class="pop-pageback-bt">
+                                            <a href="javascript:void(0)">
+                                                <img src="assets/design/image/icon/i-pop-pageback.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <p>{{'BTN.SELECT_PLEASE' | translate}}</p>
+                                    </div>
+                                    <div class="pop-content-l2">
+                                        <!--pop視窗內容開始-->
+                                        <div *ngFor="let transactionItem of transactionType;" (click)="onClickTransItem(transactionItem.value)"
+                                            class="pop-li-section pop-li-border {{ transactionItem.value == selectedTransactionType ? 'pop-li-default' : ''}}">
+
+                                            <div class="pop-li-l-100">
+                                                <div class="pop-li-l-option">
+                                                    <p>{{ transactionItem.name | translate }}</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="pop-right-icon-wrap">
+                                                <img class="check-icon" src="assets/design/image/icon/check-icon.png"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--pop視窗內容結束-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Transaction Type end -->
+
+                    <!-- D Amnt start -->
+                    <ng-container *ngIf="selectedTransactionType === 'D'">
+                        <div class="pop-sub-title">
+                            <p class="">{{'DEPOSITDETAIL.DEBITUNG_AMOUNT' | translate}}</p>
+                        </div>
+
+                        <div class="pop-input-flex-group pop-li-flex">
+                            <div class="select-pop-form-group pop-form-group-30">
+                                <div class="select-date-input-wrapper">
+                                    <div class="input-group pop-select-bk-style" id="">
+                                        <input maxlength="30" [(ngModel)]="dAmntFrom" type="tel" class="form-control select-date-input"
+                                            placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p> {{'DEPOSITDETAIL.TEN_THOUSAND_YUAN' | translate}} ～ </p>
+                            <div class="select-pop-form-group pop-form-group-30">
+                                <div class="select-date-input-wrapper">
+                                    <div class="input-group pop-select-bk-style" id="">
+                                        <input maxlength="30" [(ngModel)]="dAmntTo" type="tel" class="form-control select-date-input"
+                                            placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p> {{'DEPOSITDETAIL.TEN_THOUSAND_YUAN' | translate}} </p>
+                        </div>
+                    </ng-container>
+                    <!-- D Amnt end -->
+
+                    <!-- C Amnt start -->
+                    <ng-container *ngIf="selectedTransactionType === 'C'">
+                        <div class="pop-sub-title">
+                            <p class="">{{'DEPOSITDETAIL.PAYEE_AMOUNT' | translate}}</p>
+                        </div>
+
+                        <div class="pop-input-flex-group pop-li-flex">
+                            <div class="select-pop-form-group pop-form-group-30">
+                                <div class="select-date-input-wrapper">
+                                    <div class="input-group pop-select-bk-style" id="">
+                                        <input maxlength="30" [(ngModel)]="cAmntFrom" type="tel" class="form-control select-date-input"
+                                            placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p> {{'DEPOSITDETAIL.TEN_THOUSAND_YUAN' | translate}} ～ </p>
+                            <div class="select-pop-form-group pop-form-group-30">
+                                <div class="select-date-input-wrapper">
+                                    <div class="input-group pop-select-bk-style" id="">
+                                        <input maxlength="30" [(ngModel)]="cAmntTo" type="tel" class="form-control select-date-input"
+                                            placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p> {{'DEPOSITDETAIL.TEN_THOUSAND_YUAN' | translate}} </p>
+                        </div>
+                    </ng-container>
+                    <!-- C Amnt end -->
+
+                </div>
+                <!--pop視窗內容結束-->
+
+            </div>
+
+            <!--pop-bt-group- 兩個 -->
+            <div class="pop-bt-group">
+                <button type="button" class="btn btn-cancel btn-pop-cancel" (click)="onResetClick()">{{'DEPOSITDETAIL.FILTER_RESET' | translate}}</button>
+                <button type="submit" class="btn btn-confirm btn-pop-confirm" (click)="onSubmitClick()">{{'DEPOSITDETAIL.FILTER_COMFIRM' | translate}}</button>
+            </div>
+            <!--//pop-bt-group-兩個一組-->
+
+
+        </div>
+    </div>
+</div>

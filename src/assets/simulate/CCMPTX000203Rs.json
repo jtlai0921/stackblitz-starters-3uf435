@@ -1,0 +1,7105 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000203Rs",
+    "RqUID": "20180709111612",
+    "Timestamp": "20180709111645",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "Desc": "",
+      "TxnId": "CCMPTX000203Rs",
+      "IntRateDetailsList": 
+      [{
+        "Category":"台幣存款利率          ",
+        "ProductName":"活期有摺  ",
+        "ProductId":"活期存款利率          ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+            {
+            "IntType":"Fixed",
+            "Rate":0.15
+            }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"外資活期  ",
+        "ProductId":"外資活期存款          ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0
+        }
+        ]
+        }
+        ,
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"期貨有摺  ",
+        "ProductId":"期貨活期存款          ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"證券活期  ",
+        "ProductId":"證券活期存款          ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.04
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"新短放建  ",
+        "ProductId":"基準利率(季)          ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":2
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"月短放建  ",
+        "ProductId":"基準利率(月)          ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":3
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"Ｉ短放建  ",
+        "ProductId":"企業換利季指數        ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"Ｍ短放建  ",
+        "ProductId":"企業換利月指數        ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":3
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"支票存款  ",
+        "ProductId":"支票存款利率          ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫存款  ",
+        "ProductId":"公庫活期存款          ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.15
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"代庫活儲  ",
+        "ProductId":"代庫活儲              ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.31
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫存款  ",
+        "ProductId":"公庫活儲存款一        ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.31
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫儲二  ",
+        "ProductId":"公庫活儲存款二        ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.26
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"活儲有摺  ",
+        "ProductId":"活期儲蓄存款利率      ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.26
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"活儲撥薪  ",
+        "ProductId":"薪資轉帳活期存款利率  ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.3
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"代庫活存  ",
+        "ProductId":"代庫活存              ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.15
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"會員活儲  ",
+        "ProductId":"策略公會會員活儲利率  ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.5
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"證券活儲  ",
+        "ProductId":"證券活儲存款          ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.02
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"自動化    ",
+        "ProductId":"自動化帳戶利率        ",
+        "CurCode":"TWD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.26
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定儲  ",
+        "ProductId":"公庫定期儲蓄存款利率  ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.07
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定儲  ",
+        "ProductId":"公庫定期儲蓄存款利率  ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.36
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.1
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":1.1
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-15000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-20000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-25000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-30000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-35000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-40000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-45000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-50000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-55000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-60000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-65000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-70000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-75000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-80000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-85000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-90000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-95000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-100000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-105000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-110000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-115000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-120000萬",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.54
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.01
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-15000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-20000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-25000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-30000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-35000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-40000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-45000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-50000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-55000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-60000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-65000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-70000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-75000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-80000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-85000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-90000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-95000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-100000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-105000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-110000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-115000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-120000萬",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.6
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-15000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-20000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-25000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-30000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-35000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-40000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-45000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-50000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-55000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-60000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-65000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-70000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-75000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-80000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-85000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-90000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-95000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-100000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-105000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-110000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-115000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-120000萬",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"4",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.57
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"4",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.03
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"4",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"5",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.57
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"5",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.03
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"5",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.72
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.085
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-15000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-20000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-25000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-30000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-35000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-40000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-45000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-50000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-55000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-60000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-65000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-70000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-75000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-80000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-85000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-90000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-95000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-100000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-105000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-110000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-115000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-120000萬",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"7",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.72
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"7",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.085
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"7",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.03
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"8",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.72
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"8",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.085
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"8",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.03
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.83
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.12
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.03
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"11",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.83
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"11",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.12
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"11",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.03
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.01
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.215
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.085
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.975
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.18
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.975
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.18
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-15000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-20000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-25000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-30000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-35000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-40000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-45000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-50000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-55000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-60000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-65000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-70000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-75000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-80000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-85000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-90000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-95000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-100000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-105000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-110000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-115000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"大額定期利率-120000萬",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"24",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"24",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.205
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"24",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.07
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"36",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"36",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.245
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"36",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.1
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.81
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.28
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.25
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.81
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.28
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.25
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.87
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.3
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"4",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.87
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"4",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"4",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.3
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"5",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.87
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"5",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"5",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.3
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":12.02
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":11.375
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":11.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"7",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.02
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"7",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.375
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"7",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"8",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.02
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"8",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.375
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"8",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.13
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.41
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"11",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.13
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"11",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.41
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"11",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.275
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.47
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.35
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.275
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.47
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.35
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.285
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.48
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.36
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"24",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.3
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"24",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.49
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"24",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.37
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"36",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.3
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"36",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.52
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"定期      ",
+        "ProductId":"定期（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"36",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.4
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"投信定存  ",
+        "ProductId":"投信基金定存牌告      ",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"投信定存  ",
+        "ProductId":"投信基金定存牌告      ",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.09
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"投信定存  ",
+        "ProductId":"投信基金定存牌告      ",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.09
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"投信定存  ",
+        "ProductId":"投信基金定存牌告      ",
+        "CurCode":"TWD",
+        "Count":"4",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.09
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"投信定存  ",
+        "ProductId":"投信基金定存牌告      ",
+        "CurCode":"TWD",
+        "Count":"5",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.09
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"投信定存  ",
+        "ProductId":"投信基金定存牌告      ",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.11
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"投信定存  ",
+        "ProductId":"投信基金定存牌告      ",
+        "CurCode":"TWD",
+        "Count":"7",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.11
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"投信定存  ",
+        "ProductId":"投信基金定存牌告      ",
+        "CurCode":"TWD",
+        "Count":"8",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.11
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"投信定存  ",
+        "ProductId":"投信基金定存牌告      ",
+        "CurCode":"TWD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.11
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"投信定存  ",
+        "ProductId":"投信基金定存牌告      ",
+        "CurCode":"TWD",
+        "Count":"11",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.11
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"投信定存  ",
+        "ProductId":"投信基金定存牌告      ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.12
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.04
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.22
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.07
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.18
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.07
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"14",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"14",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.18
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"14",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.07
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"15",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"15",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.18
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"15",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.07
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.18
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"24",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.025
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"24",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.205
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"24",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"25",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.025
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"25",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.205
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"25",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"36",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"36",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.245
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"36",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.11
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.37
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.54
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.43
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.37
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.54
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.43
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"14",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.37
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"14",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.54
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"14",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.43
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"15",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.37
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"15",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.54
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"15",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.43
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.37
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.54
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"18",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.43
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"24",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.39
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"24",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.56
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"24",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.45
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"25",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.36
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"25",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.47
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"25",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.58
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 499萬以下）    ",
+        "CurCode":"TWD",
+        "Count":"36",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.42
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（ 500~999萬）    ",
+        "CurCode":"TWD",
+        "Count":"36",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.59
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"整存整付  ",
+        "ProductId":"定儲（1000萬以上）    ",
+        "CurCode":"TWD",
+        "Count":"36",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Floating",
+        "Rate":0.48
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"4",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"5",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"7",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"8",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"11",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.09
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.09
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.25
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.25
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.3
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"4",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.3
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"5",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.3
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"7",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"8",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"11",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.35
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"公庫定期  ",
+        "ProductId":"公庫定期存款利率      ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.35
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"期貨定存  ",
+        "ProductId":"期貨定期存款          ",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"期貨定存  ",
+        "ProductId":"期貨定期存款          ",
+        "CurCode":"TWD",
+        "Count":"2",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"期貨定存  ",
+        "ProductId":"期貨定期存款          ",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"期貨定存  ",
+        "ProductId":"期貨定期存款          ",
+        "CurCode":"TWD",
+        "Count":"4",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"期貨定存  ",
+        "ProductId":"期貨定期存款          ",
+        "CurCode":"TWD",
+        "Count":"5",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"期貨定存  ",
+        "ProductId":"期貨定期存款          ",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"期貨定存  ",
+        "ProductId":"期貨定期存款          ",
+        "CurCode":"TWD",
+        "Count":"7",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"期貨定存  ",
+        "ProductId":"期貨定期存款          ",
+        "CurCode":"TWD",
+        "Count":"8",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"期貨定存  ",
+        "ProductId":"期貨定期存款          ",
+        "CurCode":"TWD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"期貨定存  ",
+        "ProductId":"期貨定期存款          ",
+        "CurCode":"TWD",
+        "Count":"11",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.08
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"期貨定存  ",
+        "ProductId":"期貨定期存款          ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.09
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"法金定期  ",
+        "ProductId":"學校暨非營利機構牌告  ",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.03
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"法金定期  ",
+        "ProductId":"學校暨非營利機構牌告  ",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.03
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"法金定期  ",
+        "ProductId":"學校暨非營利機構牌告  ",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"法金定期  ",
+        "ProductId":"學校暨非營利機構牌告  ",
+        "CurCode":"TWD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"法金定期  ",
+        "ProductId":"學校暨非營利機構牌告  ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"法金定期  ",
+        "ProductId":"學校暨非營利機構牌告  ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.06
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"法金定期  ",
+        "ProductId":"學校暨非營利機構牌告  ",
+        "CurCode":"TWD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.25
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"法金定期  ",
+        "ProductId":"學校暨非營利機構牌告  ",
+        "CurCode":"TWD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.3
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"法金定期  ",
+        "ProductId":"學校暨非營利機構牌告  ",
+        "CurCode":"TWD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"法金定期  ",
+        "ProductId":"學校暨非營利機構牌告  ",
+        "CurCode":"TWD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.33
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"法金定期  ",
+        "ProductId":"學校暨非營利機構牌告  ",
+        "CurCode":"TWD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.35
+        }
+        ]
+        },
+        {
+        "Category":"台幣存款利率          ",
+        "ProductName":"法金定期  ",
+        "ProductId":"學校暨非營利機構牌告  ",
+        "CurCode":"TWD",
+        "Count":"13",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.35
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"美元活期存款利率      ",
+        "CurCode":"USD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"1",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"20",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"75",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.3
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"165",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.6
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"255",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.6
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"350",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.7
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.1
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.35
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"7",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.45
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.6
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"14",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"美元                  ",
+        "CurCode":"USD",
+        "Count":"21",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.044
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"日圓活期存款利率      ",
+        "CurCode":"JPY",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"日圓                  ",
+        "CurCode":"JPY",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"日圓                  ",
+        "CurCode":"JPY",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"日圓                  ",
+        "CurCode":"JPY",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"日圓                  ",
+        "CurCode":"JPY",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"日圓                  ",
+        "CurCode":"JPY",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.01
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"港幣活期存款利率      ",
+        "CurCode":"HKD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.01
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"港幣                  ",
+        "CurCode":"HKD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.01
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"港幣                  ",
+        "CurCode":"HKD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.02
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"港幣                  ",
+        "CurCode":"HKD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"港幣                  ",
+        "CurCode":"HKD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.1
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"港幣                  ",
+        "CurCode":"HKD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"歐元活期存款利率      ",
+        "CurCode":"EUR",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"歐元                  ",
+        "CurCode":"EUR",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"歐元                  ",
+        "CurCode":"EUR",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"歐元                  ",
+        "CurCode":"EUR",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"歐元                  ",
+        "CurCode":"EUR",
+        "Count":"7",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"歐元                  ",
+        "CurCode":"EUR",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"歐元                  ",
+        "CurCode":"EUR",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.01
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"歐元                  ",
+        "CurCode":"EUR",
+        "Count":"14",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"歐元                  ",
+        "CurCode":"EUR",
+        "Count":"21",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"英磅活期存款利率      ",
+        "CurCode":"GBP",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.01
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"英磅                  ",
+        "CurCode":"GBP",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.15
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"英磅                  ",
+        "CurCode":"GBP",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.35
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"英磅                  ",
+        "CurCode":"GBP",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.4
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"英磅                  ",
+        "CurCode":"GBP",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.5
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"英磅                  ",
+        "CurCode":"GBP",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.5
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"加幣活期存款利率      ",
+        "CurCode":"CAD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.05
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"加幣                  ",
+        "CurCode":"CAD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.3
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"加幣                  ",
+        "CurCode":"CAD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.4
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"加幣                  ",
+        "CurCode":"CAD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.5
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"加幣                  ",
+        "CurCode":"CAD",
+        "Count":"7",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"加幣                  ",
+        "CurCode":"CAD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.55
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"加幣                  ",
+        "CurCode":"CAD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.6
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"加幣                  ",
+        "CurCode":"CAD",
+        "Count":"14",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"加幣                  ",
+        "CurCode":"CAD",
+        "Count":"21",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"澳幣活期存款利率      ",
+        "CurCode":"AUD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.3
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"1",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.1
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"20",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.15
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"75",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.15
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"165",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"255",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"350",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.4
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.5
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.6
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.7
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"7",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.3
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.75
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.8
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"14",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.5
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"澳幣                  ",
+        "CurCode":"AUD",
+        "Count":"21",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"紐幣活期存款利率      ",
+        "CurCode":"NZD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.5
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"1",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"20",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.35
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"75",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.35
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"165",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.4
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"255",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.4
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"350",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.45
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.75
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.8
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.8
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"7",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.3
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.9
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.95
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"14",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.5
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"紐幣                  ",
+        "CurCode":"NZD",
+        "Count":"21",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.6
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"瑞士法郎活期存款利率  ",
+        "CurCode":"CHF",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"瑞士法郎              ",
+        "CurCode":"CHF",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"瑞士法郎              ",
+        "CurCode":"CHF",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"瑞士法郎              ",
+        "CurCode":"CHF",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"瑞士法郎              ",
+        "CurCode":"CHF",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"瑞士法郎              ",
+        "CurCode":"CHF",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"瑞典幣活期存款利率    ",
+        "CurCode":"SEK",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"瑞典幣                ",
+        "CurCode":"SEK",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"瑞典幣                ",
+        "CurCode":"SEK",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"瑞典幣                ",
+        "CurCode":"SEK",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"瑞典幣                ",
+        "CurCode":"SEK",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"瑞典幣                ",
+        "CurCode":"SEK",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.001
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"新加坡幣活期存款利率  ",
+        "CurCode":"SGD",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.01
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"新加坡幣              ",
+        "CurCode":"SGD",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.01
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"新加坡幣              ",
+        "CurCode":"SGD",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.01
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"新加坡幣              ",
+        "CurCode":"SGD",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.1
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"新加坡幣              ",
+        "CurCode":"SGD",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.1
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"新加坡幣              ",
+        "CurCode":"SGD",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.1
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"泰銖活期存款利率      ",
+        "CurCode":"THB",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.005
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"泰銖                  ",
+        "CurCode":"THB",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.1
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"泰銖                  ",
+        "CurCode":"THB",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.35
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"泰銖                  ",
+        "CurCode":"THB",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.4
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"泰銖                  ",
+        "CurCode":"THB",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.45
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"泰銖                  ",
+        "CurCode":"THB",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.6
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"南非幣                ",
+        "CurCode":"ZAR",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.5
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"南非幣                ",
+        "CurCode":"ZAR",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":4.3
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"南非幣                ",
+        "CurCode":"ZAR",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":4.3
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"南非幣                ",
+        "CurCode":"ZAR",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":4.3
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"南非幣                ",
+        "CurCode":"ZAR",
+        "Count":"7",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":2.8
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"南非幣                ",
+        "CurCode":"ZAR",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":4.3
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"南非幣                ",
+        "CurCode":"ZAR",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":4.3
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"南非幣                ",
+        "CurCode":"ZAR",
+        "Count":"14",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":2.8
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"南非幣                ",
+        "CurCode":"ZAR",
+        "Count":"21",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":2.8
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣活期  ",
+        "ProductId":"人民幣活期存款利率    ",
+        "CurCode":"CNY",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"境外活期  ",
+        "ProductId":"ＯＢＵ人民幣活期利率  ",
+        "CurCode":"CNY",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"1",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"20",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"75",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.3
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"165",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.6
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"255",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.6
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"錢寶寶    ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"350",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.7
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"1",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.2
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"3",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.3
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"6",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.6
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"7",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.55
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"9",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.6
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"12",
+        "TermUnits":"M",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.7
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"14",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.55
+        }
+        ]
+        },
+        {
+        "Category":"外幣存款利率          ",
+        "ProductName":"外幣定期  ",
+        "ProductId":"人民幣                ",
+        "CurCode":"CNY",
+        "Count":"21",
+        "TermUnits":"D",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":0.55
+        }
+        ]
+        },
+        {
+        "Category":"放款利率              ",
+        "ProductName":"首購房貸  ",
+        "ProductId":"定儲利率指數（季）    ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.5
+        }
+        ]
+        },
+        {
+        "Category":"放款利率              ",
+        "ProductName":"首購房貸  ",
+        "ProductId":"萬通銀定儲指數利率    ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.37
+        }
+        ]
+        },
+        {
+        "Category":"放款利率              ",
+        "ProductName":"一般房貸  ",
+        "ProductId":"定儲利率指數（月）    ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":2
+        }
+        ]
+        },
+        {
+        "Category":"放款利率              ",
+        "ProductName":"花企有擔  ",
+        "ProductId":"花企定儲利率指數利率  ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":1.3
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"信用卡　  ",
+        "ProductId":"信用卡（評等一）      ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":7.47
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"信用卡　  ",
+        "ProductId":"信用卡（評等二）      ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":11.97
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"信用卡　  ",
+        "ProductId":"信用卡（評等三）      ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":14.97
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"信用卡　  ",
+        "ProductId":"信用卡（評等四）      ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":17.97
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"信用卡　  ",
+        "ProductId":"信用卡（評等五）      ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":18.97
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"信用卡　  ",
+        "ProductId":"信用卡（評等六）      ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":20
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"現金卡　  ",
+        "ProductId":"現金卡（評等一）      ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":10.42
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"現金卡　  ",
+        "ProductId":"現金卡（評等二）      ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":12.42
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"現金卡　  ",
+        "ProductId":"現金卡（評等三）      ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":14.42
+        }
+        ]
+        },
+        {
+        "Category":"其他利率              ",
+        "ProductName":"現金卡　  ",
+        "ProductId":"現金卡（評等四）      ",
+        "CurCode":"   ",
+        "Count":"0",
+        "TermUnits":" ",
+        "RateInfoList":[
+        {
+        "IntType":"Fixed",
+        "Rate":15
+        }
+        ]
+        },
+        {
+        "Category":"NCD",
+        "Count":"0",
+        "TermUnits":"01",
+        "RateInfoList":[
+        {
+        "IntType":"Rate",
+        "Rate":6.25
+        },
+        {
+        "IntType":"LargeRate",
+        "Rate":6.1
+        }
+        ]
+        },
+        {
+        "Category":"NCD",
+        "Count":"0",
+        "TermUnits":"02",
+        "RateInfoList":[
+        {
+        "IntType":"Rate",
+        "Rate":6.3
+        },
+        {
+        "IntType":"LargeRate",
+        "Rate":6.15
+        }
+        ]
+        },
+        {
+        "Category":"NCD",
+        "Count":"0",
+        "TermUnits":"03",
+        "RateInfoList":[
+        {
+        "IntType":"Rate",
+        "Rate":6.3
+        },
+        {
+        "IntType":"LargeRate",
+        "Rate":6.15
+        }
+        ]
+        },
+        {
+        "Category":"NCD",
+        "Count":"0",
+        "TermUnits":"04",
+        "RateInfoList":[
+        {
+        "IntType":"Rate",
+        "Rate":6.2
+        },
+        {
+        "IntType":"LargeRate",
+        "Rate":6.05
+        }
+        ]
+        },
+        {
+        "Category":"NCD",
+        "Count":"0",
+        "TermUnits":"05",
+        "RateInfoList":[
+        {
+        "IntType":"Rate",
+        "Rate":6.35
+        },
+        {
+        "IntType":"LargeRate",
+        "Rate":6.2
+        }
+        ]
+        },
+        {
+        "Category":"NCD",
+        "Count":"0",
+        "TermUnits":"06",
+        "RateInfoList":[
+        {
+        "IntType":"Rate",
+        "Rate":6.35
+        },
+        {
+        "IntType":"LargeRate",
+        "Rate":6.2
+        }
+        ]
+        },
+        {
+        "Category":"NCD",
+        "Count":"0",
+        "TermUnits":"07",
+        "RateInfoList":[
+        {
+        "IntType":"Rate",
+        "Rate":6.4
+        },
+        {
+        "IntType":"LargeRate",
+        "Rate":6.25
+        }
+        ]
+        },
+        {
+        "Category":"NCD",
+        "Count":"0",
+        "TermUnits":"08",
+        "RateInfoList":[
+        {
+        "IntType":"Rate",
+        "Rate":6.4
+        },
+        {
+        "IntType":"LargeRate",
+        "Rate":6.25
+        }
+        ]
+        },
+        {
+        "Category":"NCD",
+        "Count":"0",
+        "TermUnits":"09",
+        "RateInfoList":[
+        {
+        "IntType":"Rate",
+        "Rate":6.45
+        },
+        {
+        "IntType":"LargeRate",
+        "Rate":6.3
+        }
+        ]
+        },
+        {
+        "Category":"NCD",
+        "Count":"0",
+        "TermUnits":"10",
+        "RateInfoList":[
+        {
+        "IntType":"Rate",
+        "Rate":6.45
+        },
+        {
+        "IntType":"LargeRate",
+        "Rate":6.3
+        }
+        ]
+        },
+        {
+        "Category":"NCD",
+        "Count":"0",
+        "TermUnits":"11",
+        "RateInfoList":[
+        {
+        "IntType":"Rate",
+        "Rate":6.45
+        },
+        {
+        "IntType":"LargeRate",
+        "Rate":6.3
+        }
+        ]
+        },
+        {
+        "Category":"NCD",
+        "Count":"0",
+        "TermUnits":"12",
+        "RateInfoList":[
+        {
+        "IntType":"Rate",
+        "Rate":6.45
+        },
+        {
+        "IntType":"LargeRate",
+        "Rate":6.3
+        }
+        ]
+        },
+        {
+        "Category":"MoneyMarket",
+        "Count":"0",
+        "TermUnits":"010",
+        "RateInfoList":[
+        {
+        "IntType":"BACP",
+        "Rate":6.5
+        },
+        {
+        "IntType":"MoneyMarketLoan",
+        "Rate":7.59
+        },
+        {
+        "IntType":"RP",
+        "Rate":5.3
+        },
+        {
+        "IntType":"RS",
+        "Rate":0
+        },
+        {
+        "IntType":"Sell",
+        "Rate":6.3
+        },
+        {
+        "IntType":"Buy",
+        "Rate":6.6
+        }
+        ]
+        },
+        {
+        "Category":"MoneyMarket",
+        "Count":"0",
+        "TermUnits":"020",
+        "RateInfoList":[
+        {
+        "IntType":"BACP",
+        "Rate":6.5
+        },
+        {
+        "IntType":"MoneyMarketLoan",
+        "Rate":7.59
+        },
+        {
+        "IntType":"RP",
+        "Rate":5.35
+        },
+        {
+        "IntType":"RS",
+        "Rate":0
+        },
+        {
+        "IntType":"Sell",
+        "Rate":6.3
+        },
+        {
+        "IntType":"Buy",
+        "Rate":6.6
+        }
+        ]
+        },
+        {
+        "Category":"MoneyMarket",
+        "Count":"0",
+        "TermUnits":"030",
+        "RateInfoList":[
+        {
+        "IntType":"BACP",
+        "Rate":6.5
+        },
+        {
+        "IntType":"MoneyMarketLoan",
+        "Rate":7.59
+        },
+        {
+        "IntType":"RP",
+        "Rate":5.35
+        },
+        {
+        "IntType":"RS",
+        "Rate":0
+        },
+        {
+        "IntType":"Sell",
+        "Rate":6.3
+        },
+        {
+        "IntType":"Buy",
+        "Rate":6.6
+        }
+        ]
+        },
+        {
+        "Category":"MoneyMarket",
+        "Count":"0",
+        "TermUnits":"045",
+        "RateInfoList":[
+        {
+        "IntType":"BACP",
+        "Rate":6.5
+        },
+        {
+        "IntType":"MoneyMarketLoan",
+        "Rate":7.59
+        },
+        {
+        "IntType":"RP",
+        "Rate":5.45
+        },
+        {
+        "IntType":"RS",
+        "Rate":0
+        },
+        {
+        "IntType":"Sell",
+        "Rate":6.3
+        },
+        {
+        "IntType":"Buy",
+        "Rate":6.6
+        }
+        ]
+        },
+        {
+        "Category":"MoneyMarket",
+        "Count":"0",
+        "TermUnits":"060",
+        "RateInfoList":[
+        {
+        "IntType":"BACP",
+        "Rate":6.5
+        },
+        {
+        "IntType":"MoneyMarketLoan",
+        "Rate":7.59
+        },
+        {
+        "IntType":"RP",
+        "Rate":5.5
+        },
+        {
+        "IntType":"RS",
+        "Rate":0
+        },
+        {
+        "IntType":"Sell",
+        "Rate":6.3
+        },
+        {
+        "IntType":"Buy",
+        "Rate":6.6
+        }
+        ]
+        },
+        {
+        "Category":"MoneyMarket",
+        "Count":"0",
+        "TermUnits":"090",
+        "RateInfoList":[
+        {
+        "IntType":"BACP",
+        "Rate":6.5
+        },
+        {
+        "IntType":"MoneyMarketLoan",
+        "Rate":7.59
+        },
+        {
+        "IntType":"RP",
+        "Rate":5.5
+        },
+        {
+        "IntType":"RS",
+        "Rate":0
+        },
+        {
+        "IntType":"Sell",
+        "Rate":6.3
+        },
+        {
+        "IntType":"Buy",
+        "Rate":6.6
+        }
+        ]
+        },
+        {
+        "Category":"MoneyMarket",
+        "Count":"0",
+        "TermUnits":"120",
+        "RateInfoList":[
+        {
+        "IntType":"BACP",
+        "Rate":6.6
+        },
+        {
+        "IntType":"MoneyMarketLoan",
+        "Rate":7.7
+        },
+        {
+        "IntType":"RP",
+        "Rate":5.5
+        },
+        {
+        "IntType":"RS",
+        "Rate":0
+        },
+        {
+        "IntType":"Sell",
+        "Rate":6.35
+        },
+        {
+        "IntType":"Buy",
+        "Rate":6.65
+        }
+        ]
+        },
+        {
+        "Category":"MoneyMarket",
+        "Count":"0",
+        "TermUnits":"150",
+        "RateInfoList":[
+        {
+        "IntType":"BACP",
+        "Rate":6.65
+        },
+        {
+        "IntType":"MoneyMarketLoan",
+        "Rate":7.75
+        },
+        {
+        "IntType":"RP",
+        "Rate":5.5
+        },
+        {
+        "IntType":"RS",
+        "Rate":0
+        },
+        {
+        "IntType":"Sell",
+        "Rate":6.4
+        },
+        {
+        "IntType":"Buy",
+        "Rate":6.7
+        }
+        ]
+        },
+        {
+        "Category":"MoneyMarket",
+        "Count":"0",
+        "TermUnits":"180",
+        "RateInfoList":[
+        {
+        "IntType":"BACP",
+        "Rate":6.65
+        },
+        {
+        "IntType":"MoneyMarketLoan",
+        "Rate":7.75
+        },
+        {
+        "IntType":"RP",
+        "Rate":5.5
+        },
+        {
+        "IntType":"RS",
+        "Rate":0
+        },
+        {
+        "IntType":"Sell",
+        "Rate":6.4
+        },
+        {
+        "IntType":"Buy",
+        "Rate":6.7
+        }
+        ]
+        },
+        {
+        "Category":"MoneyMarket",
+        "Count":"0",
+        "TermUnits":"360",
+        "RateInfoList":[
+        {
+        "IntType":"BACP",
+        "Rate":0
+        },
+        {
+        "IntType":"MoneyMarketLoan",
+        "Rate":0
+        },
+        {
+        "IntType":"RP",
+        "Rate":0
+        },
+        {
+        "IntType":"RS",
+        "Rate":0
+        },
+        {
+        "IntType":"Sell",
+        "Rate":0
+        },
+        {
+        "IntType":"Buy",
+        "Rate":0
+        }
+        ]
+        }
+        ],
+      "Result": 4001
+    }
+  }
+}

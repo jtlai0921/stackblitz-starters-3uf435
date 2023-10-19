@@ -1,0 +1,55 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000191Rs",
+    "RqUID": "20180802151530",
+    "Timestamp": "20180802151545",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000191Rs",
+      "Result": 4001,
+      "Desc": "",
+      "ChkIssueList":  [{
+        "AcctNo": "111111114",
+        "AcctCur": "111111114",
+        "ChkNo": "12345678",
+        "ChkType": "5",
+        "ChkAmt": "50000",
+        "AvailableBal": "300000",
+        "Status": "2",
+        "StatusDesc": "Yo"
+      },{
+        "AcctNo": "111111113",
+        "AcctCur": "111111113",
+        "ChkNo": "12345679",
+        "ChkType": "5",
+        "ChkAmt": "150000",
+        "AvailableBal": "300000",
+        "Status": "1",
+        "StatusDesc": "Yo"
+      },{
+        "AcctNo": "111111112",
+        "AcctCur": "111111112",
+        "ChkNo": "12345680",
+        "ChkType": "5",
+        "ChkAmt": "100000",
+        "AvailableBal": "300000",
+        "Status": "1",
+        "StatusDesc": "Yo"
+      },{
+        "AcctNo": "11111111",
+        "AcctCur": "11111111",
+        "ChkNo": "12345681",
+        "ChkType": "5",
+        "ChkAmt": "40000",
+        "AvailableBal": "300000",
+        "Status": "2",
+        "StatusDesc": "Yo"
+      }]
+    }
+  }
+}

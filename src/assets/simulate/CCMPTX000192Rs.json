@@ -1,0 +1,55 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000192Rs",
+    "RqUID": "20180709111612",
+    "Timestamp": "20180709111645",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000192Rs",
+      "Result": 4001,
+      "Desc": "",
+      "CustomerList": [
+        {
+          "Country": "TW",
+          "CustomerId": "12345678",
+          "CustomerName": "李孝文股份有限公司"
+        },
+        {
+          "Country": "HK",
+          "CustomerId": "98765432",
+          "CustomerName": "Leo股份有限公司"
+        },
+        {
+          "Country": "TW",
+          "CustomerId": "21211212",
+          "CustomerName": "Kevin股份有限公司"
+        },
+        {
+          "Country": "US",
+          "CustomerId": "80898608",
+          "CustomerName": "李思穎股份有限公司"
+        },
+        {
+          "Country": "TW",
+          "CustomerId": "80898608",
+          "CustomerName": "李思穎股份有限公司"
+        },
+        {
+          "Country": "TW",
+          "CustomerId": "867090881",
+          "CustomerName": "Jerry股份有限公司"
+        },
+        {
+          "Country": "US",
+          "CustomerId": "80898608",
+          "CustomerName": "Jerry股份有限公司"
+        }
+      ]
+    }
+  }
+}

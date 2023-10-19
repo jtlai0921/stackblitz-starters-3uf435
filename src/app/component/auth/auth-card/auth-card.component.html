@@ -1,0 +1,1332 @@
+<!-- ETRUST交易 -->
+<ng-container *ngIf="data.nTxnChannel.toString() == 'ETRUST'">
+    <div class="list-card-style {{isAuthResult ? 'card-auth-result' : 'card-timeline'}}">
+        <div class="align-two-side">
+            <div class="card-left-wrap-2">
+                <ul>
+                    <li class="card-li-style align-two-side">
+                        <p class="card-tag-wrap">
+                            <!-- 若為已授權時不顯示tag1 -->
+                            <span *ngIf = "!isAuth && datetimeTag != 'AUTH.TAG_RESERVATION' && data.nTxnType != '7' && data.nTxnType != '8' && data.nTxnType != '10B'" class="card-tag-yellow">{{ datetimeTag | translate }}</span>
+                            <!-- 為預約時tag顯示為綠字白底 -->
+                            <span *ngIf = "!isAuth && datetimeTag == 'AUTH.TAG_RESERVATION'  && data.nTxnType != '7' && data.nTxnType != '8' && data.nTxnType != '10B'" class="card-tag-green">{{ datetimeTag | translate }}</span>
+                            <!-- LC開狀,LC修狀,LC文件上傳 tag1不顯示日期只顯示信用狀 -->
+                            <span *ngIf = "!isAuth && (data.nTxnType == '7' || data.nTxnType == '8' || data.nTxnType == '10B')" class="card-tag-yellow">{{ 'AUTH.TAG_LC_SIGN' | translate }}</span>
+                            <span class="card-tag-green">{{ data.nTxnChannel | translate }}</span>
+                        </p>
+                        <!-- 概要卡片右上角狀態欄 -->
+                        <p *ngIf="isResultTag" class="card-text-right card-font-s font-blue-highlight">{{ authResult | translate }}</p>
+                        <!-- 已授權 -->
+                        <p *ngIf="isAuth && isResultTag == false" class="card-text-right card-font-s font-blue-highlight">{{ data.Action | _custom:'AUTH_ACTION' | translate}}</p>
+                    </li>   
+
+                    <li class="card-li-style align-two-side" *ngIf = "data.nTxnType != '0'">
+                        <div class="card-text-left-l2">
+                            <!-- 交易類型 -->
+                            <p>{{ 'AUTH.FIELD_TXN_TYPE' | translate }}</p>
+                        </div>
+                        <div class="card-text-right-l2">
+                            <p>{{ data.nTxnType | _custom:'AUTH_TRNTYPE' | translate }}</p>
+                        </div>
+                    </li>
+    
+                    <ng-container [ngSwitch]="data.nTxnType" >
+                        <ng-container *ngSwitchCase="'0'">                                
+                                
+                                <li class="card-li-style align-two-side" *ngIf = "data.BULKFILETYPE">
+                                    <div class="card-text-left-l2">
+                                        <!-- 交易類型 -->
+                                        <p>{{ 'AUTH.FIELD_TXN_TYPE' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.BULKFILETYPE | _custom:'AUTH_ENTIRE_TRANSACTION' | translate }}</p>
+                                </div>
+                            </li>
+                            <li class="card-li-style align-two-side" *ngIf = "data.DEBITACCOUNT && data.BULKFILETYPE != 'F09' && data.BULKFILETYPE != 'F10' && data.BULKFILETYPE != 'US1' && data.BULKFILETYPE != 'US3' && data.BULKFILETYPE != 'YA1' && data.BULKFILETYPE != 'YA2-SD'  && data.BULKFILETYPE != 'YA5' && data.BULKFILETYPE != 'BEU'">
+                                <div class="card-text-left-l2">
+                                    <!-- 扣款帳號 -->
+                                    <p>{{ 'AUTH.FIELD_DEBIT_ACCT' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.DEBITACCOUNT }}</p>
+                                </div>
+                            </li>
+
+                            <li class="content-li-detail-style align-two-side li-style-top" *ngIf = "data.BULKREFNO && (data.BULKFILETYPE == 'YA5' || data.BULKFILETYPE == 'BEU')">
+                                <!-- 檔案批號 -->
+                              <div class="content-li-text-left">
+                                <p>{{ 'AUTH.FIELD_FILE_NO' | translate }}</p>
+                              </div>
+                              <div class="content-li-text-right">
+                                <p>{{ data.BULKREFNO }}</p>
+                              </div>
+                            </li>
+
+                            <li class="card-li-style" *ngIf = "data.DEBITACCOUNT && (data.DEBITCUSTOMERID || data.DEBITCUSTOMERNAME) && data.BULKFILETYPE != 'F09' && data.BULKFILETYPE != 'F10' && data.BULKFILETYPE != 'US1' && data.BULKFILETYPE != 'US3' && data.BULKFILETYPE != 'YA1' && data.BULKFILETYPE != 'YA2-SD'  && data.BULKFILETYPE != 'YA5' && data.BULKFILETYPE != 'BEU'">
+                                <!-- (輔)統編+公司名稱 -->
+                                <div class="text-overflow-width-r font-size-14">
+                                    <p id = "font-size-14" class = "ellipsis">({{ data.DEBITCUSTOMERID }} {{ data.DEBITCUSTOMERNAME }})</p>
+                                </div>
+                            </li>
+                            <li class="card-li-money align-two-side" *ngIf = "data.DEBITAMOUNT && data.DEBITCURRENCY && data.BULKFILETYPE != 'YA5' && data.BULKFILETYPE != 'BEU'">
+                                <!-- 總金額 -->
+                                <div class="card-li-money-left">
+                                    <p>{{ 'AUTH.TOTAL_AMT' | translate }}</p>
+                                </div>
+                                <div class="card-li-money-right amount-bold-style">
+                                    <b class="amount-number"><span id = "font-size-14">{{ data.DEBITCURRENCY }}</span> {{ data.DEBITAMOUNT | _currency }}</b>
+                                </div>
+                            </li>
+
+                            <li class="card-inside-line"></li>
+
+                            <li class="card-li-style align-two-side" *ngIf = "data.TOTALRECORD">
+                                <div class="card-text-left-l2">
+                                    <!-- 總筆數 -->
+                                    <p>{{ 'AUTH.FIELD_TOTAL_RECORD' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.TOTALRECORD }}</p>
+                                </div>
+                            </li>
+                            <li class="card-li-style align-two-side" *ngIf = "data.CREDITACCOUNT && (data.BULKFILETYPE == 'US1' || data.BULKFILETYPE == 'US3' || data.BULKFILETYPE == 'YA1' || data.BULKFILETYPE == 'YA2-SD')">
+                                <div class="card-text-left-l2">
+                                    <!-- 入帳帳號 -->
+                                    <p>{{ 'AUTH.FIELD_CREDIT_ACCT' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.CREDITACCOUNT }}</p>
+                                </div>
+                            </li>
+                            
+                            
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'1'">
+                            <li class="card-li-style align-two-side" *ngIf = "data.DEBITACCOUNT">
+                                    <!-- 扣款帳號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_DEBIT_ACCT' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.DEBITACCOUNT }}</p>
+                                    </div>
+                                </li>
+                                <li class="card-li-style" *ngIf = "data.DEBITACCOUNT && (data.DEBITCUSTOMERID || data.DEBITCUSTOMERNAME)">
+                                    <!-- (輔)統編+公司名稱 -->
+                                    <div class="text-overflow-width-r font-size-14">
+                                        <p id = "font-size-14" class = "ellipsis">({{ data.DEBITCUSTOMERID }} {{ data.DEBITCUSTOMERNAME }})</p>
+                                    </div>
+                                </li>
+                                
+                                <li class="card-li-money align-two-side" *ngIf = "data.DEBITAMOUNT && data.DEBITCURRENCY">
+                                    <!-- 扣款金額 -->
+                                    <div class="card-li-money-left">
+                                        <p>{{ 'AUTH.FIELD_DEBIT_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.DEBITCURRENCY }}</span> {{ data.DEBITAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+                
+                                <li class="card-inside-line"></li>
+                
+                                <li class="card-li-style align-two-side" *ngIf = "data.CREDITACCOUNT">
+                                    <!-- 入帳帳號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_CREDIT_ACCT' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.CREDITACCOUNT }}</p>
+                                    </div>
+                                </li>
+                                <li class="card-li-style" *ngIf = "data.CREDITACCOUNT &&(data.BENEFICIARYID || data.BENEFICIARYNAME)">
+                                    <!-- (輔)統編+公司名稱 -->
+                                    <div class="text-overflow-width-r font-size-14">
+                                        <p id = "font-size-14" class = "ellipsis">({{ data.BENEFICIARYID }} {{ data.BENEFICIARYNAME }})</p>
+                                    </div>
+                                </li>
+                
+                                <li class="card-li-money align-two-side" *ngIf="(data.TRANSACTIONCURRENCY || data.CREDITAMOUNT) && (data.TRANSACTIONCURRENCY != data.DEBITCURRENCY || data.CREDITAMOUNT != data.DEBITAMOUNT)">
+                                    <div class="card-li-money-left">
+                                        <!-- 入帳金額 -->
+                                        <p>{{ 'AUTH.FIELD_CREDIT_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.TRANSACTIONCURRENCY }}</span> {{ data.CREDITAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+                            </ng-container>
+
+                        <ng-container *ngSwitchCase="'2'">
+                                <li class="card-li-style align-two-side" *ngIf = "data.DEBITACCOUNT">
+                                    <!-- 扣款帳號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_DEBIT_ACCT' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.DEBITACCOUNT }}</p>
+                                    </div>
+                                </li>
+                                <li class="card-li-style" *ngIf = "data.DEBITACCOUNT && (data.DEBITCUSTOMERID || data.DEBITCUSTOMERNAME)">
+                                    <!-- (輔)統編+公司名稱 -->
+                                    <div class="text-overflow-width-r font-size-14">
+                                        <p id = "font-size-14" class = "ellipsis">({{ data.DEBITCUSTOMERID }} {{ data.DEBITCUSTOMERNAME }})</p>
+                                    </div>
+                                </li>
+                                
+                                <li class="card-li-money align-two-side" *ngIf = "data.DEBITAMOUNT && data.DEBITCURRENCY">
+                                    <!-- 扣款金額 -->
+                                    <div class="card-li-money-left">
+                                        <p>{{ 'AUTH.FIELD_DEBIT_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.DEBITCURRENCY }}</span> {{ data.DEBITAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+                
+                                <li class="card-inside-line"></li>
+                
+                                <li class="card-li-style align-two-side" *ngIf = "data.BENEFICIARYBANKCODE || data.CREDITACCOUNT">
+                                    <!-- 入帳帳號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_CREDIT_ACCT' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.BENEFICIARYBANKCODE.slice(0,3) }}<span *ngIf = "data.BENEFICIARYBANKCODE && data.CREDITACCOUNT">-</span>{{ data.CREDITACCOUNT }}</p>
+                                    </div>
+                                </li>
+                                <li class="card-li-style" *ngIf = "data.BENEFICIARYBANKCODE || data.CREDITACCOUNT && (data.BENEFICIARYID || data.BENEFICIARYNAME)">
+                                    <!-- (輔)統編+公司名稱 -->
+                                    <div class="text-overflow-width-r font-size-14">
+                                        <p id = "font-size-14" class = "ellipsis">({{ data.BENEFICIARYID }} {{ data.BENEFICIARYNAME }})</p>
+                                    </div>
+                                </li>
+                
+                                <li class="card-li-money align-two-side" *ngIf="(data.TRANSACTIONCURRENCY || data.CREDITAMOUNT) && (data.TRANSACTIONCURRENCY != data.DEBITCURRENCY || data.CREDITAMOUNT != data.DEBITAMOUNT)">
+                                    <div class="card-li-money-left">
+                                        <!-- 入帳金額 -->
+                                        <p>{{ 'AUTH.FIELD_CREDIT_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.TRANSACTIONCURRENCY }}</span> {{ data.CREDITAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+                            </ng-container>
+
+                        <ng-container *ngSwitchCase="'3'">
+                            <li class="card-li-style align-two-side" *ngIf = "data.DEBITACCOUNT">
+                                <!-- 扣款帳號 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_DEBIT_ACCT' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.DEBITACCOUNT }}</p>
+                                </div>
+                            </li>
+                            <li class="card-li-style" *ngIf = "data.DEBITACCOUNT && (data.DEBITCUSTOMERID || data.DEBITCUSTOMERNAME)">
+                                <!-- (輔)統編+公司名稱 -->
+                                <div class="text-overflow-width-r font-size-14">
+                                    <p id = "font-size-14" class = "ellipsis">({{ data.DEBITCUSTOMERID }} {{ data.DEBITCUSTOMERNAME }})</p>
+                                </div>
+                            </li>
+            
+                            <li class="card-li-money align-two-side" *ngIf = "data.DEBITCURRENCY && data.DEBITAMOUNT">
+                                <!-- 扣款金額 -->
+                                <div class="card-li-money-left">
+                                    <p>{{ 'AUTH.FIELD_DEBIT_AMT' | translate }}</p>
+                                </div>
+                                <div class="card-li-money-right amount-bold-style">
+                                    <b class="amount-number"><span id = "font-size-14">{{ data.DEBITCURRENCY }}</span> {{ data.DEBITAMOUNT | _currency }}</b>
+                                </div>
+                            </li>
+            
+                            <li class="card-inside-line"></li>
+            
+                            <li class="card-li-style align-two-side" *ngIf = "data['BENEFICIARYBANKCOUNTRY']">
+                                <!-- 國別 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_COUNTRY' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data['BENEFICIARYBANKCOUNTRY'] }}</p>
+                                </div>
+                            </li>
+    
+                            <li class="card-li-style align-two-side" *ngIf = "data['BENEFICIARYBANKSWIFTCODE']">
+                                <!-- SWIFT ID -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_CREDIT_SWIFT_ID' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data['BENEFICIARYBANKSWIFTCODE'] }}</p>
+                                </div>
+                            </li>
+    
+                            <li class="card-li-style align-two-side" *ngIf = "data.CREDITACCOUNT">
+                                <!-- 入帳帳號 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_CREDIT_ACCT' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.CREDITACCOUNT }}</p>
+                                </div>
+                            </li>
+                            <li class="card-li-style" *ngIf = "data.CREDITACCOUNT && (data.BENEFICIARYID || data.BENEFICIARYNAME)">
+                                <!-- (輔)統編+公司名稱 -->
+                                <div class="text-overflow-width-r font-size-14">
+                                    <p id = "font-size-14" class = "ellipsis">({{ data.BENEFICIARYID }} {{ data.BENEFICIARYNAME }})</p>
+                                </div>
+                            </li>
+            
+                            <li class="card-li-money align-two-side" *ngIf="(data.CREDITAMOUNT && data.TRANSACTIONCURRENCY) && (data.TRANSACTIONCURRENCY != data.DEBITCURRENCY || data.CREDITAMOUNT != data.DEBITAMOUNT)">
+                                <!-- 入帳金額 -->
+                                <div class="card-li-money-left">
+                                    <p>{{ 'AUTH.FIELD_CREDIT_AMT' | translate }}</p>
+                                </div>
+                                <div class="card-li-money-right amount-bold-style">
+                                    <b class="amount-number"><span id = "font-size-14">{{ data.TRANSACTIONCURRENCY }}</span> {{ data.CREDITAMOUNT | _currency }}</b>
+                                </div>
+                            </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'4'">
+                            <li class="card-li-style align-two-side" *ngIf = "data.DEBITACCOUNT">
+                                <!-- 扣款帳號 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_DEBIT_ACCT' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.DEBITACCOUNT }}</p>
+                                </div>
+                            </li>
+                            <li class="card-li-style" *ngIf = "data.DEBITACCOUNT && (data.DEBITCUSTOMERID || data.DEBITCUSTOMERNAME)">
+                                <!-- (輔)統編+公司名稱 -->
+                                <div class="text-overflow-width-r font-size-14">
+                                    <p id = "font-size-14" class = "ellipsis">({{ data.DEBITCUSTOMERID }} {{ data.DEBITCUSTOMERNAME }})</p>
+                                </div>
+                            </li>
+    
+                            <li class="card-inside-line"></li>
+            
+                            <li class="card-li-money align-two-side" *ngIf = "data.TRANSACTIONCURRENCY && data.TDAMOUNT">
+                                <!-- 定存金額 -->
+                                <div class="card-li-money-left">
+                                    <p>{{ 'AUTH.FIELD_PRINCIPAL' | translate }}</p>
+                                </div>
+                                <div class="card-li-money-right amount-bold-style">
+                                    <b class="amount-number"><span id = "font-size-14">{{ data.TRANSACTIONCURRENCY }}</span> {{ data.TDAMOUNT | _currency }}</b>
+                                </div>
+                            </li>
+                
+                            <li class="card-li-style align-two-side" *ngIf = "data.TDINTERESTRATE || data['INTERESTTYPE']">
+                                <!-- 利率 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_RATE' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.TDINTERESTRATE }}%<span id = "font-size-14" *ngIf = "data['INTERESTTYPE']">({{ data['INTERESTTYPE'] }})</span></p>
+                                </div>
+                            </li>
+    
+                            <li class="card-li-style align-two-side" *ngIf = "data.TENORPERIOD && data.TENORPERIODUNIT">
+                                <!-- 期別 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_PERIOD' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <!-- 期別+單位(日或月) -->
+                                    <p>{{ data.TENORPERIOD }}<span *ngIf = "data.TENORPERIODUNIT == 'M'">{{ 'AUTH.UNIT_M' | translate }}</span><span *ngIf = "data.TENORPERIODUNIT == 'D'">{{ 'AUTH.UNIT_D' | translate }}</span>
+                                    <!-- 到期日: +日期 -->
+                                    <span class = "font-size-14" *ngIf = "data.DUEDATE">({{'AUTH.FIELD_MATURITY_DATE' | translate}}: {{data.DUEDATE}})</span></p>
+                                </div>
+                            </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'6'">
+                            <li class="card-li-style align-two-side" *ngIf = "data.TDACCOUNT">
+                                    <!-- 定存帳號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_DEPOSIT_ACCOUNT' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.TDACCOUNT }}</p>
+                                    </div>
+                                </li>
+                                <li class="card-li-style" *ngIf = "data.TDACCOUNT && (data.DEBITCUSTOMERID || data.DEBITCUSTOMERNAME)">
+                                    <!-- (輔)統編+公司名稱 -->
+                                    <div class="text-overflow-width-r font-size-14">
+                                        <p id = "font-size-14" class = "ellipsis">({{ data.DEBITCUSTOMERID }} {{ data.DEBITCUSTOMERNAME }})</p>
+                                    </div>
+                                </li>
+        
+                                <li class="card-inside-line"></li>
+                
+                                <li class="card-li-money align-two-side" *ngIf = "data.TDCURRENCY && data.TDAMOUNT">
+                                    <!-- 定存金額 -->
+                                    <div class="card-li-money-left">
+                                        <p>{{ 'AUTH.FIELD_PRINCIPAL' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.TDCURRENCY }}</span> {{ data.TDAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+                    
+                                <li class="card-li-style align-two-side" *ngIf = "data.TDINTERESTRATE || data['INTERESTTYPE']">
+                                    <!-- 利率 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_RATE' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.TDINTERESTRATE }}%<span id = "font-size-14" *ngIf = "data['INTERESTTYPE']">({{ data['INTERESTTYPE'] }})</span></p>
+                                    </div>
+                                </li>
+        
+                                <li class="card-li-style align-two-side" *ngIf = "data.TENORPERIOD && data.TENORPERIODUNIT">
+                                    <!-- 期別 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_PERIOD' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <!-- 期別+單位(日或月) -->
+                                        <p>{{ data.TENORPERIOD }}<span *ngIf = "data.TENORPERIODUNIT == 'M'">{{ 'AUTH.UNIT_M' | translate }}</span><span *ngIf = "data.TENORPERIODUNIT == 'D'">{{ 'AUTH.UNIT_D' | translate }}</span>
+                                            <!-- 到期日 -->
+                                            <span class = "font-size-14" *ngIf = "data.MATURITYDATE">({{'AUTH.FIELD_MATURITY_DATE' | translate}}: {{ data.MATURITYDATE | _datetime:'yyyy/MM/dd'}})</span>
+                                        </p>
+                                    </div>
+                                </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'7'">
+                            <li class="card-li-style align-two-side" *ngIf = "data.BatchId">
+                                <!-- 網銀序號 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_ETRUST_SEQ' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.BatchId }}</p>
+                                </div>
+                            </li>
+
+                                <li class="card-li-money align-two-side" *ngIf = "data.LCCURRENCY_1 && data.LCAMOUNT_1">
+                                        <!-- 開狀金額 -->
+                                        <div class="card-li-money-left">
+                                            <p>{{ 'AUTH.FIELD_LC_AMT' | translate }}</p>
+                                        </div>
+                                        <div class="card-li-money-right amount-bold-style">
+                                            <b class="amount-number"><span id = "font-size-14">{{ data.LCCURRENCY_1 }}</span> {{ data.LCAMOUNT_1 | _currency }}</b>
+                                        </div>
+                                </li>
+    
+                            <li class="card-inside-line"></li>
+                            
+                            <li class="card-li-style align-two-side" *ngIf = "data.APPLICANTNAME">
+                                    <!-- 開狀申請人 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_LC_OPEN_APPLICANT' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.APPLICANTNAME }}</p>
+                                    </div>
+                                </li>
+
+                            
+                            <li class="card-li-style align-two-side" *ngIf = "data.BENEFICIARYCOUNTRYCODE_1">
+                                <!-- 受益人國別 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_BENEFICIARY_COUNTRY' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.BENEFICIARYCOUNTRYCODE_1 }}</p>
+                                </div>
+                            </li>
+
+                            <li class="card-li-style align-two-side" *ngIf = "data.BENEFICIARYNAME">
+                                    <!-- 受益人 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_BENEFICIARY' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.BENEFICIARYNAME }}</p>
+                                    </div>
+                                </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'8'">
+                                <li class="card-li-style align-two-side" *ngIf = "data.BatchId">
+                                    <!-- 網銀序號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_ETRUST_SEQ' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.BatchId }}</p>
+                                    </div>
+                                </li>
+    
+                                    <li class="card-li-money align-two-side" *ngIf = "data.LCNUMBER">
+                                            <!-- 信用狀號碼 -->
+                                            <div class="card-text-left-l2">
+                                                <p>{{ 'AUTH.FIELD_LC_NO' | translate }}</p>
+                                            </div>
+                                            <div class="card-text-right-l2">
+                                                    <p>{{ data.LCNUMBER }}</p>
+                                                </div>
+                                    </li>
+        
+                                <li class="card-inside-line"></li>
+                                
+                                <li class="card-li-style align-two-side" *ngIf = "data.APPLICANTNAME">
+                                        <!-- 開狀申請人 -->
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'AUTH.FIELD_LC_OPEN_APPLICANT' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p>{{ data.APPLICANTNAME }}</p>
+                                        </div>
+                                    </li>
+
+                                
+                                <li class="card-li-style align-two-side" *ngIf = "data.BENEFICIARYCOUNTRYCODE_1">
+                                    <!-- 受益人國別 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_BENEFICIARY_COUNTRY' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.BENEFICIARYCOUNTRYCODE_1 }}</p>
+                                    </div>
+                                </li>
+    
+                                <li class="card-li-style align-two-side" *ngIf = "data.BENEFICIARYNAME">
+                                        <!-- 受益人 -->
+                                            <div class="card-text-left-l2">
+                                                <p>{{ 'AUTH.FIELD_BENEFICIARY' | translate }}</p>
+                                            </div>
+                                            <div class="card-text-right-l2">
+                                                <p>{{ data.BENEFICIARYNAME }}</p>
+                                            </div>
+                                        </li>
+                            </ng-container>
+
+                        <ng-container *ngSwitchCase="'9'">
+                        </ng-container>
+
+                        <!-- 電子聯繫單 -->
+                        <ng-container *ngSwitchCase="'10A'">
+                                <li class="card-li-style align-two-side" *ngIf = "data.BatchId">
+                                    <!-- 交易序號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_TXN_BATCH_ID' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.BatchId }}</p>
+                                    </div>
+                                </li>
+                                
+                                <li class="card-inside-line"></li>
+                
+                                <li class="card-li-style align-two-side auth-memo-content_3 type10" *ngIf = "data['REMARK']">
+                                    <p class="break_word">{{ data['REMARK'] }}</p>
+                                </li>
+                            </ng-container>
+
+                        <!-- LC文件上傳 -->    
+                        <ng-container *ngSwitchCase="'10B'">
+                            <li class="card-li-style align-two-side" *ngIf = "data.BatchId">
+                                <!-- 網銀序號 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_ETRUST_SEQ' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.BatchId }}</p>
+                                </div>
+                            </li>
+    
+                            <li class="card-li-style align-two-side" *ngIf = "data.LCNUMBER">
+                                <div class="card-text-left-l2">
+                                    <!-- 信用狀號碼 -->
+                                    <p>{{ 'AUTH.FIELD_LC_NO' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.LCNUMBER }}</p>
+                                </div>
+                            </li>
+                                    
+                            <li class="card-li-money align-two-side" *ngIf = "data.LCCURRENCY && data.LCAMOUNT_1">
+                                    <!-- 開狀金額 -->
+                                    <div class="card-li-money-left">
+                                        <p>{{ 'AUTH.FIELD_LC_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.LCCURRENCY }}</span> {{ data.LCAMOUNT_1 | _currency }}</b>
+                                    </div>
+                                </li>
+    
+                            <li class="card-inside-line"></li>
+            
+                            <li class="card-li-style align-two-side" *ngIf = "data.CUSTOMERCOUNTRYCODE">
+                                    <!-- 開狀申請人國別 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_LC_OPEN_APPLICANT_COUNTRY' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.CUSTOMERCOUNTRYCODE }}</p>
+                                    </div>
+                                </li>
+
+                            <li class="card-li-style align-two-side" *ngIf = "data.BENEFICIARYNAME">
+                                <!-- 受益人 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_BENEFICIARY' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.BENEFICIARYNAME }}</p>
+                                    </div>
+                                </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'11'">
+                                <li class="card-li-style align-two-side" *ngIf = "data.DEBITACCOUNT">
+                                        <!-- 扣款帳號 -->
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'AUTH.FIELD_DEBIT_ACCT' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p>{{ data.DEBITACCOUNT }}</p>
+                                        </div>
+                                    </li>
+                                    <li class="card-li-style" *ngIf = "data.DEBITACCOUNT && (data.DEBITCUSTOMERID || data.DEBITCUSTOMERNAME)">
+                                        <!-- (輔)統編+公司名稱 -->
+                                        <div class="text-overflow-width-r font-size-14">
+                                            <p id = "font-size-14" class = "ellipsis">({{ data.DEBITCUSTOMERID }} {{ data.DEBITCUSTOMERNAME }})</p>
+                                        </div>
+                                    </li>
+                    
+                                    <li class="card-li-money align-two-side" *ngIf = "data.DEBITCURRENCY && data.DEBITAMOUNT">
+                                        <!-- 扣款金額 -->
+                                        <div class="card-li-money-left">
+                                            <p>{{ 'AUTH.FIELD_DEBIT_AMT' | translate }}</p>
+                                        </div>
+                                        <div class="card-li-money-right amount-bold-style">
+                                            <b class="amount-number"><span id = "font-size-14">{{ data.DEBITCURRENCY }}</span> {{ data.DEBITAMOUNT | _currency }}</b>
+                                        </div>
+                                    </li>
+            
+                            <li class="card-inside-line"></li>
+            
+                            <li class="card-li-style align-two-side" *ngIf = "data.BENEFICIARYCOUNTRYCODE_1">
+                                    <!-- 國別 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_COUNTRY' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.BENEFICIARYCOUNTRYCODE_1 }}</p>
+                                    </div>
+                                </li>
+        
+                                <li class="card-li-style align-two-side" *ngIf = "data['BENEFICIARYBANKNAME']">
+                                    <!-- SWIFT ID -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_CREDIT_SWIFT_ID' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2 text-overflow-width-r">
+                                        <p>{{ data['BENEFICIARYBANKNAME'] }}</p>
+                                    </div>
+                                </li>
+        
+                                <li class="card-li-style align-two-side" *ngIf = "data.CREDITACCOUNT">
+                                    <!-- 入帳帳號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_CREDIT_ACCT' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.CREDITACCOUNT }}</p>
+                                    </div>
+                                </li>
+                                <li class="card-li-style" *ngIf = "data.CREDITACCOUNT && (data.BENEFICIARYID || data.BENEFICIARYNAME)">
+                                        <!-- (輔)統編+公司名稱 -->
+                                        <div class="text-overflow-width-r font-size-14">
+                                            <p id = "font-size-14" class = "ellipsis">({{ data.BENEFICIARYID }} {{ data.BENEFICIARYNAME }})</p>
+                                        </div>
+                                </li>
+                
+                                <li class="card-li-money align-two-side" *ngIf="(data.CREDITAMOUNT && data.TRANSACTIONCURRENCY) && (data.TRANSACTIONCURRENCY != data.DEBITCURRENCY || data.CREDITAMOUNT != data.DEBITAMOUNT)">
+                                    <!-- 入帳金額 -->
+                                    <div class="card-li-money-left">
+                                        <p>{{ 'AUTH.FIELD_CREDIT_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.TRANSACTIONCURRENCY }}</span> {{ data.CREDITAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'21'">
+                                <li class="card-li-style align-two-side" *ngIf = "data.DEBITACCOUNT">
+                                    <!-- 扣款帳號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_DEBIT_ACCT' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.DEBITACCOUNT }}</p>
+                                    </div>
+                                </li>
+                                <li class="card-li-style" *ngIf = "data.DEBITACCOUNT && (data.DEBITCUSTOMERID || data.DEBITCUSTOMERNAME)">
+                                        <!-- (輔)統編+公司名稱 -->
+                                        <div class="text-overflow-width-r font-size-14">
+                                            <p id = "font-size-14" class = "ellipsis">({{ data.DEBITCUSTOMERID }} {{ data.DEBITCUSTOMERNAME }})</p>
+                                        </div>
+                                </li>
+                                
+                                <li class="card-li-money align-two-side" *ngIf = "data.DEBITAMOUNT && data.DEBITCURRENCY">
+                                    <!-- 扣款金額 -->
+                                    <div class="card-li-money-left">
+                                        <p>{{ 'AUTH.FIELD_DEBIT_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.DEBITCURRENCY }}</span> {{ data.DEBITAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+                
+                                <li class="card-inside-line"></li>
+                
+                                <li class="card-li-style align-two-side" *ngIf = "data.BENEFICIARYBANKCODE || data.CREDITACCOUNT">
+                                    <!-- 入帳帳號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_CREDIT_ACCT' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.BENEFICIARYBANKCODE }}{{ data.CREDITACCOUNT }}</p>
+                                    </div>
+                                </li>
+                                <li class="card-li-style" *ngIf = "data.BENEFICIARYBANKCODE || data.CREDITACCOUNT && (data.BENEFICIARYID && data.BENEFICIARYNAME)">
+                                        <!-- (輔)統編+公司名稱 -->
+                                        <div class="text-overflow-width-r font-size-14">
+                                            <p id = "font-size-14" class = "ellipsis">({{ data.BENEFICIARYID }} {{ data.BENEFICIARYNAME }})</p>
+                                        </div>
+                                </li>
+                
+                                <li class="card-li-money align-two-side" *ngIf="(data.TRANSACTIONCURRENCY || data.CREDITAMOUNT) && (data.TRANSACTIONCURRENCY != data.DEBITCURRENCY || data.CREDITAMOUNT != data.DEBITAMOUNT)">
+                                    <div class="card-li-money-left">
+                                        <!-- 入帳金額 -->
+                                        <p>{{ 'AUTH.FIELD_CREDIT_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.TRANSACTIONCURRENCY }}</span> {{ data.CREDITAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+                            </ng-container>
+
+                        <ng-container *ngSwitchCase="'31'">
+                                <li class="card-li-style align-two-side" *ngIf = "data.DEBITBANKSWIFTCODE">
+                                        <!-- 扣款SWIFT ID -->
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'AUTH.FIELD_DEBIT_BANK_SWIFT_ID' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p>{{ data.DEBITBANKSWIFTCODE }}</p>
+                                        </div>
+                                    </li>                                
+                                <li class="card-li-style align-two-side" *ngIf = "data.DEBITACCOUNT">
+                                        <!-- 扣款帳號 -->
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'AUTH.FIELD_DEBIT_ACCT' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p>{{ data.DEBITACCOUNT }}</p>
+                                        </div>
+                                    </li>
+                                    <li class="card-li-style" *ngIf = "data.DEBITACCOUNT && (data.DEBITCUSTOMERID || data.DEBITCUSTOMERNAME)">
+                                        <!-- (輔)統編+公司名稱 -->
+                                        <div class="text-overflow-width-r font-size-14">
+                                            <p id = "font-size-14" class = "ellipsis">({{ data.DEBITCUSTOMERID }} {{ data.DEBITCUSTOMERNAME }})</p>
+                                        </div>
+                                    </li>
+                    
+                                    <li class="card-li-money align-two-side" *ngIf = "data.DEBITCURRENCY && data.DEBITAMOUNT">
+                                        <!-- 扣款金額 -->
+                                        <div class="card-li-money-left">
+                                            <p>{{ 'AUTH.FIELD_DEBIT_AMT' | translate }}</p>
+                                        </div>
+                                        <div class="card-li-money-right amount-bold-style">
+                                            <b class="amount-number"><span id = "font-size-14">{{ data.DEBITCURRENCY }}</span> {{ data.DEBITAMOUNT | _currency }}</b>
+                                        </div>
+                                    </li>
+                    
+                                    <li class="card-inside-line"></li>
+                    
+                                    <li class="card-li-style align-two-side" *ngIf = "data['BENEFICIARYBANKCOUNTRY']">
+                                        <!-- 國別 -->
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'AUTH.FIELD_COUNTRY' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p>{{ data['BENEFICIARYBANKCOUNTRY'] }}</p>
+                                        </div>
+                                    </li>
+            
+                                    <li class="card-li-style align-two-side" *ngIf = "data['BENEFICIARYBANKSWIFTCODE']">
+                                        <!-- 入帳SWIFT ID -->
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'AUTH.FIELD_CREDIT_BANK_SWIFT_ID' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p>{{ data['BENEFICIARYBANKSWIFTCODE'] }}</p>
+                                        </div>
+                                    </li>
+            
+                                    <li class="card-li-style align-two-side" *ngIf = "data.CREDITACCOUNT">
+                                        <!-- 入帳帳號 -->
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'AUTH.FIELD_CREDIT_ACCT' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p>{{ data.CREDITACCOUNT }}</p>
+                                        </div>
+                                    </li>
+                                    <li class="card-li-style" *ngIf = "data.CREDITACCOUNT && (data.BENEFICIARYID || data.BENEFICIARYNAME)">
+                                        <!-- (輔)統編+公司名稱 -->
+                                        <div class="text-overflow-width-r font-size-14">
+                                            <p id = "font-size-14" class = "ellipsis">({{ data.BENEFICIARYID }} {{ data.BENEFICIARYNAME }})</p>
+                                        </div>
+                                    </li>
+                    
+                                    <li class="card-li-money align-two-side" *ngIf="(data.CREDITAMOUNT && data.TRANSACTIONCURRENCY) && (data.TRANSACTIONCURRENCY != data.DEBITCURRENCY || data.CREDITAMOUNT != data.DEBITAMOUNT)">
+                                        <!-- 入帳金額 -->
+                                        <div class="card-li-money-left">
+                                            <p>{{ 'AUTH.FIELD_CREDIT_AMT' | translate }}</p>
+                                        </div>
+                                        <div class="card-li-money-right amount-bold-style">
+                                            <b class="amount-number"><span id = "font-size-14">{{ data.TRANSACTIONCURRENCY }}</span> {{ data.CREDITAMOUNT | _currency }}</b>
+                                        </div>
+                                    </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'32'">
+                                <li class="card-li-style align-two-side" *ngIf = "data.DEBITACCOUNT">
+                                    <!-- 扣款帳號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_DEBIT_ACCT' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.DEBITACCOUNT }}</p>
+                                    </div>
+                                </li>
+                                <li class="card-li-style" *ngIf = "data.DEBITACCOUNT && (data.DEBITCUSTOMERID || data.DEBITCUSTOMERNAME)">
+                                    <!-- (輔)統編+公司名稱 -->
+                                    <div class="text-overflow-width-r font-size-14">
+                                        <p id = "font-size-14" class = "ellipsis">({{ data.DEBITCUSTOMERID }} {{ data.DEBITCUSTOMERNAME }})</p>
+                                    </div>
+                                </li>
+                                
+                                <li class="card-li-money align-two-side" *ngIf = "data.DEBITAMOUNT && data.DEBITCURRENCY">
+                                    <!-- 扣款金額 -->
+                                    <div class="card-li-money-left">
+                                        <p>{{ 'AUTH.FIELD_DEBIT_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.DEBITCURRENCY }}</span> {{ data.DEBITAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+                                
+                                <li class="card-inside-line"></li>
+                                
+                                <li class="card-li-style align-two-side" *ngIf = "data['BENEFICIARYBANKCOUNTRY']">
+                                    <!-- 國別 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_COUNTRY' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data['BENEFICIARYBANKCOUNTRY'] }}</p>
+                                    </div>
+                                </li>
+                
+                                <li class="card-li-style" *ngIf = "data.CREDITACCOUNT && data['BENEFICIARYBANKCOUNTRY']">
+                                    <!-- (輔)入帳帳號 -->
+                                    <div class="text-overflow-width-r font-size-14">
+                                        <p id = "font-size-14" class = "ellipsis">({{ data.CREDITACCOUNT }})</p>
+                                    </div>
+                                </li>
+                                                
+                                <li class="card-li-style align-two-side" *ngIf = "data.BENEFICIARYBANKCODE || data.CREDITACCOUNT">
+                                    <!-- 入帳戶名 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_CREDIT_ACCT_NAME' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.BENEFICIARYID }} {{ data.BENEFICIARYNAME }}</p>
+                                    </div>
+                                </li>
+                
+                                <li class="card-li-money align-two-side" *ngIf="(data.TRANSACTIONCURRENCY || data.CREDITAMOUNT) && (data.TRANSACTIONCURRENCY != data.DEBITCURRENCY || data.CREDITAMOUNT != data.DEBITAMOUNT)">
+                                    <div class="card-li-money-left">
+                                        <!-- 入帳金額 -->
+                                        <p>{{ 'AUTH.FIELD_CREDIT_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.TRANSACTIONCURRENCY }}</span> {{ data.CREDITAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+                            </ng-container>
+                        <ng-container *ngSwitchCase="'99'">
+                        </ng-container>
+                    </ng-container>
+
+                </ul>
+            </div>
+    
+            <ng-container>
+                <div *ngIf="showDetailBtn" class="card-right-icon-wrap right-icon-ellipsis">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</ng-container>
+
+<!-- CSFAX交易 -->
+<ng-container *ngIf="data.nTxnChannel == 'CSFAX'">
+    <div class="list-card-style {{isAuthResult ? 'card-auth-result' : 'card-timeline'}}">
+        <div class="align-two-side">
+            <div class="card-left-wrap-2">
+                <ul>
+                    <li class="card-li-style align-two-side">
+                        <p class="card-tag-wrap">
+                            <!-- 若為已授權時不顯示tag1 -->
+                            <span *ngIf = "!isAuth && datetimeTag != 'AUTH.TAG_RESERVATION' && data.nTxnType != '7' && data.nTxnType != '8' && data.nTxnType != '10B'" class="card-tag-yellow">{{ datetimeTag | translate }}</span>
+                            <!-- 為預約時tag顯示為綠字白底 -->
+                            <span *ngIf = "!isAuth && datetimeTag == 'AUTH.TAG_RESERVATION'  && data.nTxnType != '7' && data.nTxnType != '8' && data.nTxnType != '10B'" class="card-tag-green">{{ datetimeTag | translate }}</span>
+                            <!-- LC開狀,LC修狀,LC文件上傳 tag1不顯示日期只顯示信用狀 -->
+                            <span *ngIf = "!isAuth && (data.nTxnType == '7' || data.nTxnType == '8' || data.nTxnType == '10B')" class="card-tag-yellow">{{ 'AUTH.TAG_LC_SIGN' | translate }}</span>
+                            <span class="card-tag-green">{{ data.nTxnChannel | translate }}</span>
+                        </p>
+                        <!-- 概要卡片右上角狀態欄 -->
+                        <p *ngIf="isResultTag" class="card-text-right card-font-s font-blue-highlight">{{ authResult | translate }}</p>
+                        <!-- 已授權 -->
+                        <p *ngIf="isAuth && isResultTag == false" class="card-text-right card-font-s font-blue-highlight">{{ data.Action | _custom:'AUTH_ACTION' | translate}}</p>
+                    </li>
+
+                    <li class="card-li-style align-two-side">
+                        <div class="card-text-left-l2">
+                            <p>{{ 'AUTH.FIELD_TXN_TYPE' | translate }}</p>
+                        </div>
+                        <div class="card-text-right-l2">
+                            <p>{{ data.nTxnType | _custom:'AUTH_TRNTYPE_CSFAX' | translate }}</p>
+                        </div>
+                    </li>
+
+
+                    <ng-container [ngSwitch]="data.nTxnType">
+                        <ng-container *ngSwitchCase="'1'">
+                            <li class="card-li-style align-two-side" *ngIf = "data.PAYERACCTID">
+                                <!-- 扣款帳號 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_DEBIT_ACCT' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.PAYERACCTID }}</p>
+                                </div>
+                            </li>
+                            <li class="card-li-style" *ngIf = "data.PAYERACCTID && (data.CUSTPERMID || data.LEGALNAME)">
+                                    <!-- (輔)統編+公司名稱 -->
+                                    <div class="text-overflow-width-r font-size-14">
+                                        <p id = "font-size-14" class = "ellipsis">({{ data.CUSTPERMID }} {{ data.LEGALNAME }})</p>
+                                    </div>
+                            </li>
+
+                            <li class="card-inside-line"></li>
+
+                            <li class="card-li-style align-two-side" *ngIf = "data.PAYEEACCTID">
+                                <!-- 入帳帳號 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_CREDIT_ACCT' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.PAYEEACCTID }}</p>
+                                </div>
+                            </li>
+            
+                            <li class="card-li-style" *ngIf = "data.PAYEEACCTID && data.PAYEENAME">
+                                <!-- (輔)入帳戶名 -->
+                                <div class="card-text-right-l2 text-overflow-width-r font-size-14">
+                                    <p id = "font-size-14">({{ data.PAYEENAME }})</p>
+                                </div>
+                            </li>
+                            <li *ngIf="data.REMITCURCODE_1 && data.AMT" class="card-li-money align-two-side">
+                                    <div class="card-li-money-left">
+                                        <!-- 入帳金額 -->
+                                        <p>{{ 'AUTH.FIELD_CREDIT_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.REMITCURCODE_1 }}</span> {{ data.AMT | _currency }}</b>
+                                    </div>
+                                </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'2'">
+                                <li class="card-li-style align-two-side" *ngIf = "data.PAYERACCTID_1">
+                                        <!-- 扣款帳號 -->
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'AUTH.FIELD_DEBIT_ACCT' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p>{{ data.PAYERACCTID_1 }}</p>
+                                        </div>
+                                    </li>
+                                    <li class="card-li-style" *ngIf = "data.PAYERACCTID_1 && (data.CUSTPERMID || data.LEGALNAME)">
+                                        <!-- (輔)統編+公司名稱 -->
+                                        <div class="text-overflow-width-r font-size-14">
+                                            <p id = "font-size-14" class = "ellipsis">({{ data.CUSTPERMID }} {{ data.LEGALNAME }})</p>
+                                        </div>
+                                    </li>
+        
+                                    <li class="card-inside-line"></li>
+        
+                                    <li class="card-li-style align-two-side" *ngIf = "data.PAYEEACCTID_1">
+                                        <!-- 入帳帳號 -->
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'AUTH.FIELD_CREDIT_ACCT' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p>{{ data.PAYEEACCTID_1 }}</p>
+                                        </div>
+                                    </li>
+                    
+                                    <li class="card-li-style" *ngIf = "data.PAYEEACCTID_1 && data.PAYEENAME_1">
+                                        <!-- (輔)入帳戶名 -->
+                                        <div class="card-text-right-l2 text-overflow-width-r font-size-14">
+                                            <p id = "font-size-14">({{ data.PAYEENAME_1 }})</p>
+                                        </div>
+                                    </li>
+                                    <li *ngIf="data.REMITCURCODE && data.AMT_1" class="card-li-money align-two-side">
+                                            <div class="card-li-money-left">
+                                                <!-- 入帳金額 -->
+                                                <p>{{ 'AUTH.FIELD_CREDIT_AMT' | translate }}</p>
+                                            </div>
+                                            <div class="card-li-money-right amount-bold-style">
+                                                <b class="amount-number"><span id = "font-size-14">{{ data.REMITCURCODE }}</span> {{ data.AMT_1 | _currency }}</b>
+                                            </div>
+                                        </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'3'">
+                                <li class="card-li-style align-two-side" *ngIf = "data.PAYERACCTID_1">
+                                <!-- 扣款帳號 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_DEBIT_ACCT' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.PAYERACCTID_1 }}</p>
+                                </div>
+                            </li>
+                            <li class="card-li-style" *ngIf = "data.PAYERACCTID_1 && (data.CUSTPERMID || data.LEGALNAME)">
+                                <!-- (輔)統編+公司名稱 -->
+                                <div class="text-overflow-width-r font-size-14">
+                                    <p id = "font-size-14" class = "ellipsis">({{ data.CUSTPERMID }} {{ data.LEGALNAME }})</p>
+                                </div>
+                            </li>
+
+                            <li class="card-inside-line"></li>
+
+                            <li class="card-li-style align-two-side" *ngIf = "data.BANKID">
+                                    <!-- SWIFT ID -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_CREDIT_SWIFT_ID' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.BANKID }}</p>
+                                    </div>
+                                </li>
+
+                            <li class="card-li-style align-two-side" *ngIf = "data.PAYEEACCTID_1">
+                                <!-- 入帳帳號 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_CREDIT_ACCT' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.PAYEEACCTID_1 }}</p>
+                                </div>
+                            </li>
+            
+                            <li class="card-li-style" *ngIf = "data.PAYEEACCTID_1 && data.PAYEENAME_1">
+                                <!-- (輔)入帳戶名 -->
+                                <div class="card-text-right-l2 text-overflow-width-r font-size-14">
+                                    <p id = "font-size-14">({{ data.PAYEENAME_1 }})</p>
+                                </div>
+                            </li>
+                            <li *ngIf="data.REMITCURCODE && data.AMT_1" class="card-li-money align-two-side">
+                                    <div class="card-li-money-left">
+                                        <!-- 入帳金額 -->
+                                        <p>{{ 'AUTH.FIELD_CREDIT_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.REMITCURCODE }}</span> {{ data.AMT_1 | _currency }}</b>
+                                    </div>
+                                </li>
+                        </ng-container>
+
+                        
+                        <ng-container *ngSwitchCase="'4'">
+                            <li class="card-li-money align-two-side" *ngIf = "data.DEPOSITSCURRENCY && data.DEPOSITSAMOUNT">
+                                    <div class="card-li-money-left">
+                                        <!-- 定存金額 -->
+                                        <p>{{ 'AUTH.FIELD_PRINCIPAL' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.DEPOSITSCURRENCY }}</span> {{ data.DEPOSITSAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+
+    
+                            <li class="card-inside-line"></li>
+
+                
+                            <li class="card-li-style align-two-side" *ngIf = "data.RATE">
+                                <!-- 利率 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_RATE' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.RATE }}%</p>
+                                </div>
+                            </li>
+
+                            <li class="card-li-style align-two-side" *ngIf = "data.DEPOSITPERIOD">
+                                <!-- 定存期間 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_DEPOSIT_PERIOD' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.DEPOSITPERIOD }}</p>
+                                </div>
+                            </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'5'">
+                            <li class="card-li-style align-two-side" *ngIf = "data.DEPOSITSACCOUNT">
+                                <!-- 定存帳號 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_DEPOSIT_ACCOUNT' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.DEPOSITSACCOUNT }}</p>
+                                </div>
+                            </li>
+            
+                            <li class="card-li-style" *ngIf = "data.DEPOSITSACCOUNT && (data.CUSTPERMID || data.CUSTNAME)">
+                                <!-- (輔)統編+公司名稱 -->
+                                <div class="text-overflow-width-r font-size-14">
+                                    <p id = "font-size-14" class = "ellipsis">({{ data.CUSTPERMID }} {{ data.CUSTNAME }})</p>
+                                </div>
+                            </li>
+
+                            <li class="card-li-money align-two-side" *ngIf = "data.DEPOSITSCURRENCY && data.DEPOSITSAMOUNT">
+                                    <div class="card-li-money-left">
+                                        <!-- 定存金額 -->
+                                        <p>{{ 'AUTH.FIELD_PRINCIPAL' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.DEPOSITSCURRENCY }}</span> {{ data.DEPOSITSAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+    
+                            <li *ngIf = "data.MODIFYDEPOSITPERIOD || data.MODIFYDISPOSALINSTRUCTION" class="card-inside-line"></li>
+            
+                
+                            <li class="card-li-style align-two-side" *ngIf = "data.MODIFYDEPOSITPERIOD">
+                                <!-- 變更後期間 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_MODIFY_DATE' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.MODIFYDEPOSITPERIOD }}</p>
+                                </div>
+                            </li>
+
+                            <li  class="card-li-style align-two-side" *ngIf = "data.MODIFYDISPOSALINSTRUCTION">
+                                <!-- 變更後到期指示 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_MODIFY_DISPOSAL' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.MODIFYDISPOSALINSTRUCTION }}</p>
+                                </div>
+                            </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'6'">
+                                <li class="card-li-style align-two-side" *ngIf = "data.DEPOSITACCOUNT">
+                                    <!-- 定存帳號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_DEPOSIT_ACCOUNT' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.DEPOSITACCOUNT }}</p>
+                                    </div>
+                                </li>
+                
+                                <li class="card-li-style" *ngIf = "data.DEPOSITACCOUNT && (data.CUSTPERMID || data.CUSTNAME )">
+                                    <!-- (輔)統編+公司名稱 -->
+                                    <div class="text-overflow-width-r font-size-14">
+                                        <p id = "font-size-14" class = "ellipsis">({{ data.CUSTPERMID }} {{ data.CUSTNAME }})</p>
+                                    </div>
+                                </li>
+    
+
+        
+                                <li *ngIf = "data.DEPOSITSCURRENCY && data.DEPOSITSAMOUNT" class="card-inside-line"></li>
+                
+                    
+                                <li class="card-li-money align-two-side" *ngIf = "data.DEPOSITSCURRENCY && data.DEPOSITSAMOUNT">
+                                        <div class="card-li-money-left">
+                                            <!-- 解約金額 -->
+                                            <p>{{ 'AUTH.FIELD_RELEASE_MONEY' | translate }}</p>
+                                        </div>
+                                        <div class="card-li-money-right amount-bold-style">
+                                            <b class="amount-number"><span id = "font-size-14">{{ data.DEPOSITSCURRENCY }}</span> {{ data.DEPOSITSAMOUNT | _currency }}</b>
+                                        </div>
+                                    </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'7'">
+                            <li class="card-li-style align-two-side" *ngIf = "data.COUNTRY">
+                                <!-- 國別 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_COUNTRY' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.COUNTRY }}</p>
+                                </div>
+                            </li>
+            
+                            <li class="card-li-style align-two-side" *ngIf = "data.CUSTPERMID || data.CUSTNAME">
+                                <!-- 申請公司 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_APPLY_COMPANY' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.CUSTPERMID }} {{ data.CUSTNAME }}</p>
+                                </div>
+                            </li>
+
+                            <li class="card-li-money align-two-side" *ngIf = "data.LCCURRENCY && data.LCAMOUNT">
+                                    <div class="card-li-money-left">
+                                        <!-- 開狀金額 -->
+                                        <p>{{ 'AUTH.FIELD_LC_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.LCCURRENCY }}</span> {{ data.LCAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+    
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'8'">
+                        <li class="card-li-style align-two-side" *ngIf = "data.COUNTRY">
+                                <!-- 國別 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_COUNTRY' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.COUNTRY }}</p>
+                                </div>
+                            </li>
+                        
+                            <li class="card-li-style align-two-side" *ngIf = "data.CUSTPERMID || data.CUSTNAME">
+                                <!-- 申請公司 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_APPLY_COMPANY' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.CUSTPERMID }} {{ data.CUSTNAME }}</p>
+                                </div>
+                            </li>   
+
+                            <li class="card-li-style align-two-side" *ngIf = "data.LCNO">
+                                    <!-- 信用狀號碼 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_LC_NO' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.LCNO }}</p>
+                                    </div>
+                                </li>  
+
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'9'">
+                                <li class="card-li-money align-two-side" *ngIf = "data.LOANCURRENCY && data.LOANAMOUNT">
+                                    <div class="card-li-money-left">
+                                        <!-- 動撥金額 -->
+                                        <p>{{ 'AUTH.FIELD_LOAN_AMT' | translate }}</p>
+                                    </div>
+                                    <div class="card-li-money-right amount-bold-style">
+                                        <b class="amount-number"><span id = "font-size-14">{{ data.LOANCURRENCY }}</span> {{ data.LOANAMOUNT | _currency }}</b>
+                                    </div>
+                                </li>
+
+    
+                            <li class="card-inside-line"></li>
+
+                            <li class="card-li-style align-two-side" *ngIf = "data.RATE_1">
+                                <!-- 利率 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_RATE' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.RATE_1 }}%</p>
+                                    </div>
+                                </li>
+
+                            <li class="card-li-style align-two-side" *ngIf = "data.INCOMINGACCOUNT">
+                                    <!-- 撥入帳號 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_LOAN_ACCT' | translate }}</p>
+                                    </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.INCOMINGACCOUNT }}</p>
+                                </div>
+                            </li>
+                        </ng-container>
+
+                        <ng-container *ngSwitchCase="'10'">
+                            <li class="card-li-style align-two-side" *ngIf = "data.COUNTRY">
+                                <!-- 國別 -->
+                                <div class="card-text-left-l2">
+                                    <p>{{ 'AUTH.FIELD_COUNTRY' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                    <p>{{ data.COUNTRY }}</p>
+                                </div>
+                            </li>
+
+                            <li class="card-li-style align-two-side" *ngIf = "data.CUSTPERMID || data.CUSTNAME">
+                                    <!-- 申請公司 -->
+                                    <div class="card-text-left-l2">
+                                        <p>{{ 'AUTH.FIELD_APPLY_COMPANY' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right-l2">
+                                        <p>{{ data.CUSTPERMID }} {{ data.CUSTNAME }}</p>
+                                    </div>
+                                </li>
+
+                            <li *ngIf = "data.MEMO" class="card-inside-line"></li>
+                            
+                            <!-- 備註(預覽三行) -->
+                            <li class="card-li-style align-two-side auth-memo-content_3">
+                                <p>{{ data.MEMO }}</p>
+                            </li>
+                        </ng-container>
+                    </ng-container>
+                    
+                </ul>
+            </div>
+    
+            
+            <ng-container>
+                <div *ngIf="showDetailBtn" class="card-right-icon-wrap right-icon-ellipsis">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</ng-container>

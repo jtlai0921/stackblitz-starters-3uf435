@@ -1,0 +1,172 @@
+<!-- 放款明細頁 -->
+<div class="bg-fixed-60-full-height"></div>
+<section class="col-xs-12 section-content-tab deposit-activity-cons-pg">
+
+  <!--公司資訊-->
+  <!-- 公司資訊內容-種類1 --->
+  <div class="row">
+    <ul class="info-li-wrapper info-li-wrapper-bottomLine wrapper-padding-25">
+      <li class="info-li-title-tag">
+        <p class="info-li-tag-left"> <span class="info-tag-green">{{'LOANDETAIL.COMPANYINFORMATION' | translate}}</span> </p>
+      </li>
+      <li class="info-li-detail-style align-two-side li-style-top">
+        <div class="info-li-text-left">
+          <!-- 國別 -->
+          <p>{{ 'LOANDETAIL.COUNTRY' | translate }}</p>
+        </div>
+        <div class="info-li-text-right">
+          <p>{{ 'countryCode.'+country | translate}}</p>
+        </div>
+      </li>
+      <li class="info-li-detail-style align-two-side li-style-top">
+        <div class="info-li-text-left ">
+          <!-- 公司 -->
+          <p>{{ 'LOANDETAIL.CUSTOMER_NAME' | translate }}</p>
+        </div>
+        <div class="info-li-text-right">
+          <p>{{ customerId }}{{ customerName }}</p>
+        </div>
+      </li>
+      <li class="info-li-detail-style align-two-side li-style-top">
+        <div class="info-li-text-left ">
+          <!-- 帳號 -->
+          <p>{{ 'LOANDETAIL.ACCT_NO' | translate }}</p>
+        </div>
+        <div class="info-li-text-right">
+          <p>{{ AcctNo }}{{ AcctBranchName }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- //公司資訊內容-種類1 --->
+  <!--//公司資訊-->
+
+  <!-- BadgeFrame 方框標示牌 Start -->
+  <div class="row">
+    <div class="list-card-style card-saving-type">
+      <div class="card-saving-title-wrapper">
+        <div class="card-saving-title-left">
+          <!-- 放款帳戶 -->
+          <p>{{ 'LOANDETAIL.LOAN_ACCT' | translate }}</p>
+        </div>
+        <div class="card-saving-title-right font-size-14">
+          <!-- 幣別 -->
+          <p>{{ 'LOANSUMMARY.FILTER_CURRENCY' | translate}}:{{ AcctCur }}</p>
+        </div>
+      </div>
+      <ul>
+        <li class="card-saving-li-style-loanDetail align-two-side">
+          <div class="card-saving-text-l">
+            <!-- 動撥金額 -->
+            <p>{{ 'LOANDETAIL.LOAN_AMT1' | translate }}</p>
+          </div>
+          <div class="card-saving-text-r card-saving-money">
+            <p>{{ Amt_1 | _currency }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- BadgeFrame 方框標示牌 End -->
+
+  <!-- 明細顯示區塊 Start -->
+  <div class="row">
+    <!-- content-li種類1 - 無icon - 兩列-->
+    <div class="content-li-container">
+      <ul class="content-li-wrapper content-li-wrapper-bottomLine">
+        <li class="content-li-title-style">
+          <!-- 明細 -->
+          <p class="content-li-text-left">{{ 'LOANDETAIL.DETAIL' | translate }}</p>
+        </li>
+      </ul>
+      <ul class="content-li-wrapper content-li-wrapper-bottomLine wrapper-padding-25">
+        <li class="content-li-detail-style align-two-side li-style-top">
+          <!-- 狀態 -->
+          <div class="content-li-text-left">
+            <p>{{ 'LOANDETAIL.ACCT_STATUS' | translate }}</p>
+          </div>
+          <div class="content-li-text-right">
+            <p>{{ AcctStatus}}</p>
+          </div>
+        </li>
+        <li class="content-li-detail-style align-two-side li-style-top">
+          <!-- 產品別 -->
+          <div class="content-li-text-left ">
+            <p>{{ 'LOANDETAIL.PROD_NAME' | translate }}</p>
+          </div>
+          <div class="content-li-text-right">
+            <p>{{ ProdName }}</p>
+          </div>
+        </li>
+        <li class="content-li-detail-style align-two-side li-style-top">
+          <!-- 授信額度 -->
+          <div class="content-li-text-left">
+            <p>{{ 'LOANDETAIL.LOAN_AMT2' | translate }}</p>
+          </div>
+          <div class="content-li-text-right">
+            <p>{{ AcctCur }} {{ Amt_2 | _currency }}</p>
+          </div>
+        </li>
+        <li class="content-li-detail-style align-two-side li-style-top">
+          <!-- 利率 -->
+          <div class="content-li-text-left">
+            <p>{{ 'LOANDETAIL.ACTL_INT_RATE' | translate }}</p>
+          </div>
+          <div class="content-li-text-right">
+            <p>{{ ActlIntRate }}%</p>
+          </div>
+        </li>
+        <li class="content-li-detail-style align-two-side li-style-top">
+          <!-- 利率別 -->
+          <div class="content-li-text-left">
+            <p>{{ 'LOANDETAIL.INT_TYPE' | translate }}</p>
+          </div>
+          <div class="content-li-text-right">
+            <p>{{ IntType }}</p>
+          </div>
+        </li>
+        <!-- 分隔線 -->
+        <li class="content-li-seperator-line"></li>
+        <li class="content-li-detail-style align-two-side li-style-top">
+          <!-- 動撥日 -->
+          <div class="content-li-text-left">
+            <p>{{ 'LOANDETAIL.DISBURSE_DT' | translate }}</p>
+          </div>
+          <div class="content-li-text-right">
+            <p>{{ DisburseDt | _datetime}}</p>
+          </div>
+        </li>
+        <li class="content-li-detail-style align-two-side li-style-top">
+          <!-- 到期日 -->
+          <div class="content-li-text-left">
+            <p>{{ 'LOANDETAIL.MTRTY_DT' | translate }}</p>
+          </div>
+          <div class="content-li-text-right">
+            <p>{{ MtrtyDt | _datetime}}</p>
+          </div>
+        </li>
+        <!-- 分隔線 -->
+        <li class="content-li-seperator-line"></li>
+        <li class="content-li-detail-style align-two-side li-style-top">
+          <!-- 扣款帳號 -->
+          <div class="content-li-text-left">
+            <p>{{ 'LOANDETAIL.CREDIT_STL_ACCT_NUM' | translate }}</p>
+          </div>
+          <div class="content-li-text-right">
+            <p>{{ AcctNo }}</p>
+          </div>
+        </li>
+        <li class="content-li-detail-style align-two-side li-style-top">
+          <!-- 扣款幣別 -->
+          <div class="content-li-text-left">
+            <p>{{ 'LOANDETAIL.CREDIT_STL_ACCT_NUM_CUR' | translate }}</p>
+          </div>
+          <div class="content-li-text-right">
+            <p>{{ AcctCur }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 明細顯示區塊 End -->
+</section>

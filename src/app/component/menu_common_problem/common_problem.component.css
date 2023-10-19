@@ -1,0 +1,22 @@
+.card-ques-l2 .ques-pg-a{
+    max-height: 4rem;
+
+}
+.card-ques-l2.active .ques-pg-a{
+    overflow:visible;
+    max-height: 100%;
+}
+.card-ques-l2 .ques-pg-a p{
+    /* autoprefixer: off */
+    display: -webkit-box;  
+    overflow:hidden;
+    text-overflow : ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+/* autoprefixer: on */   
+} 
+.card-ques-l2.active .ques-pg-a p{
+    display:block;  ; 
+}
+
+

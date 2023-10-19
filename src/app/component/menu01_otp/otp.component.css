@@ -1,0 +1,21 @@
+.select-pop-bt-wrapper {
+    position: relative;
+}
+
+.select-pop-bt-wrapper i {
+    position:  absolute;
+    right: 15px;
+    top: 18px;
+}
+
+.btn-inner-group-s.btn-confirm.div_reset_disable,
+.btn-inner-group-s.btn-confirm.div_reset_disable:hover,
+.btn-inner-group-s.btn-confirm.div_reset_disable:active,
+.btn-inner-group-s.btn-confirm.div_reset_disable:focus {
+    background-color: #bfbfbf !important;
+    color: #FFFFFF;
+    box-shadow: none;
+}
+.otp-section .btn-confirm{
+    margin-top:20px;
+}

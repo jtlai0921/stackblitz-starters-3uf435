@@ -1,0 +1,147 @@
+.section-content{
+    overflow-x: hidden;
+}
+
+.app-update-card-content {
+    white-space: pre-line;
+    list-style-type: none;
+}
+
+.app-update-card-content li {
+    background: transparent;
+}
+
+.app-update-card-content p {
+    word-break: break-word;
+}
+
+.app-update-card-content .not-first-item {
+    border-top: 1px solid #E5E5E5;
+}
+
+.div_title {
+    height: 50px;
+    text-align: center;
+}
+
+.div_title span {
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    color: #FFFFFF;
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+}
+
+.dataTable {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dateTag {
+    font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #BBBBBB;
+    border-radius: 13px;
+    padding: 3px 10px;
+}
+
+.dataRow {
+    display: grid;
+    grid-template-columns: 42px auto 42px;
+    margin: 5px 10px;
+}
+
+.typeBlock {
+    height: 42px;
+    width: 42px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.trxnType {
+    background-image: url('/assets/ui/images/notification/u600.png');
+}
+
+.authType {
+    background-image: url('/assets/ui/images/notification/u586.png');
+}
+
+.exrateType {
+    background-image: url('/assets/ui/images/notification/u576.png');
+}
+
+.iconImg {
+    width: 30px;
+}
+
+.typeTitle {
+    position: relative;
+}
+
+.typeTitle span {
+    font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    text-align: left;
+    color: #333333;
+    padding: 0px 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.contentBox {
+    background-color: #FFFFFF;
+    border: 1px #333333 solid;
+    border-radius: 12px;
+    padding: 20px 20px;
+}
+
+.readTag {
+    position: relative;
+}
+
+.readTag span {
+    font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-align: left;
+    color: #333333;
+    padding: 0px 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#line {
+    width: 100%;
+    border: 1px;
+    border-style: solid;
+    border-color: #BBBBBB;
+    margin: 10px 0px;
+}
+.detail{
+    color:blue;
+    text-decoration:underline;
+}
+
+
+.padding-top-10 {
+    padding-top: 10%;
+}

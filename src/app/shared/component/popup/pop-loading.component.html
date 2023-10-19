@@ -1,0 +1,198 @@
+<style>
+    .container {
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .scrollstyle {
+        width: 100%;
+        height: auto;
+        max-width: none;
+        overflow: scroll;
+    }
+
+    .scrollstyle img {
+        width: 100%;
+        display: block;
+    }
+
+
+    /*loading 圖示 - Style1 ------------------------------------------------------*/
+
+    /*loading 白底定位*/
+
+    .pop-box-loading {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        left: 50%;
+        top: 50%;
+        margin: -60px 0 0 -60px;
+        border-radius: 6px;
+        /* border: 3px solid pink; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+
+        /*背景色設定*/
+
+        /*background-color: rgba(255,255,255,1);*/
+
+
+    }
+
+    .bubblingG {
+        text-align: center;
+        width: 78px;
+        height: 49px;
+        margin: auto;
+    }
+
+    .bubblingG span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 4px;
+        height: 4px;
+        margin: 24px auto;
+        background: #FFD100;
+        border-radius: 49px;
+        -o-border-radius: 49px;
+        -ms-border-radius: 49px;
+        -webkit-border-radius: 49px;
+        -moz-border-radius: 49px;
+        animation: bubblingG 1s infinite alternate;
+        -o-animation: bubblingG 1s infinite alternate;
+        -ms-animation: bubblingG 1s infinite alternate;
+        -webkit-animation: bubblingG 1s infinite alternate;
+        -moz-animation: bubblingG 1s infinite alternate;
+    }
+
+    #bubblingG_1 {
+        animation-delay: 0s;
+        -o-animation-delay: 0s;
+        -ms-animation-delay: 0s;
+        -webkit-animation-delay: 0s;
+        -moz-animation-delay: 0s;
+    }
+
+    #bubblingG_2 {
+        animation-delay: 0.3s;
+        -o-animation-delay: 0.3s;
+        -ms-animation-delay: 0.3s;
+        -webkit-animation-delay: 0.3s;
+        -moz-animation-delay: 0.3s;
+    }
+
+    #bubblingG_3 {
+        animation-delay: 0.6s;
+        -o-animation-delay: 0.6s;
+        -ms-animation-delay: 0.6s;
+        -webkit-animation-delay: 0.6s;
+        -moz-animation-delay: 0.6s;
+    }
+
+
+
+    @keyframes bubblingG {
+        0% {
+            width: 8px;
+            height: 8px;
+            background-color: rgb(17, 143, 125);
+            transform: translateY(0);
+        }
+
+        100% {
+            width: 18px;
+            height: 18px;
+            background-color: #FFD100;
+            transform: translateY(-10px);
+        }
+    }
+
+    @-o-keyframes bubblingG {
+        0% {
+            width: 8px;
+            height: 8px;
+            background-color: rgb(17, 143, 125);
+            -o-transform: translateY(0);
+        }
+
+        100% {
+            width: 18px;
+            height: 18px;
+            background-color: #FFD100;
+            -o-transform: translateY(-10px);
+        }
+    }
+
+    @-ms-keyframes bubblingG {
+        0% {
+            width: 8px;
+            height: 8px;
+            background-color: rgb(17, 143, 125);
+            -ms-transform: translateY(0);
+        }
+
+        100% {
+            width: 18px;
+            height: 18px;
+            background-color: #FFD100;
+            -ms-transform: translateY(-10px);
+        }
+    }
+
+    @-webkit-keyframes bubblingG {
+        0% {
+            width: 8px;
+            height: 8px;
+            background-color: rgb(17, 143, 125);
+            -webkit-transform: translateY(0);
+        }
+
+        100% {
+            width: 18px;
+            height: 18px;
+            background-color: #FFD100;
+            -webkit-transform: translateY(-10px);
+        }
+    }
+
+    @-moz-keyframes bubblingG {
+        0% {
+            width: 8px;
+            height: 8px;
+            background-color: rgb(17, 143, 125);
+            -moz-transform: translateY(0);
+        }
+
+        100% {
+            width: 18px;
+            height: 18px;
+            background-color: #FFD100;
+            -moz-transform: translateY(-10px);
+        }
+    }
+
+    /*//loading 圖示 - Style1 ------------------------------------------------------*/
+</style>
+<div class="" *ngIf="IsOpen">
+    <div class="shadow active"></div>
+    <div class="pop-box-container active">
+        <!--loading 圖示----------------------->
+        <div class="pop-box-loading">
+            <div class="bubblingG">
+                <span id="bubblingG_1">
+                </span>
+                <span id="bubblingG_2">
+                </span>
+                <span id="bubblingG_3">
+                </span>
+            </div>
+        </div>
+        <!--//loading 圖示----------------------->
+    </div>
+    <!--// CT-loading 種類1 -->
+</div>

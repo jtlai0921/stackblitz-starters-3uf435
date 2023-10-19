@@ -1,0 +1,103 @@
+.agreed_account {
+  overflow: scroll;
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  width: 100vw;
+  background-image: url('/assets/ui/images/u117.jpg');
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.title_confirm {
+  margin: 10px 5vw 0px 5vw;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+}
+
+.title_transfer {
+  display: grid;
+  margin: 10px 5vw 0px 5vw;
+}
+
+.title_transfer p {
+  display: inline-block;
+  width: 40vw;
+  padding: 2px 10px;
+  border-radius: 5px;
+  border: 1px solid #555555;
+  color: #555555;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+}
+
+.title_transfer p.user_name {
+  width: 90vw;
+  padding: 0px;
+  margin: 2vh 0px;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  font-weight: normal;
+  text-align: left;
+}
+
+.info {
+  margin: 1vh 5vw 0px 5vw;
+  font-size: 17px;
+  font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+}
+
+.info td {
+  padding-top: 1vh;
+}
+
+.split_line {
+  display: grid;
+  grid-template-columns: auto 25px auto;
+}
+
+.split_line div {
+  border-top: solid 1px rgb(165, 165, 165);
+  margin-top: 12px;
+}
+
+.split_line.single {
+  height: 1px;
+  margin: 10px 0px;
+  background-color: rgb(165, 165, 165);
+}
+
+.buttons {
+  margin: 2vh 5vw 0px 5vw;
+}
+
+.buttons th {
+  border-collapse: collapse;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+}
+
+.padding_bottom {
+  height: 5vh;
+}
+
+.align-right {
+  text-align: right;
+}
+
+#font-size-14{
+  font-size:14px;
+}

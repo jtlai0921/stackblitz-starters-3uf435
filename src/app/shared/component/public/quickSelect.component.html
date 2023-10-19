@@ -1,0 +1,25 @@
+<ng-container *ngIf="quickSelectPage">
+    <!-- pop-sub-title 種類1 - 黑字灰線 -->
+    <div class="pop-sub-title">
+        <p class="">{{title | translate}}</p>
+    </div>
+    <!-- //pop-sub-title 種類1 - 黑字灰線 -->
+
+    <!-- pop-tag-wrapper 種類2 - 幣別 -->
+    <div class="pop-tag-wrapper">
+            <ng-container [ngSwitch] = "tagStyle">
+                <ng-container *ngSwitchCase="'currency'">
+                    <div *ngFor="let option of optionArray" (click)="onOptionClick(option.name)" class="pop-date-tag2-currency {{option.selected ? 'active' : '' }}">
+                        <p>{{option.name | translate}}</p>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngSwitchDefault >
+                    <div *ngFor="let option of optionArray" (click)="onOptionClick(option.name)" class="pop-date-tag2 {{option.selected ? 'active' : '' }}">
+                        <p>{{option.name | translate}}</p>
+                    </div>
+                </ng-container>
+            </ng-container>
+    </div>
+    <!-- //pop-tag-wrapper 種類2 - 幣別 -->
+</ng-container>

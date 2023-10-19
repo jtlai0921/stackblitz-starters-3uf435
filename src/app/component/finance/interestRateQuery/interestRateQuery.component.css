@@ -1,0 +1,34 @@
+.interest-rate-query {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.noTop{
+  top: 0px;
+  bottom: 0px;
+}
+
+.section-content-tab.rate-table-pg.noTop {
+  margin-top: initial;
+}
+
+.ct-table-title-wrapper {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ct-table-title-wrapper p {
+  text-align: center;
+}
+.padding-lr{
+  padding: 0 10px;
+}
+
+
+.memo-info-interestratequery{
+  width: 100%;
+  padding: 10px 0px;
+  height: auto;
+  min-height: 133px;
+}

@@ -1,0 +1,55 @@
+<!-- <div class="pop_mask" *ngIf="Isopen">
+        <div class="pop_mid">
+            <div class="pop_block">
+                <h3 *ngIf="!(title == '')">{{title}}</h3>
+                <div class="pop_content">
+                    <div class="pop_form_group">
+                        <h4>{{content}}</h4>
+                    </div>
+
+                    <div class="pop_form_group" *ngFor="let item of data; let i = index;">
+                        <input type="{{checkType}}" name="checkitem" id="f{{i}}" 
+                        [checked]="item.checked" (change)="item.checked = !item.checked"/>
+                        <label for="f{{i}}">{{item.desc}}</label>
+                    </div>
+                    
+                </div>
+                <div class="btn_group">
+                    <div class="cancel" (click)="Cancel()">{{(cancelTxt == '') ? '取消' : cancelTxt}}</div>
+                    <div class="check" (click)="Submit()">{{(checkTxt == '') ? '確定' : checkTxt}}</div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+<div class="pop_mask" *ngIf="Isopen">
+        <div class="shadow active"></div>
+        <div class="pop-box-container active">
+            <div class="pop-box-area">
+                <div class="pop-close-bt" (click)="Cancel()">
+                    <div class="i-close"></div>
+                </div>
+                <div class="pop-content-wrapper">
+                    <div class="pop-title-l2">
+                        <p>{{ title | translate }}</p>
+                    </div>
+                    <div class="pop-content-l2"><!--pop視窗內容開始-->
+                        <!-- pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+                        <ng-container *ngFor="let item of data; let i = index;">
+                            <div class="pop-li-section pop-li-border" [ngClass]="(item.checked) ?'pop-li-default':''">
+                                <div class="pop-li-l-100" (click)="CheckItem(item)">
+                                    <div class="pop-li-l-option">
+                                        <p>{{ item.desc | translate }}</p>
+                                    </div>
+                                </div>
+                                <div class="pop-right-icon-wrap">
+                                    <img class="check-icon" src="assets/design/image/icon/check-icon.png" alt="">
+                                </div>
+                            </div>
+                        </ng-container>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

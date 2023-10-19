@@ -1,0 +1,33 @@
+{
+  "HeaderRs": {
+      "TxnId": "CCMPTX000189Rs",
+      "RqUID": "20180802151530",
+      "Timestamp": "20180802151545",
+      "Result": 4001,
+      "Desc": ""
+  },
+  "BodyRs": {
+      "DataType": 0,
+      "Compressed": 0,
+      "Data": {  
+        "TxnId": "CCMPTX000189Rs",
+        "Result": 4001,
+        "Desc": "",
+        "TransactionReferenceNumber": "",
+        "StructuredTdProductName": "-",
+        "ProductCode": "",
+        "CurrentStructuredTdValuePercentage": "-",
+        "ApplyToBuyAmt": "",
+        "IntRate": "4.5%",
+        "PrincipalAmt": "77,312",
+        "Currency": "TWD",
+        "CurrentSTValueAmt": "77,312",
+        "Pledged": "N",
+        "PledgedAmt": "0",
+        "IssueDt": "2018/1/1",
+        "MaturityDt": "2018/2/1",
+        "PrincipalAmtTransferDt": "2018/2/12",
+        "ProfitTransferDt": "2018/2/28"
+      }
+  }
+}

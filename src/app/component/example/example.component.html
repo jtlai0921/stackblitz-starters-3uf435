@@ -1,0 +1,53 @@
+
+<div class=" containerDemo" scrollTop gestures dropReload>
+    <h1>This is Example List{{'LOGINOUT.WELCOM' | translate}}</h1>
+     <ng-container *ngIf="IsShow">
+        <div class="demo" *ngFor="let item of data" (click)="showDetail(item)">
+                {{item.name}} + {{item.value}}
+        </div>
+     </ng-container>
+
+    <app-example-child *ngIf="!IsShow" [DataItem]="Selected" (updateData)="Callback($event)"></app-example-child>
+
+    <!-- 搜尋欄位陣列 -->
+    <app-search [source]="data" [column]="filterArray" (filterData)="result1($event)"></app-search>
+    <p style="color:#fff">{{r1}}</p>
+    <!-- 搜尋單一欄位 -->
+    <app-search [source]="data" [column]="'name'" (filterData)="result2($event)"></app-search>
+    <p style="color:#fff">{{r2}}</p>
+    <!-- 不限制全部搜尋 -->
+    <app-search [source]="testData" (filterData)="result3($event)"></app-search>
+    <p style="color:#fff">{{r3}}</p>
+    
+    <!-- 篩選 => 選項 -->
+    <!-- <app-option [source]="source" [filterKey]="filterKey" [view]="viewData" (filterData)="result4($event)"></app-option>
+    <p style="color:#fff">{{r4}}</p> -->
+    <!-- 篩選 => 快選 -->
+    <!-- <app-quickselect [source]="source" [filterKey]="filterKey" [view]="viewData" (filterData)="result4($event)"></app-quickselect>
+    <p style="color:#fff">{{r4}}</p> -->
+
+    <style>
+    .example_btn{width:80vw;margin:5px auto;border:1px solid #fff;padding: 10px;text-align: center;position: relative;}
+    .example_btn::before{content:'POP';display: inline-block;position: absolute;height: 43px;background:antiquewhite;top:0;left: 0;line-height: 41px;width: 50px; }</style>
+
+    <div>時間Pipe 預設值:{{ '2018/08/09 17:55:23' | _datetime }}</div>
+    <div>時間Pipe format:{{ '2018/08/09 17:55:23' | _datetime:'yyyy/MM/dd' }}</div>
+    <div>時間Pipe format:{{ '2018/08/09 17:55:23' | _datetime:'yyyy-MM-dd hh:mm:ss' }}</div>
+    <div>幣別Pipe 預設值:{{ '1234567.12456' | _currency }}</div>
+    <div>幣別Pipe 小數兩位:{{ '1234567.12456' | _currency:2 }}</div>
+    <div>幣別Pipe 小數三位:{{ '1234567.1266' | _currency:3 }}</div>
+    <div class="example_btn" (click)="PurePop()">SetTransQuery Pop</div>
+    <div class="example_btn" (click)="TitlePop()">Pop Message With Title</div>
+    <div class="example_btn" (click)="HtmlPop()">Pop Message With Html Content</div>
+    <div class="example_btn" (click)="PopTwoBtn()">Pop For BTN content</div>
+    <div class="example_btn" (click)="PopInput()">Pop For Input</div>
+    <div class="example_btn" (click)="PopCheck()">Pop For CheckList</div>
+    <div class="example_btn" (click)="PopRadio()">Pop For RadioList</div>
+    <div class="example_btn" (click)="PopPerCent()">Pop For Percentage</div>
+    <div class="example_btn" (click)="PopSelect()">Pop For Select</div>
+    <div class="example_btn" (click)="PopDatePicker()">Pop For DatePicker</div>
+    <div class="example_btn" (click)="RestartApp()">RestartApp</div>
+
+    <div>SwiperStatus:{{SwiperStatus}}</div>
+    <div>Pipe Test:{{ '123' | _datetime}}</div>
+</div>

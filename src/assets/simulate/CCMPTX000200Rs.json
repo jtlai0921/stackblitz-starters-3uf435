@@ -1,0 +1,42 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000200Rs",
+    "RqUID": "20180803104000",
+    "Timestamp": "20180803104000",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+	  "TxnId": "CCMPTX000200Rs",
+	  "Result": 4001,
+	  "Desc": "",
+	  "AcctNo": "9382928249344",
+	  "AcctCur": "TWD",
+	  "AcctBranchCode": "303",
+	  "AcctBranchName": "營業部",
+	  "ALTAcctNum": "ALTAcctNum",
+	  "AmtFincg": "1000000",
+	  "DisburseDt": "2018/2/3",
+	  "MtrtyDt": "2020/4/1",
+	  "AcctStatus": "正常",
+	  "DebitStlAcctNumCur": "TWD",
+	  "DebitStlAcctNum": "00000329481739",
+	  "DebitStlAcctBranchCode": "DebitStlAcctBranchCode",
+	  "DebitStlAcctBranchName": "DebitStlAcctBranchName",
+	  "CreditStlAcctNumCur": "USD",
+	  "CreditStlAcctNum": "822-8491882722",
+	  "CreditStlAcctBranchCode": "CreditStlAcctBranchCode",
+	  "CreditStlAcctBranchName": "CreditStlAcctBranchName",
+	  "ProdCode": "待確認",
+	  "ProdName": "待確認",
+	  "UserRefNum": "UserRefNum",
+	  "BillRefNum": "BillRefNum",
+	  "IntType": "浮動利率",
+		"ActlIntRate": "1.45",
+		"OutstandingPrincipalBalance":"1234567890"
+    }
+  }
+}

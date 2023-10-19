@@ -1,0 +1,11 @@
+
+<div class="footer-wrap" *ngIf="isOpen">
+    <footer class="row">
+      <div class="col-xs-12 footer-info">
+        <!--/** active狀態class name >> active  ex: class="active" **/-->
+        <div *ngFor="let item of FootSource;" (click)="linkTo(item.link)" class="footer-icon">
+          <i class="{{item.iconClass}}" aria-hidden="true"></i>
+          <p class = "{{item.pClass}}">{{item.key | translate}}</p></div> <!-- 授權 -->
+      </div>
+    </footer>
+  </div>

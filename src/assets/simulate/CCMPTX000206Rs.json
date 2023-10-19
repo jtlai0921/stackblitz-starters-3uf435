@@ -1,0 +1,56 @@
+{
+    "HeaderRs": {
+      "TxnId": "CCMPTX000206Rs",
+      "RqUID": "20180709111612",
+      "Timestamp": "20180709111645",
+      "Result": 4001,
+      "Desc": ""
+    },
+    "BodyRs": {
+      "DataType": 0,
+      "Compressed": 0,
+      "Data": {
+        "TxnId":"CCMPTX000206Rs",
+        "Result":4001,
+        "Desc":"",
+        "CacheId":"CacheFundXfer_CB5A1YHPY4",
+        "FAQList": [  
+          {  
+            "FAQId":"1",
+            "HotFAQ":"N",
+            "QuestType":"1",
+            "Question":"閏年的定義？",
+            "Answer":"西元年份除以4可整除，且除以100不可整除，為閏年。"
+          },
+          {  
+            "FAQId":"2",
+            "HotFAQ":"N",
+            "QuestType":"4",
+            "Question":"請問核卡後，收到的信用卡權益手冊，要看嗎?",
+            "Answer":"一般來說，信用卡權益手冊會記載信用卡約定條款內容，及信用卡相關作業與服務方式等，藉此提醒並保障您的權益，您可以多多瀏覽參閱喔。"
+          },
+          {  
+            "FAQId":"3",
+            "HotFAQ":"Y",
+            "QuestType":"4",
+            "Question":"信用卡開卡完成何時才能使用？",
+            "Answer":"只要開卡程序完成，簽名後即可使用。"
+          },
+          {  
+            "FAQId":"4",
+            "HotFAQ":"Y",
+            "QuestType":"1",
+            "Question":"語音開卡是否為24小時作業?",
+            "Answer":"目前本行於每天凌晨某一時段，系統資料將會進行維護整檔作業，故系統在此時無法連線作業情況下，於該期間將無法開卡。"
+          },
+          {  
+            "FAQId":"13",
+            "HotFAQ":"Y",
+            "QuestType":"6",
+            "Question":"test1",
+            "Answer":"test1"
+          }
+        ]
+      }
+    }
+  }

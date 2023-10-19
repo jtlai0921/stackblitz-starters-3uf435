@@ -1,0 +1,76 @@
+.finance-root {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+
+.finance-root.afterLogin {
+    bottom: 64px;
+}
+
+.finance-root.beforeLogin {
+    bottom: 0px;
+}
+
+.l2-tab-wrapper {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+}
+
+.l2-tab-container {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.l2-tab-set {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.7rem;
+    border-bottom: 5px solid rgba(86, 180, 191, 0.31);
+    color: white;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    display: block;
+}
+
+.l2-tab-single {
+    display: inline-block;
+    width: 100%;
+}
+
+.l2-tab-set.active {
+    border-bottom: 5px solid #FFD100;
+    font-weight: bold;
+}
+
+.l2-tab-wrapper .l2-tab-container .l2-tab-set a {
+    display: block;
+    margin-top: 0;
+    line-height: 1.2;
+    color: inherit;
+}
+
+.content {
+    position: absolute;
+    overflow-x: hidden;
+    bottom: 0px;
+    width: 100%;
+    background: #f0f2f3;
+}
+
+.content.tab-bar-visiable {
+    top: 50px;
+}
+
+.content.tab-bar-hidaden {
+    top: 0px;
+}

@@ -1,0 +1,41 @@
+<div class="bg-fixed-105"></div>
+<section>
+  <div id="l2-tab-wrapper" class="l2-tab-wrapper">
+    <div class="l2-tab-container">
+      <div class="col-tab-10 l2-tab-more">
+        <div class="l2-tab-single">
+          <div class="dropdown-more-l2 active" (click)="onMenuClick('menuPage')">
+            <div class="dropdown drop-tag-group">
+              <!-- 選單被選取請使用 <div class="drop-tag active">-->
+              <!-- 存款概要 -->
+              <a class="drop-tag {{getActive(0)}}" (click)="onMenuClick('depositSumPage')">
+                <p>{{ 'DEPOSITSUMMARY.TITLE' | translate}}</p>
+              </a>
+              <!-- 存款明細 -->
+              <a class="drop-tag {{getActive(1)}}" (click)="onMenuClick('depositDetailPage')">
+                <p>{{ 'DEPOSITDETAIL.TITLE' | translate}}</p>
+              </a>
+              <!-- 放款概要 -->
+              <a class="drop-tag {{getActive(2)}}" (click)="onMenuClick('loanSumPage')">
+                <p>{{ 'LOANSUMMARY.TITLE' | translate}}</p>
+              </a>
+              <!-- 票據查詢 -->
+              <a class="drop-tag {{getActive(4)}}" (click)="onMenuClick('billColPage')">
+                <p>{{ 'BILLCOLLECTION.TITLE' | translate}}</p>
+              </a>
+              <!-- 匯款查詢 -->
+              <!-- <a class="drop-tag {{getActive(3)}}">
+                <p>{{ 'WIRETRANSFER.TITLE' | translate}}</p>
+              </a> -->
+              <!-- 交易紀錄 -->
+              <a class="drop-tag {{getActive(5)}}" (click)="onMenuClick('transPage')">
+                <p>{{ 'TRANSACTION.TITLE' | translate}}</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

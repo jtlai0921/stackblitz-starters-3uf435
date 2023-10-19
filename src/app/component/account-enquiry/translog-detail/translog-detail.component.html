@@ -1,0 +1,172 @@
+<!-- Root start -->
+<div class="bgoverflowhidden">
+    <div class="bg-fixed-105"></div>
+    <section class="col-xs-12 section-content-tab cheque-deposit-pg">
+        <div class="row" >
+            <!-- content-li種類1 - 無icon - 兩列-->
+            <div class="content-li-container margin_top_0">
+                <ul class="content-li-wrapper content-li-wrapper-bottomLine wrapper-padding-25">
+                    <li class="content-li-detail-style align-two-side li-style-top">
+                        <p class="content-li-tag-left">
+                            <span class="li-tag-green">{{'AGREEDACCOUNT.TRANS_USER' | translate}}</span>
+                        </p>
+                        <p class="content-li-tag-right">
+                                {{ ('TXN_STATUS.TXN_STATUS_'+TxnStatus) | translate}}
+                        </p>
+                    </li>
+                    <li class="content-li-detail-style">
+                        <div class="content-li-text-left-all">
+                            <p>{{UserName}}</p>
+                        </div>
+                    </li>
+                    <li class="content-li-title-tag">
+                        <p class="content-li-tag-left">
+                            <span class="li-tag-green">{{'AGREEDACCOUNT.TRANS_CONTENT' | translate}}</span>
+                        </p>
+                    </li>
+                    <!-- 交易日期 -->
+                    <li class="content-li-detail-style align-two-side li-style-top" *ngIf="TxnCode == 'SDT'">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.TRANS_DATE' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p> {{TxnDate}}</p>
+                        </div>
+                    </li>
+                    <!-- 週期交易日期 -->
+                    <li class="content-li-detail-style align-two-side li-style-top" *ngIf="TxnCode == 'PDT'">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.PDT_TRANS_DATE' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p> {{TxnDate}}</p>
+                        </div>
+                    </li>
+                    <!-- 有效期間 -->
+                    <li class="content-li-detail-style align-two-side li-style-top" *ngIf="TxnCode == 'PDT'">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.PDT_EFFECTIVE_DATE' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p> {{DateFromText}}-{{DateToText}}</p>
+                        </div>
+                    </li>
+                    <!-- 首次扣款日 -->
+                    <li class="content-li-detail-style align-two-side li-style-top" *ngIf="TxnCode == 'PDT'">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.FIRST_DEBIT_DAY' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p> {{First | _datetime:'yyyy/MM/dd'}}</p>
+                        </div>
+                    </li>
+                    <!-- 最後扣款日 -->
+                    <li class="content-li-detail-style align-two-side li-style-top" *ngIf="TxnCode == 'PDT'">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.LAST_DEBIT_DAY' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p> {{Last | _datetime:'yyyy/MM/dd'}}</p>
+                        </div>
+                    </li>
+
+                    <!-- 交易序號 -->
+                    <li class="content-li-detail-style align-two-side li-style-top">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.TXN_BATCH_ID' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p>{{ TxnNo }}</p>
+                        </div>
+                    </li>
+                    <!-- 扣款帳號 -->
+                    <li class="content-li-detail-style align-two-side li-style-top">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.REL_ACCT' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p>{{DebitCur}}-{{PayerAcct}}</p>
+                        </div>
+                    </li>
+                    <li class="content-li-detail-style align-two-side">
+                        <div class="content-li-text-left">
+                            <p></p>
+                        </div>
+                        <div class="content-li-text-right li-text-overflow-r font-size-14">
+                            <p>{{CustomerId}}{{CustomerName}}</p>
+                        </div>
+                    </li>
+                    <li class="content-li-detail-style align-two-side li-style-top">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.CUR_TYPE' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p>{{DebitCur}}</p>
+                        </div>
+                    </li>
+                    <li class="content-li-money-style align-two-side li-style-top">
+                        <div class="content-li-money-left">
+                            <p>{{'AGREEDACCOUNT.AMOUNT' | translate}}</p>
+                        </div>
+                        <div class="content-li-money-right amount-bold-style align-right">
+                            <b class="amount-number">{{DebitAmt | _currency}}</b>
+                        </div>
+                    </li>
+
+                    <li class="content-inside-line-wrapper">
+                        <div class="form-inside-line-wrapper content-inside-line-wrapper">
+                            <div class="form-inside-line-l">
+                            </div>
+                            <div class="form-inside-line-icon">
+                            </div>
+                            <div class="form-inside-line-r">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="content-li-detail-style align-two-side li-style-top">
+                        <div class="content-li-text-left">
+                            <p>{{'AGREEDACCOUNT.PAYEE_ACCT' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p>{{CreditBankId}}{{CreditBranchCode}}-{{PayeeAcct}}</p>
+                        </div>
+                    </li>
+
+                    <li class="content-li-detail-style align-two-side">
+                        <div class="content-li-text-left">
+                            <p></p>
+                        </div>
+                        <div class="content-li-text-right li-text-overflow-r font-size-14">
+                            <p>{{PayeeName}}</p>
+                        </div>
+                    </li>
+
+                    <li class="content-li-detail-style align-two-side li-style-top">
+                        <div class="content-li-text-left">
+                            <p>{{'AGREEDACCOUNT.MEMO' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p>{{Memo}}</p>
+                        </div>
+                    </li>
+
+                    <!-- <li class="content-li-seperator-line"></li>
+    
+                        <li class="content-li-detail-style align-two-side li-style-top">
+                            <div class="content-li-text-left">
+                                <p> {{'AGREEDACCOUNT.FEE' | translate}}</p>
+                            </div>
+                            <div class="content-li-text-right">
+                                <p>{{Fee}}</p>
+                            </div>
+                        </li> -->
+
+
+                </ul>
+            </div>
+            <!-- content-li種類1 - 無icon - 兩列 // END-->
+        </div>
+    </section>
+</div>
+<!-- Root end -->

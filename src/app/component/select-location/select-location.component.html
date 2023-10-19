@@ -1,0 +1,38 @@
+<div class="row">
+  <header class="col-xs-12 main_nav">
+        <div class="sidemenu">
+          <a href="" onclick="return false;">
+            <img src="" alt="">
+          </a>
+        </div>
+        <!-- 選擇預設區域 -->
+          <h1 class="page_title_location">{{'SELECTLOCATION.TITLE2' | translate}}</h1>
+        <div class="notice">
+          <a href="" onclick="return false;">
+            <img src="" alt="">
+          </a>
+        </div>
+  </header>
+</div>
+
+	<div class="bg-fixed-60"></div>
+    <section class="col-xs-12 section-content no-footer">
+
+     <!-- 區域卡片 一列2欄 三選項 -->
+      <div class="row">
+
+        <div class="country-area-card-wrapper">
+
+          <ng-container *ngFor="let item of data; let i = index">
+              <div class="country-area-{{item.lang}}" [ngClass]="className" (click)="setLang(item)">
+                  <div class="country-title-bk-25">
+                    <p class="country-title"> {{item.location | translate}}</p>
+                  </div>
+              </div>     
+          </ng-container>
+
+        </div>
+
+      </div>
+      <!-- // 區域卡片 一列1欄 三選項 -->
+    </section>

@@ -1,0 +1,97 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000004Rs",
+    "RqUID": "20180822195112",
+    "Timestamp": "20180822195112",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000004Rs",
+      "MsgCount": 4,
+      "ContinueFlag": "N",
+      "NotificationList": [
+        {
+          "NotifySeq": "18092616484000000156",
+          "ChannelId": "SPETrust",
+          "NotifyTime": "20180926164840",
+          "Category": "2",
+          "Content": "{\"TxnType\":\"SDT\",\"DebitTotalAmt\":\"30000\",\"DebitCur\":\"TWD\",\"CreditTotalAmt\":\"30000\",\"CreditCur\":\"TWD\",\"TxnDate\":\"20180926\",\"AcctNo\":\"141540175833\",\"CustomerId\":\"84429175\",\"CustomerName\":\"ＬＭＪＤＨＲＧ\",\"TxnRecord\":\"1\",\"TxnNo\":\"SDT1809260000143\"}"
+        },
+        {
+          "NotifySeq": "18092616484000000157",
+          "ChannelId": "SPETrust",
+          "NotifyTime": "20180926164840",
+          "Category": "1",
+          "Content": "{\"TxnType\":\"SDT\",\"StopTotalAmt\":\"30000\",\"StopCur\":\"TWD\",\"StopRecord\":\"1\",\"TxnDate\":\"20180927\",\"AcctNo\":\"141540175833\",\"DebitTotalAmt\":\"30000\",\"DebitCur\":\"TWD\",\"CreditTotalAmt\":\"30000\",\"CreditCur\":\"TWD\",\"TxnNo\":\"SDT1809260000145\"}"
+        },
+        {
+          "NotifySeq": "18092616484100000158",
+          "ChannelId": "SPETrust",
+          "NotifyTime": "20180926164841",
+          "Category": "3",
+          "Content": "{\"TxnType\":\"SDT\",\"TxnNo\":\"SDT1809260000143\",\"DebitTotalAmt\":\"30000\",\"DebitCur\":\"TWD\",\"TxnDate\":\"20180926\",\"AcctNo\":\"141540175833\",\"CustomerId\":\"84429175\",\"CustomerName\":\"ＬＭＪＤＨＲＧ\",\"StopRecord\":\"1\",\"Remarks\":\"TEST\",\"Result\":\"0000\"}"
+        },
+        {
+          "NotifySeq": "18092616484100000159",
+          "ChannelId": "SPETrust",
+          "NotifyTime": "20180926164841",
+          "Category": "2",
+          "Content": "{\"TxnType\":\"SDT\",\"DebitTotalAmt\":\"30000\",\"DebitCur\":\"TWD\",\"CreditTotalAmt\":\"30000\",\"CreditCur\":\"TWD\",\"TxnDate\":\"20180926\",\"AcctNo\":\"141540175833\",\"CustomerId\":\"84429175\",\"CustomerName\":\"ＬＭＪＤＨＲＧ\",\"TxnRecord\":\"1\",\"TxnNo\":\"SDT1809260000144\"}"
+        },
+        {
+          "NotifySeq": "18092616484100000160",
+          "ChannelId": "SPETrust",
+          "NotifyTime": "20180926164841",
+          "Category": "2",
+          "Content": "{\"TxnType\":\"SDT\",\"DebitTotalAmt\":\"30000\",\"DebitCur\":\"TWD\",\"CreditTotalAmt\":\"30000\",\"CreditCur\":\"TWD\",\"TxnDate\":\"20180926\",\"AcctNo\":\"141540175833\",\"CustomerId\":\"84429175\",\"CustomerName\":\"ＬＭＪＤＨＲＧ\",\"TxnRecord\":\"1\",\"TxnNo\":\"SDT1809260000144\"}"
+        },
+        {
+          "NotifySeq": "18092616484100000161",
+          "ChannelId": "SPETrust",
+          "NotifyTime": "20180926164841",
+          "Category": "2",
+          "Content": "{\"TxnType\":\"PDT\",\"DebitTotalAmt\":\"30000\",\"DebitCur\":\"TWD\",\"CreditTotalAmt\":\"30000\",\"CreditCur\":\"TWD\",\"TxnDate\":\"20180926\",\"AcctNo\":\"141540175833\",\"CustomerId\":\"84429175\",\"CustomerName\":\"ＬＭＪＤＨＲＧ\",\"TxnRecord\":\"1\",\"TxnNo\":\"SDT1809260000144\"}"
+        },
+        {
+          "NotifySeq": "18092616484100000162",
+          "ChannelId": "SPETrust",
+          "NotifyTime": "20180926164841",
+          "Category": "2",
+          "Content": "{\"TxnType\":\"PDT\",\"DebitTotalAmt\":\"2\",\"DebitCur\":\"TWD\",\"CreditTotalAmt\":\"3\",\"CreditCur\":\"TWD\",\"TxnDate\":\"20191026\",\"AcctNo\":\"141540175833\",\"CustomerId\":\"84429175\",\"CustomerName\":\"ＬＭＪＤＨＲＧ\",\"TxnRecord\":\"1\",\"TxnNo\":\"SDT1809260000144\"}"
+        },
+        {
+          "NotifySeq": "18092616484000000163",
+          "ChannelId": "SPETrust",
+          "NotifyTime": "20180926164840",
+          "Category": "1",
+          "Content": "{\"TxnType\":\"PDT\",\"StopTotalAmt\":\"20000\",\"StopCur\":\"JPN\",\"StopRecord\":\"2\",\"TxnDate\":\"20191127\",\"AcctNo\":\"141540175855\",\"DebitTotalAmt\":\"15000\",\"DebitCur\":\"JPN\",\"CreditTotalAmt\":\"30000\",\"CreditCur\":\"TWD\",\"TxnNo\":\"SDT1809260002145\"}"
+        },
+        {
+          "NotifySeq": "18092616484100000164",
+          "ChannelId": "SPETrust",
+          "NotifyTime": "20180926164841",
+          "Category": "3",
+          "Content": "{\"TxnType\":\"PDT\",\"TxnNo\":\"SDT1809260000143\",\"DebitTotalAmt\":\"36000\",\"DebitCur\":\"USD\",\"TxnDate\":\"20160102\",\"AcctNo\":\"141541175833\",\"CustomerId\":\"84429176\",\"CustomerName\":\"ABCD\",\"StopRecord\":\"4\",\"Remarks\":\"TEST\",\"Result\":\"1000\"}"
+        },
+        {
+          "NotifySeq": "18092616484100000165",
+          "ChannelId": "SPETrust",
+          "NotifyTime": "20180926164841",
+          "Category": "3",
+          "Content": "{\"TxnType\":\"PDT\",\"TxnNo\":\"SDT1809260000143\",\"DebitTotalAmt\":\"36000\",\"DebitCur\":\"USD\",\"TxnDate\":\"20160102\",\"AcctNo\":\"141541175833\",\"CustomerId\":\"84429176\",\"CustomerName\":\"ABCD\",\"StopRecord\":\"4\",\"Remarks\":\"TEST\",\"Result\":\"1000\"}"
+        },
+        {
+          "NotifySeq": "18092616484100000166",
+          "ChannelId": "SPETrust",
+          "NotifyTime": "20180926164841",
+          "Category": "3",
+          "Content": "{\"TxnType\":\"PDT\",\"TxnNo\":\"SDT1809260000143\",\"DebitTotalAmt\":\"36000\",\"DebitCur\":\"USD\",\"TxnDate\":\"20160102\",\"AcctNo\":\"141541175833\",\"CustomerId\":\"84429176\",\"CustomerName\":\"ABCD\",\"StopRecord\":\"4\",\"Remarks\":\"TEST\",\"Result\":\"1000\"}"
+        }
+      ]
+    }
+  }
+}

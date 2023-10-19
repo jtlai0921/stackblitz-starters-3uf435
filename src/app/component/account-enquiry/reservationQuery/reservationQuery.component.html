@@ -1,0 +1,449 @@
+<!-- 預約查詢與取消頁 -->
+<!-- 篩選popup -->
+<div *ngIf="filterBlock" class="row">
+  <div class="shadow active"></div>
+
+  <div class="pop-box-container active">
+    <div class="pop-box-area">
+      <div (click)="filterCloseBtn()" *ngIf="closeBtnChange" class="pop-close-bt">
+        <div class="i-close"></div>
+      </div>
+      <div class="pop-content-wrapper">
+        <div class="pop-title">
+          <p>{{'TRANSACTION.FILTER_TITLE' | translate}}</p>
+        </div>
+        <div class="pop-content">
+          <!-- 交易類型 -->
+          <app-option [source]="originalData" [filterKey]="'TxnCode'" [view]="viewTxnCodeData" (filterData)="result1($event)" (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+          <!-- 日期 -->
+          <div class="pop-sub-title">
+            <p class="">{{ 'TRANSACTION.TXNDATE' | translate}}</p>
+          </div>
+          <div class="pop-tag-wrapper">
+            <div *ngFor="let dateItem of dateType;" (click)="SelectDateType(dateItem)" class="pop-date-tag {{(dateItem.select)?'active':''}}">
+              <p>{{ dateItem.name }}</p>
+            </div>
+          </div>
+          <div (click)="onDatePickerButtonClick('from')" class="pop-li-section">
+            <div class="pop-li-l-50">
+              <div class="pop-li-l-option">
+                <!-- 起日 -->
+                <p>{{'POPUP_TRANSQUERY.DATE_FROM' | translate}}</p>
+              </div>
+            </div>
+            <div class="pop-li-r-50">
+              <div class="pop-li-r-option">
+                <p>{{selectedDateFrom}}</p>
+              </div>
+              <div class="pop-right-icon-wrap right-icon-ellipsis">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div (click)="onDatePickerButtonClick('to')" class="pop-li-section">
+            <div class="pop-li-l-50">
+              <div class="pop-li-l-option">
+                <!-- 迄日 -->
+                <p>{{'POPUP_TRANSQUERY.DATE_TO' | translate}}</p>
+              </div>
+            </div>
+            <div class="pop-li-r-50">
+              <div class="pop-li-r-option">
+                <p>{{selectedDateTo}}</p>
+              </div>
+              <div class="pop-right-icon-wrap right-icon-ellipsis">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 日期 -->
+          <!-- D Amnt start -->
+          <div class="pop-sub-title">
+            <p class="">{{'TRANSACTION.DEBITUNG_AMOUNT' | translate}}</p>
+          </div>
+          <div class="pop-input-flex-group pop-li-flex">
+            <div class="select-pop-form-group pop-form-group-30">
+              <div class="select-date-input-wrapper">
+                <div class="input-group pop-select-bk-style" id="">
+                  <input maxlength="30" [(ngModel)]="dAmntFrom" type="tel" class="form-control select-date-input" placeholder="">
+                </div>
+              </div>
+            </div>
+            <p> {{ 'TRANSACTION.TEN_THOUSAND_YUAN' | translate}} ～ </p>
+            <div class="select-pop-form-group pop-form-group-30">
+              <div class="select-date-input-wrapper">
+                <div class="input-group pop-select-bk-style" id="">
+                  <input maxlength="30" [(ngModel)]="dAmntTo" type="tel" class="form-control select-date-input" placeholder="">
+                </div>
+              </div>
+            </div>
+            <p> {{ 'TRANSACTION.TEN_THOUSAND_YUAN' | translate}} </p>
+          </div>
+          <!-- D Amnt end -->
+          <app-option [source]="originalData" [filterKey]="'DebitCur'" [view]="viewDebitCurData" (filterData)="result2($event)" (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+          <!-- C Amnt start -->
+          <div class="pop-sub-title">
+            <p class="">{{'TRANSACTION.PAYEE_AMOUNT' | translate}}</p>
+          </div>
+          <div class="pop-input-flex-group pop-li-flex">
+            <div class="select-pop-form-group pop-form-group-30">
+              <div class="select-date-input-wrapper">
+                <div class="input-group pop-select-bk-style" id="">
+                  <input maxlength="30" [(ngModel)]="cAmntFrom" type="tel" class="form-control select-date-input" placeholder="">
+                </div>
+              </div>
+            </div>
+            <p> {{'TRANSACTION.TEN_THOUSAND_YUAN' | translate}} ～ </p>
+            <div class="select-pop-form-group pop-form-group-30">
+              <div class="select-date-input-wrapper">
+                <div class="input-group pop-select-bk-style" id="">
+                  <input maxlength="30" [(ngModel)]="cAmntTo" type="tel" class="form-control select-date-input" placeholder="">
+                </div>
+              </div>
+            </div>
+            <p> {{'TRANSACTION.TEN_THOUSAND_YUAN' | translate}} </p>
+          </div>
+          <!-- C Amnt end -->
+          <app-option [source]="originalData" [filterKey]="'CreditCur'" [view]="viewCreditCurData" (filterData)="result3($event)" (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+          <!-- 總筆數 -->
+          <app-quickselect [source]="originalData" [filterKey]="'TOTALRECORD'" [view]="viewTOTALRECORDData" (filterData)="result4($event)"></app-quickselect>
+        </div>
+        <!--pop視窗內容結束-->
+      </div>
+      <!--pop-bt-group- 兩個 -->
+      <div class="pop-bt-group">
+        <button type="button" class="btn btn-cancel btn-pop-cancel" (click)="filterClick(true)">{{'TRANSACTION.FILTER_RESET'
+          | translate}}</button>
+        <button type="submit" class="btn btn-confirm btn-pop-confirm" (click)="onFilterClick()">{{'TRANSACTION.FILTER_COMFIRM'
+          | translate}}</button>
+      </div>
+      <!--//pop-bt-group-兩個一組-->
+    </div>
+  </div>
+</div>
+<!-- 篩選popup -->
+
+<!-- Summary Page Start -->
+<ng-container>
+  <div [hidden]="!summaryPage">
+    <div class="bg-fixed-105"></div>
+    <section class="col-xs-12 section-content-tab cheque-deposit-pg" scrollTop dropReload>
+      <!-- TAB-L3 - 二選項 -->
+      <div class="row">
+        <div class="nav-l3">
+          <a href="javascript:void(0)" (click)="onSwitchClick('1')" class="col-xs-6 tab-l3-set-2 tab-l3-set-l">
+            <!-- APP交易紀錄 -->
+            {{ 'TRANSACTION.TRANSACTION_PAST' | translate }}
+          </a>
+          <a href="javascript:void(0)" (click)="onSwitchClick('2')" class="col-xs-6 tab-l3-set-2 tab-l3-set-r active">
+            <!-- 預約查詢與取消 -->
+            {{ 'TRANSACTION.TRANSACTION_FUTURE' | translate }}
+          </a>
+        </div>
+      </div>
+      <!-- // TAB-L3 - 二選項 ----------->
+
+      <!--表單popup種類9-2 -->
+      <div class="row">
+        <div class="select-pop-group-style pop-input-flex-group">
+
+          <div class="tag-wrap ">
+            <!-- 全選 -->
+            <span (click)="onCheckAllClick()" class="tag-grey" style="margin-right:5px">{{'BTN.SELECT_ALL' | translate}}</span>
+            <!-- 全不選 -->
+            <span (click)="onCancelAllClick()" class="tag-grey">{{'BTN.CANCEL_ALL' | translate}}</span>
+          </div>
+          <!-- <div class="select-pop-form-group pop-form-group-50">
+          <div class="select-date-input-wrapper">
+            <div class="input-group search-input-group" id="search"> <span class="input-group-addon select-search-input">
+                <i class="fa fa-search" aria-hidden="true"></i> </span>
+              <input type="text" class="form-control select-search-input" placeholder="請輸入關鍵字" id="search">
+            </div>
+          </div>
+        </div> -->
+          <div class="group-50">
+            <app-search [source]="source" [column]="filterArray" (filterData)="search_result($event)"></app-search>
+          </div>
+
+          <!-- 搜尋欄位陣列 -->
+          <!-- <app-search></app-search> -->
+
+          <!-- 左邊icon+文字連結 -->
+          <div class="select-pop-form-group pop-form-group-10" (click)="filterClick()">
+            <div class="select-pop-input-wrapper link-wrapper">
+              <p class="content-li-text-ct-style"><i class="icon-filter"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 表單popup種類9  //End----------------------------------------------------------------------->
+      <div *ngIf="groups != undefined && groups.length > 0">
+        <div class="row" *ngFor="let group of groups; let groupIndex = index">
+          <!--表單-->
+          <form class="bs-example bs-example-form" data-example-id="input-group-with-checkbox-radio">
+
+            <section class="cd-timeline js-cd-timeline">
+              <div class="cd-timeline__container">
+
+                <div class="timeline-year-title">{{ group.year }}</div>
+
+                <div *ngFor="let list of group.list; let i = index" class="cd-timeline__block js-cd-block">
+                  <!-- 單筆<S> Start -->
+                  <ng-container *ngIf="list.TxnCode === 'SDT'">
+                    <div class="cd-timeline__img cd-timeline__img--picture js-cd-img timeline-wau-date-bk">
+
+                      <p>{{ list.date }}</p>
+                      <div class="timeline-checkbox">
+                        <div class="title-left-icon">
+                          <span>
+                            <input class="ct-timeline-checkbox" type="checkbox" name="option_{{i}}" id="option_{{i}}" value="option_{{i}}" [checked]="list.checked"
+                              (click)="onCheckboxClick(groupIndex,i)">
+                            <label class="pull-left" for="option_{{i}}"></label>
+                          </span>
+                        </div>
+                      </div>
+
+                    </div> <!-- cd-timeline__img -->
+
+                    <div (click)="onPageClick('singleDetailPage',list)" class="cd-timeline__content js-cd-content">
+
+                      <label class="timeline-checkbox-label"></label>
+
+                      <!-- card-timeline 卡片放置位置 -------------------------------------------------->
+                      <div class="list-card-style card-timeline">
+                        <div class="align-two-side">
+                          <div class="card-left-wrap-2">
+                            <ul>
+                              <li class="card-li-style align-two-side">
+                                <p class="card-tag-wrap">
+                                  <!-- 單筆 -->
+                                  <span class="card-tag-green">{{ 'TRANSACTION.SINGLE' | translate }}</span>
+                                </p>
+                              </li>
+
+                              <li class="card-li-style align-two-side" *ngIf="list.PayerAcct">
+                                <div class="card-text-left-l2">
+                                  <!-- 轉出帳號 -->
+                                  <p>{{ 'TRANSACTION.PAYER_ACCT_NO' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                  <p>{{ list.PayerAcct }}</p>
+                                </div>
+                              </li>
+
+                              <li class="card-li-style" *ngIf="list.PayerAcct && (list.PayerId || list.PayerName)">
+                                <div class="card-text-right-l2 text-overflow-width-r font-size-14">
+                                  <p id="font-size-14">({{ list.PayerId }}{{ list.PayerName }})</p>
+                                </div>
+                              </li>
+
+                              <li class="card-li-money align-two-side">
+                                <div class="card-li-money-left">
+                                  <!-- 轉出金額 -->
+                                  <p>{{ 'TRANSACTION.AMOUNT' | translate }}</p>
+                                </div>
+                                <div class="card-li-money-right amount-bold-style">
+                                  <b><span id="font-size-14">{{ list.DebitCur }}</span> {{ list.DebitAmt | number }}</b>
+                                </div>
+                              </li>
+
+                              <li class="card-inside-line"></li>
+
+                              <li class="card-li-style align-two-side">
+                                <div class="card-text-left-l2">
+                                  <!-- 轉入帳號 -->
+                                  <p>{{ 'TRANSACTION.PAYEE_ACCT_NO' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                  <p>{{ list.PayeeAcct }}</p>
+                                </div>
+                              </li>
+
+                              <li class="card-li-style align-two-side" *ngIf="checkPayeeIdName(list)">
+                                <div class="card-text-left-l2 text-width-min-l">
+                                  <p></p>
+                                </div>
+                                <div class="card-text-right-l2 text-overflow-width-r font-size-14">
+                                  <p id="font-size-14">({{ list.PayeeId }}{{ list.PayeeName }})</p>
+                                </div>
+                              </li>
+
+                            </ul>
+                          </div>
+
+                          <div class="card-right-icon-wrap right-icon-ellipsis">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //card-timeline 卡片放置位置 -------------------------------------------------->
+
+
+                    </div> <!-- cd-timeline__content -->
+                  </ng-container>
+                  <!-- 單筆<S> End -->
+
+                  <!--週期<D> Start -->
+                  <ng-container *ngIf="list.TxnCode === 'PDT'">
+                    <div class="cd-timeline__img cd-timeline__img--picture js-cd-img timeline-wau-date-bk">
+
+                      <p>{{ list.date }}</p>
+                      <div class="timeline-checkbox">
+                        <div class="title-left-icon">
+                          <span>
+                            <input class="ct-timeline-checkbox" type="checkbox" name="option_{{i}}" id="option_{{i}}" value="option_{{i}}" [checked]="list.checked"
+                              (click)="onCheckboxClick(groupIndex, i)">
+                            <label class="pull-left" for="option_{{i}}"></label>
+                          </span>
+                        </div>
+                      </div>
+
+                    </div> <!-- cd-timeline__img -->
+
+                    <div (click)="onPageClick('cycleDetailPage',list)" class="cd-timeline__content js-cd-content">
+
+                      <label class="timeline-checkbox-label"></label>
+
+                      <!-- card-timeline 卡片放置位置 -------------------------------------------------->
+                      <div class="list-card-style card-timeline">
+                        <div class="align-two-side">
+                          <div class="card-left-wrap-2">
+                            <ul>
+                              <li class="card-li-style align-two-side">
+                                <p class="card-tag-wrap">
+                                  <!-- 週期 -->
+                                  <span class="card-tag-green">{{ 'TRANSACTION.CYCLE' | translate }}</span>
+                                </p>
+                                <!-- 交易名稱 -->
+                                <p class="card-text-right card-font-s">{{ list.TxnAlias}}</p>
+
+                              </li>
+
+                              <li class="card-li-style align-two-side" *ngIf="list.PayerAcct">
+                                <div class="card-text-left-l2">
+                                  <!-- 轉出帳號 -->
+                                  <p>{{ 'TRANSACTION.PAYER_ACCT_NO' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                  <p>{{ list.PayerAcct }}</p>
+                                </div>
+                              </li>
+
+                              <li class="card-li-style" *ngIf="list.PayerAcct && (list.PayerId || list.PayerName)">
+                                <div class="card-text-right-l2 text-overflow-width-r font-size-14">
+                                  <p>({{ list.PayerId }}{{ list.PayerName }})</p>
+                                </div>
+                              </li>
+
+                              <li class="card-li-money align-two-side">
+                                <div class="card-li-money-left max-width">
+                                  <!-- 單次轉出金額 -->
+                                  <p>{{ 'TRANSACTION.AMOUNT_EVERYTIME' | translate }}</p>
+                                </div>
+                                <div class="card-li-money-right amount-bold-style">
+                                  <b class="amount-number"><span id="font-size-14">{{ list.DebitCur }}</span> {{ list.DebitAmt | number }}</b>
+                                </div>
+                              </li>
+
+                              <li class="card-inside-line"></li>
+
+                              <li class="card-li-style align-two-side">
+                                <div class="card-text-left-l2">
+                                  <!-- 轉入帳號 -->
+                                  <p>{{ 'TRANSACTION.PAYEE_ACCT_NO' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                  <p>{{ list.PayeeAcct }}</p>
+                                </div>
+                              </li>
+
+                              <li class="card-li-style align-two-side">
+                                <div class="card-text-left-l2">
+                                  <!-- 週期 -->
+                                  <p>{{ 'TRANSACTION.CYCLE' | translate }}</p>
+                                </div>
+                                <!-- 每月 -->
+                                <div *ngIf="list['PeriodInfo']['PeriodType'] === 'M'" class="card-text-right-l2">
+                                  <p>{{ 'TRANSACTION.EVERY_MONTH' | translate }}{{ list['PeriodInfo']['PeriodValue'] }}{{
+                                    'TRANSACTION.DATE' | translate }}</p>
+                                </div>
+                                <!-- 每週 -->
+                                <div *ngIf="list['PeriodInfo']['PeriodType'] === 'W'" class="card-text-right-l2">
+                                  <p>{{ 'TRANSACTION.EVERY_WEEK' | translate }}{{ list['PeriodInfo']['PeriodValue'] }}</p>
+                                </div>
+                              </li>
+
+                              <li class="card-li-style align-two-side">
+                                <div class="card-text-left-l2">
+                                  <!-- 剩餘扣款次數 -->
+                                  <p>{{ 'TRANSACTION.AVAILABLE_PERIOD_CNT' | translate }}</p>
+                                </div>
+                                <div class="card-text-right-l2">
+                                  <p>{{ list.AvailablePeriodCnt }}{{ 'TRANSACTION.TIMES' | translate }}</p>
+                                </div>
+                              </li>
+
+
+                            </ul>
+                          </div>
+
+                          <div class="card-right-icon-wrap right-icon-ellipsis">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //card-timeline 卡片放置位置 -------------------------------------------------->
+
+
+
+                    </div> <!-- cd-timeline__content -->
+                  </ng-container>
+                  <!--週期<D> End -->
+
+                </div> <!-- cd-timeline__block -->
+
+              </div>
+            </section> <!-- cd-timeline -->
+
+          </form>
+          <!--//表單-->
+
+
+
+        </div>
+      </div>
+      <app-no-data *ngIf="groups != undefined && groups.length == 0"></app-no-data>
+
+      <!-- Memo start -->
+      <div class="memo-info">
+          <ol class="memo-info-list">
+          <li>{{'TRANSACTION.MEMO_TITLE' | translate}}</li>
+          <li>{{'TRANSACTION.MEMO_LINE_1' | translate}}</li>
+          </ol>
+      </div>
+      <!-- Memo end -->
+
+      <!-- Button Area Start -->
+      <div (click)="onCancel(checkedStatus)" class="row" *ngIf="cancelBtn">
+        <div class="bt-center-group">
+          <div class="bt-inner-group-xl">
+            <!-- 取消預約 -->
+            <button type="submit" class="btn btn-inner-group-s btn-confirm">{{ 'TRANSACTION.RESERVATION_CANCEL' | translate
+              }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Button Area End -->
+
+    </section>
+  </div>
+</ng-container>
+<!-- Summary Page End -->
+
+
+
+<!-- Single Detail Page -->
+<app-reservationQuerySingleDetails *ngIf="singleDetailPage" [listData]="listData" (onLeftClick)="onLeftClick($event)"></app-reservationQuerySingleDetails>
+<!-- Cycle Detail Page -->
+<app-reservationQueryCycleDetails *ngIf="cycleDetailPage" [listData]="listData"></app-reservationQueryCycleDetails>

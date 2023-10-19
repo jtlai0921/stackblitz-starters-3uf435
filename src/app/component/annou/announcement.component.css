@@ -1,0 +1,411 @@
+/*csslint outline-none:false*/
+
+.pure-button {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  color: #444; /* rgba not supported (IE 8) */
+  color: rgba(0, 0, 0, 0.80); /* rgba supported */
+  border: 1px solid #999;  /*IE 6/7/8*/
+  border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.pure-button-gray{
+  font-family: inherit;
+  font-size: 50%;
+  padding: 0.5em 1em;
+  color: #808080; /* rgba not supported (IE 8) */
+  color: rgba(128,128,128, 0.80); /* rgba supported */
+  border: 1px solid #999;  /*IE 6/7/8*/
+  border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+  background-color: #808080;
+  text-decoration: none;
+  border-radius: 2px;
+  color: white;
+}
+
+.pure-button-hover,
+.pure-button:hover,
+.pure-button:focus {
+  background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.pure-button:focus {
+  outline: 0;
+}
+.pure-button-active,
+.pure-button:active {
+  box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+  border-color: #0009;
+}
+
+.pure-button[disabled],
+.pure-button-disabled,
+.pure-button-disabled:hover,
+.pure-button-disabled:focus,
+.pure-button-disabled:active {
+  border: none;
+  background-image: none;
+  /* csslint ignore:start */
+  filter: alpha(opacity=40);
+  /* csslint ignore:end */
+  opacity: 0.40;
+  cursor: not-allowed;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.pure-button-hidden {
+  display: none;
+}
+
+.pure-button-primary,
+.pure-button-selected,
+a.pure-button-primary,
+a.pure-button-selected {
+  background-color: rgb(0, 120, 231);
+  color: #fff;
+}
+
+/* Button Groups */
+.pure-button-group .pure-button {
+  margin: 0;
+  border-radius: 0;
+  border-right: 1px solid #111;  /* fallback color for rgba() for IE7/8 */
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.pure-button-group .pure-button:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.pure-button-group .pure-button:last-child {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-right: none;
+}
+
+
+.pure-button {
+  /* Structure */
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.pure-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Inherit .pure-g styles */
+.pure-button-group {
+  letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+  *letter-spacing: normal; /* reset IE < 8 */
+  *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+  text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+}
+
+.opera-only :-o-prefocus,
+.pure-button-group {
+  word-spacing: -0.43em;
+}
+
+.pure-button-group .pure-button {
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+
+/*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
+
+.pure-g {
+  letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+  *letter-spacing: normal; /* reset IE < 8 */
+  *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+  text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+
+  /*
+  Sets the font stack to fonts known to work properly with the above letter
+  and word spacings. See: https://github.com/pure-css/pure/issues/41/
+
+  The following font stack makes Pure Grids work on all known environments.
+
+  * FreeSans: Ships with many Linux distros, including Ubuntu
+
+  * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+    Arial to get picked up by the browser, even though neither is available
+    in Chrome OS.
+
+  * Droid Sans: Ships with all versions of Android.
+
+  * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
+  */
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+
+  /* Use flexbox when possible to avoid `letter-spacing` side-effects. */
+  display: flex;
+  flex-flow: row wrap;
+
+  /* Prevents distributing space between rows */
+  align-content: flex-start;
+}
+
+/* IE10 display: -ms-flexbox (and display: flex in IE 11) does not work inside a table; fall back to block and rely on font hack */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+table .pure-g {
+  display: block;
+}
+}
+
+/* Opera as of 12 on Windows needs word-spacing.
+ The ".opera-only" selector is used to prevent actual prefocus styling
+ and is not required in markup.
+*/
+.opera-only :-o-prefocus,
+.pure-g {
+  word-spacing: -0.43em;
+}
+
+.pure-u {
+  display: inline-block;
+  *display: inline; /* IE < 8: fake inline-block */
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+
+/*
+Resets the font family back to the OS/browser's default sans-serif font,
+this the same font stack that Normalize.css sets for the `body`.
+*/
+.pure-g [class *= "pure-u"] {
+  font-family: sans-serif;
+}
+
+
+
+.grids-example {  
+  background: rgb(250, 250, 250);  
+  margin: 2em auto;              
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;  
+  text-align: center;                   
+}    
+.grid-unit {  
+  margin: 0.25em 0;  
+  padding-left: 4.5em;  
+}  
+.grid-unit .grid-unit-width {  
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;  
+}  
+.grid-unit-bar {  
+  height: 2em;  
+  background: lightgreen;  
+}  
+
+/*csslint important:false*/
+
+/* ==========================================================================
+ Pure Base Extras
+ ========================================================================== */
+
+/**
+* Extra rules that Pure adds on top of Normalize.css
+*/
+
+/**
+* Always hide an element when it has the `hidden` HTML attribute.
+*/
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/**
+* Add this class to an image to make it fit within it's fluid parent wrapper while maintaining
+* aspect ratio.
+*/
+.pure-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pure-table {
+  /* Remove spacing between table cells (from Normalize.css) */
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  width: 100%;
+}
+.pure-table-detail {
+  /* Remove spacing between table cells (from Normalize.css) */
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  width: 100%;
+  margin: 25px 50px 25px 50px;
+  /* background-color: white; */
+}
+
+.pure-table-border{
+  border: 1px solid black;
+  background-color: white;
+  border-left-color: blue;
+  border-left-width: 0.5em;
+}
+.pure-table-td-align-left{    
+  text-align: left;
+}
+
+.pure-table caption {
+  color: #000;
+  font: italic 85%/1 arial, sans-serif;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.pure-table td,
+.pure-table th {
+  /* border-left: 1px solid #cbcbcb;  inner column border */
+  border-width: 0 0 0 1px;
+  font-size: inherit;
+  margin: 0;
+  overflow: visible; /*to make ths where the title is really long work*/
+  padding: 0.5em 1em; /* cell padding */
+}
+
+/* Consider removing this next declaration block, as it causes problems when
+there's a rowspan on the first cell. Case added to the tests. issue#432 */
+.pure-table td:first-child,
+.pure-table th:first-child {
+  border-left-width: 0;
+}
+
+.pure-table thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+/*
+striping:
+ even - #fff (white)
+ odd  - #f2f2f2 (light gray)
+*/
+.pure-table td {
+  background-color: transparent;
+}
+.pure-table-odd td {
+  background-color: #f2f2f2;
+}
+
+/* nth-child selector for modern browsers */
+.pure-table-striped tr:nth-child(2n-1) td {
+  background-color: #f2f2f2;
+}
+
+/* BORDERED TABLES */
+.pure-table-bordered td {
+  border-bottom: 1px solid #cbcbcb;
+}
+.pure-table-bordered tbody > tr:last-child > td {
+  border-bottom-width: 0;
+}
+
+
+/* HORIZONTAL BORDERED TABLES */
+
+.pure-table-horizontal td,
+.pure-table-horizontal th {
+  border-width: 0 0 1px 0;
+  border-bottom: 1px solid #cbcbcb;
+}
+.pure-table-horizontal tbody > tr:last-child > td {
+  border-bottom-width: 0;
+}
+
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+  background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+  background: red; /* this is a maroon */
+}
+
+.button-warning {
+  background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+  background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 5px;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  background:red
+}
+
+.topbutten{
+  width: 45%;
+  height: 50px;
+  margin-left:5px;
+  margin-right:5px;
+}
+
+.select-butten{
+  margin-left:5px; 
+  margin-right:5px; 
+  width:70px;
+}
+.aaa {
+  width: 5%;
+  height: 50px;
+  background:rgb(95, 80, 80);
+  margin-right:5px; 
+  margin-left:5px; 
+  width:15%;
+}
+.card-li-style p{
+  line-height : 2.5rem;
+}
+.ann-content{
+  line-height: 2.5rem;
+}
+
+
+.card-text-left-announce{
+  text-align: left;
+}

@@ -1,0 +1,226 @@
+<ng-container [ngSwitch]="pageType">
+
+  <!-- 餘額上下限通知設定頁 -->
+  <ng-container *ngSwitchCase="'balanceLimitPage'">
+    <app-balance-notice (editedData)="onEditClickCallBack($event)" [editPara]="editPara"></app-balance-notice>
+  </ng-container>
+  <!-- 餘額上下限通知設定編輯頁 -->
+  <ng-container *ngSwitchCase="'balanceLimitEditPage'">
+    <app-balance-notice-edit [editedData]="editedData" [accountInfo]="accountInfo"></app-balance-notice-edit>
+  </ng-container>
+  <!-- 指定額度通知設定頁 -->
+  <ng-container *ngSwitchCase="'amountLimitPage'">
+    <app-amount-notice (editedData)="onEditClickCallBack($event)" [editPara]="editPara"></app-amount-notice>
+  </ng-container>
+  <!-- 指定額度通知設定編輯頁 -->
+  <ng-container *ngSwitchCase="'amountLimitEditPage'">
+    <app-amount-notice-edit [editedData]="editedData" [accountInfo]="accountInfo" ></app-amount-notice-edit>
+  </ng-container>
+
+  <!-- container-->
+  <!-- <div class="container-fluid container-bk-gree"> -->
+
+  <!-- <div class="row"> -->
+  <div class="bg-fixed-60 bg-color-lightgray"></div>
+
+  <section class="col-xs-12 section-content notification-setting-pg" *ngSwitchDefault>
+
+    <form method="post">
+
+      <!-- 副標題-種類1 - 黑字黃底線 - 單列 -->
+      <div class="row">
+        <div class="sub-title">
+          <!-- APP通知項目設定 -->
+          <p>{{ 'NOTIFICATIONSETTING.TITLE' | translate }}</p>
+        </div>
+      </div>
+
+      <!-- switch-group-wrapper 種類1 -->
+      <div class="row">
+
+        <div class="switch-group-wrapper">
+
+
+        </div>
+
+      </div>
+      <!-- // switch-group-wrapper 種類1 -->
+
+      <!--副標題-種類2 - 黑字灰底線 - 單列(背景色灰) -->
+      <!--<div class="row"> 2018/12/15 Leo:昭雯說不要 Defact 586
+        <div class="sub-title-46 bg-color-lightgray">
+          <!-- 帳戶交易及餘額 -->
+          <!--<p class="">{{ 'NOTIFICATIONSETTING.TITLE_L2_TRXN' | translate }}</p>
+        </div>
+      </div>*/
+      <!--// 副標題-種類2 - 黑字灰底線 - 單列 (背景色灰) -->
+
+      <!-- ct-li-group-wrapper 種類1 -->
+      <div class="row">
+
+        <div class="ct-li-group-wrapper">
+          <!-- switch group 種類1 -->
+          <!-- 止付通知 -->
+          <div class="ct-switch-option-group switch-group-style-100">
+            <div class="switch-inner-container align-two-side">
+
+              <div class="ct-switch-left-wrap">
+                <!-- 止付通知 -->
+                <p>{{ 'NOTIFICATIONSETTING.TRXN_STOP_PAYMENT' | translate }}</p>
+              </div>
+
+              <div class="ct-switch-right-wrap">
+                <div class="ct-onoffswitch">
+                  <input type="checkbox" [checked]="notificationPara['AP16']['value'] !== '0'" name="ct-onoffswitch6" class="ct-onoffswitch-checkbox"
+                    id="ct-onoffswitch6" (change)="onItemClick('AP16')">
+                  <label class="ct-onoffswitch-label" for="ct-onoffswitch6"></label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- // switch group 種類1 -->
+
+          <!-- switch group 種類1 -->
+          <!-- 預約前一日付款通知 -->
+          <div class="ct-switch-option-group switch-group-style-100">
+            <div class="switch-inner-container align-two-side">
+
+              <div class="ct-switch-left-wrap">
+                <!-- 預約前一日付款通知 -->
+                <p>{{ 'NOTIFICATIONSETTING.TRXN_RESERVED_PAYMENT' | translate }}</p>
+              </div>
+
+              <div class="ct-switch-right-wrap">
+                <div class="ct-onoffswitch">
+                  <input type="checkbox" [checked]="notificationPara['AP01']['value'] !== '0'" name="ct-onoffswitch7" class="ct-onoffswitch-checkbox"
+                    id="ct-onoffswitch7" (change)="onItemClick('AP01')">
+                  <label class="ct-onoffswitch-label" for="ct-onoffswitch7"></label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- // switch group 種類1 -->
+
+          <!-- switch group 種類1 -->
+          <!-- 交易結果通知 -->
+          <div class="ct-switch-option-group switch-group-style-100">
+            <div class="switch-inner-container align-two-side">
+
+              <div class="ct-switch-left-wrap">
+                <!-- 交易結果通知 -->
+                <p>{{ 'NOTIFICATIONSETTING.TRXN_RESULT' | translate }}</p>
+              </div>
+
+              <div class="ct-switch-right-wrap">
+                <div class="ct-onoffswitch">
+                  <input type="checkbox" [checked]="notificationPara['OT01']['value'] !== '0'" name="ct-onoffswitch8" class="ct-onoffswitch-checkbox"
+                    id="ct-onoffswitch8" (change)="onItemClick('OT01')">
+                  <label class="ct-onoffswitch-label" for="ct-onoffswitch8"></label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- // switch group 種類1 -->
+
+          <!-- ct-li-group 種類1 -->
+          <!-- 餘額上下限通知 -->
+          <div class="ct-li-option-group ct-li-group-style-100">
+            <div class="ct-li-inner-container align-two-side" (click)="onSubSettingsClick('MS01')">
+
+              <div class="ct-li-left-wrap">
+                <!-- 餘額上下限通知 -->
+                <p>{{ 'NOTIFICATIONSETTING.TRXN_BALANCE_LIMIT' | translate }}</p>
+              </div>
+
+              <div class="ct-li-right-wrap ct-icon-right-wrap" >
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </div>
+
+            </div>
+          </div>
+          <!-- // ct-li-group 種類1 -->
+          <!-- 扣帳交易即時通知 -->
+          <div class="ct-li-option-group ct-li-group-style-100">
+            <div class="ct-li-inner-container align-two-side" (click)="onSubSettingsClick('MS02')">
+
+              <div class="ct-li-left-wrap">
+                <!-- 扣帳交易即時通知 -->
+                <p>{{ 'NOTIFICATIONSETTING.MS02_Title' | translate }}</p>
+              </div>
+
+              <div class="ct-li-right-wrap ct-icon-right-wrap" >
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </div>
+
+            </div>
+          </div>
+          <!-- // ct-li-group 種類1 -->
+          <!-- // ct-li-group 種類1 -->
+          <!-- 入帳交易即時通知 -->
+          <div class="ct-li-option-group ct-li-group-style-100">
+            <div class="ct-li-inner-container align-two-side" (click)="onSubSettingsClick('MS03')">
+
+              <div class="ct-li-left-wrap">
+                <!-- 入帳交易即時通知 -->
+                <p>{{ 'NOTIFICATIONSETTING.MS03_Title' | translate }}</p>
+              </div>
+
+              <div class="ct-li-right-wrap ct-icon-right-wrap" >
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </div>
+
+            </div>
+          </div>
+          <!-- // ct-li-group 種類1 -->
+          <!-- // ct-li-group 種類1 -->
+          <!-- 支存帳戶存款不足通知 -->
+          <div class="ct-li-option-group ct-li-group-style-100" >
+            <div class="ct-li-inner-container align-two-side" (click)="onSubSettingsClick('MS04')">
+
+              <div class="ct-li-left-wrap">
+                <!-- 支存帳戶存款不足通知 -->
+                <p>{{ 'NOTIFICATIONSETTING.MS04_Title' | translate }}</p>
+              </div>
+
+              <div class="ct-li-right-wrap ct-icon-right-wrap" >
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </div>
+
+            </div>
+          </div>
+          <!-- // ct-li-group 種類1 -->
+          <!-- // ct-li-group 種類1 -->
+          <!-- 託收票退票通知 -->
+          <div class="ct-li-option-group ct-li-group-style-100">
+            <div class="ct-li-inner-container align-two-side" (click)="onSubSettingsClick('MS05')">
+
+              <div class="ct-li-left-wrap">
+                <!-- 託收票退票通知 -->
+                <p>{{ 'NOTIFICATIONSETTING.MS05_Title' | translate }}</p>
+              </div>
+
+              <div class="ct-li-right-wrap ct-icon-right-wrap" >
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </div>
+
+            </div>
+          </div>
+          <!-- // ct-li-group 種類1 -->
+        </div>
+
+      </div>
+      <!-- // ct-li-group-wrapper 種類1 -->
+
+    </form>
+
+  </section>
+
+  <!-- </div> -->
+  <!-- end of container-->
+
+  <!-- </div> -->
+
+</ng-container>

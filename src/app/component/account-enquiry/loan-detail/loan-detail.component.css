@@ -1,0 +1,183 @@
+
+p {
+    margin: 0px;
+}
+
+.info {
+    padding-left: 30px;
+}
+
+.list_area {
+    margin: 0;
+    padding-bottom: 40px;
+    background-color: #fff;
+	width: 100vw;
+}
+
+.list_title {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list_label {
+    color: blue;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.list_title span{
+    font-size: 0.8em;
+}
+
+.list_frame {
+    padding: 10px;
+    width: 94vw;
+}
+
+.list_frame:nth-child(even) {
+    background-color: rgb(209, 209, 209);
+    border-color: rgb(209, 209, 209);
+}
+
+.list_frame_content {
+    text-align: left;
+}
+
+.list_group_content {
+    margin: 10px 0px 0px 130px;
+}
+
+.list_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list_left, .list_middle, .list_right {
+    width: 30%;
+    margin-left: 5px;
+}
+
+.list_right {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.hr_simple {
+    border: 0;
+    height: 1px;
+    background-color: rgb(165, 165, 165);
+}
+
+.list_area_cert {
+    padding: 0px 15px;
+}
+
+.list_area_cert.title {
+    padding-top: 15px;
+}
+
+.list_title_cert {
+    padding: auto 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list_label_note {
+    font-size: 0.8em;
+}
+
+.list_label_cert {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.noopenPage, .openPage {
+    position: initial;
+}
+
+.button_unselect {
+	color: black;
+	background-color: rgb(225, 225, 225);
+	width: 22vw;
+    height: 20px;
+    border-radius: 5px 5px 0 0;
+    border: none;
+}
+
+.button_unselect_small {
+	color: black;
+	background-color: rgb(225, 225, 225);
+	width: 10vw;
+    height: 20px;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+}
+
+.button_group {
+	display : inline-block;
+}
+
+.div_title {
+    height: 50px;
+    text-align: center;
+}
+
+.box_frame {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(165, 165, 165) rgb(165, 165, 165) rgb(165, 165, 165) rgb(0, 0, 255);
+    border-width: 3px;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    width: 85vw;
+}
+
+.box_frame_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box_frame_top div:nth-child(2) {
+    padding: 10px
+}
+
+.bage {
+    float: left;
+	/* background-image: url('/src/assets/ui/images/u4735.png'); */ /* 因路徑問題 目前先寫在style.css */
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 5px 30px 5px 15px;
+    width: 130px;
+    height: 35px;
+    background-repeat: no-repeat;
+}
+
+.box_frame_content {
+    text-align: right;
+    margin: 5px 30px 5px 0px;
+    font-weight: bold;
+}
+
+.box_frame_content span{
+    font-size: 2em;
+}
+.card-saving-text-l p{
+    overflow: visible;
+}
+
+.section-content-tab {
+    top: 60px;
+}
+
+.bg-fixed-60-full-height {
+    position: relative;
+}
+
+.card-saving-li-style-loanDetail {
+	padding: 6px 0;
+	font-size: 1.6rem;
+	font-weight: 500;
+}

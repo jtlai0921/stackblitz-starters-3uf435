@@ -1,0 +1,174 @@
+<!-- Root start -->
+<div class="bgoverflowhidden">
+    <div class="bg-fixed-195"></div>
+    <section class="col-xs-12 section-content trans-result-6-pg">
+        <div class="row">
+            <!-- content-li種類1 - 無icon - 兩列-->
+            <div class="content-li-container">
+                <ul class="content-li-wrapper content-li-wrapper-bottomLine wrapper-padding-25">
+                    <li class="content-li-title-tag">
+                        <p class="content-li-tag-left">
+                            <span class="li-tag-green">{{'AGREEDACCOUNT.TRANS_USER' | translate}}</span>
+                        </p>
+                    </li>
+                    <li class="content-li-detail-style">
+                        <div class="content-li-text-left-all">
+                            <p>{{UserName}}</p>
+                        </div>
+                    </li>
+                    <li class="content-li-title-tag">
+                        <p class="content-li-tag-left">
+                            <span class="li-tag-green">{{'AGREEDACCOUNT.TRANS_CONTENT' | translate}}</span>
+                        </p>
+                    </li>
+                    <!-- 交易日期 -->
+                    <li class="content-li-detail-style align-two-side li-style-top" *ngIf="ViewObject.TxnType == '1'">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.TRANS_DATE' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p> {{ViewObject.TxnDate}}</p>
+                        </div>
+                    </li>
+                    <!-- 週期交易日期 -->
+                    <li class="content-li-detail-style align-two-side li-style-top" *ngIf="ViewObject.TxnType == '2'">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.PDT_TRANS_DATE' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p> {{ViewObject.TxnDate}}</p>
+                        </div>
+                    </li>
+                    <!-- 有效期間 -->
+                    <li class="content-li-detail-style align-two-side li-style-top" *ngIf="ViewObject.TxnType == '2'">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.PDT_EFFECTIVE_DATE' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p> {{ViewObject.DateFrom}}-{{ViewObject.DateTo}}</p>
+                        </div>
+                    </li>
+                    <!-- 首次扣款日 -->
+                    <li class="content-li-detail-style align-two-side li-style-top" *ngIf="ViewObject.TxnType == '2'">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.FIRST_DEBIT_DAY' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p> {{ViewObject.First}}</p>
+                        </div>
+                    </li>
+                    <!-- 最後扣款日 -->
+                    <li class="content-li-detail-style align-two-side li-style-top" *ngIf="ViewObject.TxnType == '2'">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.LAST_DEBIT_DAY' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p> {{ViewObject.Last}}</p>
+                        </div>
+                    </li>
+
+
+                    <li class="content-li-detail-style align-two-side li-style-top">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.REL_ACCT' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p>{{RelAcctSelected.CurCode}}-{{RelAcctSelected.AcctNo}}{{RelAcctSelected.BankName}}</p>
+                        </div>
+                    </li>
+                    <li class="content-li-detail-style align-two-side">
+                        <div class="content-li-text-left">
+                            <p></p>
+                        </div>
+                        <div class="content-li-text-right li-text-overflow-r font-size-14">
+                            <p>{{RelAcctSelected.CustomerId}}{{RelAcctSelected.CustomerName}}</p>
+                        </div>
+                    </li>
+                    <!-- <li class="content-li-detail-style align-two-side li-style-top">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.CUR_TYPE' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p>{{ViewObject.DebitCur}}</p>
+                        </div>
+                    </li> -->
+                    <li class="content-li-money-style align-two-side li-style-top">
+                        <div class="content-li-money-left">
+                            <p>{{'AGREEDACCOUNT.AMOUNT' | translate}}</p>
+                        </div>
+                        <div class="content-li-money-right amount-bold-style align-right">
+                            <b id="font-size-14">{{ViewObject.DebitCur}}  </b><b class="amount-number">{{ViewObject.Amount | _currency}}</b>
+                        </div>
+                    </li>
+
+                    <li class="content-inside-line-wrapper">
+                        <div class="form-inside-line-wrapper content-inside-line-wrapper">
+                            <div class="form-inside-line-l">
+                            </div>
+                            <div class="form-inside-line-icon">
+                            </div>
+                            <div class="form-inside-line-r">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="content-li-detail-style align-two-side li-style-top">
+                        <div class="content-li-text-left">
+                            <p>{{'AGREEDACCOUNT.PAYEE_ACCT' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p>{{PayeeAcctSelected.BankCode}}-{{PayeeAcctSelected.AcctNo}}</p>
+                        </div>
+                    </li>
+
+                    <li class="content-li-detail-style align-two-side">
+                        <div class="content-li-text-left">
+                            <p></p>
+                        </div>
+                        <div class="content-li-text-right li-text-overflow-r font-size-14">
+                            <p>{{PayeeAcctSelected.AcctName}}</p>
+                        </div>
+                    </li>
+
+                    <li class="content-li-detail-style align-two-side li-style-top">
+                        <div class="content-li-text-left">
+                            <p>{{'AGREEDACCOUNT.MEMO' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p>{{ViewObject.Memo}}</p>
+                        </div>
+                    </li>
+
+                    <!-- <li class="content-li-seperator-line"></li>
+
+                    <li class="content-li-detail-style align-two-side li-style-top">
+                        <div class="content-li-text-left">
+                            <p> {{'AGREEDACCOUNT.FEE' | translate}}</p>
+                        </div>
+                        <div class="content-li-text-right">
+                            <p>{{Fee | _currency}}</p>
+                        </div>
+                    </li> -->
+
+
+                </ul>
+            </div>
+            <!-- content-li種類1 - 無icon - 兩列 // END-->
+        </div>
+
+
+        <!-- button-set種類1 - 2個按鈕-->
+
+        <div class="row">
+            <div class="bt-center-group align-two-side">
+                <button type="button" class="btn btn-group-sm btn-cancel" (click)="onCancelClick()">{{'AGREEDACCOUNT.PREVIOUS'
+                    | translate}}</button>
+                <button type="submit" class="btn btn-group-sm btn-confirm" (click)="onComfirmClick()">{{'AGREEDACCOUNT.CONFIRM'
+                    | translate}}</button>
+            </div>
+        </div>
+
+        <!-- button-set種類1 - 2個按鈕 //End-->
+    </section>
+</div>
+<!-- Root end -->

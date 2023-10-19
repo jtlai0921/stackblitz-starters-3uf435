@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="questionPage">
+        <div class="area_ex_but">
+            <P>{{ 'EXCESSAMOUNT.ADDNOTIFICATION' | translate}}</P>
+        </div>
+
+
+        <div class="area_ex">
+            <h3>{{ 'EXCESSAMOUNT.NOTIFICATIONHAVESET' | translate}}</h3>
+        </div>
+        <hr style="
+        border: 0;
+        background-color: #ffd100; 
+        height: 4px">
+        <div class="area_ex">
+            <span>{{ 'EXCESSAMOUNT.AMOUNTNOTICE' | translate}}</span><span style="float:right;" >{{ 'EXCESSAMOUNT.EDIT' | translate}}</span>
+        </div>
+            <div *ngFor="let HotProblem of HotProblem;let recordIndex = index">
+                <div class="inp_box">
+                    <div>
+                        <p>{{HotProblem.issuer}}</p>
+                        <hr align="left">
+                        <p>{{HotProblem.description}}</p><span class="edit_img"></span>
+                    </div>
+                </div>
+            </div>    
+    </div>    
+</div>
+
+

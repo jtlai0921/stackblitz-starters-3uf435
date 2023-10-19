@@ -1,0 +1,386 @@
+<!-- 篩選popup -->
+<div *ngIf="filterBlock" class="row">
+  <div class="shadow active"></div>
+
+  <div class="pop-box-container active">
+    <div class="pop-box-area">
+      <div (click)="filterCloseBtn()" *ngIf="closeBtnChange" class="pop-close-bt">
+        <div class="i-close"></div>
+      </div>
+      <div class="pop-content-wrapper">
+
+        <div class="pop-title">
+          <p>{{'BILLCOLLECTION.FILTER_TITLE' | translate }}</p>
+        </div>
+
+        <div class="pop-content">
+          <!--pop視窗內容開始-->
+          <app-option [source]="source" [filterKey]="'Status'" [view]="viewStatusData" (filterData)="result1($event)" (closeBtnFlag)="closeBtnFlag($event)"></app-option>
+          <app-datefilter [source]="source" [view]="viewDateData" (filterData)="result2($event)"></app-datefilter>
+
+          <!-- D Amnt start -->
+          <div class="pop-sub-title">
+            <p class="">{{'BILLCOLLECTION.DEBITUNG_AMOUNT' | translate }}</p>
+          </div>
+
+          <div class="pop-input-flex-group pop-li-flex">
+            <div class="select-pop-form-group pop-form-group-30">
+              <div class="select-date-input-wrapper">
+                <div class="input-group pop-select-bk-style" id="">
+                  <input maxlength="30" [(ngModel)]="dAmntFrom" type="tel" class="form-control select-date-input" placeholder="">
+                </div>
+              </div>
+            </div>
+            <p> {{'BILLCOLLECTION.TEN_THOUSAND_YUAN' | translate }} ～ </p>
+            <div class="select-pop-form-group pop-form-group-30">
+              <div class="select-date-input-wrapper">
+                <div class="input-group pop-select-bk-style" id="">
+                  <input maxlength="30" [(ngModel)]="dAmntTo" type="tel" class="form-control select-date-input" placeholder="">
+                </div>
+              </div>
+            </div>
+            <p> {{'BILLCOLLECTION.TEN_THOUSAND_YUAN' | translate }} </p>
+          </div>
+          <!-- D Amnt end -->
+        </div>
+        <!--pop視窗內容結束-->
+
+      </div>
+
+      <!--pop-bt-group- 兩個 -->
+      <div class="pop-bt-group">
+        <button type="button" class="btn btn-cancel btn-pop-cancel" (click)="filterClick(true)">{{'BILLCOLLECTION.FILTER_RESET'
+          | translate }}</button>
+        <button type="submit" class="btn btn-confirm btn-pop-confirm" (click)="onFilterClick()">{{'BILLCOLLECTION.FILTER_COMFIRM'
+          | translate }}</button>
+      </div>
+      <!--//pop-bt-group-兩個一組-->
+
+
+    </div>
+  </div>
+
+</div>
+
+<!-- 票據查詢頁 -->
+<!-- Switch Button Start -->
+<!-- <div class="row"> -->
+<div class="bg-fixed-105"></div>
+<section class="col-xs-12 section-content-tab-billcollection cheque-deposit-pg" scrollTop dropReload>
+  <!-- TAB-L3 - 二選項 -->
+  <div class="row">
+
+    <div class="nav-l3">
+      <a href="javascript:void(0)" (click)="onSwitchClick('1')" class="col-xs-6 tab-l3-set-2 tab-l3-set-l {{getActive(0)}}">
+        {{'BILLCOLLECTION.BILLCOLLECTION' | translate }}
+      </a>
+      <a href="javascript:void(0)" (click)="onSwitchClick('2')" class="col-xs-6 tab-l3-set-2 tab-l3-set-r {{getActive(1)}}">
+        {{'BILLCOLLECTION.NOT_ENOUGH_DETAIL' | translate }}
+      </a>
+    </div>
+  </div>
+  <!-- // TAB-L3 - 二選項 ----------->
+
+  <!--表單popup種類10 - 90%+Filter+國別 -->
+  <div class="row">
+    <div class="select-pop-group-style select-pop-group-style-row">
+      <!-- 台灣 -->
+      <span class="country">{{ 'countryCode.TW' | translate }}</span>
+      <div (click)="onAccountClick()" class="select-pop-form-group pop-form-group-l pop-form-group-80">
+        <!-- 下拉 Start-->
+        <div class="select-pop-bt-wrapper bt-wrapper-100">
+          <button type="button" class="btn btn-default dropdown-toggle btn-selectline-pop {{switchIndex!=1 ? 'searchBlock' : ''}}"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="select-pop-content">{{selAccountName | translate}}</span>
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- 下拉 End -->
+      </div>
+      <!-- 左邊icon+文字連結 -->
+      <div *ngIf="switchIndex==1" (click)="filterClick()" class="select-pop-form-group pop-form-group-r pop-form-group-10">
+        <div class="select-pop-input-wrapper link-wrapper">
+          <p class="content-li-text-ct-style"><i class="icon-filter"></i></p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- 表單popup種類10  //End----------------------------------------------------------------------->
+
+  <!-- 搜尋欄位陣列 -->
+  <app-search [hidden]="switchIndex!=1" [source]="source" [column]="filterArray" (filterData)="search_result($event)"></app-search>
+
+
+  <!-- 託收票據 清單顯示區塊 Start -->
+  <ng-container *ngIf="collection">
+    <!--accordion 外框架 -->
+
+    <div class="row">
+      <div class="accordion2-section" *ngIf="loadData != undefined && loadData.length > 0">
+        <!-- accordion 種類2 -->
+        <!-- accordion 種類2 title -->
+        <div class="col-xs-12 align-two-side accordion2-sub-title">
+          <div class="col-xs-2 accordion2-sub-title-col1">
+            <!-- 託收日 -->
+            <p>{{ 'BILLCOLLECTION.COL_DATA' | translate }}</p>
+          </div>
+          <div class="col-xs-4 accordion2-sub-title-col2">
+            <!-- 狀態 -->
+            <p>{{ 'BILLCOLLECTION.STATUS' | translate }}</p>
+          </div>
+          <div class="col-xs-5 accordion2-sub-title-col3">
+            <!-- 金額 -->
+            <p>{{ 'BILLCOLLECTION.AMOUNT' | translate }}</p>
+          </div>
+          <div class="col-xs-1 accordion2-sub-title-col4">
+            <p></p>
+          </div>
+        </div>
+        <!-- //accordion 種類2 title -->
+
+        <div class="accordion-outer-container">
+          <div class="accordion">
+            <!--詳細資料單筆-->
+              <ng-container *ngFor="let item of loadData; let listIndex = index">
+                <div class="accordion-title {{ item.openType ? 'active' : '' }}" (click)="toggle(listIndex)">
+                  <div class="col-xs-2 accordion-title-date">
+                    <!-- 原資料型態為2016-07-04，取月、日 -->
+                    <p>{{ item.ColDate | _datetime :'MM-dd'}}</p>
+                  </div>
+                  <div class="col-xs-4 accordion-title-name">
+                    <p>{{ statusToString(item.Status)}}</p>
+                  </div>
+                  <div class="col-xs-5 accordion-title-amount">
+                    <p>{{ item.Amount | _currency }}</p>
+                  </div>
+                  <div class="accordion-title-icon">
+                    <i class="fa fa-angle-down " aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="accordion-content {{ item.openType ? 'active' : '' }}">
+                  <ul class="col-xs-9 col-xs-offset-2 accordion2-inner-detail">
+                    <li>
+                      <div class="col-xs-4 accordion-li-text-l">
+                        <!-- 付款行 -->
+                        <p>{{Detailitle.DebitBankTitle | translate}}</p>
+                      </div>
+                      <div class="col-xs-8 accordion-li-text-r">
+                        <p>
+                          {{item.DebitBankName}}
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+
+                      <div class="col-xs-4 accordion-li-text-l">
+                        <!-- 發票人帳號 -->
+                        <p>{{Detailitle.DebitAcctNoTitle | translate}}</p>
+                      </div>
+                      <div class="col-xs-8 accordion-li-text-r">
+                        <p>{{item.DebitAcctNo}}</p>
+                      </div>
+
+                    </li>
+                    <li>
+
+                      <div class="col-xs-4 accordion-li-text-l">
+                        <!-- 票交所地點 -->
+                        <p>{{Detailitle.ColBranchNameTitle | translate}}</p>
+                      </div>
+                      <div class="col-xs-8 accordion-li-text-r">
+                        <p>{{item.ColBranchName }}</p>
+                      </div>
+                    </li>
+                    <li>
+
+                      <div class="col-xs-4 accordion-li-text-l">
+                        <!-- 最後更新日 -->
+                        <p>{{Detailitle.LastModifiedDateTitle | translate}}</p>
+                      </div>
+                      <div class="col-xs-8 accordion-li-text-r">
+                        <p>{{item.LastModifiedDate | _datetime}}</p>
+                      </div>
+                    </li>
+                    <li>
+
+                      <div class="col-xs-4 accordion-li-text-l">
+                        <!-- 到期日 -->
+                        <p>{{Detailitle.MaturityDateTitle | translate}}</p>
+                      </div>
+                      <div class="col-xs-8 accordion-li-text-r">
+                        <p>{{item.MaturityDate | _datetime}}</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </ng-container>
+            <!-- // 詳細資料單筆-->
+          </div>
+        </div>
+        <!-- accordion 種類2 //END -->
+        
+      </div>
+      <app-no-data *ngIf="loadData != undefined && loadData.length == 0"></app-no-data>
+
+      <!-- Memo start -->
+      <div class="memo-info-billcollection">
+        <ol class="memo-info-list">
+          <li>{{'BILLCOLLECTION.MEMO_TITLE' | translate}}</li>
+          <li>{{'BILLCOLLECTION.MEMO_LINE_1' | translate}}</li>
+          <li>{{'BILLCOLLECTION.MEMO_LINE_2' | translate}}</li>
+        </ol>
+      </div>
+      <!-- Memo end -->
+
+    </div>
+    <!--//accordion 外框架 -->
+
+  
+  </ng-container>
+  <!-- 託收票據 清單顯示區塊 End -->
+
+  <!-- 當日支存不足明細 清單顯示區塊 Start -->
+  <ng-container *ngIf="!collection">
+
+    <!--活期存款卡片種類1- 無icon -->
+    <div class="row">
+      <div class="list-card-style card-saving-type">
+
+        <div class="card-saving-title-wrapper">
+          <div class="card-saving-title-left">
+            <!-- 支票存款 -->
+            <p>{{ 'BILLCOLLECTION.CURRENT_ACCOUNT' | translate }}</p>
+          </div>
+
+          <div class="card-saving-title-right font-size-14">
+            <p>{{'BILLCOLLECTION.Currency' | translate}}:{{ChkIssueModel.currency}}</p>
+          </div>
+        </div>
+
+        <ul>
+
+          <li class="card-saving-li-style align-two-side">
+            <div class="card-saving-text-l">
+              <!-- 帳戶餘額 -->
+              <p>{{ 'BILLCOLLECTION.BALANCE' | translate }}</p>
+            </div>
+            <div class="card-saving-text-r card-saving-money">
+              <p>{{ChkIssueModel.balance | _currency}}</p>
+            </div>
+          </li>
+
+          <li class="card-saving-li-style align-two-side">
+            <div class="card-saving-text-l">
+              <!-- 不足金額 -->
+              <p>{{ 'BILLCOLLECTION.NOT_ENOUGN' | translate }}</p>
+            </div>
+            <div class="card-saving-text-r card-saving-money">
+              <p>{{ChkIssueModel.notEnough | _currency}}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--// 活期存款卡片種類1- 無icon -->
+
+
+    <div class="row">
+      <!-- content-li種類1 - 無icon - 兩列-->
+      <div class="content-li-container">
+        <ul class="content-li-wrapper content-li-wrapper-bottomLine">
+          <li class="content-li-title-style">
+            <!-- 票據明細 -->
+            <p class="content-li-text-left">{{'BILLCOLLECTION.BILL_DETAIL' | translate }}</p>
+          </li>
+        </ul>
+
+        <ul class="content-li-wrapper content-li-wrapper-bottomLine wrapper-padding-25">
+
+          <li class="content-li-detail-style align-two-side li-style-top">
+            <div class="content-li-text-left">
+              <p>{{'BILLCOLLECTION.BILL_CUR' | translate}}</p>
+            </div>
+            <div class="content-li-text-right">
+              <p>{{ChkIssueModel.currency}}</p>
+            </div>
+          </li>
+
+          <li class="content-li-detail-style align-two-side li-style-top">
+            <div class="content-li-text-left">
+              <!-- 支票總金額 -->
+              <p>{{ 'BILLCOLLECTION.CHK_TOTAL' | translate }}</p>
+            </div>
+            <div class="content-li-text-right">
+              <p>{{ChkIssueModel.chkTotal | _currency}}</p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+      <!-- content-li種類1 - 無icon - 兩列 // END-->
+    </div>
+
+    <!--accordion 外框架 -->
+    <div class="row">
+      <div class="accordion3-section">
+
+        <!-- accordion 種類3 -->
+        <!-- accordion 種類3 title -->
+        <div class="col-xs-12 align-two-side accordion3-sub-title">
+          <div class="col-xs-6 accordion3-sub-title-col1">
+            <!-- 票號 -->
+            <p>{{ 'BILLCOLLECTION.CHK_NO' | translate }}</p>
+          </div>
+          <div class="col-xs-6 accordion3-sub-title-col2">
+            <!-- 金額   -->
+            <p>{{ 'BILLCOLLECTION.CHK_AMT' | translate }}</p>
+          </div>
+        </div>
+        <!-- //accordion 種類3 title -->
+        <div class="accordion3-outer-container">
+
+          <div class="accordion3">
+
+            <!--詳細資料單筆-->
+            <div *ngFor="let item of loadData; let listIndex = index" class="accordion-title">
+              <div class="col-xs-6 accordion3-title-num">
+                <p>{{item.ChkNo}}</p>
+              </div>
+              <div class="col-xs-6 accordion3-title-amount">
+                <p>{{item.ChkAmt | _currency}}</p>
+              </div>
+            </div>
+            <!-- // 詳細資料單筆-->
+
+          </div>
+
+        </div>
+        <!-- accordion 種類3 //END -->
+
+      </div>
+    </div>
+    <!--//accordion 外框架 -->
+
+    <!-- 下方注意事項 種類1 -->
+    <div class="row">
+      <div class="memo-info">
+        <!--<p>注意事項</p>-->
+        <ol class="memo-info-list">
+          <!--<li>單位:新台幣</li>-->
+          <!--<li>更新時間:2017/04/17 07:34:10</li>-->
+          <li>{{'BILLCOLLECTION.Remarks' | translate}}</li>
+          <!-- 本資料顯示當日支存扣款餘額不足明細 -->
+          <li>{{ 'BILLCOLLECTION.NOTE' | translate }}</li>
+        </ol>
+      </div>
+    </div>
+    <!-- 下方注意事項 種類1 // END  -->
+
+  </ng-container>
+  <!--當日支存不足明細 清單顯示區塊 End -->
+
+</section>

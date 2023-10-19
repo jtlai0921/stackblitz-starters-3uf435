@@ -1,0 +1,44 @@
+<!-- 聯絡客服 -->
+<div class="bg-fixed-60"></div>
+  <section class="col-xs-12 section-content setting-pg">
+    <div *ngFor="let item of data; let i = index">
+      <!-- 副標題-種類1 - 黑字黃底線 - 單列 -->
+      <div class="row">
+        <div class="sub-title">
+          <p>{{ item.location | translate }}</p>
+        </div>
+      </div>
+      <!-- 副標題-種類1 - 黑字黃底線 - 單列 //END -->
+
+      <!-- ct-content-card種類- 聯絡客服 -左tag icon -->
+      <div class="row">
+        <div class="ct-content-card ct-content-card-column contact-service-card">
+          <div class="content-card-column-wrap">             
+            <div class="card-tag-green-icon">
+              <a href="mailto:{{ item.email }}"><div class="tag-icon-email"></div></a>                                
+            </div>
+            <div class="contact-service-content link-color">
+              <a href="mailto:{{ item.email }}"><p>{{ item.email }}</p></a>
+            </div>
+          </div>
+          <div class="content-card-column-wrap">
+            <div class="card-tag-green-text" (click)="confirmCall(item.phone)">
+                <p>{{ phone_title }}</p>
+            </div>
+            <div class="contact-service-content link-color" (click)="confirmCall(item.phone)">
+              <p>{{ item.showPhone }}</p>
+            </div>
+          </div>
+          <div class="content-card-column-wrap">
+            <div class="card-tag-green-text">
+              <p>{{ tax_title }}</p>
+            </div>
+            <div class="contact-service-content">
+              <p>{{ item.fax }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // ct-content-card種類- 聯絡客服 -左tag icon -->
+    </div>
+  </section>

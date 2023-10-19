@@ -1,0 +1,93 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000005Rs",
+    "RqUID": "20180709111612",
+    "Timestamp": "20180709111645",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000005Rs",
+      "UserName": "User999",
+      "Result": 4001,
+      "Desc": "",
+      "SessionKey": "qa2sf4vgh1a11qq",
+      "TrustedDevice": "Y",
+      "OTPDevice": "Y",
+      "IdUser": "small_Leo",
+      "FunctionList": [
+        {
+          "FunctionId": "TXN_AUTH"
+        },
+        {
+          "FunctionId": "ACCT_OVERVIEW"
+        },
+        {
+          "FunctionId": "ACCT_SUMM"
+        },
+        {
+          "FunctionId": "ACCT_ACTIVITY"
+        },
+        {
+          "FunctionId": "ACT_QUERY"
+        },
+        {
+          "FunctionId": "ACT_TRANS"
+        },
+        {
+          "FunctionId": "LOAN_DET_INQ"
+        },
+        {
+          "FunctionId": "LOAN_DET_INQ"
+        },
+        {
+          "FunctionId": "TD_ACCT_SUMM"
+        },
+        {
+          "FunctionId": "INV_PRD_SUMM"
+        },
+        {
+          "FunctionId": "INV_PRD_DET"
+        },
+        {
+          "FunctionId": "ATM_TXN"
+        },
+        {
+          "FunctionId": "INTERNAL_TXN"
+        },
+        {
+          "FunctionId": "LCY_TXN"
+        },
+        {
+          "FunctionId": "FCY_TXN"
+        },
+        {
+          "FunctionId": "IR_INQ"
+        },
+        {
+          "FunctionId": "OR_INQ"
+        },
+        {
+          "FunctionId": "COL_INQ"
+        },
+        {
+          "FunctionId": "CHK_INQ"
+        },
+        {
+          "FunctionId": "MST_FILE_INQ"
+        },
+        {
+          "FunctionId": "ACCT_ACTIVITY_TD"
+        },
+        {
+          "FunctionId": "ACCT_ACTIVITY_ST"
+        }
+      ],
+      "KeyIndex": "123456789",
+      "CustomerName": "中國信託股份有限公司"
+    }
+  }
+}

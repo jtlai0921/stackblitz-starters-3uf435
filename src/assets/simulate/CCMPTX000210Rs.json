@@ -1,0 +1,18 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000210Rs",
+    "RqUID": "20190306111700",
+    "Timestamp": "20190306111700",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId":"CCMPTX000210Rs",
+      "Result":4001,
+      "Desc":"agreement"
+    }
+  }
+}

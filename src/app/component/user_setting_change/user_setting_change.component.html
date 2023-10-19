@@ -1,0 +1,33 @@
+<!-- 個人設定-資料變更 -->
+<div class="bg-fixed-60 bg-color-lightgray"></div>
+  <section class="col-xs-12 section-content notification-setting-pg">
+    <form method="post">
+      <!--副標題-種類2 - 黑字灰底線 - 單列(背景色灰) ----------->
+      <div class="row">
+        <div class="sub-title-46 bg-color-lightgray">
+          <!-- 資料變更 -->
+          <p class="">{{'USERSETTING.INFO_CHANGE' | translate}}</p>
+        </div>
+      </div>
+      <!--// 副標題-種類2 - 黑字灰底線 - 單列 (背景色灰)  ----------->
+      <!-- switch-group-wrapper 種類1 -->
+      <div class="row">
+        <div class="switch-group-wrapper">
+          <!-- ct-li-group 種類1 -->
+            <div class="ct-li-option-group ct-li-group-style-100" *ngFor="let item of dataList2; let i = index" (click)="Link(item)">
+              <div class="ct-li-inner-container align-two-side">
+                <div class="ct-li-left-wrap">
+                  <!-- 功能名稱 -->
+                  <p>{{item.name | translate}}</p>
+                </div>
+                <div class="ct-li-right-wrap ct-icon-right-wrap">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <!-- // ct-li-group 種類1 -->    
+        </div>
+      </div>
+      <!-- // switch-group-wrapper 種類1 -->
+    </form>
+  </section>

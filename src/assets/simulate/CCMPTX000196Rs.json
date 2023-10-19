@@ -1,0 +1,173 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000196Rs",
+    "RqUID": "20180815111512",
+    "Timestamp": "20180815111545",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000196Rs", 
+      "Result": 4001,
+      "Desc": "",
+      "RecCnt": 2,
+      "DataCnt": 2,
+      "LastBatchId": "",
+      "FundXferList": [
+        {
+          "TxnDate": "20180712",
+          "BatchId": "938292824938293829282493829382928240",
+          "TxnType": "SDT",
+          "PeriodType": "",
+          "PeriodValue": "99",
+          "PayerAcctNo": "822-9382928249371",
+          "PayeeAcctNo": "105-39282928272",
+          "CreditCur": "TWD",
+          "DebitCur": "TWD",
+          "Amount": "1800",
+          "Memo": "",
+          "BankId": "", 
+          "AvailablePeriodCnt": 1,
+          "TotalPeriodCnt": 1,
+          "PeriodInfoList": [
+            {
+              
+            }
+          ],
+          "TxnAlias": "",
+          "Maker": ""
+        },
+        {
+          "TxnDate": "20180830",
+          "BatchId": "938292824938293829282493829382928241",
+          "TxnType": "PDT",
+          "PeriodType": "M",
+          "PeriodValue": "30",
+          "PayerAcctNo": "822-9382928249372",
+          "PayeeAcctNo": "105-39283794234",
+          "CreditCur": "TWD",
+          "DebitCur": "TWD",
+          "Amount": "25000",
+          "Memo": "",
+          "BankId": "", 
+          "AvailablePeriodCnt": 4,
+          "TotalPeriodCnt": 8,
+          "PeriodInfoList": [
+            {
+              "PeriodId": 1,
+              "TxnDate": "20180430"
+            },
+            {
+              "PeriodId": 2,
+              "TxnDate": "20180530"
+            },
+            {
+              "PeriodId": 3,
+              "TxnDate": "20180630"
+            },
+            {
+              "PeriodId": 4,
+              "TxnDate": "20180730"
+            },
+            {
+              "PeriodId": 5,
+              "TxnDate": "20180830"
+            },
+            {
+              "PeriodId": 6,
+              "TxnDate": "20180930"
+            },
+            {
+              "PeriodId": 7,
+              "TxnDate": "20181030"
+            },
+            {
+              "PeriodId": 8,
+              "TxnDate": "20181130"
+            }
+          ],
+          "TxnAlias": "忠孝路房租",
+          "Maker": ""
+        },
+        {
+          "TxnDate": "20180712",
+          "BatchId": "938292824938293829282493829382928242",
+          "TxnType": "SDT",
+          "PeriodType": "",
+          "PeriodValue": "99",
+          "PayerAcctNo": "822-9382928249382",
+          "PayeeAcctNo": "105-39282928273",
+          "CreditCur": "TWD",
+          "DebitCur": "TWD",
+          "Amount": "3800",
+          "Memo": "",
+          "BankId": "", 
+          "AvailablePeriodCnt": 1,
+          "TotalPeriodCnt": 1,
+          "PeriodInfoList": [
+            {
+              
+            }
+          ],
+          "TxnAlias": "",
+          "Maker": ""
+        },
+        {
+          "TxnDate": "20180830",
+          "BatchId": "938292824938293829282493829382928243",
+          "TxnType": "PDT",
+          "PeriodType": "M",
+          "PeriodValue": "30",
+          "PayerAcctNo": "822-9382928249383",
+          "PayeeAcctNo": "105-39283794235",
+          "CreditCur": "TWD",
+          "DebitCur": "TWD",
+          "Amount": "45000",
+          "Memo": "",
+          "BankId": "", 
+          "AvailablePeriodCnt": 4,
+          "TotalPeriodCnt": 8,
+          "PeriodInfoList": [
+            {
+              "PeriodId": 1,
+              "TxnDate": "20180430"
+            },
+            {
+              "PeriodId": 2,
+              "TxnDate": "20180530"
+            },
+            {
+              "PeriodId": 3,
+              "TxnDate": "20180630"
+            },
+            {
+              "PeriodId": 4,
+              "TxnDate": "20180730"
+            },
+            {
+              "PeriodId": 5,
+              "TxnDate": "20180830"
+            },
+            {
+              "PeriodId": 6,
+              "TxnDate": "20180930"
+            },
+            {
+              "PeriodId": 7,
+              "TxnDate": "20181030"
+            },
+            {
+              "PeriodId": 8,
+              "TxnDate": "20181130"
+            }
+          ],
+          "TxnAlias": "忠孝路房租",
+          "Maker": ""
+        }
+      ]
+    }
+  }
+}

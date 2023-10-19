@@ -1,0 +1,96 @@
+<header class="col-xs-12 main_nav" id="header_component" *ngIf="isOpen">
+    <ng-container *ngIf="!topDisapear">
+        <div *ngIf="backEventStack.length == 0" (click)="toggle()" class="sidemenu">
+            <a href="javascript:void(0)">
+                <img src="assets/design/image/icon/i-header-menu.svg" alt="">
+            </a>
+        </div>
+    </ng-container>
+    <div *ngIf="backEventStack.length > 0" (click)="back()" class="pageback">
+        <a href="javascript:void(0)">
+            <img src="assets/design/image/icon/i-header-back.svg" alt="">
+        </a>
+    </div>
+    <h1 class="page_title {{ (header_title == '') ? 'header_bg' : ''}}">
+        {{ header_title | translate}}
+        <img *ngIf="header_logo" src="assets/design/image/logo.png" alt="logo">
+    </h1>
+
+    <ng-container *ngIf="!topDisapear">
+    <!-- 無通知權限則將通知Icon隱藏 -->
+        <ng-container *ngIf ="hasNoticePermission">
+            <!-- 有訊息時請加上active樣式 -->
+            <div class="notice {{hasNewNotification? 'active': ''}}" *ngIf="!rightIcon" (click)="notice()">
+                <a href="javascript:void(0)">
+                    <img src="assets/design/image/icon/i-header-notice.svg" alt="">
+                </a>
+            </div>
+        </ng-container>
+        <div class="notice" *ngIf="rightIcon == 'noticeSetting'" (click)="setting()">
+            <a href="javascript:void(0)">
+                <img id = "noticeImage" src="assets/design/image/icon/i-left-setting-open.svg" />
+            </a>
+        </div>
+        <div class="notice" *ngIf="rightIcon == 'announce'" (click)="annouce()">
+            <a href="javascript:void(0)">
+                <img src="assets/design/image/icon/i-announce.svg" />
+            </a>
+        </div>
+    </ng-container>
+</header>
+
+<div id="nav_left_bar" class="sidenav {{activeClass}}">
+    <div class="left_nav_log_welcome_coated">
+        <div class="left_nav_log_welcome">
+            <a href="javascript:void(0)" class="closebtn" (click)="onBackClick()">&times;</a>
+            <a href="javascript:void(0)" class="active">
+                <div class="user-log-info">
+                    <div class="log-logo"><img src="assets/design/image/logo.png" alt=""></div>
+                    <div class="user-login-box {{!isLogin?'user-logout' : ''}}">
+                        <ul *ngIf="isLogin">
+                            <li>{{UserName}}</li>
+                            <li>( {{UserAccount}} )</li>
+                        </ul>
+                        <ul *ngIf="!isLogin">
+                            <li>{{ 'MENU.TITLE_CTBC' | translate }}</li>
+                            <li>{{ 'MENU.TITLE_APP' | translate }}</li>
+                        </ul>
+                    </div>
+                    <div *ngIf="isLogin" (click)="logout()" class="btn-log-group">
+                        <!-- 登出 -->
+                        <button type="button" class="btn btn-log">{{ 'MENU.LOGOUT' | translate}}</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <ul class="accordion-menu">
+        <ng-container *ngFor="let menu_item of NowList; let ind = index;">
+            <li class="{{menu_item.isVisible && menu_item.link == 'sub' ? 'open': ''}}">
+                <div (click)="menuClick(menu_item)" class="dropdownlink">
+                    <i class="nav-title-icon {{menu_item.iconClass}}"></i>
+                    <p>{{ menu_item.key | translate}}</p>
+                    <i *ngIf="menu_item.link == 'sub'" class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+                <ng-container *ngFor="let sub_menu of menu_item.subMenu; let ind = index;">
+                    <ul *ngIf="menu_item.isVisible" class="submenuItems">
+                        <li (click)="menuClick(sub_menu)">
+                            <a href="javascript:void(0)">{{sub_menu.key | translate}}</a>
+                        </li>
+                    </ul>
+                </ng-container>
+            </li>
+        </ng-container>
+
+        <!-- <li>
+            <div class="dropdownlink" (click)="linkTo('example')">
+            <i class="nav-title-icon nav-title-icon-announcement"></i><p>Example </p>
+            </div>
+        </li> -->
+    </ul>
+    <div class="side-menu-copyright">{{ 'MENU.VERSION' | translate}}:v{{appVersion}}({{contentVersion}})</div>
+</div>
+
+
+
+<!-- </div> -->

@@ -1,0 +1,34 @@
+<div class="bg-fixed-60 "></div>
+<section class="col-xs-12 section-content language-pg">
+
+
+    <div class="row">
+        <div class="page-separator-35"></div>
+    </div>
+
+    <ng-container *ngFor="let item of languages">
+        <div class="row" (click)="onLanguageItemClick(item)">
+            <div class="language-card-style" [ngClass]="{'active': selectedLang == item.code}">
+                <div class="align-two-side">
+                    <div class="card-left-wrap">
+                        <ul>
+                            <li class="card-li-style">
+                                <p class="card-text-left language-bold-title">{{item.display}}</p>
+                            </li>
+                            <li class="card-li-style">
+                                <p class="card-text-left language-semi-title">{{item.localName}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-right-icon-wrap">
+                        <!--<i class="fa fa-ellipsis-v" aria-hidden="true"></i>-->
+                        <img class="check-icon" src="assets/design/image/icon/check-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+
+
+</section>

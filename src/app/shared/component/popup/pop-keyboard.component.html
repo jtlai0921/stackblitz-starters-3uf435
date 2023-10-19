@@ -1,0 +1,29 @@
+<div *ngIf="IsOpen">
+  <div class="part" (click)="closeKeyboard()">
+  </div>
+  <div class="keyboard {{isKeyboardActive ? 'active' : ''}}" id="softkeys">
+    <div class = "complete">
+      <!-- 完成 -->
+      <span (click) = "closeKeyboard()">{{ 'BTN.FINISH' | translate }}</span>
+    </div>
+    <div class="softkeys" *ngFor="let item of arr3;let i = index">
+      <li disabled = "true" *ngIf = "item != '!' && item != 'uppercase' && item != 'delete' && item != 'UPPERCASE' && item != 'DELETE'" class="softkeys__btn" (touchstart)="clickButton(item)">
+        <span  class="size">{{item}}</span></li>
+        <li *ngIf = "item == '!'" id="size2" class="softkeys__btn">
+          <span>{{item}}</span></li>
+
+      <li *ngIf="(item == 'uppercase' || item == 'UPPERCASE') && upperCaseStatus == 0 || upperCaseStatus == 3"  id="softkeys__btn" class="softkeys__btn" (click)="upperCaseButton()">
+        <div class="uppercase" id = "uppercase1"></div>
+      </li>
+      <li *ngIf="(item == 'uppercase' || item == 'UPPERCASE') && upperCaseStatus == 1"  id="softkeys__btn" class="softkeys__btn" (click)="upperCaseButton()">
+        <div class="uppercase" id = "uppercase2"></div>
+      </li>
+      <li *ngIf="(item == 'uppercase' || item == 'UPPERCASE') && upperCaseStatus == 2"  id="softkeys__btn" class="softkeys__btn" (click)="upperCaseButton()">
+        <div class="uppercase" id = "uppercase3"></div>
+      </li>
+      <li *ngIf="item == 'delete' || item == 'DELETE'"  id="softkeys__btn" class="softkeys__btn" (touchstart)="deleteButton()">
+        <div class="delete"></div>
+      </li>
+    </div>
+  </div>
+</div>

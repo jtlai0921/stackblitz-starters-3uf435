@@ -1,0 +1,69 @@
+.questionPage{
+  background-image:url('../../../assets/ui/images/sky.jpg');
+  overflow:hidden;
+  position: absolute;
+  padding-top:24vh;
+  width: 100vw;height: 96vh;
+  top:-90px;
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: 50% 0; 
+  background-size:cover;
+}
+.area{
+  margin: 20px 10px 10px 50px;
+  text-align: left;
+}
+.area label{
+  margin:10px auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: #666666;
+  font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+}
+
+.area p{
+  margin:10px auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: #666666;
+  font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+  padding-left:24px;
+}
+
+
+.area input{
+  width: 75vw;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: '微軟正黑體';
+  font-size: 13px;
+  color: #5E5E5E;
+}
+.buttonCenter{
+  text-align: center;
+}
+.buttonCenter button{
+  width: 140px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 5px;
+} 
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.area .error_p {
+  color: red;
+}
+
+.error_input {
+  border: 2px red solid;
+}
+.oldUserId{
+  padding-left:10px;
+}

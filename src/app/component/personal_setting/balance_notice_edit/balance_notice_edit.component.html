@@ -1,0 +1,179 @@
+<!-- container-->
+<div class="container-fluid container-bk-gree"> 
+
+    <div class="row">
+        <div class="bg-fixed-60 bg-lightgray"></div>
+
+        <section class="col-xs-12 section-content rate-setting-pg"> 
+        
+            <!-- 副標題-種類1 - 黑字黃底線 - 單列 -->
+            <div class="row">
+                <div class="sub-title">
+                    <p>{{ 'BALANCE_LIMIT.TITLE_L2_SELECT_ACOUNT' | translate }}</p>
+                </div>
+            </div>
+            <!-- 副標題-種類1 - 黑字黃底線 - 單列 //END --> 
+        
+            <!--表單popup種類2-1 - 100% - 下拉單列 -->
+            <div class="row">
+                <div class="rate-select-wrap bg-white">
+                    <div class="select-group-style">
+                        <div class="select-pop-form-group pop-form-group pop-form-group-100"> 
+                            <!-- 下拉 Start-->
+                            <div class="select-pop-bt-wrapper bt-wrapper-100">
+                                <button type="button" class="btn btn-default dropdown-toggle btn-select-pop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="onAcctListOpen()">
+                                <!-- 選取之帳號 -->
+                                    <p class="select-pop-content">{{ selectedAccountInfo }}</p>
+                                <!-- 選單下拉箭頭 -->
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i> </button>
+                            </div>
+                            <!-- 下拉 End --> 
+                        </div>
+                    </div>
+                    <!-- 公司資訊種類 1 -->
+                    <div class="select-group-info">
+                        <p>{{ companyId }} {{ customerName }}</p>
+                    </div>       
+                    <!-- 公司資訊種類 1 //End --> 
+                </div>
+            </div>
+            <!-- 表單popup種類2-1 //End --> 
+        
+            <!-- 副標題-種類1 - 黑字黃底線 - 單列 -->
+            <div class="row">
+                <div class="sub-title">
+                    <p>{{ 'BALANCE_LIMIT.TITLE_L2_LAUNCH' | translate }}</p>
+                </div>
+            </div>
+            <!-- 副標題-種類1 - 黑字黃底線 - 單列 //END --> 
+        
+            <!-- 表單popup種類13-2 - 輸入框＋checkbox＋label-->
+            <div class="row">
+                <!-- 上限值設定 -->
+                <div class="rate-select-wrap select-flex-group bg-white">
+                    <div class="select-row-group-up">
+                        <div class="pop-checkbox"> 
+                            <span>
+                                <input class="ct-checkbox" type="checkbox" [(ngModel)]="checkMax" name="option1" id="1" value="option1">
+                                <label class="pull-left" for="1"></label>
+                            </span> 
+                        </div>
+                        <p>{{ 'BALANCE_LIMIT.ACCOUNT_BALANCE' | translate }}{{ 'BALANCE_LIMIT.EXCEED' | translate }}</p>
+                    </div>
+                    <div class="select-row-group-down">
+                        <div class="select-pop-form-group pop-form-group-80" >
+                            <div class="select-amount-input-wrapper">
+                                <div class="input-group select-amount-input-group" id="">
+                                    <label>{{ currency }}</label>
+                                    <input maxlength="30" type="tel" [(ngModel)]="max" class="form-control select-amount-input" placeholder="{{ 'BALANCE_LIMIT.INPUT_NUMBER' | translate }}" (keyup)="onMaxInput()">
+                                </div>
+                            </div>
+                        </div>
+                        <p>{{ 'BALANCE_LIMIT.NOTICE_ME' | translate }}</p>
+                    </div>
+                    <!-- 約當本幣顯示種類 1 -->
+                    <div class="currency-info" *ngIf="exchangeTable && currency != equivalentCurrency">
+                        <p>{{ 'BALANCE_LIMIT.EQUIV' | translate }}{{ equivalentCurrency }}: {{ equivalentMax }}</p>
+                    </div>       
+                    <!-- 約當本幣顯示種類 1 //End --> 
+                </div>
+            </div>
+            <!-- //表單popup種類13-2 - 輸入框＋checkbox＋label--> 
+            <!-- 表單popup種類13-2 - 輸入框＋checkbox＋label-->
+            <div class="row">
+                <!-- 下限值設定 -->
+                <div class="rate-select-wrap select-flex-group bg-white">
+                    <div class="select-row-group-up">
+                        <div class="pop-checkbox">
+                            <span>
+                                <input class="ct-checkbox" type="checkbox" [(ngModel)]="checkMin" name="option2" id="2" value="option2" >
+                                <label class="pull-left" for="2"></label>
+                            </span>
+                        </div>
+                        <p>{{ 'BALANCE_LIMIT.ACCOUNT_BALANCE' | translate }}{{ 'BALANCE_LIMIT.BELOW' | translate }}</p>
+                    </div>
+                    <div class="select-row-group-down">
+                        <div class="select-pop-form-group pop-form-group-80">
+                            <div class="select-amount-input-wrapper">
+                                <div class="input-group select-amount-input-group" id="">
+                                    <label>{{ currency }}</label>
+                                    <input maxlength="30" type="tel" [(ngModel)]="min" class="form-control select-amount-input" placeholder="{{ 'BALANCE_LIMIT.INPUT_NUMBER' | translate }}" (keyup)="onMinInput()">
+                                </div>
+                            </div>
+                        </div>
+                        <p>{{ 'BALANCE_LIMIT.NOTICE_ME' | translate }}</p>
+                    </div>
+                    <!-- 約當本幣顯示種類 1 -->
+                    <div class="currency-info" *ngIf="exchangeTable && currency != equivalentCurrency">
+                        <p>{{ 'BALANCE_LIMIT.EQUIV' | translate }}{{ equivalentCurrency }}: {{ equivalentMin }}</p>
+                    </div>
+                    <!-- 約當本幣顯示種類 1 //End -->
+                </div>
+            </div>
+        <!-- //表單popup種類13-2 - 輸入框＋checkbox＋label--> 
+        <ng-container *ngIf="!editedData">
+            <!-- button-set種類5 - 1個按鈕 -->
+            <div class="row">
+                <div class="bt-center-group">
+                    <div class="bt-inner-group-xl">
+                        <button type="submit" class="btn btn-inner-group-s btn-confirm" (click)="onSaveClick()">{{ 'BALANCE_LIMIT.BTN_SAVE' | translate }}</button>
+                    </div>
+                </div>
+            </div>
+            <!-- button-set種類5 - 1個按鈕 - Disable//End -->
+        </ng-container>
+
+        <ng-container *ngIf="editedData">
+            <!-- button-set種類1 - 2個按鈕-->
+            <div class="row">
+                <div class="bt-center-group align-two-side">
+                    <button type="button" class="btn btn-group-sm btn-cancel" (click)="onDeleteClick()">{{ 'BALANCE_LIMIT.BTN_DELETE' | translate }}</button>
+                    <button type="submit" class="btn btn-group-sm btn-confirm" (click)="onSaveClick()">{{ 'BALANCE_LIMIT.BTN_SAVE' | translate }}</button>
+                </div>
+            </div>
+            <!-- button-set種類1 - 2個按鈕 - Disable//End -->
+        </ng-container>
+            
+        </section>
+
+    </div>
+
+
+    <!-- AcctList page -->
+    <div class="row" *ngIf="showAcctList">
+        <div class="shadow active"></div>
+        <div class="pop-box-container active">
+            <div class="pop-box-area">
+                <div class="pop-content-wrapper">
+                    <div class="pop-title-l2">
+                        <div class="pop-pageback-bt" (click)="onAcctListClose()">
+                            <a href="javascript:void(0)">
+                                <img src="assets/design/image/icon/i-pop-pageback.svg" alt="">
+                            </a>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="pop-content-l2">
+                        <div class="pop-li-section pop-li-border {{account == acct ? 'pop-li-default':''}}" *ngFor="let acct of accounts;" (click)="onAcctItemClick(acct)">
+                            <div class="pop-li-l-100">
+                                <div class="pop-li-l-option" *ngIf="acct['AcctNo'] != 0000000000000000">
+                                    <p>{{ acct['AcctCur'] }}-{{ acct['AcctNo'] }}</p>
+                                </div>
+                                <!-- 若有0000000000000000帳號則是顯示所有帳號 -->
+                                <div class="pop-li-l-option" *ngIf="acct['AcctNo'] == 0000000000000000">
+                                        <p>{{ companyId }}-{{ 'BALANCE_LIMIT.ALL_ACOUNT' | translate }}</p>
+                                </div>
+                            </div>
+                            <div class="pop-right-icon-wrap">
+                                <img class="check-icon" src="assets/design/image/icon/check-icon.png" alt="">
+                            </div>
+                        </div>
+                        <!-- //pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+                    </div>
+                    <!--pop視窗內容結束-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,193 @@
+<!-- 預約查詢與取消頁 預約轉帳週期明細 -->
+
+<div>
+<div class="bg-fixed-105"></div>
+<section class="col-xs-12 section-content pre-def-detail-cycle-pg top-128 padding-12">
+
+  <!--卡片種類1 - 無icon - 兩列-->
+  <div class="row">
+    <div class="list-card-style card-pre-def-cycle">
+      <ul>
+        <li class="card-li-style align-two-side">
+          <p class="card-tag-wrap">
+            <!-- 週期 -->
+            <span class="card-tag-green">{{ 'TRANSACTION.CYCLE' | translate }}</span>
+          </p>
+
+          <div class="card-text-right card-font-s font-blue-highlight">
+            <!-- 交易名稱 -->
+            <p>{{ listData.TxnAlias ? listData.TxnAlias.trim() : "" }}</p>
+          </div>
+
+        </li>
+        <li class="card-li-style align-two-side" *ngIf="listData.PayerAcct" >
+          <div class="card-text-left">
+            <!-- 轉出帳號 -->
+            <p>{{ 'TRANSACTION.PAYER_ACCT_NO' | translate }}</p>
+          </div>
+          <div class="card-text-right">
+            <p>{{ listData.PayerAcct }}</p>
+          </div>
+        </li>
+        <li class="card-li-style">
+          <div class="card-text-right text-overflow-width-r font-size-14" *ngIf="listData.PayerAcct && (listData.PayerId || listData.PayerName)">
+            <p id = "font-size-14">({{ listData.PayerId }}{{ listData.PayerName }})</p>
+          </div>
+        </li>
+        <li class="card-li-style align-two-side">
+          <div class="card-text-left">
+            <!-- 單次轉出幣別 -->
+            <p>{{ 'TRANS_LOG.CURRENCY' | translate }}</p>
+          </div>
+          <div class="card-text-right">
+            <p>{{ listData.DebitCur }}</p>
+          </div>
+        </li>
+        <li class="card-li-money align-two-side">
+          <div class="card-li-money-left">
+            <!-- 單次轉出金額 -->
+            <p>{{ 'TRANSACTION.AMOUNT_EVERYTIME' | translate }}</p>
+          </div>
+          <div class="card-li-money-right amount-bold-style">
+            <b class="amount-number">{{ listData.DebitAmt | number }}</b>
+          </div>
+        </li>
+        <li class="card-inside-line"></li>
+        <li class="card-li-style align-two-side">
+          <div class="card-text-left">
+            <!-- 轉入帳號 -->
+            <p>{{ 'TRANSACTION.PAYEE_ACCT_NO' | translate }}</p>
+          </div>
+          <div class="card-text-right">
+            <p>{{ listData.PayeeAcct }}</p>
+          </div>
+        </li>
+        <li class="card-li-style align-two-side">
+          <div class="card-text-left">
+            <!-- 週期 -->
+            <p>{{ 'TRANSACTION.CYCLE' | translate }}</p>
+          </div>
+          <div class="card-text-right">
+            <p *ngIf="listData['PeriodInfo']['PeriodType'] === 'M'">{{ 'TRANSACTION.EVERY_MONTH' | translate }}{{ listData['PeriodInfo']['PeriodValue'] }}{{
+              'TRANSACTION.DATE' | translate }}</p>
+            <p *ngIf="listData['PeriodInfo']['PeriodType'] === 'W'">{{ 'TRANSACTION.EVERY_WEEK' | translate }}{{ listData['PeriodInfo']['PeriodValue'] }}</p>
+          </div>
+        </li>
+
+        <li class="card-li-style align-two-side">
+          <div class="card-text-left">
+            <!-- 剩餘扣款次數 -->
+            <p>{{ 'TRANSACTION.AVAILABLE_PERIOD_CNT' | translate }}</p>
+          </div>
+          <div class="card-text-right">
+            <p>{{ listData.AvailablePeriodCnt }}{{ 'TRANSACTION.TIMES' | translate }}</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <!--卡片種類1 - 無icon - 兩列 //END -->
+
+  <ng-container *ngFor="let setData of showData; let listsIndex = index">
+    <!-- 副標題-種類1 - 黑字黃底線 - 單列 -->
+    <div class="row">
+      <div class="sub-title">
+        <!-- 待執行 -->
+        <p *ngIf="setData.type === 'todo'">{{ 'TRANSACTION.TODO' | translate }}</p>
+        <!-- 已執行或取消 -->
+        <p *ngIf="setData.type !== 'todo'">{{ 'TRANSACTION.DONE' | translate }}</p>
+      </div>
+    </div>
+    <!-- 副標題-種類1 - 黑字黃底線 - 單列 //END -->
+
+    <!-- ct-表格 種類1 - 4欄 -->
+    <div class="row">
+      <div class="ct-table-title-section pre-def-title-section">
+        <div *ngIf="setData.type=='todo'" class="ct-table-title-wrapper pre-def-title-wrapper">
+          <div class="ct-table-title-col1 pre-def-title-col1">
+            <!-- 生效日 -->
+            <p>{{ 'TRANSACTION.TD_ISSUE_DATE' | translate }}</p>
+          </div>
+          <div class="ct-table-title-col2 pre-def-title-col2">
+            <!-- 狀態 -->
+            <p>{{ 'TRANSACTION.STATUS' | translate }}</p>
+          </div>
+          <div class="ct-table-title-col3 pre-def-title-col3">
+            <!-- 金額 -->
+            <p>{{ 'TRANSACTION.AMT' | translate}}</p>
+          </div>
+          <div class="ct-table-title-col4 pre-def-title-col4">
+            <!-- 取消 -->
+            <p>{{ 'TRANSACTION.CANCEL' | translate }}</p>
+          </div>
+        </div>
+
+        <div *ngIf="setData.type=='done'" class="ct-table-title-wrapper pre-def-tb-wrapper">
+          <div class="ct-table-title-col1 pre-def-tb-col1">
+            <!-- 生效日 -->
+            <p>{{ 'TRANSACTION.TD_ISSUE_DATE' | translate }}</p>
+          </div>
+          <div class="ct-table-title-col3 pre-def-tb-col3">
+            <!-- 狀態 -->
+            <p>{{ 'TRANSACTION.STATUS' | translate }}</p>
+          </div>
+          <div class="ct-table-title-col4 pre-def-tb-col4">
+            <!-- 金額 -->
+            <p>{{ 'TRANSACTION.AMT' | translate }}</p>
+          </div>
+        </div>
+      </div>
+
+      <ng-container *ngIf="setData.type=='todo'">
+        <div class="ct-table-content-section pre-def-content-section">
+          <div class="ct-table-content-wrapper pre-def-content-wrapper">
+            <ul>
+
+              <li *ngFor="let item of setData.data; let listIndex = index">
+                <div class="ct-table-content-col1 pre-def-content-col1">
+                  <p>{{ item.date }}</p>
+                </div>
+                <div class="ct-table-content-col2 pre-def-content-col2">
+                  <p >{{ 'TXN_STATUS.TXN_STATUS_' + item.TxnStatus | translate}}</p>
+                  <!-- <p *ngIf="item.type=='d'">Unknown(交易取消)</p> -->
+                </div>
+                <div class="ct-table-content-col3 pre-def-content-col3">
+                  <p>{{ listData.DebitAmt | _currency:2}}</p>
+                </div>
+                <div class="ct-table-content-col4 pre-def-content-col4">
+                  <div (click)="onCancel(item,listIndex)" class="icon-delete"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="setData.type=='done'">
+        <div class="ct-table-content-section pre-def-cb-section">
+          <div class="ct-table-content-wrapper pre-def-cb-wrapper">
+            <ul>
+
+              <li *ngFor="let item of setData.data; let listIndex = index">
+                <div class="ct-table-content-col1 pre-def-cb-col1">
+                  <p>{{ item.date }}</p>
+                </div>
+                <div class="ct-table-content-col3 pre-def-cb-col3">
+                  <p >{{ 'TXN_STATUS.TXN_STATUS_' + item.TxnStatus | translate}}</p>
+                </div>
+                <div class="ct-table-content-col4 pre-def-cb-col4">
+                  <p>{{ listData.DebitAmt | _currency:2}}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <!-- //ct-表格 種類1 - 4欄 -->
+
+  </ng-container>
+
+</section>
+</div>

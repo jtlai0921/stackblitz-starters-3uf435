@@ -1,0 +1,464 @@
+<!-- 存款明細頁 -->
+<div class="bg-fixed-105"></div>
+<section class="col-xs-12 section-content-tab deposit-activity-pg" scrollTop dropReload>
+
+  <!-- Selection + Filter Area Start -->
+  <!-- 搜尋欄位陣列 -->
+  <!-- 暫時移除搜尋bar -->
+  <!-- <app-search [source]="source" [column]="filterArray" (filterData)="search_result($event)"></app-search> -->
+
+  <!-- 搜尋欄位陣列 -->
+  <app-search *ngIf="isShowFilter" [source]="source" [column]="searchBarArray" (filterData)="search_result($event)"></app-search>
+
+  <div class="row">
+    <div class="select-pop-group-style select-pop-group-style-row">
+      <div (click)="onCompanyClick()" class="select-pop-form-group pop-form-group-l {{ isShowFilter ? 'pop-form-group-90' : 'pop-form-group-100' }}">
+        <!-- Selection Start-->
+        <div class="select-pop-bt-wrapper bt-wrapper-100">
+          <button type="button" class="btn btn-default dropdown-toggle btn-selectline-pop" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <span class="select-pop-content">{{selCompanyName | translate}}</span>
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+        <!-- Selection End -->
+      </div>
+      <!-- Filter Start -->
+      <div class="select-pop-form-group pop-form-group-r pop-form-group-10" *ngIf="isShowFilter">
+        <div class="select-pop-input-wrapper link-wrapper" >
+          <p class="content-li-text-ct-style" (click)="filterPop()"><i class="icon-filter"></i></p>
+        </div>
+      </div>
+      <!-- Filter End -->
+    </div>
+  </div>
+  <!-- Selection + Filter Area End -->
+  <div *ngIf="isNoData!= undefined && !isNoData">
+    <!-- BadgeCard Area Start -->
+    <div class="row" *ngIf="type !== 'TS' && type !== 'blank'">
+      <div class="list-card-style card-saving-type">
+        <div class="card-saving-title-wrapper">
+          <div class="card-saving-title-left">
+            <!-- 產品別 -->
+            <p>{{ badgeName }}</p>
+          </div>
+          <div class="card-saving-title-right font-size-14">
+            <!-- 幣別 -->
+            <p>{{ 'DEPOSITSUMMARY.CURRENCY' | translate }}:{{curType}}</p>
+          </div>
+        </div>
+        <ul>
+          <!-- 顯示項目1 帳戶餘額 or 本金 -->
+          <li class="card-saving-li-style align-two-side">
+            <div class="card-saving-text-l">
+              <p>{{ badgeItem }}</p>
+            </div>
+            <div class="card-saving-text-r card-saving-money" *ngIf="type !== 'T' && type !== 'SD'">
+              <p>{{ curBalance | _currency : 2}}</p>
+            </div>
+            <div class="card-saving-text-r card-saving-money" *ngIf="type === 'T'">
+              <p>{{ tDetail.PrincipalAmt | _currency : 2}}</p>
+            </div>
+            <div class="card-saving-text-r card-saving-money" *ngIf="type === 'SD'">
+              <p>{{ stDetail.PrincipalAmt | _currency : 2}}</p>
+            </div>
+          </li>
+          <!-- 顯示項目2 可用餘額 -->
+          <li class="card-saving-li-style align-two-side" *ngIf="type === 'S'">
+            <div class="card-saving-text-l">
+              <p>{{ 'DEPOSITDETAIL.AVAILABLE_BALANCE' | translate }}</p>
+            </div>
+            <div class="card-saving-text-r card-saving-money">
+              <p>{{ availBalance | _currency : 2}}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- BadgeCard Area End -->
+
+    <!-- 活期存款(S) 支票存款(C) 清單顯示區塊 Start -->
+    <ng-container *ngIf="!certificate && type !== 'TS' && type !== 'blank'">
+      <div class="row">
+        <div class="accordion-section">
+          <!-- 資料群組月份 -->
+          <div *ngFor="let key of keys; let listsIndex = index">
+            <div class="col-xs-12 align-two-side accordion-month-title">
+              <div class="accordion-month-title-text">
+                <!-- 月份 -->
+                <b>{{ key }}{{ 'DEPOSITDETAIL.MONTH' | translate }}</b>
+              </div>
+              <div class="accordion-month-title-time" *ngIf="listsIndex === 0">
+                <!-- 查詢時間 -->
+                <p>{{ dateTime | _datetime:'yyyy/MM/dd hh:mm:ss'}}</p>
+              </div>
+            </div>
+            <!-- 詳細資料單筆 Start -->
+            <div class="accordion-outer-container">
+              <div class="accordion">
+                <div class="accordion-group" *ngFor="let item of list[key];let listIndex = index" (click)="toggle(listsIndex,listIndex)">
+                  <div class="accordion-title {{ item.openType? 'active' : '' }}">
+                    <div class="col-xs-2 accordion-title-date">
+                      <!-- 交易日期 -->
+                      <p>{{ item.TxnDate | _datetime:'MM/dd'}}</p>
+                    </div>
+                    <div class="col-xs-4 accordion-title-name">
+                      <!-- 摘要 -->
+                      <p>{{ item.TrnDesc ? item.TrnDesc.trim() : "" }}</p>
+                    </div>
+                    <div class="col-xs-5 accordion-title-amount {{ item.blueStyle? 'font-blue-highlight' : '' }}">
+                      <!-- 扣/入帳金額 -->
+                      <p [class.colorStyle]="item.blueStyle != true">{{ (item.blueStyle) ? '+' : '-' }}{{ item.Amt | _currency
+                        : 2}}</p>
+                    </div>
+                    <div class="accordion-title-icon">
+                      <i class="fa fa-angle-down " aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="accordion-content {{ item.openType? 'active' : '' }}">
+                    <ul class="col-xs-9 col-xs-offset-2 accordion-inner-detail">
+                      <li class="">
+                        <div class="col-xs-4 accordion-li-text-l">
+                          <!-- 結餘 -->
+                          <p>{{ 'DEPOSITDETAIL.BALANCE2' | translate }}</p>
+                        </div>
+                        <div class="col-xs-8 accordion-li-text-r">
+                          <!-- 帳戶餘額 -->
+                          <p class="">{{ item.Balance | _currency : 2}}</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="col-xs-4 accordion-li-text-l">
+                          <!-- 附言 -->
+                          <p>{{ 'DEPOSITDETAIL.MEMO2' | translate }}</p>
+                        </div>
+                        <div class="col-xs-8 accordion-li-text-r">
+                          <!-- 備註2(Nrrtv) -->
+                          <p>{{ item.NarrativeMemo }}</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="col-xs-4 accordion-li-text-l">
+                          <!-- 備註 -->
+                          <p>{{ 'DEPOSITDETAIL.MEMO1' | translate }}</p>
+                        </div>
+                        <div class="col-xs-8 accordion-li-text-r">
+                          <!-- 備註1(DetailsNote) -->
+                          <p>{{ item.DetailedNoteMemo ? item.DetailedNoteMemo.trim() : "" }}</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- 詳細資料單筆 End -->
+          </div>
+          
+          <!-- 查無資料跳圖示 -->
+          <app-no-data *ngIf="keys != undefined && keys.length == 0"></app-no-data>
+
+        </div>
+      </div>
+    </ng-container>
+    <!-- 活期存款(S) 支票存款(C) 清單顯示區塊 End -->
+
+    <!-- 定期存款(T) 清單顯示區塊 Start -->
+    <ng-container *ngIf="certificate && type !== 'TS' && type !== 'blank' && type !== 'SD'">
+      <!-- 查詢時間 Start -->
+      <div class="row">
+        <div class="time-show-wrapper">
+          <p>{{ dateTime }}</p>
+        </div>
+      </div>
+      <!-- 查詢時間 End -->
+      <!-- 詳細資料單筆 Start -->
+      <div class="row">
+        <div class="content-li-container">
+          <ul class="content-li-wrapper content-li-wrapper-bottomLine">
+            <li class="content-li-title-style">
+              <!-- 明細 -->
+              <p class="content-li-text-left">{{ 'DEPOSITDETAIL.DETAIL' | translate }}</p>
+            </li>
+          </ul>
+          <ul class="content-li-wrapper content-li-wrapper-bottomLine wrapper-padding-25">
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 狀態 -->
+              <div class="content-li-text-left">
+                <p>{{ 'DEPOSITDETAIL.STATUS' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{ tDetail.TDStatus ? tDetail.TDStatus.trim() : "" }}</p>
+              </div>
+            </li>
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 利率 -->
+              <div class="content-li-text-left ">
+                <p>{{ 'DEPOSITDETAIL.INTEREST_RATE' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{ tDetail.InterestRate }}%</p>
+              </div>
+            </li>
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 利率別 -->
+              <div class="content-li-text-left">
+                <p>{{ 'DEPOSITDETAIL.INTEREST_TYPE' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{ tDetail.InterestType }}</p>
+              </div>
+            </li>
+            <!-- 分隔線(細) -->
+            <li class="content-li-seperator-line"></li>
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 期別 -->
+              <div class="content-li-text-left">
+                <p>{{ 'DEPOSITDETAIL.COUNT' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{ tDetail.Count }} {{tDetail.TermUnit}}</p>
+              </div>
+            </li>
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 生效日 -->
+              <div class="content-li-text-left">
+                <p>{{ 'DEPOSITDETAIL.TD_ISSUE_DATE' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{ tDetail.TDIssueDate | _datetime}}</p>
+              </div>
+            </li>
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 到期日 -->
+              <div class="content-li-text-left">
+                <p>{{ 'DEPOSITDETAIL.MATURITY' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{ tDetail.DueDate | _datetime}}</p>
+              </div>
+            </li>
+            <!-- 分隔線(細) -->
+            <li class="content-li-seperator-line"></li>
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 上次付息日 -->
+              <div class="content-li-text-left">
+                <p>{{ 'DEPOSITDETAIL.LAST_INTEREST_PAYMENTDATE' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{ tDetail.LastInterestPaidDt | _datetime}}</p>
+              </div>
+              <li class="content-li-detail-style align-two-side li-style-top">
+                <!-- 支付利息 -->
+                <div class="content-li-text-left">
+                  <p>{{ 'DEPOSITDETAIL.INTEREST_PAYMENT' | translate }}</p>
+                </div>
+                <div class="content-li-text-right">
+                  <p>TWD {{ tDetail.IntPaidAmt == undefined ? '0' : '' | _currency : 2}}</p>
+                </div>
+              </li>
+              <li class="content-li-detail-style align-two-side li-style-top">
+                <!-- 付息帳號 -->
+                <div class="content-li-text-left">
+                  <p>{{ 'DEPOSITDETAIL.TD_INT_ACCT_NO' | translate }}</p>
+                </div>
+                <div class="content-li-text-right">
+                  <p>{{ tDetail.TDIntAcctNo }}</p>
+                </div>
+              </li>
+              <li class="content-li-detail-style align-two-side li-style-top">
+                <!-- 原始減免稅額 -->
+                <div class="content-li-text-left">
+                  <p>{{ 'DEPOSITDETAIL.TAX_DEDUCTED_SRC' | translate }}</p>
+                </div>
+                <div class="content-li-text-right">
+                  <p>{{ tDetail.TaxDeductedSrc | _currency : 2}}</p>
+                </div>
+              </li>
+              <!-- 分隔線(細) -->
+              <li class="content-li-seperator-line"></li>
+              <li class="content-li-detail-style align-two-side li-style-top">
+                <!-- 融資金額 -->
+                <div class="content-li-text-left">
+                  <p>{{ 'DEPOSITDETAIL.LOAN_AMT' | translate }}</p>
+                </div>
+                <div class="content-li-text-right">
+                  <p>{{ tDetail.LoanAmt | _currency : 2 }}</p>
+                </div>
+              </li>
+              <li class="content-li-detail-style align-two-side li-style-top">
+                <!-- 融資成數 -->
+                <div class="content-li-text-left">
+                  <p>{{ 'DEPOSITDETAIL.LOAN_RATE' | translate }}</p>
+                </div>
+                <div class="content-li-text-right">
+                  <p>{{ tDetail.LoanRate }}</p>
+                </div>
+              </li>
+              <!-- 分隔線(細) -->
+              <li class="content-li-seperator-line"></li>
+              <li class="content-li-detail-style align-two-side li-style-top">
+                <!-- 定存憑證編號 -->
+                <div class="content-li-text-left">
+                  <p>{{ 'DEPOSITDETAIL.CERT_NO' | translate }}</p>
+                </div>
+                <div class="content-li-text-right">
+                  <p>{{ tDetail.CertNo }}</p>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 詳細資料單筆 End -->
+    </ng-container>
+    <!-- 定期存款(T) 清單顯示區塊 End -->
+
+    <!-- 結構型存款(SD) 清單顯示區塊 Start -->
+    <ng-container *ngIf="type === 'SD'">
+      <!-- 查詢時間 Start -->
+      <div class="row">
+        <div class="time-show-wrapper">
+          <p>{{ dateTime }}</p>
+        </div>
+      </div>
+      <!-- 查詢時間 End -->
+      <!-- 詳細資料單筆 Start -->
+      <div class="row">
+        <div class="content-li-container">
+          <ul class="content-li-wrapper content-li-wrapper-bottomLine">
+            <li class="content-li-title-style">
+              <!-- 明細 -->
+              <p class="content-li-text-left">{{ 'DEPOSITDETAIL.DETAIL' | translate }}</p>
+            </li>
+          </ul>
+          <ul class="content-li-wrapper content-li-wrapper-bottomLine wrapper-padding-25">
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 產品名稱 -->
+              <div class="content-li-text-left">
+                <p>{{ 'DEPOSITDETAIL.PRODUCT_NAME' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{ stDetail.StructuredTdProductName }}</p>
+              </div>
+            </li>
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 利率 -->
+              <div class="content-li-text-left ">
+                <p>{{ 'DEPOSITDETAIL.INTEREST_RATE' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{ stDetail.IntRate }}</p>
+              </div>
+            </li>
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 保本率 -->
+              <div class="content-li-text-left">
+                <p>{{ 'DEPOSITDETAIL.PROTECTION_RATE' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{ stDetail.CurrentStructuredTdValuePercentage }}</p>
+              </div>
+            </li>
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 目前幣別 -->
+              <div class="content-li-text-left">
+                <p>{{ 'DEPOSITSUMMARY.CURRENCY' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{stDetail.Currency}}</p>
+              </div>
+            </li>
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 目前金額 -->
+              <div class="content-li-text-left">
+                <p>{{ 'DEPOSITDETAIL.CURRENT_AMT' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{ stDetail.CurrentSTValueAmt | _currency : 2}}</p>
+              </div>
+            </li>
+            <!-- 分隔線(細) -->
+            <li class="content-li-seperator-line"></li>
+            <li class="content-li-detail-style align-two-side li-style-top">
+              <!-- 本金轉帳日 -->
+              <div class="content-li-text-left">
+                <p>{{ 'DEPOSITDETAIL.PRINCIPAL_AMOUNT_TRANSFER_DATE' | translate }}</p>
+              </div>
+              <div class="content-li-text-right">
+                <p>{{ stDetail.PrincipalAmtTransferDt | _datetime:'MM/dd' }}</p>
+              </div>
+              <li class="content-li-detail-style align-two-side li-style-top">
+                <!-- 紅利轉帳日 -->
+                <div class="content-li-text-left">
+                  <p>{{ 'DEPOSITDETAIL.PROFIT_TRANSFER_DATES' | translate }}</p>
+                </div>
+                <div class="content-li-text-right">
+                  <p>{{ stDetail.ProfitTransferDt | _datetime:'MM/dd'}}</p>
+                </div>
+              </li>
+              <!-- 分隔線(細) -->
+              <li class="content-li-seperator-line"></li>
+              <li class="content-li-detail-style align-two-side li-style-top">
+                <!-- 生效日 -->
+                <div class="content-li-text-left">
+                  <p>{{ 'DEPOSITDETAIL.TD_ISSUE_DATE' | translate }}</p>
+                </div>
+                <div class="content-li-text-right">
+                  <p>{{ stDetail.IssueDt | _datetime:'MM/dd'}}</p>
+                </div>
+              </li>
+              <li class="content-li-detail-style align-two-side li-style-top">
+                <!-- 到期日 -->
+                <div class="content-li-text-left">
+                  <p>{{ 'DEPOSITDETAIL.MATURITY' | translate }}</p>
+                </div>
+                <div class="content-li-text-right">
+                  <p>{{ stDetail.MaturityDt | _datetime:'MM/dd' }}</p>
+                </div>
+              </li>
+              <!-- 分隔線(細) -->
+              <li class="content-li-seperator-line"></li>
+              <li class="content-li-detail-style align-two-side li-style-top">
+                <!-- 質借 -->
+                <div class="content-li-text-left">
+                  <p>{{ 'DEPOSITDETAIL.PLEDGED' | translate }}</p>
+                </div>
+                <div class="content-li-text-right">
+                  <p>{{ stDetail.Pledged }}</p>
+                </div>
+              </li>
+              <li class="content-li-detail-style align-two-side li-style-top">
+                <!-- 質借金額 -->
+                <div class="content-li-text-left">
+                  <p>{{ 'DEPOSITDETAIL.PLEDGED_AMOUNT' | translate }}</p>
+                </div>
+                <div class="content-li-text-right">
+                  <p>{{ stDetail.PledgedAmt | _currency : 2}}</p>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 詳細資料單筆 End -->
+    </ng-container>
+    <!-- 結構型存款(SD) 清單顯示區塊 End -->
+  </div>
+
+  <app-no-data *ngIf="isNoData!= undefined && isNoData"></app-no-data>
+
+     <!-- Memo start -->
+  <div class="memo-info">
+      <ol class="memo-info-list">
+      <li>{{'DEPOSITDETAIL.MEMO_TITLE' | translate}}</li>
+      <li>{{'DEPOSITDETAIL.MEMO_LINE_1' | translate}}</li>
+      <li>{{'DEPOSITDETAIL.MEMO_LINE_2' | translate}}</li>
+      <li>{{'DEPOSITDETAIL.MEMO_LINE_3' | translate}}</li>
+      <li>{{'DEPOSITDETAIL.MEMO_LINE_4' | translate}}</li>
+      </ol>
+  </div>
+  <!-- Memo end -->
+
+  
+  
+</section>

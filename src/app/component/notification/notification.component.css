@@ -1,0 +1,106 @@
+.div_title {
+    height: 50px;
+    text-align: center;
+  }
+  
+  .div_title span {
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    color: #FFFFFF;
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+  }
+
+.listTable {
+    margin-top: 30px; 
+    width: 100%
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listRow {
+    display: grid;
+    background-color: #FFFFFF;
+    border: 1px #bfc4c6 solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    grid-template-columns: 63px auto 63px;
+}
+
+.typeBlock {
+    height: 63px;
+    width: 63px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.trxnType {
+    background-image: url('/assets/ui/images/notification/u600.png');
+}
+
+.authType {
+    background-image: url('/assets/ui/images/notification/u586.png');
+}
+
+.exrateType {
+    background-image: url('/assets/ui/images/notification/u576.png');
+}
+
+.infoBlock {
+    padding: 0px 15px;
+}
+    .infoBlock div {
+        height: 50%;
+        width: 100%;
+    }
+
+.infoTitle {
+    font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    text-align: left;
+    color: #333333;
+}
+
+.infoSummary {
+    font-family: '微軟正黑體';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-align: left;
+    color: #999999;
+    white-space: nowrap;
+    padding-left: 10px;
+}
+
+.countBlock {
+    height: 63px;
+    width: 63px;
+    background-image: url('/assets/ui/images/notification/u580.png');
+    background-size: 34px 34px;
+    background-position: center;
+    background-repeat: no-repeat;  
+}
+    .countBlock span {
+        font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        color: #333333;
+        text-align: center;
+    }
+.msg-tag-green{
+    white-space:nowrap;
+}    

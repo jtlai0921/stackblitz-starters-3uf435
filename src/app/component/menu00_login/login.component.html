@@ -1,0 +1,154 @@
+<ng-container>
+
+    <!-- Slider -->
+    <ul class="cb-slideshow">
+        <li>
+            <span>img 01</span>
+            <div></div>
+        </li>
+        <li>
+            <span>img 02</span>
+            <div></div>
+        </li>
+        <li>
+            <span class="out">img 03</span>
+            <div></div>
+        </li>
+    </ul>
+    <!-- / Slider -->
+    <!-- container Form -->
+    <div id="login">
+
+        <div class="section-login login-wrap">
+
+            <!--預設國家 Start-->
+            <div class="label-input-group-style">
+                <div (click) = "selectClick()" class="select-pop-form-group login-location-group">
+                    <!-- 下拉 Start-->
+                    <div class="select-pop-bt-wrapper bt-wrapper-100">
+                        <button type="button" class="btn btn-default dropdown-toggle btn-selectline-pop" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
+                            <!-- <p class="select-pop-content">台灣</p> -->
+                            <!-- <select selectForpop class="country-selector" [(ngModel)]="selectedCountry">
+                                <option *ngFor="let countryItem of countryArr" [ngValue]="countryItem.id">{{countryItem.value
+                                    | translate}}</option>
+                            </select> -->
+                            <span class="select-pop-content">{{ DropContent | translate}}</span>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <!-- 下拉 End -->
+                </div>
+                
+            </div>
+            <!-- //預設國家 End -->
+
+            <!--表單 Start-->
+            <form method="post">
+                <fieldset class="clearfix">
+
+                    <!-- 統編 -->
+                    <div class="label-input-group-style">
+                        <div class="select-pop-form-group pop-form-group pop-form-group-100">
+
+                            <div class="select-date-input-wrapper">
+                                <div class="label-input-group login-input-group {{isCompanyIDError ? 'active' :''}}" id="">
+                                    <!-- 統編 -->
+                                    <label class="select-inline-label">{{'LOGINOUT.ID_NUM' | translate}}</label>
+                                    <!-- 輸入公司統一編號 -->
+                                    <input maxlength="255" type="text" name="companyID" class="form-control select-date-input"
+                                        placeholder="{{'LOGINOUT.ENTER_COMID_NUM' | translate}}" [(ngModel)]="companyID"
+                                        (focusout)="checkCompanyID()" required>
+                                </div>
+                                <span *ngIf="isCompanyIDError" class="input-pop-otp-password-alert">{{companyIDErrorMsg
+                                    | translate}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //統編 -->
+
+                    <!-- 使用者代號 -->
+                    <div class="label-input-group-style">
+                        <div class="select-pop-form-group pop-form-group pop-form-group-100">
+
+                            <div class="select-date-input-wrapper">
+                                <div class="label-input-group login-input-group {{isAccountError ? 'active' :''}}" id="">
+                                    <!-- 使用者代號 -->
+                                    <label class="select-inline-label">{{'LOGINOUT.USER_CODE' | translate}}</label>
+                                    <input id="accountNoMask" type="text" name="account" class="form-control select-date-input"
+                                        placeholder="{{'LOGINOUT.USER_CODE' | translate}}" maxlength="12" [(ngModel)]="account"
+                                        (focusout)="checkAccount()">
+                                    <input id="accountMask" type="text" name="accountMask" class="form-control select-date-input"
+                                        placeholder="{{'LOGINOUT.USER_CODE' | translate}}" maxlength="12" [(ngModel)]="accountMask"
+                                        (focusout)="checkAccount()" (focusin)="checkAccountfocusin()">
+                                </div>
+                                <span *ngIf="isAccountError" class="input-pop-otp-password-alert">{{accountErrorMsg |
+                                    translate}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 使用者代號 -->
+
+                    <!-- Switch -->
+                    <div class="switch">
+                        <label (click) ="changeRememberMe()">
+                            <!-- 同意保留統編及使用者代號 -->
+                            <span class="lever {{checkbox? 'blue':''}}"><span class = "ball {{checkbox? 'left':''}}"></span></span>{{'LOGINOUT.AGREE_ID_CODE' | translate}}
+                        </label>
+                    </div>
+
+                    <!-- 網銀密碼 -->
+                    <div (click)="checkIdentify()" class="label-input-group-style" id="pwd_forKeyBoard">
+                        <div class="pop-form-group pop-form-group-100">
+
+                            <div class="select-date-input-wrapper">
+                                <div class="label-input-group login-input-group {{isPasswordError ? 'active' :''}}" id="">
+                                    <!-- 網銀密碼 -->
+                                    <label class="select-inline-label">{{'LOGINOUT.PASSWORD' | translate}}</label>
+                                    <input maxlength="255" type="password" name="password" class="form-control select-date-input"
+                                        [placeholder]="passwordPlacehodler | translate"  id="password" readonly
+                                         [(ngModel)]="password" (ngModelChange) = "checkPassword()">
+                                </div>
+                                <span *ngIf="isPasswordError" class="input-pop-otp-password-alert">{{passwordErrorMsg |
+                                    translate}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 網銀密碼 -->
+                    <!-- button-set種類5 - 1個按鈕 -->
+
+
+                    <div (click)="Login()" class="bt-center-group">
+                        <div class="bt-login-group-xl">
+                            <!-- 登入 -->
+                            <button id="login_button" type="submit" class="btn btn-login-group {{!isDisabled ? 'btn-confirm' :'btn-disable'}}">{{'MENU.LOGIN'
+                                | translate}}</button>
+                        </div>
+                    </div>
+
+                    <!-- button-set種類5 - 1個按鈕 - Disable//End----------------------------------------------------------------------->
+                </fieldset>
+            </form>
+            <!-- //表單 End -->
+
+            <!-- Floating -->
+            <a (click)="NavigateOTP()" class="btn-floating btn-large floating-tooltip">
+                <span>
+                    <!-- 產生OTP -->
+                    {{'LOGINOUT.GENERATE' | translate}}
+                    <br>{{'LOGINOUT.OTP' | translate}}
+                </span>
+            </a>
+            <!-- // Floating -->
+        </div>
+        <!-- // login -->
+
+    </div>
+    <!-- // container Form -->
+
+</ng-container>

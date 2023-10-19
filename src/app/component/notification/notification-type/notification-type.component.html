@@ -1,0 +1,125 @@
+<div class="bg-fixed-60"></div>
+<section class="col-xs-12 section-content bg-color-lightgray app-update-pg" scrollBottom>
+<!-- 搜尋bar -->
+<app-search [source]="typeData" [column]="filterArray" [IsNotify] = "true" (filterData)="search_result($event)"></app-search>
+
+    <!--Read notification list start-->
+    <div class="row" *ngFor="let data of readedData">
+        <!--Time start-->
+        <div class="row" *ngIf="data.today">
+            <div class="app-update-time-wrapper">
+                <div class="app-update-show-time">
+                    <p>{{'NOTIFICATION.TODAY'|translate}}</p>
+                </div>
+            </div>
+        </div>
+        <!--Time end-->
+
+        <!--Title start-->
+        <div class="app-update-sub-wrapper" *ngIf="!data.today">
+            <div class="app-update-type-icon">
+                <div class="app-update-type app-update-announce"></div>
+            </div>
+
+            <div class="app-update-sub-title">
+                <p>{{('NOTIFICATION.CATEGORY_' + data.Category) | translate}}</p>
+            </div>
+        </div>
+        <!--Title end-->
+
+
+        <!--Card start-->
+        <div class="app-update-card-wrapper" *ngIf="!data.today">
+            <!-- Content text start -->
+            <div class="app-update-card">
+                <ul class="app-update-card-content">
+                    <ng-container *ngFor="let element of data.ContentSet; let i = index;">
+                        <li [ngClass]="{'not-first-item': i > 0}">
+                            <p>{{element.content}}</p>
+                            <p class="detail" (click)="element.OnClick()">{{element.Title}}</p>
+                        </li>
+                    </ng-container>
+                </ul>
+            </div>
+            <!-- Content text end -->
+
+
+            <!-- Button set start -->
+            <div class="card-bottom-bt-wraaper" *ngFor="let element of data.ButtonSet">
+                <div class="card-bottom-bt">
+                    <p (click)="element.OnClick()">{{element.Title}}</p>
+                </div>
+            </div>
+            <!-- Button set end -->
+
+
+            <!-- Read status start -->
+            <div class="app-update-read-status">
+                <p>{{'NOTIFICATION.HAVE_READ'|translate}}</p>
+            </div>
+            <!-- Read status end -->
+        </div>
+        <!--Card end-->
+    </div>
+    <!--Read notification list end-->
+
+
+    <!--Unread notification list start-->
+    <div class="row" id="unread" *ngFor="let data of unreadData">
+        <!--Time start-->
+        <div class="row" *ngIf="data.today">
+            <div class="app-update-time-wrapper">
+                <div class="app-update-show-time">
+                    <p>{{'NOTIFICATION.TODAY'|translate}}</p>
+                </div>
+            </div>
+        </div>
+        <!--Time end-->
+        <!--Title start-->
+        <div class="app-update-sub-wrapper" *ngIf="!data.today">
+            <div class="app-update-type-icon">
+                <div class="app-update-type app-update-announce"></div>
+            </div>
+
+            <div class="app-update-sub-title">
+                <p>{{('NOTIFICATION.CATEGORY_' + data.Category) | translate}}</p>
+            </div>
+        </div>
+        <!--Title end-->
+
+
+        <!--Card start-->
+        <div class="app-update-card-wrapper" *ngIf="!data.today">
+            <!-- Content text start -->
+            <div class="app-update-card">
+                <ul class="app-update-card-content">
+                    <ng-container *ngFor="let element of data.ContentSet; let i = index;">
+                        <li [ngClass]="{'not-first-item': i > 0}">
+                            <p>{{element.content}}</p>
+                            <p class="detail" (click)="element.OnClick()">{{element.Title}}</p>
+                        </li>
+                    </ng-container>
+                </ul>
+            </div>
+            <!-- Content text end -->
+
+
+            <!-- Button set start -->
+            <div class="card-bottom-bt-wraaper" *ngFor="let element of data.ButtonSet">
+                <div class="card-bottom-bt">
+                    <p (click)="element.OnClick()">{{element.Title}}</p>
+                </div>
+            </div>
+            <!-- Button set end -->
+
+
+            <!-- Unread status start -->
+            <div class="app-update-read-status">
+                <p>{{'NOTIFICATION.UNREAD'|translate}}</p>
+            </div>
+            <!-- Unread status end -->
+        </div>
+        <!--Card end-->
+    </div>
+    <!--Unread notification list end-->
+</section>

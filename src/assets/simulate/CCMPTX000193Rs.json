@@ -1,0 +1,4645 @@
+{
+	"HeaderRs": {
+		"TxnId": "CCMPTX000193Rs",
+		"RqUID": "20180709111612",
+		"Timestamp": "20180709111645",
+		"Result": 4001,
+		"Desc": ""
+	},
+	"BodyRs": {
+		"DataType": 0,
+		"Compressed": 0,
+		"Data": {
+			"TxnId": "CCMPTX000193Rs",
+			"Result": 4001,
+			"Desc": "",
+			"AcctList": [
+				{
+					"Country": "TWN",
+					"CustomerId": "11223318",
+					"CustomerName": "舟酒０雪",
+					"AcctNo": "107540385214",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220107",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 235790,
+							"CurrentBal": 235790,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "11223318",
+					"CustomerName": "舟酒０雪",
+					"AcctNo": "107350000679",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "C",
+					"BankCode": "8220107",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1199800000,
+							"CurrentBal": 1199800000,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "11223318",
+					"CustomerName": "舟酒０雪",
+					"AcctNo": "107350000682",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "C",
+					"BankCode": "8220107",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "11223318",
+					"CustomerName": "舟酒０雪",
+					"AcctNo": "107350000695",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "C",
+					"BankCode": "8220107",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "11223318",
+					"CustomerName": "舟酒０雪",
+					"AcctNo": "495131006164",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220107",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 100032794.21,
+							"CurrentBal": 100033994.21,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "EUR"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "M200082934",
+					"CustomerName": "酒月願",
+					"AcctNo": "107540399116",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220107",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 474245,
+							"CurrentBal": 474245,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "M200082934",
+					"CustomerName": "酒月願",
+					"AcctNo": "107131012200",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220107",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 112811.01,
+							"CurrentBal": 112811.01,
+							"CurCode": "USD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "16159928",
+					"CustomerName": "７樓臺迷愁十有限公司",
+					"AcctNo": "141540176418",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 694204,
+							"CurrentBal": 783506,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "16159928",
+					"CustomerName": "７樓臺迷愁十有限公司",
+					"AcctNo": "141131003741",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 10478018.02,
+							"CurrentBal": 10478018.02,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 145134.09,
+							"CurrentBal": 145134.09,
+							"CurCode": "HKD"
+						},
+						{
+							"AvailableBal": 7181103,
+							"CurrentBal": 7181103,
+							"CurCode": "JPY"
+						},
+						{
+							"AvailableBal": 8815.46,
+							"CurrentBal": 8815.46,
+							"CurCode": "EUR"
+						},
+						{
+							"AvailableBal": 423504.19,
+							"CurrentBal": 423504.19,
+							"CurCode": "THB"
+						},
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "NZD"
+						},
+						{
+							"AvailableBal": 2267923.3,
+							"CurrentBal": 2267923.3,
+							"CurCode": "AUD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "16159928",
+					"CustomerName": "７樓臺迷愁十有限公司",
+					"AcctNo": "901540264560",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 291500976,
+							"CurrentBal": 291500976,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "16159928",
+					"CustomerName": "７樓臺迷愁十有限公司",
+					"AcctNo": "901540264573",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1322781,
+							"CurrentBal": 1322781,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "16159928",
+					"CustomerName": "７樓臺迷愁十有限公司",
+					"AcctNo": "901540264586",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 3028722,
+							"CurrentBal": 3028722,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "K200000039",
+					"CustomerName": "１回回",
+					"AcctNo": "200540091913",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 10000,
+							"CurrentBal": 10000,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "K200000039",
+					"CustomerName": "１回回",
+					"AcctNo": "200540092116",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "K200000039",
+					"CustomerName": "１回回",
+					"AcctNo": "200540092187",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "K200000039",
+					"CustomerName": "１回回",
+					"AcctNo": "200540092190",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "K200000039",
+					"CustomerName": "１回回",
+					"AcctNo": "200540092200",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "K200000039",
+					"CustomerName": "１回回",
+					"AcctNo": "107131012187",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220107",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "USD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "19880808OBU",
+					"CustomerName": "有心樓愁１回樓愁１飄９６９４５９２０４",
+					"AcctNo": "107131010985",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220107",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 11500,
+							"CurrentBal": 11500,
+							"CurCode": "USD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "11456006",
+					"CustomerName": "７嗟愁心",
+					"AcctNo": "141540176573",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 999995925030,
+							"CurrentBal": 999995925030,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "11456006",
+					"CustomerName": "７嗟愁心",
+					"AcctNo": "141131003958",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1954749.01,
+							"CurrentBal": 1954749.01,
+							"CurCode": "USD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "11456006",
+					"CustomerName": "７嗟愁心",
+					"AcctNo": "901543168168",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 103396544,
+							"CurrentBal": 103396544,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141540175817",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1988032,
+							"CurrentBal": 1988032,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141540175833",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 76877714,
+							"CurrentBal": 76881715,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141119900044",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "SE",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1400,
+							"CurrentBal": 1400,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141191000069",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "SE",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1650,
+							"CurrentBal": 1650,
+							"CurCode": "USD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131003246",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220107",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1082881.71,
+							"CurrentBal": 1082881.71,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 10000,
+							"CurrentBal": 10000,
+							"CurCode": "JPY"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141119900057",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "SE",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 8620,
+							"CurrentBal": 8620,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141540175875",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 28495,
+							"CurrentBal": 28495,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141350004835",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "C",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 60500,
+							"CurrentBal": 60500,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141350004848",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "C",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 900,
+							"CurrentBal": 900,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141540175891",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 2335020,
+							"CurrentBal": 2335020,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131003259",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 126062.85,
+							"CurrentBal": 126062.85,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 342818,
+							"CurrentBal": 342818,
+							"CurCode": "HKD"
+						},
+						{
+							"AvailableBal": 172,
+							"CurrentBal": 172,
+							"CurCode": "JPY"
+						},
+						{
+							"AvailableBal": 1148,
+							"CurrentBal": 1148,
+							"CurCode": "AUD"
+						},
+						{
+							"AvailableBal": 21,
+							"CurrentBal": 21,
+							"CurCode": "SGD"
+						},
+						{
+							"AvailableBal": 271.68,
+							"CurrentBal": 271.68,
+							"CurCode": "EUR"
+						},
+						{
+							"AvailableBal": 167,
+							"CurrentBal": 167,
+							"CurCode": "GBP"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131003262",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 5000,
+							"CurrentBal": 5000,
+							"CurCode": "JPY"
+						},
+						{
+							"AvailableBal": 6001,
+							"CurrentBal": 6001,
+							"CurCode": "USD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131003275",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 97400,
+							"CurrentBal": 97400,
+							"CurCode": "HKD"
+						},
+						{
+							"AvailableBal": 1,
+							"CurrentBal": 1,
+							"CurCode": "JPY"
+						},
+						{
+							"AvailableBal": 1,
+							"CurrentBal": 1,
+							"CurCode": "NZD"
+						},
+						{
+							"AvailableBal": 200001,
+							"CurrentBal": 200001,
+							"CurCode": "IDR"
+						},
+						{
+							"AvailableBal": 1001,
+							"CurrentBal": 1001,
+							"CurCode": "AUD"
+						},
+						{
+							"AvailableBal": 1,
+							"CurrentBal": 1,
+							"CurCode": "GBP"
+						},
+						{
+							"AvailableBal": 1,
+							"CurrentBal": 1,
+							"CurCode": "EUR"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141540176023",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 9717203,
+							"CurrentBal": 9717203,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141540176036",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1994732,
+							"CurrentBal": 1994732,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141540176081",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1000620,
+							"CurrentBal": 1000620,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141540176120",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 9991870,
+							"CurrentBal": 9991870,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131003479",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 99,
+							"CurrentBal": 99,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "JPY"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131003534",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 99999899,
+							"CurrentBal": 99999899,
+							"CurCode": "JPY"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141540176298",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1005500,
+							"CurrentBal": 1005500,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131003770",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 5391,
+							"CurrentBal": 5391,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 1299,
+							"CurrentBal": 1299,
+							"CurCode": "HKD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "901540264395",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 5009887,
+							"CurrentBal": 5009887,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "901350001971",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "C",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "901350001984",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "C",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "901350001997",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "C",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "901540264421",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 10620,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "901350002006",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "C",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 38160,
+							"CurrentBal": 38160,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "901540264544",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 620,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "901540264599",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 3720,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131003961",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "HKD"
+						},
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "USD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131003974",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "HKD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "901350007179",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 850080,
+							"CurrentBal": 850080,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131004384",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "JPY"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "901131004498",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 4748.27,
+							"CurrentBal": 4748.27,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "JPY"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131004397",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "USD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131004407",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 1399,
+							"CurrentBal": 1399,
+							"CurCode": "JPY"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131004436",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 107,
+							"CurrentBal": 107,
+							"CurCode": "JPY"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "141131004449",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1001,
+							"CurrentBal": 1001,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 994,
+							"CurrentBal": 994,
+							"CurCode": "JPY"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "200540139875",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "200540139888",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1000,
+							"CurrentBal": 1000,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "200230002377",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1546.88,
+							"CurrentBal": 1546.88,
+							"CurCode": "USD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "84429175",
+					"CustomerName": "ＬＭＪＤＨＲＧ",
+					"AcctNo": "200350003531",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "C",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1000,
+							"CurrentBal": 1000,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "16085840",
+					"CustomerName": "時明有心股份有限公司",
+					"AcctNo": "901540264489",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 571255,
+							"CurrentBal": 571255,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "16085840",
+					"CustomerName": "時明有心股份有限公司",
+					"AcctNo": "901131003855",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 44730.36,
+							"CurrentBal": 44730.36,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 1003298.41,
+							"CurrentBal": 1003298.41,
+							"CurCode": "EUR"
+						},
+						{
+							"AvailableBal": 9024599,
+							"CurrentBal": 9024599,
+							"CurCode": "JPY"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "16085840",
+					"CustomerName": "時明有心股份有限公司",
+					"AcctNo": "200540139891",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 99999996,
+							"CurrentBal": 99999996,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "16085840",
+					"CustomerName": "時明有心股份有限公司",
+					"AcctNo": "200540139901",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 4100,
+							"CurrentBal": 4100,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "16085840",
+					"CustomerName": "時明有心股份有限公司",
+					"AcctNo": "901540269293",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 499998,
+							"CurrentBal": 499998,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "16085840",
+					"CustomerName": "時明有心股份有限公司",
+					"AcctNo": "901540269303",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						},
+						{
+							"FunctionId": "PAT"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "12358067",
+					"CustomerName": "射射３雪股份有限公司",
+					"AcctNo": "107546011359",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220107",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 39303,
+							"CurrentBal": 39524,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "12358067",
+					"CustomerName": "射射３雪股份有限公司",
+					"AcctNo": "107131012158",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 1067113.65,
+							"CurrentBal": 1067113.65,
+							"CurCode": "USD"
+						},
+						{
+							"AvailableBal": 100000,
+							"CurrentBal": 100000,
+							"CurCode": "CZK"
+						},
+						{
+							"AvailableBal": 109194.73,
+							"CurrentBal": 109194.73,
+							"CurCode": "CNY"
+						},
+						{
+							"AvailableBal": 874000,
+							"CurrentBal": 874000,
+							"CurCode": "EUR"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "12358067",
+					"CustomerName": "射射３雪股份有限公司",
+					"AcctNo": "200540137660",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220200",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 100100,
+							"CurrentBal": 100100,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "12358067",
+					"CustomerName": "射射３雪股份有限公司",
+					"AcctNo": "141540176214",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220141",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 110582515593,
+							"CurrentBal": 110582515593,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "TWN",
+					"CustomerId": "12358067",
+					"CustomerName": "射射３雪股份有限公司",
+					"AcctNo": "901350001748",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "C",
+					"BankCode": "8220901",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 518954,
+							"CurrentBal": 518954,
+							"CurCode": "TWD"
+						}
+					]
+				},
+				{
+					"Country": "HKG",
+					"CustomerId": "500001",
+					"CustomerName": "CUSTOMER-500001",
+					"AcctNo": "904305000018",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "C",
+					"BankCode": "nullnull",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"CurCode": "HKD"
+						}
+					]
+				},
+				{
+					"Country": "HKG",
+					"CustomerId": "500001",
+					"CustomerName": "CUSTOMER-500001",
+					"AcctNo": "904135000013",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "nullnull",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"CurCode": "USD"
+						}
+					]
+				},
+				{
+					"Country": "HKG",
+					"CustomerId": "000056",
+					"CustomerName": "CUSTOMER-000056",
+					"AcctNo": "904130000568",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "CTCB",
+					"BankCodeType": "2",
+					"CurCodeList": [
+						{
+							"AvailableBal": 342785.31,
+							"CurrentBal": 342842.44,
+							"CurCode": "AUD"
+						},
+						{
+							"AvailableBal": 0.09,
+							"CurrentBal": 0.09,
+							"CurCode": "CNY"
+						},
+						{
+							"AvailableBal": 0,
+							"CurrentBal": 0,
+							"CurCode": "GBP"
+						},
+						{
+							"AvailableBal": 1056808.57,
+							"CurrentBal": 1056809.45,
+							"CurCode": "USD"
+						}
+					]
+        },
+        {
+					"Country": "TWN",
+					"CustomerId": "5646546",
+					"CustomerName": "舟酒０雪",
+					"AcctNo": "107540385214",
+					"OBUDBU": "D",
+					"FunctionList": [
+						{
+							"FunctionId": "BFU"
+						},
+						{
+							"FunctionId": "CTD"
+						},
+						{
+							"FunctionId": "FDI"
+						},
+						{
+							"FunctionId": "FRT"
+						},
+						{
+							"FunctionId": "FTI"
+						},
+						{
+							"FunctionId": "ICA"
+						},
+						{
+							"FunctionId": "IRT"
+						},
+						{
+							"FunctionId": "LCA"
+						},
+						{
+							"FunctionId": "LCI"
+						},
+						{
+							"FunctionId": "LRT"
+						},
+						{
+							"FunctionId": "MLT"
+						},
+						{
+							"FunctionId": "OTD"
+						}
+					],
+					"AcctType": "S",
+					"BankCode": "8220107",
+					"BankCodeType": "1",
+					"CurCodeList": [
+						{
+							"AvailableBal": 235790,
+							"CurrentBal": 235790,
+							"CurCode": "TWD"
+						}
+					]
+				}
+			]
+		}
+	}
+}

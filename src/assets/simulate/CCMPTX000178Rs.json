@@ -1,0 +1,14 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000178Rs",
+    "RqUID": "20180906180000",
+    "Timestamp": "20180906180000",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {"TxnId":"CCMPTX000178Rs","Result":4001,"Desc":"","NotifyResultList":[{"ProductId":"AP16","Result":4001,"Desc":"設定狀態成功"}]}
+  }
+}

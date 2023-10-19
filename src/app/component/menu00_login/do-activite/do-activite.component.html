@@ -1,0 +1,33 @@
+<!-- 帳號啟動碼 -->
+<div class="bg-fixed-60"></div>
+<section class="col-xs-12 section-content no-footer device-pg">
+  <form method="post">
+    <div class="row">  
+      <!-- 帳號啟動碼 -->
+      <div class="device-sub-title"><p class="">{{'LOGINOUT.ACCOUNT_ACTIVE_CODE' | translate}}</p></div>  
+    </div>  
+    <!--表單popup種類6-3 - 整行標題+ 整行input-->
+    <div class="row">
+      <div class="form-group ct-info-text-wrap select-pop-group-style-column">
+        <div class="field-input pop-form-group-100">
+          <!-- 錯誤提示框 請加上  active-->
+          <input maxlength="255"  type="text" class="form-control input-non-bg" id="com_id1" name="com_id" value="" placeholder="{{'LOGINOUT.ENTER_STARTUP_CODE' | translate}}" [(ngModel)]="ActivateCode" (ngModelChange)="checkInput()" #inputStartCode="ngModel">
+          <span *ngIf="isInputError" class="input-pop-otp-password-alert">{{'LOGINOUT.ENTER_START_CODE' |
+            translate}}
+          </span>    
+        </div>
+      </div>
+    </div>
+    <!-- 表單popup種類6-3 //End----------------------------------------------------------------------->
+    <!-- button-set種類1 - 2個按鈕-->
+    <div class="row">
+      <div class="bt-center-group ">
+        <!-- 取消 -->
+        <button type="button" class="btn btn-group-sm btn-cancel" (click)="cancel()">{{'BTN.CANCEL' | translate}}</button>
+        <!-- 確認 -->
+        <button type="submit" class="btn btn-group-sm btn-confirm" [disabled]="isInputError || inputStartCode.pristine" (click)="avtivite()">{{'BTN.CHECK' | translate}}</button>
+      </div>
+    </div>
+    <!-- button-set種類1 - 2個按鈕 //End----------------------------------------------------------------------->
+  </form>
+</section>

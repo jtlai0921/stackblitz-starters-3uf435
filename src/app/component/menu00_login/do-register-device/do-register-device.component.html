@@ -1,0 +1,33 @@
+<!-- 設備確認碼 -->
+<div class="bg-fixed-60"></div>
+<section class="col-xs-12 section-content no-footer device-pg">
+  <form method="post">
+    <div class="row">  
+      <!-- 請輸入設備確認碼 -->
+      <div class="device-sub-title"><p class="">{{'LOGINOUT.DEVICE_CONFIRMATION_CODE' | translate}}</p></div>  
+    </div>  
+    <!--表單popup種類6-3 - 整行標題+ 整行input-->
+    <div class="row">
+      <div class="form-group ct-info-text-wrap select-pop-group-style-column">
+        <div class="field-input pop-form-group-100">
+          <!-- 錯誤提示框 請加上  active-->
+          <input maxlength="30" type="tel" class="form-control input-non-bg" id="com_id1" name="com_id" value="" placeholder="{{'LOGINOUT.ENTER_CONFIRMATION_CODE' | translate}}" [(ngModel)]="AuthenticationCode" (ngModelChange)="checkInput()" #registrCode="ngModel">          <!--<span class="input-pop-otp-password-alert">請輸入正確確認碼</span>-->
+          <span *ngIf="isInputError" class="input-pop-otp-password-alert">{{'LOGINOUT.ENTER_REGISTR_CODE' |
+            translate}}
+          </span> 
+        </div>
+      </div>
+    </div>
+    <!-- 表單popup種類6-3 //End----------------------------------------------------------------------->
+    <!-- button-set種類1 - 2個按鈕-->
+    <div class="row">
+      <div class="bt-center-group ">
+        <!-- 取消 -->
+        <button type="button" class="btn btn-group-sm btn-cancel" (click)="cancel()">{{'BTN.CANCEL' | translate}}</button>
+        <!-- 確認 -->
+        <button type="submit" class="btn btn-group-sm btn-confirm" [disabled]="isInputError || registrCode.pristine" (click)="comfirm()">{{'BTN.CHECK' | translate}}</button>
+      </div>
+    </div>
+    <!-- button-set種類1 - 2個按鈕 //End----------------------------------------------------------------------->
+  </form>
+</section>

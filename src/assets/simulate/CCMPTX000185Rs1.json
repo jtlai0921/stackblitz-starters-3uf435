@@ -1,0 +1,27 @@
+{
+  "HeaderRs": {
+      "TxnId": "CCMPTX000185Rs",
+      "RqUID": "20180726111900",
+      "Timestamp": "20180726111933",
+      "Result": 4001,
+      "Desc": ""
+  },
+  "BodyRs": {
+      "DataType": 0,
+      "Compressed": 0,
+      "Data": {  
+         "TxnId":"CCMPTX000185Rs",
+         "Result":4001,
+         "Length":1,
+         "UserDataList":[  
+          {  
+           "Country":"TW",
+           "SystemId":"SPETrust",
+           "CustomerId":"16085840",
+           "UserId":"User102",
+           "OTPDevice":"Y"
+          }
+         ]
+      }
+  }
+}

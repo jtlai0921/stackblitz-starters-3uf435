@@ -1,0 +1,103 @@
+<ng-container *ngIf="dateOptionBlock">
+    <ng-container *ngIf="defaultPage">
+        <div class="pop-sub-title">
+            <p class="">{{ 'BTN.DATE_TYPE' | translate }}</p>
+        </div>
+        <div (click)="onOptionClick()" class="pop-li-section">
+
+            <div class="pop-li-l-100">
+                <div class="pop-li-l-option">
+                    <p>{{ default_value | translate }}</p>
+                </div>
+            </div>
+
+            <div class="pop-right-icon-wrap right-icon-ellipsis">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="selectPage">
+        <div class="row">
+            <div class="pop-box-container active">
+                <div class="pop-box-area">
+                    <div class="pop-content-wrapper">
+                        <div class="pop-title-l2">
+
+                            <div (click)="onBackClick()" class="pop-pageback-bt">
+                                <a href="javascript:void(0)">
+                                    <img src="assets/design/image/icon/i-pop-pageback.svg" alt="">
+                                </a>
+                            </div>
+
+                            <p>{{ 'BTN.SELECT_PLEASE' | translate }}</p>
+
+                        </div>
+                        <div class="pop-content-l2">
+                            <div *ngFor="let option of optionArray" (click)="onFilterClick(option)" class="pop-li-section pop-li-border {{default_value == option.name ? 'pop-li-default' : ''}}">
+
+                                <div class="pop-li-l-100">
+                                    <div class="pop-li-l-option">
+                                        <p>{{ option.name | translate }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="pop-right-icon-wrap">
+                                    <img class="check-icon" src="assets/design/image/icon/check-icon.png" alt="">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+</ng-container>
+
+
+<div class="pop-sub-title">
+    <p class="">{{ default_value | translate }}</p>
+</div>
+
+<div class="pop-tag-wrapper">
+    <div *ngFor="let dateItem of dateType;" (click)="SelectDateType(dateItem)" class="pop-date-tag {{(dateItem.select)?'active':''}}">
+        <p>{{ dateItem.name | translate }}</p>
+    </div>
+</div>
+
+<div class="pop-li-section" (click)="PopDatePicker('start')">
+    <div class="pop-li-l-50">
+        <div class="pop-li-l-option">
+            <!-- 起日 -->
+            <p>{{'POPUP_TRANSQUERY.DATE_FROM' | translate}}</p>
+        </div>
+    </div>
+    <div class="pop-li-r-50">
+        <div class="pop-li-r-option">
+            <p>{{selectedDateFrom}}</p>
+        </div>
+        <div class="pop-right-icon-wrap right-icon-ellipsis">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>
+
+<div class="pop-li-section" (click)="PopDatePicker('end')">
+    <div class="pop-li-l-50">
+        <div class="pop-li-l-option">
+            <!-- 迄日 -->
+            <p>{{'POPUP_TRANSQUERY.DATE_TO' | translate}}</p>
+        </div>
+    </div>
+    <div class="pop-li-r-50">
+        <div class="pop-li-r-option">
+            <p>{{selectedDateTo}}</p>
+        </div>
+        <div class="pop-right-icon-wrap right-icon-ellipsis">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>

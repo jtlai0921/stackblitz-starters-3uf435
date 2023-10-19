@@ -1,0 +1,74 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000207Rq",
+    "RqUID": "20180829183000",
+    "Timestamp": "20180829183000",
+    "Result": 4001,
+	"Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+	  	"TxnId": "CCMPTX000207Rq",
+	  	"Result": 4001,
+	  	"Desc": "",
+	  	"CurrentVer": "20135",
+		"LastVer": "10000",
+		"PatchSize": "2000",
+		"PatchPackageCnt": "2",
+		"PatchPackage": [
+			{
+				"Seq": "1",
+				"FileName": "app_patch_01.bin",
+				"Size": "750",
+				"CheckSum": "SHA256-HEX_p1"
+			},
+			{
+				"Seq": "2",
+				"FileName": "app_patch_02.bin",
+				"Size": "1250",
+				"CheckSum": "SHA256-HEX_p2"
+			}
+		],
+		"PatchCheckSum": "SHA256-HEX",
+		"CompleteSize": "10000",
+		"CompletePackageCnt": "5",
+		"CompletePackage": [
+			{
+				"Seq": "1",
+				"FileName": "app_patch_01.bin",
+				"Size": "750",
+				"CheckSum": "SHA256-HEX_p1"
+			},
+			{
+				"Seq": "2",
+				"FileName": "app_patch_02.bin",
+				"Size": "1250",
+				"CheckSum": "SHA256-HEX_p2"
+			},
+			{
+				"Seq": "3",
+				"FileName": "app_patch_03.bin",
+				"Size": "4000",
+				"CheckSum": "SHA256-HEX_p3"
+			},
+			{
+				"Seq": "4",
+				"FileName": "app_patch_04.bin",
+				"Size": "2500",
+				"CheckSum": "SHA256-HEX_p4"
+			},
+			{
+				"Seq": "5",
+				"FileName": "app_patch_05.bin",
+				"Size": "1500",
+				"CheckSum": "SHA256-HEX_p5"
+			}
+		],
+		"CompleteCheckSum": "SHA256-HEX",
+		"PassPhase": "MTIzNDU=",
+		"KeyIndex": "1000000001"
+	}
+  }
+}

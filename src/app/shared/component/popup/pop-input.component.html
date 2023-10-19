@@ -1,0 +1,18 @@
+<div class="pop_mask" id="outsideBlock_forKeyBoard" *ngIf="Isopen">
+    <div class="pop_mid">
+        <div class="pop_block" id="pwd_forKeyBoard">
+            <h3 *ngIf="!(title == '')">{{title | translate}}</h3>
+            <div class="pop_content">
+                <input maxlength="255" *ngIf='!inPassword' type="text" placeholder="{{placeholder}}" [(ngModel)]="_value"/>
+                <input maxlength="255" *ngIf='inPassword' type="password" placeholder="{{placeholder}}" [(ngModel)]="_value" id="password" (ngModelChange) = "checkPassword()" readonly (click)="createKeyboard()" />
+                <span *ngIf="isPasswordError" class="input-pop-otp-password-alert">{{passwordErrorMsg |
+                        translate}}
+                </span>
+            </div>
+            <div class="btn_group">
+                <div class="cancel" (click)="Cancel()" *ngIf="!(cancelTxt == '')">{{cancelTxt | translate}}</div>
+                <div class="check" (click)="Submit()">{{(checkTxt == '') ? OKBTN : checkTxt}}</div>
+            </div>
+        </div>
+    </div>
+</div>

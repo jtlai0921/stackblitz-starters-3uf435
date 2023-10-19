@@ -1,0 +1,120 @@
+<ng-container [ngSwitch]="pageType">
+  <!-- <div> -->
+
+  <!-- 上方tab 存款概要/存款明細/放款概要 Start -->
+  <div *ngIf="menuType == 'first'" class="">
+    <div id="l2-tab-wrapper" class="l2-tab-wrapper">
+      <div class="l2-tab-container">
+        <div class="l2-tab-container__overflowhidden" id="scrolllefttest">
+          <div class="l2-tab-container__block">
+            <div class="col-tab-30 l2-tab-set {{getActive(0)}}" id="{{getActive(0)}}" (click)="onTabClick('depositSumPage')">
+              <div class="l2-tab-single"><a class="">{{ 'DEPOSITSUMMARY.TITLE' | translate }}</a></div>
+            </div>
+            <div class="col-tab-30 l2-tab-set {{getActive(1)}}" id="{{getActive(1)}}" (click)="onTabClick('depositDetailPage')">
+              <div class="l2-tab-single">
+                <a class="">{{ 'DEPOSITDETAIL.TITLE' | translate }}</a> </div>
+            </div>
+            <div class="col-tab-30 l2-tab-set {{getActive(2)}}" id="{{getActive(2)}}" (click)="onTabClick('loanSumPage')">
+              <div class="l2-tab-single">
+                <a class="">{{ 'LOANSUMMARY.TITLE' | translate }}</a> </div>
+            </div>
+            <!-- <div class="col-tab-30 l2-tab-set {{getActive(3)}}" id="{{getActive(3)}}" (click)="onTabClick('inquiryPage')">
+            <div class="l2-tab-single"><a class="">{{ 'WIRETRANSFER.TITLE' | translate }}</a></div>
+          </div> -->
+            <div class="col-tab-30 l2-tab-set {{getActive(4)}}" id="{{getActive(4)}}" (click)="onTabClick('billColPage')">
+              <div class="l2-tab-single">
+                <a class="">{{ 'BILLCOLLECTION.TITLE' | translate }}</a> </div>
+            </div>
+            <div class="col-tab-30 l2-tab-set {{getActive(5)}}" id="{{getActive(5)}}" (click)="onTabClick('transPage')">
+              <div class="l2-tab-single">
+                <a class="">{{ 'TRANSACTION.TITLE' | translate }}</a> </div>
+            </div>
+          </div>
+        </div>
+        <div (click)="onTabClick('menuPage')" class="col-tab-10 l2-tab-more">
+          <div class="l2-tab-single">
+            <a href="javascript:void(0)" class="">
+              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 上方tab 存款概要/存款明細/放款概要 End -->
+
+
+  <!-- 上方tab 匯款查詢/票據查詢/交易紀錄 Start -->
+  <!-- <div *ngIf="menuType == 'second'" class="">
+    <div id="l2-tab-wrapper" class="l2-tab-wrapper">
+      <div class="l2-tab-container">
+        <div class="col-tab-30 l2-tab-set {{getActive(3)}}" (click)="onTabClick('inquiryPage')">
+          <div class="l2-tab-single"><a class="">{{ 'WIRETRANSFER.TITLE' | translate }}</a></div>
+        </div>
+        <div class="col-tab-30 l2-tab-set {{getActive(4)}}" (click)="onTabClick('billColPage')">
+          <div class="l2-tab-single">
+            <a class="">{{ 'BILLCOLLECTION.TITLE' | translate }}</a> </div>
+        </div>
+        <div class="col-tab-30 l2-tab-set {{getActive(5)}}" (click)="onTabClick('transPage')">
+          <div class="l2-tab-single">
+            <a class="">{{ 'TRANSACTION.TITLE' | translate }}</a> </div>
+        </div>
+        <div (click)="onTabClick('menuPage')" class="col-tab-10 l2-tab-more">
+          <div class="l2-tab-single">
+            <a href="javascript:void(0)" class="">
+              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- 上方tab 存款概要/存款明細/放款概要 End -->
+
+
+
+  <!-- 存款概要頁 Start -->
+  <ng-container *ngSwitchCase="'depositSumPage'">
+    <app-deposit-summary (toDetailPage)=toDepositDetailPage($event) [homeReq]="homeReq"></app-deposit-summary>
+  </ng-container>
+  <!-- 存款概要頁 End -->
+
+  <!-- 存款明細頁 Start -->
+  <ng-container *ngSwitchCase="'depositDetailPage'">
+    <app-deposit-detial [detailReq]="detailReq" [formWho]="formWho" [homeReq]="homeReq"></app-deposit-detial>
+  </ng-container>
+  <!-- 存款明細頁 End -->
+
+  <!-- 放款概要頁 Start -->
+  <ng-container *ngSwitchCase="'loanSumPage'">
+    <app-loan-summary [homeReq]="homeReq"></app-loan-summary>
+  </ng-container>
+  <!-- 放款概要頁 End -->
+
+  <!-- 帳戶查詢小選單頁 Start -->
+  <ng-container *ngIf="menuPage">
+    <app-account-menu (menuType)="getMenuType($event)"></app-account-menu>
+  </ng-container>
+  <!-- 帳戶查詢小選單頁 End -->
+
+  <!-- 票據查詢頁 Start -->
+  <ng-container *ngSwitchCase="'billColPage'">
+    <app-bill-collection></app-bill-collection>
+  </ng-container>
+  <!-- 票據查詢頁 End -->
+
+  <!-- 交易紀錄頁 Start -->
+  <ng-container *ngSwitchCase="'transPage'">
+    <app-translog (tabChange)="onTabClick($event)"></app-translog>
+  </ng-container>
+  <!-- 交易紀錄頁 End -->
+  <!-- 約轉取消 Start -->
+  <ng-container *ngSwitchCase="'reservationQuery'">
+    <app-reservationQuery (tabChange)="onTabClick($event)"></app-reservationQuery>
+  </ng-container>
+  <!-- 約轉取消 End -->
+  <!-- Footer space start -->
+  <!-- <div class="footerSpace"></div> -->
+  <!-- Footer space end -->
+  <!-- </div> -->
+</ng-container>

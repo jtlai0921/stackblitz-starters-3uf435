@@ -1,0 +1,58 @@
+<div class="pop_mask" *ngIf = "Isopen">
+    <div class="" >
+        
+        <div class="bg-color-lightgray bg-fixed-60-full-height" style="height:calc(100vh - 60px)"></div>
+        <section class="col-xs-12 section-content bg-white fast-log-provision-pg">
+            <form method="post">
+
+                <!-- 副標題-種類1 - 黑字黃底線 - 單列 -->
+                <div class="row">
+                    <div class="sub-title">
+                        <p>{{'QUICKLOGIN.READ_TERMS' | translate}}</p>
+                    </div>
+                </div>
+                <!-- 副標題-種類1 - 黑字黃底線 - 單列 //END -->
+
+
+                <!-- provision-group-wrapper 種類1 -->
+                <div class="row">
+                    <!-- 同意條款區塊-->
+                    <div class="provision-frame">
+                        <div [innerHtml]="Content" class="provision-box">
+                            
+                        </div>
+                        <div class="provision-check-group">
+                            <div class="pop-checkbox">
+                                <span>
+                                    <input class="ct-checkbox" type="checkbox" name="option1" id="1" value="option1"
+                                        [(ngModel)]="isAgreementChecked">
+                                    <label class="pull-left" for="1"></label>
+                                </span>
+                            </div>
+                            <p>
+                                <b>{{'QUICKLOGIN.HAVE_READ_TERMS' | translate}}</b>{{'QUICKLOGIN.QUICK_BIO_LOGIN_TERMS'
+                                | translate}}</p>
+                        </div>
+
+
+                        <!-- // 同意條款區塊 -->
+                    </div>
+                </div>
+                <!-- // provision-group-wrapper 種類1 -->
+                <!-- button-set種類1 - 2個按鈕-->
+
+                <div class="row">
+                    <div class="bt-center-group bt-provision-group align-two-side">
+                        <button type="button" (click)="Cancel()" class="btn btn-group-sm btn-cancel">{{'QUICKLOGIN.PREVIOUS_PAGE'
+                            | translate}}</button>
+                        <button type="submit" (click)="Comfirm()" class="btn btn-group-sm {{isAgreementChecked ? 'btn-confirm' :'btn-disable'}}">{{'QUICKLOGIN.AGREE_SETTING'
+                            | translate}}</button>
+                    </div>
+
+                </div>
+                <!-- button-set種類1 - 2個按鈕 //End-->
+            </form>
+
+        </section>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div *ngIf="DataItem">
+  
+    <div>ID:{{DataItem.id}}</div>
+    <div>Name:{{DataItem.name}}</div>
+    <div><input maxlength="255" type="text" [(ngModel)]="DataItem.value"/></div>
+
+    <button (click)="Submit()"> {{'BTN.SAVE' | translate}}</button>
+    <button (click)="Close()"> {{'BTN.CANCEL' | translate}}</button>
+
+</div>

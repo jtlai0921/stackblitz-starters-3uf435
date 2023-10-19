@@ -1,0 +1,15 @@
+<!-- 裝置管理員 -->
+<div class="bg-fixed-60"></div>
+<section class="col-xs-12 section-content setting-pg">
+  <div class="row">
+    <div class="nav-l3">
+      <!-- 已註冊裝置 -->
+      <a (click)="displayComponent('RegisteredDevice')" class="col-xs-6 tab-l3-set-2 tab-l3-set-l" [ngClass]="registerActive? 'active' : ''">{{'DEVICE_MANAGE.REGISTERED_DEVICE' | translate}}</a>
+      <!-- OTP裝置 -->
+      <a (click)="displayComponent('OtpDevice')" class="col-xs-6 tab-l3-set-2 tab-l3-set-r" [ngClass]="otpActive? 'active' : ''">{{'DEVICE_MANAGE.OTP_DEVICE' | translate}}</a>
+    </div>
+  </div>
+  <div class="app-otp-device">
+    <ng-template appDynamicComponent></ng-template>
+  </div>
+</section>

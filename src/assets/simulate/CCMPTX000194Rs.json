@@ -1,0 +1,169 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000194Rs",
+    "RqUID": "20180709111612",
+    "Timestamp": "20180709111645",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000194Rs",
+      "Result": 4001,
+      "PayeeAcctList": [
+        {
+          "Country": "TW",
+          "CustomerId": "66654986",
+          "CustomerType": "C",
+          "CustomerName": "１回日日１射８公司飄",
+          "AcctNo": "495540353026",
+          "AcctName": "１回日日１射８公司飄",
+          "OBUDBU": "D",
+          "FunctionList": [
+            {
+              "Function": "ALL"
+            }
+          ],
+          "BankCode": "8220495",
+          "BankName": "中國信託",
+          "BankCodeType": "1",
+          "CurCodeList": [
+            {
+              "CurCode": "TWD"
+            }
+          ],
+          "MaxAmt": "9999999999",
+          "ChargeType": "SHA"
+        },
+        {
+          "Country": "TW",
+          "CustomerId": "BeneficiaryID",
+          "CustomerType": "C",
+          "CustomerName": "靖小小",
+          "AcctNo": "123456780",
+          "AcctName": "靖小小",
+          "OBUDBU": "D",
+          "FunctionList": [
+            {
+              "Function": "ALL"
+            }
+          ],
+          "BankCode": "82320901",
+          "BankName": "靖古錐營業部",
+          "BankCodeType": "1",
+          "CurCodeList": [
+            {
+              "CurCode": "TWD"
+            }
+          ],
+          "MaxAmt": "9999999999",
+          "ChargeType": "SHA"
+        },
+        {
+          "Country": "HK",
+          "CustomerId": "1085840",
+          "CustomerType": "C",
+          "CustomerName": "Test2",
+          "AcctNo": "141119900044",
+          "AcctName": "Test2",
+          "OBUDBU": "D",
+          "FunctionList": [
+            {
+              "Function": "ALLB"
+            },
+            {
+              "Function": "ALLS"
+            }
+          ],
+          "BankCode": "8220901",
+          "BankName": "CTBC",
+          "BankCodeType": "1",
+          "CurCodeList": [
+            {
+              "CurCode": "HKD"
+            },
+            {
+              "CurCode": "TWD"
+            }
+          ],
+          "MaxAmt": "9999999999",
+          "ChargeType": "SHA"
+        },
+        {
+          "Country": "HK",
+          "CustomerId": "1088564",
+          "CustomerType": "C",
+          "CustomerName": "Test Ben",
+          "AcctNo": "122334455",
+          "AcctName": "Test Ben",
+          "OBUDBU": "D",
+          "FunctionList": [
+            {
+              "Function": "ALLS"
+            }
+          ],
+          "BankCode": "8220901",
+          "BankName": "CTBC Mike",
+          "BankCodeType": "1",
+          "CurCodeList": [
+            {
+              "CurCode": "HKD"
+            }
+          ],
+          "MaxAmt": "9999999999",
+          "ChargeType": "SHA"
+        },
+        {
+          "Country": "HK",
+          "CustomerId": "822901234",
+          "CustomerType": "C",
+          "CustomerName": "TEST",
+          "AcctNo": "123456789123",
+          "AcctName": "TEST",
+          "OBUDBU": "D",
+          "FunctionList": [
+            {
+              "Function": "ALLS"
+            }
+          ],
+          "BankCode": "901",
+          "BankName": "test",
+          "BankCodeType": "1",
+          "CurCodeList": [
+            {
+              "CurCode": "HKD"
+            }
+          ],
+          "MaxAmt": "9999999999",
+          "ChargeType": "SHA"
+        },
+        {
+          "Country": "TW",
+          "CustomerId": "5646546",
+          "CustomerType": "C",
+          "CustomerName": "１回日日１射８公司飄",
+          "AcctNo": "495540353026",
+          "AcctName": "１回日日１射８公司飄",
+          "OBUDBU": "D",
+          "FunctionList": [
+            {
+              "Function": "ALL"
+            }
+          ],
+          "BankCode": "8220495",
+          "BankName": "中國信託",
+          "BankCodeType": "1",
+          "CurCodeList": [
+            {
+              "CurCode": "TWD"
+            }
+          ],
+          "MaxAmt": "9999999999",
+          "ChargeType": "SHA"
+        }
+      ]
+    }
+  }
+}

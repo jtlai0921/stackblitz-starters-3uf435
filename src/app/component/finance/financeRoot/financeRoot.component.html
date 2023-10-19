@@ -1,0 +1,59 @@
+<!-- Fullscreen root start -->
+<div>
+  <!-- Root start -->
+  <div class="finance-root" [ngClass]="isLogin ? 'afterLogin' : 'beforeLogin'">
+    <!-- Tab bar start -->
+    <div id="l2-tab-wrapper" class="l2-tab-wrapper" *ngIf="isTabBarVisiable">
+      <div class="l2-tab-container">
+        <!-- 匯率查詢 start -->
+        <div class="col-xs-4 l2-tab-set" [ngClass]="{'active': selectedPage == 'exchangeRateQuery'}" (click)="navigate('exchangeRateQuery')">
+          <div class="l2-tab-single">
+              {{'EXCHANGE_RATE.TITLE' | translate}}
+          </div>
+        </div>
+        <!-- 匯率查詢 end -->
+
+
+        <!-- 匯率轉算器 start -->
+        <div class="col-xs-4 l2-tab-set" [ngClass]="{'active': selectedPage == 'exchangeRateConverter'}" (click)="navigate('exchangeRateConverter')">
+          <div class="l2-tab-single">
+              {{'EXCHANGE_CONVERTER.TITLE' | translate}}
+          </div>
+        </div>
+        <!-- 匯率轉算器 end -->
+
+
+        <!-- 利率查詢 start -->
+        <div class="col-xs-4 l2-tab-set" [ngClass]="{'active': selectedPage == 'interestRateQuery'}" (click)="navigate('interestRateQuery')">
+          <div class="l2-tab-single">
+              {{'INTEREST_RATE.TITLE' | translate}}
+          </div>
+        </div>
+        <!-- 利率查詢 end -->
+      </div>
+    </div>
+    <!-- Tab bar end -->
+
+    <!-- Content start -->
+    <div class="content" [ngClass]="{'tab-bar-visiable': isTabBarVisiable, 'tab-bar-hidaden': !isTabBarVisiable}">
+      <ng-container [ngSwitch]="selectedPage">
+        <!-- 匯率查詢 start -->
+        <app-exchangeRateQuery (updateTabBarVisiable)="setTabBarVisiable($event)" *ngSwitchDefault></app-exchangeRateQuery>
+        <!-- 匯率查詢 end -->
+
+
+        <!-- 匯率轉算器 start -->
+        <app-exchangeRateConverter (updateTabBarVisiable)="setTabBarVisiable($event)" *ngSwitchCase="'exchangeRateConverter'"></app-exchangeRateConverter>
+        <!-- 匯率轉算器 end -->
+
+
+        <!-- 利率查詢 start -->
+        <app-interestRateQuery *ngSwitchCase="'interestRateQuery'"></app-interestRateQuery>
+        <!-- 利率查詢 end -->
+      </ng-container>
+    </div>
+    <!-- Content end -->
+  </div>
+  <!-- Root end -->
+</div>
+<!-- Fullscreen root end -->

@@ -1,0 +1,28 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000197Rs",
+    "RqUID": "20180815113610",
+    "Timestamp": "20180815113615",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000197Rs",
+      "Result": 4001,
+      "Desc": "約定轉帳取消 成功",
+      "BatchId": "",
+      "PeriodResultList": [
+        {
+          "PeriodId": 6,
+          "TxnDate": "20180930",
+          "Result": 4001,
+          "Desc": ""
+        }
+      ]
+    }
+  }
+}
+

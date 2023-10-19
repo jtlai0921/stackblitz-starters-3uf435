@@ -1,0 +1,293 @@
+<!-- 篩選popup -->
+<div *ngIf="filterBlock" class="row">
+    <div class="shadow active"></div>
+    
+
+    <div class="pop-box-container active">
+        <div class="pop-box-area">
+            <!-- *ngIf="closeBtnChange" -->
+            <div (click)="closePop()" class="pop-close-bt">
+                <div class="i-close"></div>
+            </div>
+            <div class="pop-content-wrapper">
+
+                <div class="pop-title">
+                    <p>{{ 'DEPOSITSUMMARY.FILTER_TITLE' | translate}}</p>
+                </div>
+
+                <div class="pop-content">
+                    <!--pop視窗內容開始-->
+                    <!-- <app-option [source]="showData" [filterKey]="'Country'" [view]="viewCountryData" (filterData)="result($event)"></app-option> -->
+                    <app-quickselect [source]="showData" [filterKey]="'AcctCurrency'" [view]="viewCurrencyData" (filterData)="result($event)" [tagStyle]="tagStyle"></app-quickselect>
+                    <app-quickselect [source]="showData" [filterKey]="'AcctType'" [view]="viewProductNameData" (filterData)="result($event)"></app-quickselect>
+                    <!-- <app-datefilter [source]="showData" [view]="viewDateData" (filterData)="result($event)"></app-datefilter> -->
+                </div>
+                <!--pop視窗內容結束-->
+
+            </div>
+
+            <!--pop-bt-group- 兩個 -->
+            <div class="pop-bt-group">
+                <button type="button" class="btn btn-cancel btn-pop-cancel" (click)="resetFilter()">{{ 'DEPOSITSUMMARY.FILTER_RESET'
+                    | translate}}</button>
+                <button type="submit" class="btn btn-confirm btn-pop-confirm" (click)="onFilterClick()">{{ 'DEPOSITSUMMARY.FILTER_COMFIRM'
+                    | translate}}</button>
+            </div>
+            <!--//pop-bt-group-兩個一組-->
+
+
+        </div>
+    </div>
+</div>
+<!-- 篩選popup -->
+<!-- 存款概要頁 -->
+<div class="bg-fixed-105"></div>
+<section class="col-xs-12 section-content-tab deposit-activity-cons-pg" scrollTop dropReload>
+    <!-- Selection + Filter Area Start -->
+    <!-- 搜尋欄位陣列 -->
+    <app-search [source]="source" [column]="filterArray" (filterData)="search_result($event)"></app-search>
+    <!--表單popup種類9 - 90%+Filter -->
+    <div class="row">
+
+
+        <div class="select-pop-group-style select-pop-group-style-row">
+            <div (click)="onCompanyClick()" class="select-pop-form-group pop-form-group-l pop-form-group-90">
+                <!-- 下拉 Start-->
+                <div class="select-pop-bt-wrapper bt-wrapper-100">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-selectline-pop" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <span class="select-pop-content">{{selCompanyName | translate}}</span>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <!-- 下拉 End -->
+            </div>
+            <!-- 左邊icon+文字連結 -->
+            <div class="select-pop-form-group pop-form-group-r pop-form-group-10">
+                <div class="select-pop-input-wrapper link-wrapper" (click)="filterSwitch()">
+                    <p class="content-li-text-ct-style"><i class="icon-filter"></i></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- row 種類 - 時間-->
+    <div class="row">
+        <div class="time-show-wrapper">
+            <p>{{ dateTime | _datetime:'yyyy/MM/dd hh:mm:ss'}}</p>
+        </div>
+    </div>
+    <div *ngIf="pagerData != undefined && pagerData.length > 0">
+        <!--資產總覽卡片種類1 - 右icon - 黑色箭頭-->
+        <ng-container *ngFor="let item of pagerData; let i = index; trackBy: trackByFn">
+            <!-- 非定存區 --> <!-- 若可用餘額為零 而且 帳戶餘額為零則不顯示卡片 -->
+            <div class="row" *ngIf="item.AcctType!='T'" (click)="onCardClick(item)">
+                <div class="list-card-style card-account">
+                    <div class="align-two-side">
+                        <div class="card-left-wrap">
+                            <ul>
+                                <li class="card-li-style align-two-side">
+
+                                    <div class="card-tag-wrap">
+                                        <span class="card-tag-green">{{ 'countryCode.'+item.Country | translate }}</span>
+                                        <span class="card-tag-green">{{ 'DEPOSITSUMMARY.'+item.AcctType | translate }}</span>
+                                        <span class="card-tag-green">{{ item.AcctCurrency }}</span>
+                                    </div>
+
+                                </li>
+
+                                <li class="card-li-style align-two-side" *ngIf="item.BranchName">
+                                    <div class="card-text-left">
+                                        <p>{{ 'DEPOSITSUMMARY.OPENING_BANK' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right">
+                                        <p>{{item.BranchName ? item.BranchName.trim(): "" }}</p>
+                                    </div>
+                                </li>
+                                <li class="card-li-style align-two-side">
+                                    <div class="card-text-left">
+                                        <p>{{ 'DEPOSITSUMMARY.ACCOUNT' | translate }}</p>
+                                    </div>
+                                    <div class="card-text-right">
+                                        <p>{{item.AcctNo}}</p>
+                                    </div>
+                                </li>
+                                <li class="card-li-style" *ngIf = "item.AcctNo && (item.CustomerId || item.CustomerName)">
+                                    <div class="card-text-right text-overflow-width-r font-size-14">
+                                        <p id = "font-size-14">({{item.CustomerId}}{{item.CustomerName}})</p>
+                                    </div>
+                                </li>
+                                <ng-container *ngIf="item.AcctType=='S' || item.AcctType=='C' || item.AcctType=='SE'">
+                                    <li class="card-inside-line"></li>
+                                    <!-- 幣別 -->
+                                    <li class="card-li-style align-two-side">
+                                        <div class="card-text-left">
+                                            <p>{{ 'DEPOSITSUMMARY.CURRENCY' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right">
+                                            <p id = "font-size-14">{{item.AcctCurrency}}</p>
+                                        </div>
+                                    </li>
+                                    <!-- 帳戶餘額 -->
+                                    <li class="card-li-style align-two-side">
+                                            <div class="card-text-left">
+                                                <p>{{ 'DEPOSITSUMMARY.BALANCE' | translate }}</p>
+                                            </div>
+                                            <div class="card-text-right">
+                                                <p id = "font-size-14">{{item.CurBalance | _currency}}</p>
+                                            </div>
+                                    </li>
+                                    <!-- 可用餘額 -->
+                                    <li class="card-li-money align-two-side">
+                                        <div class="card-li-money-left">
+                                            <p>{{ 'DEPOSITSUMMARY.AVAILABLE_BALANCE' | translate }}</p>
+                                        </div>
+                                        <div class="card-li-money-right amount-bold-style">
+                                            <b class="amount-number">{{item.AvailBalance | _currency}}</b>
+                                        </div>
+                                    </li>
+                                </ng-container>
+
+
+                            </ul>
+                        </div>
+
+                        <!-- <div *ngIf="item.detailFlag" class="card-right-icon-wrap right-icon-ellipsis"> -->
+                        <!-- 有無權限都有箭頭 -->
+                        <div class="card-right-icon-wrap right-icon-ellipsis">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 定存區 *ngIf="item.AcctType=='T'" -->
+            <div class="row" *ngIf="item.AcctType=='T'" (click)="onCollapseClick(item.openFlag, i)">
+                <div class="list-card-style card-account-accordion" [ngClass]="(item.openFlag) ? 'active' : ''">
+                    <!--active為展開樣式預備classname-->
+                    <div class="align-two-side">
+                        <div class="card-left-wrap-2">
+                            <ul>
+                                <li class="card-li-style align-two-side">
+                                    <div class="card-tag-wrap">
+                                        <span class="card-tag-green">{{'countryCode.'+item.Country | translate}}</span>
+                                        <span class="card-tag-green">{{ item.AcctTypeCH | translate}}</span>
+                                        <!-- <span class="card-tag-green">{{item.AcctCurrency}}</span> -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-right-icon-wrap-2 right-icon-ellipsis">
+                            <i class="fa" [ngClass]="(!this.pagerData[i].openFlag) ? 'fa-plus' : 'fa-minus'" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <div class="list-card-style-l2 card-account-l2" *ngFor="let Titem of item.Tdata" [ngClass]="(item.openFlag) ? 'active' : ''"
+                        (click)="onCardClick(Titem)">
+                        <div class="align-two-side">
+                            <div class="card-left-wrap-2">
+                                <ul>
+                                    <li class="card-li-style align-two-side">
+                                        <div class="card-tag-wrap ">
+                                            <span class="card-tag-green">{{ Titem.Currency }}</span>
+                                        </div>
+                                    </li>
+                                    <!-- 開戶銀行 -->
+                                    <li class="card-li-style align-two-side" *ngIf="Titem.BranchName">
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'DEPOSITSUMMARY.OPENING_BANK' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p>{{Titem.BranchName? Titem.BranchName.trim(): ""}}</p>
+                                        </div>
+                                    </li>
+                                    <!-- 帳號 -->
+                                    <li class="card-li-style align-two-side">
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'DEPOSITSUMMARY.ACCOUNT' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p>{{ Titem.AcctNo }}</p>
+                                        </div>
+                                    </li>
+                                    <li class="card-li-style" *ngIf = "Titem.AcctNo && (Titem.CustomerId || Titem.CustomerName)">
+                                        <div class="card-text-right-l2 text-overflow-width-r font-size-14">
+                                            <p id = "font-size-14">({{Titem.CustomerId}}{{Titem.CustomerName}})</p>
+                                        </div>
+                                    </li>
+                                    <li class="card-inside-line"></li>
+                                    <!-- 狀態 -->
+                                    <li class="card-li-style align-two-side">
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'DEPOSITSUMMARY.STATUS' | translate }}</p>
+                                        </div>
+                                        <!-- 正常 -->
+                                        <div class="card-text-right-l2">
+                                            <p>{{ 'DEPOSITSUMMARY.NORMAL' | translate }}</p>
+                                        </div>
+                                    </li>
+                                    <!-- 本金 -->
+                                    <li class="card-li-money align-two-side">
+                                        <div class="card-li-money-left-l2">
+                                            <p>{{ 'DEPOSITSUMMARY.PRINCIPAL' | translate }}</p>
+                                        </div>
+                                        <!-- 幣別+金額 -->
+                                        <div class="card-li-money-right-l2 amount-bold-style">
+                                            <b class="amount-number"><span id = "font-size-14">{{Titem.AcctCurrency}}</span> {{ Titem.PrncplAmt | _currency}}</b>
+                                        </div>
+                                    </li>
+                                    <!-- 利率 -->
+                                    <li class="card-li-style align-two-side" *ngIf="Titem.IntRate">
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'DEPOSITSUMMARY.RATE' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p>{{ Titem.IntRate }}%</p>
+                                        </div>
+                                    </li>
+                                    <!-- 期別 -->
+                                    <li class="card-li-style align-two-side" *ngIf = "Titem.DueDt">
+                                        <div class="card-text-left-l2">
+                                            <p>{{ 'DEPOSITSUMMARY.MATURITY' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right-l2">
+                                            <p><span id = "font-size-14">{{ Titem.DueDt | _datetime}}</span>
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="card-right-icon-wrap-l2 right-icon-ellipsis">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </ng-container>
+    </div>
+    <app-no-data *ngIf="pagerData != undefined && pagerData.length == 0"></app-no-data>
+
+    <!-- 載入更多按鈕 置於ngFor的最後一個 -->
+    <!-- 按鈕- 載入更多 -->
+    <div (click)="LoadPage()" *ngIf="showLoad" class="bt-more-group">
+        <div class="bt-inner-group-xl">
+            <button type="button" class="btn btn-inner-group-s btn-more-load">
+                {{ 'BTN.RELOAD_MORE' | translate }}</button>
+        </div>
+    </div>
+    <!-- //按鈕- 載入更多 -->
+    <!-- Memo start -->
+    <div class="memo-info">
+        <ol class="memo-info-list">
+        <li>{{'DEPOSITSUMMARY.MEMO_TITLE' | translate}}</li>
+        <li>{{'DEPOSITSUMMARY.MEMO_LINE_1' | translate}}</li>
+        <li>{{'DEPOSITSUMMARY.MEMO_LINE_2' | translate}}</li>
+        <li>{{'DEPOSITSUMMARY.MEMO_LINE_3' | translate}}</li>
+        </ol>
+    </div>
+    <!-- Memo end -->
+</section>

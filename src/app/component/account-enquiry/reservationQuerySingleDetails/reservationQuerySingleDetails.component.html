@@ -1,0 +1,114 @@
+<!-- 預約查詢與取消頁 預約轉帳單筆明細 -->
+<div class="bg-fixed-105"></div>
+<section class="col-xs-12 section-content pre-def-detail-single-pg top-128 padding-12">
+  
+  <!--卡片種類1 - 無icon - 兩列-->
+  
+    <div class="list-card-style card-detail">
+      <ul>
+        <li class="card-li-style align-two-side">
+          <p class="card-tag-wrap">
+            <!-- 單筆 -->
+            <span class="card-tag-green">{{ 'TRANSACTION.SINGLE' | translate }}</span>
+          </p>
+
+        </li>
+        <li class="card-li-style align-two-side" *ngIf="listData.PayerAcct">
+          <div class="card-text-left">
+            <!-- 轉出帳號 -->
+            <p>{{ 'TRANSACTION.PAYER_ACCT_NO' | translate }}</p>
+          </div>
+          <div class="card-text-right">
+            <p>{{ listData.PayerAcct }}</p>
+          </div>
+        </li>
+        <li class="card-li-style" *ngIf="listData.PayerAcct && (listData.PayerId || listData.PayerName)">
+          <div class="card-text-right text-overflow-width-r font-size-14">
+            <p id = "font-size-14">({{ listData.PayerId }}{{ listData.PayerName }})</p>
+          </div>
+        </li>
+        <li class="card-li-style align-two-side">
+          <div class="card-text-left">
+            <!-- 幣別 -->
+            <p>{{ 'TRANS_LOG.CURRENCY' | translate }}</p>
+          </div>
+          <div class="card-text-right">
+            <p id = "font-size-14">{{ listData.DebitCur }}</p>
+          </div>
+        </li>
+        <li class="card-li-money align-two-side">
+          <div class="card-li-money-left">
+            <!-- 轉出金額 -->
+            <p>{{ 'TRANSACTION.AMOUNT' | translate }}</p>
+          </div>
+          <div class="card-li-money-right amount-bold-style">
+            <b class="amount-number">{{ listData.DebitAmt | number }}</b>
+          </div>
+        </li>
+        <li class="card-inside-line"></li>
+        <li class="card-li-style align-two-side">
+          <div class="card-text-left">
+            <!-- 轉入帳號 -->
+            <p>{{ 'TRANSACTION.PAYEE_ACCT_NO' | translate }}</p>
+          </div>
+          <div class="card-text-right">
+            <p>{{ listData.PayeeAcct }}</p>
+          </div>
+        </li>
+        <li class="card-li-style align-two-side" *ngIf="checkPayeeIdName(listData)">
+          <div class="card-text-left text-width-min-l">
+            <p></p>
+          </div>
+          <div class="card-text-right text-overflow-width-r font-size-14">
+            <p id = "font-size-14">({{ listData.PayeeId }}{{ listData.PayeeName }})</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+  <!--卡片種類1 - 無icon - 兩列 //END -->
+
+  <div class="row  padding-12">
+    <!-- content-li種類1 - 無icon - 兩列-->
+    <div class="content-li-container" >
+      <ul class="content-li-wrapper content-li-wrapper-bottomLine wrapper-padding-25">
+        <li class="content-li-detail-style align-two-side li-style-top">
+          <div class="content-li-text-left">
+            <!-- 設定時間 -->
+            <p>{{ 'TRANSACTION.SETTING_TIME' | translate }}</p>
+          </div>
+          <div class="content-li-text-right">
+            <p><span>
+              {{(listData.CreateTime ? listData.CreateTime : '') | _datetime}}
+            </span></p>
+          </div>
+        </li>
+        <li class="content-li-detail-style align-two-side li-style-top">
+          <div class="content-li-text-left ">
+            <!-- 生效時間 -->
+            <p>{{ 'TRANSACTION.VALIDED_TIME' | translate }}</p>
+          </div>
+          <div class="content-li-text-right">
+            <p>{{listData.TxnDate}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- content-li種類1 - 無icon - 兩列 // END-->
+
+    <!-- button-set種類1 - 2個按鈕-->
+    <div class="row">
+      <div class="bt-center-group align-two-side  padding-12">
+        <!-- 上一步 -->
+        <button (click)="leftEvent()" type="button" class="btn btn-group-sm btn-cancel">{{ 'TRANSACTION.BACK' | translate }}</button>
+        <!-- 取消預約 -->
+        <button (click)="onCancel()" type="button" class="btn btn-group-sm btn-confirm">{{ 'TRANSACTION.RESERVATION_CANCEL'
+          | translate }}</button>
+      </div>
+    </div>
+    <!-- button-set種類1 - 2個按鈕 //End---->
+  </div>
+  
+
+</section>

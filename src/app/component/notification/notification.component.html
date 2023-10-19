@@ -1,0 +1,58 @@
+<ng-container [ngSwitch]="pageType">
+
+    <!-- 通知類別訊息頁 -->
+    <ng-container *ngSwitchCase="'typePage'">
+        <app-notification-type [type]="type" [typeData]="typeData" (addReaded)="onAddReadedTagCallback($event)"></app-notification-type>
+    </ng-container>
+    
+    <!-- 通知訊息列表頁 -->
+    <div *ngSwitchDefault>
+        <div class="bg-fixed-60"> <p>{{'' | translate}}</p></div>
+
+        <section class="col-xs-12 section-content new-info-page" scrollTop dropReload>
+            <div class="row">
+                <!-- 搜尋單列 --> <!-- 暫時隱藏搜尋bar -->
+                <div class="select-pop-group-style" *ngIf = "false">
+                    <div class="select-pop-form-group pop-form-group pop-form-group-100">
+                        <div class="select-date-input-wrapper">
+                            <div class="input-group search search-input-group" id="search">
+                                <span class="input-group-addon select-search-input">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                </span>               
+                                <!-- 請輸入搜尋關鍵字 -->
+                                <input maxlength="255" type="search" class="form-control select-search-input" [(ngModel)] = "searchWord" (ngModelChange)="filter()"  placeholder="{{'NOTIFICATION.PLACEHOLDER_KEYWORD'|translate}}" id="search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 通知訊息類別列表 -->
+            <div class="row" *ngFor="let data of contentArr" (click)="onDataRowClick(data.type)">
+                <div class="ct-content-card ct-content-card-row new-info-card">
+                    <div class="content-card-l-wrap new-info-icon">
+                        <div class="new-info-icon-trade"></div>
+                    </div>
+                    <div class="content-card-m-wrap new-info-content">
+                            <div class="new-info-tag-container">
+
+                                <div class="msg-tag-wrap">
+                                    <span class="msg-tag-green">{{data.Tag}}</span>
+                                </div>
+                                <p class="new-info-content-title">{{data.Title}}</p>
+                    
+                                
+                            </div>
+                        <p class="new-info-content-detail">{{data.Content}}</p>
+                    </div>
+                    <div class="content-card-r-wrap new-info-notice" *ngIf="data.unread">
+                        <p>{{data.unread}}</p>
+                       
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</ng-container>

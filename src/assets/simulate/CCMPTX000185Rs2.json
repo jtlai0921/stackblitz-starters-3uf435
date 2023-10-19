@@ -1,0 +1,48 @@
+{
+  "HeaderRs": {
+      "TxnId": "CCMPTX000185Rs",
+      "RqUID": "20180726111900",
+      "Timestamp": "20180726111933",
+      "Result": 4001,
+      "Desc": ""
+  },
+  "BodyRs": {
+      "DataType": 0,
+      "Compressed": 0,
+      "Data": {  
+         "TxnId":"CCMPTX000185Rs",
+         "Result":4001,
+         "Length":2,
+         "UserDataList":[  
+            {  
+                "Country":"TW",
+                "SystemId":"SPETrust",
+                "CustomerId":"16085840",
+                "UserId":"User102",
+                "OTPDevice":"N"
+            },
+            {  
+                "Country":"TW",
+                "SystemId":"eTrust",
+                "CustomerId":"16085841",
+                "UserId":"User103",
+                "OTPDevice":"Y"
+            },
+            {  
+                "Country":"TW",
+                "SystemId":"SPETrust",
+                "CustomerId":"16085842",
+                "UserId":"User104",
+                "OTPDevice":"N"
+            },
+            {  
+                "Country":"TW",
+                "SystemId":"eTrust",
+                "CustomerId":"16085843",
+                "UserId":"User105",
+                "OTPDevice":"Y"
+            }
+         ]
+      }
+  }
+}

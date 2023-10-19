@@ -1,0 +1,60 @@
+<!-- <div class="search_bar">
+    <input [(ngModel)]="searchkey" placeholder="請輸入搜尋關鍵字" (keyup)="Submit()" (focus)="onFocus()" (focusout)="outFocus()" />
+    <div class="search_cmd" *ngIf="focus_flag">
+        <ng-container *ngFor="let text of keywork_command; let listIndex = index">
+            <span (click)="setInput(text)">{{text}}</span>
+        </ng-container>
+    </div>
+</div> -->
+
+<!--表單popup種類3 - 100% - 搜尋單列 -->
+<div class="row">
+    <div class="select-pop-group-style">
+        <div class="select-pop-form-group pop-form-group pop-form-group-100">
+            <div class="select-date-input-wrapper">
+                <div class="input-group search search-input-group" id="search">
+                    <span class="input-group-addon select-search-input">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </span>
+                    <input maxlength="255" [(ngModel)]="searchkey" (ngModelChange)="Submit()" (focus)="onFocus()" (focusout)="outFocus()" type="search" class="form-control select-search-input"
+                        placeholder="{{'NOTIFICATION.PLACEHOLDER_KEYWORD'|translate}}" id="search">
+                </div>
+            </div>
+        </div>
+        <div class="search_cmd" *ngIf="focus_flag">
+            <ng-container *ngFor="let text of keywork_command; let listIndex = index">
+                <span (click)="setInput(text)">{{text}}</span>
+            </ng-container>
+        </div>
+    </div>
+</div>
+<!-- 表單popup種類3  //End----------------------------------------------------------------------->
+
+<style>
+    .search_bar {
+        position: relative;
+    }
+
+    .search_cmd {
+        position: absolute;
+        background: #fff;
+        width: 100%;
+        z-index: 99;
+        max-height: 30vh;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .search_cmd span {
+        display: block;
+        padding: 2px 10px;
+        border-bottom: 1px solid #ddd;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .search_cmd span:hover {
+        background: #ddd;
+    }
+</style>

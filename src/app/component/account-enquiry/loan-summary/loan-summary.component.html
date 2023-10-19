@@ -1,0 +1,195 @@
+<!-- 篩選popup -->
+<div *ngIf="filterBlock" class="row">
+    <div class="shadow active"></div>
+
+    <div class="pop-box-container active">
+        <div class="pop-box-area">
+            <div (click)="filterCloseBtn()" *ngIf="closeBtnChange" class="pop-close-bt">
+                <div class="i-close"></div>
+            </div>
+            <div class="pop-content-wrapper">
+
+                <div class="pop-title">
+                    <p>{{ 'LOANSUMMARY.FILTER_TITLE' | translate }}</p>
+                </div>
+
+                <div class="pop-content">
+                    <app-quickselect [filterKey]="'Currency'" [view]="viewCurrencyData" (filterData)="result2($event)" [tagStyle]="tagStyle"></app-quickselect>
+                    <app-quickselect [filterKey]="'ProductName'" [view]="viewProductNameData" (filterData)="result3($event)"></app-quickselect>
+                    <app-option [filterKey]="'Status'" [view]="viewStatusData" (filterData)="result4($event)"></app-option>
+                    <app-datefilter [view]="viewDateData" (filterData)="result5($event)" (closeBtnFlag)="closeBtnFlag($event)"></app-datefilter>
+                </div>
+
+            </div>
+
+            <div class="pop-bt-group">
+                <button type="button" class="btn btn-cancel btn-pop-cancel" (click)="filterClick(true)">{{ 'LOANSUMMARY.FILTER_RESET' | translate }}</button>
+                <button type="submit" class="btn btn-confirm btn-pop-confirm" (click)="onFilterClick()">{{ 'LOANSUMMARY.FILTER_COMFIRM' | translate }}</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- 篩選popup -->
+
+<ng-container [ngSwitch]="pageType" style="margin-top: 108px">
+    <!-- 放款明細頁 -->
+    <ng-container *ngSwitchCase="'detailPage'">
+        <app-loan-detail [loanSummary]="selectedLoanSummary" (backToLoanSum)="backToLoanSum($event)"></app-loan-detail>
+    </ng-container>
+    <!-- 放款明細頁 -->
+
+
+    <!-- 放款概要頁 -->
+    <div *ngSwitchDefault>
+        <div class="bg-fixed-105"></div>
+        <section class="col-xs-12 section-content-tab deposit-activity-pg" scrollTop dropReload>
+            <!-- 搜尋欄位陣列 -->
+            <app-search [source]="sourceData" [column]="filterArray" (filterData)="search_result($event)"></app-search>
+
+            <!-- Filter start -->
+            <div class="row">
+                <div class="select-pop-group-style select-pop-group-style-row">
+                    <div (click)="onListClick()" class="select-pop-form-group pop-form-group-l pop-form-group-90">
+                        <!-- Selection Area Start -->
+                        <div class="select-pop-bt-wrapper bt-wrapper-100">
+                            <button type="button" class="btn btn-default dropdown-toggle btn-selectline-pop" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span class="select-pop-content">{{ DropContent | translate }}</span>
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <!-- Selection Area End -->
+                    </div>
+                    <!-- Filter icon start -->
+                    <div class="select-pop-form-group pop-form-group-r pop-form-group-10" (click)="filterClick()">
+                        <div class="select-pop-input-wrapper link-wrapper">
+                            <p class="content-li-text-ct-style"><i class="icon-filter"></i></p>
+                        </div>
+                    </div>
+                    <!-- Filter icon end -->
+                </div>
+            </div>
+            <!-- Filter end -->
+
+            <!-- Query date start -->
+            <div class="row">
+                <div class="time-show-wrapper">
+                    <p>{{queryDate}}</p>
+                </div>
+            </div>
+            <!-- Query date end -->
+
+            <!-- Loan summary list start -->
+            <div *ngIf="pagerData != undefined && pagerData.length > 0">
+                <div class="row" *ngFor="let loanSummary of pagerData;">
+                    <div class="list-card-style card-account" (click)="onLoanSummaryItemClick(loanSummary)">
+                        <div class="align-two-side">
+                            <div class="card-left-wrap">
+                                <ul>
+                                    <!-- Tag list start -->
+                                    <li class="card-li-style align-two-side">
+                                        <div class="card-tag-wrap">
+                                            <!-- <span class="card-tag-green" *ngIf="loanSummary.Currency && loanSummary.Currency != ''">{{loanSummary.Currency}}</span>
+                                            <span class="card-tag-green" *ngIf="loanSummary.ProductType && loanSummary.ProductType != ''">{{ ('LOANSUMMARY.PRODUCT_TYPE_' + loanSummary.ProductType) | translate }}</span>
+                                            <span class="card-tag-green" *ngIf="loanSummary.Status && loanSummary.Status != ''">{{loanSummary.Status}}</span> -->
+                                            
+                                            <span class="card-tag-green" *ngIf="loanSummary.Country && loanSummary.Country != ''">{{ 'countryCode.'+loanSummary.Country | translate}}</span>
+                                            <span class="card-tag-green" *ngIf="loanSummary.ProductName && loanSummary.ProductName != ''">{{ loanSummary.ProductName }}</span>
+                                            <span class="card-tag-green" *ngIf="loanSummary.Currency && loanSummary.Currency != ''">{{loanSummary.Currency}}</span>
+                                        </div>
+                                    </li>
+                                    <!-- Tag list end -->
+                                    <!-- 開戶銀行 start -->
+                                    <!-- <li class="card-li-style align-two-side">
+                                        <div class="card-text-left">
+                                            <p>{{ 'LOANSUMMARY.BRANCH_NAME' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right">
+                                            <p>{{loanSummary.BranchName}}</p>
+                                        </div>
+                                    </li> -->
+                                    <!-- 開戶銀行 end -->
+                                    <!-- 帳號 start -->
+                                    <li class="card-li-style align-two-side">
+                                        <div class="card-text-left">
+                                            <p>{{ 'LOANSUMMARY.ACCT_NO' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right">
+                                            <p>{{loanSummary.AcctNo}}</p>
+                                        </div>
+                                    </li>
+                                    <!-- 帳號 end -->
+                                    <!-- 公司名稱 start -->
+                                    <li class="card-li-style" *ngIf="loanSummary.AcctNo && (loanSummary.CustomerId || loanSummary.CustomerName)">
+                                        <div class="card-text-right text-overflow-width-r font-size-14">
+                                            <p id ="font-size-14">({{loanSummary.CustomerId + ' - ' + loanSummary.CustomerName}})</p>
+                                        </div>
+                                    </li>
+                                    <!-- 公司名稱 end -->
+                                    <!-- 分隔線 -->
+                                    <li class="card-inside-line"></li>
+                                    <!-- 核准額度 start -->
+                                    <li class="card-li-style align-two-side">
+                                        <div class="card-text-left">
+                                            <p>{{ 'LOANSUMMARY.QUOTA' | translate }}</p>
+                                        </div>
+                                        <div class="card-text-right">
+                                            <p id="font-size-14">{{loanSummary.Currency}} {{loanSummary.AmountFinanced | _currency}}</p>
+                                        </div>
+                                    </li>
+                                    <!-- 核准額度 end -->
+                                    <!-- 動撥日 start -->
+                                    <li class="card-li-money align-two-side">
+                                        <div class="card-li-money-left">
+                                            <p>{{ 'LOANSUMMARY.DISBURSE_DT' | translate }}</p>
+                                        </div>
+                                        <div class="card-li-money-right amount-bold-style">
+                                            <b class="amount-number">{{loanSummary.DisburseDt | _datetime}}</b>
+                                        </div>
+                                    </li>
+                                    <!-- 動撥日 end -->
+                                    <!-- 到期日 start -->
+                                    <li class="card-li-money align-two-side">
+                                        <div class="card-li-money-left">
+                                            <p>{{ 'LOANSUMMARY.MATURITY_DT' | translate }}</p>
+                                        </div>
+                                        <div class="card-li-money-right amount-bold-style">
+                                            <b class="amount-number">{{loanSummary.MaturityDt | _datetime}}</b>
+                                        </div>
+                                    </li>
+                                    <!-- 到期日 end -->
+                                </ul>
+                            </div>
+                            <!-- Next arrow start -->
+                            <div class="card-right-icon-wrap right-icon-ellipsis">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+                            <!-- Next arrow end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Loan summary list end -->
+
+            <app-no-data *ngIf="pagerData != undefined && pagerData.length == 0"></app-no-data>
+
+
+            <!-- 載入更多按鈕 置於ngFor的最後一個 -->
+            <!-- 按鈕- 載入更多 -->
+            <div (click)="LoadPage()" *ngIf="showLoad" class="bt-more-group">
+                <div class="bt-inner-group-xl">
+                    <button type="button" class="btn btn-inner-group-s btn-more-load">
+                        {{ 'BTN.RELOAD_MORE' | translate }}</button>
+                </div>
+            </div>
+            <!-- //按鈕- 載入更多 -->
+            <!-- 載入更多按鈕 end -->
+
+            <!-- Footer padding start -->
+            <div class="div_footer_padding"></div>
+            <!-- Footer padding end -->
+
+        </section>
+    </div>
+</ng-container>

@@ -1,0 +1,216 @@
+/*
+     下方效果
+ =====================================*/
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  overflow: hidden;
+}
+
+.ocean {
+  height: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #107778;
+}
+
+.wave {
+  background: url(../image/loader/wave.svg) repeat-x;
+  position: absolute;
+  top: -185px;
+  width: 6400px;
+  height: 185px;
+  -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+          animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -150px;
+  -webkit-animation: wave 7s cubic-bezier(0.34, 0.43, 0.61, 0.51) -0.125s infinite, swell 7s ease -1s infinite;
+          animation: wave 7s cubic-bezier(0.34, 0.43, 0.61, 0.51) -0.125s infinite, swell 7s ease -1s infinite;
+  opacity: 1;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+@-webkit-keyframes swell {
+  0%, 100% {
+    -webkit-transform: translate3d(0, -25px, 0);
+            transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+}
+@keyframes swell {
+  0%, 100% {
+    -webkit-transform: translate3d(0, -25px, 0);
+            transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+}
+
+/*
+     circle line
+ =====================================*/
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+@-webkit-keyframes preloader {
+    0% {
+        opacity: 0;
+    }
+
+
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+      opacity:1;
+  }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes preloader {
+
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        opacity:1;
+
+
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+
+
+    }
+}
+
+/*
+     LOGO動畫
+ =====================================*/
+
+/* Logo*/
+.container{
+    position: relative;
+    overflow: hidden;
+}
+
+svg{
+    position: absolute;
+}
+
+.logo-wrapper{
+    position: absolute;
+}
+
+/* / End Logo */
+
+.logo-wrapper{
+	
+    /*原先設定*/
+
+    /*margin-top: -100px;*/
+    /*width: 150px;*/
+    /*height: 150px;*/
+    /*border-radius: 150px;*/
+
+    /*20181222 圓球調整(ipad) */
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -75px
+}
+
+.logo-wrapper img{ width: 100%;}
+
+.logo-wrapper{
+    -webkit-animation-name: logoloader;
+    animation-name: logoloader;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: 8;
+    animation-iteration-count: 8;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    opacity:.5;
+    will-change: transform;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+
+}
+
+
+@keyframes logoloader {
+
+    0% {
+        opacity: .6;
+    }
+
+    50% {
+        opacity:.8;
+
+    }
+
+    100% {
+        opacity: .6;
+    }
+
+}
+
+ /* 版本號 */
+ .copyright {
+	 position: relative;
+	 bottom: 50px;
+	 text-align: center;
+	 font-size: 14px;
+	 font-family: "微軟正黑體";
+	 color: #fff;
+	 
+	 
+
+  }
+

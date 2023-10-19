@@ -1,0 +1,109 @@
+.agreed_account {
+    overflow: scroll;
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    width: 100vw;
+    background-image: url('/assets/ui/images/u117.jpg');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: 50% 0;
+    background-size: cover;
+  }
+  
+  .success_box {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #666666;
+    font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+  }
+  
+  .success_box .hook_img {
+    background-image: url('/assets/ui/images/u3180.png');
+    width: 80px;
+    height: 85px;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+  
+  .title_transfer {
+    display: grid;
+    margin: 10px 5vw 0px 5vw;
+  }
+  
+  .title_transfer p {
+    display: inline-block;
+    width: 40vw;
+    padding: 2px 10px;
+    border-radius: 5px;
+    border: 1px solid #555555;
+    color: #555555;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+  }
+  
+  .title_transfer p.user_name {
+    width: 90vw;
+    padding: 0px;
+    margin: 2vh 0px;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    font-weight: normal;
+    text-align: left;
+  }
+  
+  .info {
+    margin: 1vh 5vw 0px 5vw;
+    font-size: 17px;
+    font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+  }
+  
+  .info td {
+    padding-top: 1vh;
+  }
+  
+  .split_line {
+    display: grid;
+    grid-template-columns: auto 25px auto;
+  }
+  
+  .split_line div {
+    border-top: solid 1px rgb(165, 165, 165);
+    margin-top: 12px;
+  }
+  
+  .split_line.single {
+    height: 1px;
+    margin: 10px 0px;
+    background-color: rgb(165, 165, 165);
+  }
+  
+  .buttons {
+    margin: 2vh 5vw 0px 5vw;
+  }
+  
+  .buttons th {
+    border-collapse: collapse;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: '微軟正黑體 Bold', '微軟正黑體 Regular', '微軟正黑體';
+  }
+  .margin_top_0 {
+    margin-top: 0px;
+  }
+  .padding_bottom {
+    height: 5vh;
+  }
+  
+  .align-right {
+    text-align: right;
+  }

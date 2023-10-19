@@ -1,0 +1,91 @@
+<!-- 匯率轉換器 -->
+<!-- Root start -->
+<ng-container>
+  <!-- Exchange rate converter root start -->
+  <div class="exchange-rate-converter col-xs-12 rate-table-pg" *ngIf="!isCustomCurrencyShown" scrollTop dropReload>
+    <div class="row">
+      <!-- Country selector start-->
+      <div class="select-pop-group-style">
+        <div (click)="onCountryClick()" class="select-pop-form-group pop-form-group pop-form-group-100 ">
+          <div class="select-pop-bt-wrapper bt-wrapper-100">
+            <button type="button" class="btn btn-default dropdown-toggle btn-selectline-pop" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <!-- <select selectForpop class="country-selector" [(ngModel)]="exchangeRateModel.selectedCountry" (ngModelChange)="exchangeRateModel.onCountrySelected($event)">
+              <ng-container *ngFor="let item of exchangeRateModel.countryList">
+                <option class="select-pop-content" [value]="item.country">{{item.country}} ({{item.currency}})</option>
+              </ng-container>
+            </select> -->
+              <span class="select-pop-content">{{selCountryCurName | translate}}</span>
+              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Country selector end -->
+
+
+      <!-- Custom currency and query date start -->
+      <div class="select-pop-group-style select-info-group select-pop-group-style-row">
+        <!-- Custom currency start -->
+        <div class="select-pop-form-group pop-form-group-l pop-form-group-50" (click)="onCustomCurrencyClick()">
+          <div class="select-pop-input-wrapper link-wrapper text-left">
+            <p class="content-li-text-ct-style">
+              <i class="icon-editmoney"></i>{{'EXCHANGE_RATE.CUSTOM_CURRENCIES' | translate}}
+            </p>
+          </div>
+        </div>
+        <!-- Custom currency end -->
+
+
+        <!-- Query date start -->
+        <div class="select-pop-form-group pop-form-group-r pop-form-group-50">
+          <div class="time-show-wrapper">
+            <p>{{exchangeRateModel.queryDate}}</p>
+          </div>
+        </div>
+        <!-- Query date start -->
+      </div>
+      <!-- Custom currency and query date end -->
+
+
+      <!-- Exchange converter list start -->
+      <div class="exchangerate-text-style">
+        <div class="select-pop-form-group pop-form-group pop-form-group-100">
+          <div class="select-date-input-wrapper">
+            <ng-container *ngFor="let item of converterList">
+              <div class="field-input pop-form-group-100 exchangerate-group">
+                <label>{{item.CurCodeFrom}}</label>
+                <input type="tel" id="{{item.CurCodeFrom}}" class="form-control exchangerate-input" placeholder="{{'EXCHANGE_CONVERTER.INPUT_HINT' | translate}}"
+                  [(ngModel)]="item.input" (focusout)="onlyNumber($event)" maxlength="14" />
+                <label for="{{item.CurCodeFrom}}" class="fake-label"></label>
+              </div>
+            </ng-container>
+
+            <!-- Memo start -->
+            <div class="memo-info">
+                <ol class="memo-info-list">
+                  <li>{{'EXCHANGE_RATE.MEMO_TITLE' | translate}}</li>
+                  <li>{{'EXCHANGE_RATE.MEMO_LINE_1' | translate}}</li>
+                  <li>{{'EXCHANGE_RATE.MEMO_LINE_2' | translate}}</li>
+                </ol>
+              </div>
+            <!-- Memo end -->
+
+          </div>
+        </div>
+      </div>
+      <!-- Exchange converter list end -->
+    </div>
+  </div>
+  <!-- Exchange rate converter root end -->
+
+
+
+
+  <!-- Exchange rate custom currency root start -->
+  <app-exchangeRateCustomCurrency *ngIf="isCustomCurrencyShown" [pageType]="pageType" [exchangeRateModel]="exchangeRateModel"
+    (onBackEvnet)="onCustomCurrencyBackEvent($event)"></app-exchangeRateCustomCurrency>
+  <!-- Exchange rate custom currency root end -->
+</ng-container>
+<!-- Root end -->
+

@@ -1,0 +1,36 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000007Rs",
+    "RqUID": "20180709111612",
+    "Timestamp": "20180709111645",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {"TxnId":"CCMPTX000007Rs"
+      ,"Result":"38"
+      ,"Desc":""
+      ,"SessionKey":"qa2sf4vgh1a11qq"
+      ,"TrustedDevice":"Y"
+      ,"OTPDevice":"Y"
+      ,"FunctionList": [
+        "TXN_AUTH",
+        "ACCT_OVERVIEW",
+        "ACCT_SUMM",
+        "ACCT_ACTIVITY",
+        "LOAN_DET_INQ",
+        "LOAN_DET_INQ",
+        "TD_ACCT_SUMM",
+        "TD_ACCT_DET",
+        "INV_PRD_SUMM",
+        "INV_PRD_DET",
+        "ATM_TXN",
+        "INTERNAL_TXN",
+        "LCY_TXN",
+        "FCY_TXN"
+      ]
+      ,"KeyIndex":"123456789"}
+  }
+}

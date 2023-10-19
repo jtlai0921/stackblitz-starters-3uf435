@@ -1,0 +1,22 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000008Rs",
+    "RqUID": "20180709111612",
+    "Timestamp": "20180709111645",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data":  {"TxnId":"CCMPTX000008Rs"
+      ,"Result":4001
+      ,"SessionKey":"9kH0HiH4YQKsgUuZwvzASwaFbGodaT6zWpUorj6Vk4WmqbcG4K1T91h8EQjGFyau1PKFGUIT82uTYRNhN/75lAJbbdwTIoU8I3mBvmIBhvk="
+      ,"PersoFile":"B1FE6B18EA8486160D902A4AE6700E96A8035D063F7C1035058446BE01CD4834644567C0C7F6E48E967D571867AEBB72203A6E9EE33BF1B234D12EC8F5F5EC71F09BC9348350DD5181AA4F3BC36A264BDF608FFBA6027703D0AFC4A2A21ADE16"
+      ,"CustSeq":"1000000757"
+      ,"KeyIndex":"476136132578894661441044"
+      ,"IdUser":"10000901"
+      ,"RestrictedPayee":"N","TrustedDevice":"Y","OTPDevice":"N","FunctionList":[{"FunctionId":"ACCT_ACTIVITY"},{"FunctionId":"ACCT_OVERVIEW"},{"FunctionId":"ACCT_SUMM"},{"FunctionId":"ATM_TXN"},{"FunctionId":"INV_PRD_DET"},{"FunctionId":"INV_PRD_SUMM"},{"FunctionId":"LOAN_DET_INQ"},{"FunctionId":"TD_ACCT_DET"},{"FunctionId":"TD_ACCT_SUMM"},{"FunctionId":"TXN_AUTH"}]
+      ,"UserName":"SmallLeo"}
+  }
+}

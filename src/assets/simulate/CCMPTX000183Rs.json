@@ -1,0 +1,429 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000183Rs",
+    "RqUID": "20180731161530",
+    "Timestamp": "20180731161545",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+    "Desc": "",
+    "TxnId": "CCMPTX000183Rs",
+    "TDAcctList": [
+        {
+            "DueDt": "2015-06-03",
+            "TDIssDt": "2014-12-03",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111642746    ",
+            "IntRate": "1.09"
+        },
+        {
+            "DueDt": "2015-07-22",
+            "TDIssDt": "2015-01-22",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111643059    ",
+            "IntRate": "1.09"
+        },
+        {
+            "DueDt": "2015-06-09",
+            "TDIssDt": "2015-02-09",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111643101    ",
+            "IntRate": "0.94"
+        },
+        {
+            "DueDt": "2015-06-02",
+            "TDIssDt": "2015-03-02",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111643169    ",
+            "IntRate": "0.94"
+        },
+        {
+            "DueDt": "2015-09-27",
+            "TDIssDt": "2015-08-27",
+            "Currency": "USD",
+            "PrncplAmt": "2000",
+            "AcctNo": "006111643444    ",
+            "IntRate": "0.2"
+        },
+        {
+            "DueDt": "2015-09-28",
+            "TDIssDt": "2015-07-28",
+            "Currency": "USD",
+            "PrncplAmt": "2000",
+            "AcctNo": "006111643460    ",
+            "IntRate": "0.2"
+        },
+        {
+            "DueDt": "2015-12-07",
+            "TDIssDt": "2015-10-07",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111643554    ",
+            "IntRate": "0.88"
+        },
+        {
+            "DueDt": "2016-04-13",
+            "TDIssDt": "2015-10-13",
+            "Currency": "USD",
+            "PrncplAmt": "2000",
+            "AcctNo": "006111643570    ",
+            "IntRate": "0.35"
+        },
+        {
+            "DueDt": "2016-11-18",
+            "TDIssDt": "2015-11-18",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111643606    ",
+            "IntRate": "1.345"
+        },
+        {
+            "DueDt": "2018-12-19",
+            "TDIssDt": "2017-12-19",
+            "Currency": "USD",
+            "PrncplAmt": "7800",
+            "AcctNo": "006111644702    ",
+            "IntRate": "0.8"
+        },
+        {
+            "DueDt": "2006-10-21",
+            "TDIssDt": "2006-09-21",
+            "Currency": "USD",
+            "PrncplAmt": "150000",
+            "AcctNo": "006107045454    ",
+            "IntRate": "1.75"
+        },
+        {
+            "DueDt": "2009-09-24",
+            "TDIssDt": "2008-09-24",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006119478721    ",
+            "IntRate": "1.94"
+        },
+        {
+            "DueDt": "2009-09-24",
+            "TDIssDt": "2008-09-24",
+            "Currency": "TWD",
+            "PrncplAmt": "30000",
+            "AcctNo": "006119478734    ",
+            "IntRate": "1.94"
+        },
+        {
+            "DueDt": "2010-06-17",
+            "TDIssDt": "2009-12-17",
+            "Currency": "TWD",
+            "PrncplAmt": "0",
+            "AcctNo": "006119483813    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2011-08-18",
+            "TDIssDt": "2010-08-18",
+            "Currency": "TWD",
+            "PrncplAmt": "20002",
+            "AcctNo": "006111638213    ",
+            "IntRate": "0.9"
+        },
+        {
+            "DueDt": "2011-08-18",
+            "TDIssDt": "2010-08-18",
+            "Currency": "TWD",
+            "PrncplAmt": "5000002",
+            "AcctNo": "006111638226    ",
+            "IntRate": "0.3"
+        },
+        {
+            "DueDt": "2011-09-03",
+            "TDIssDt": "2010-09-03",
+            "Currency": "TWD",
+            "PrncplAmt": "5000001",
+            "AcctNo": "006111638459    ",
+            "IntRate": "0.3"
+        },
+        {
+            "DueDt": "2011-09-03",
+            "TDIssDt": "2010-09-03",
+            "Currency": "TWD",
+            "PrncplAmt": "5000001",
+            "AcctNo": "006111638462    ",
+            "IntRate": "0.3"
+        },
+        {
+            "DueDt": "2011-10-19",
+            "TDIssDt": "2010-10-19",
+            "Currency": "TWD",
+            "PrncplAmt": "60001",
+            "AcctNo": "006111638970    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2011-10-19",
+            "TDIssDt": "2010-10-19",
+            "Currency": "TWD",
+            "PrncplAmt": "60001",
+            "AcctNo": "006111638983    ",
+            "IntRate": "0.9"
+        },
+        {
+            "DueDt": "2011-10-19",
+            "TDIssDt": "2010-10-19",
+            "Currency": "TWD",
+            "PrncplAmt": "60001",
+            "AcctNo": "006111638996    ",
+            "IntRate": "0.9"
+        },
+        {
+            "DueDt": "2012-04-18",
+            "TDIssDt": "2011-04-18",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111639830    ",
+            "IntRate": "0.9"
+        },
+        {
+            "DueDt": "2018-12-19",
+            "TDIssDt": "2017-12-19",
+            "Currency": "USD",
+            "PrncplAmt": "2000",
+            "AcctNo": "006111644689    ",
+            "IntRate": "0.8"
+        },
+        {
+            "DueDt": "2018-12-19",
+            "TDIssDt": "2017-12-19",
+            "Currency": "USD",
+            "PrncplAmt": "3500",
+            "AcctNo": "006111644692    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2018-10-30",
+            "TDIssDt": "2018-07-30",
+            "Currency": "TWD",
+            "PrncplAmt": "100000",
+            "AcctNo": "006111644906    ",
+            "IntRate": "0.94"
+        },
+        {
+            "DueDt": "2018-10-30",
+            "TDIssDt": "2018-07-30",
+            "Currency": "TWD",
+            "PrncplAmt": "100000",
+            "AcctNo": "006111644919    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2028-07-30",
+            "TDIssDt": "2018-07-30",
+            "Currency": "USD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111644922    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2011-09-14",
+            "TDIssDt": "2010-09-14",
+            "Currency": "USD",
+            "PrncplAmt": "60001",
+            "AcctNo": "006111638543    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2011-09-14",
+            "TDIssDt": "2010-09-14",
+            "Currency": "USD",
+            "PrncplAmt": "60001",
+            "AcctNo": "006111638556    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2011-09-15",
+            "TDIssDt": "2010-09-15",
+            "Currency": "USD",
+            "PrncplAmt": "60001",
+            "AcctNo": "006111638569    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2011-09-15",
+            "TDIssDt": "2010-09-15",
+            "Currency": "USD",
+            "PrncplAmt": "60001",
+            "AcctNo": "006111638572    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2011-09-17",
+            "TDIssDt": "2010-09-17",
+            "Currency": "USD",
+            "PrncplAmt": "60001",
+            "AcctNo": "006111638585    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2011-09-17",
+            "TDIssDt": "2010-09-17",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111638598    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2011-09-17",
+            "TDIssDt": "2010-09-17",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111638608    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2011-09-17",
+            "TDIssDt": "2010-09-17",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111638611    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2011-09-17",
+            "TDIssDt": "2010-09-17",
+            "Currency": "TWD",
+            "PrncplAmt": "60001",
+            "AcctNo": "006111638624    ",
+            "IntRate": "0.9"
+        },
+        {
+            "DueDt": "2009-04-09",
+            "TDIssDt": "2009-03-09",
+            "Currency": "TWD",
+            "PrncplAmt": "100000",
+            "AcctNo": "006119482966    ",
+            "IntRate": "0.88"
+        },
+        {
+            "DueDt": "2009-06-09",
+            "TDIssDt": "2009-03-09",
+            "Currency": "TWD",
+            "PrncplAmt": "300000",
+            "AcctNo": "006119482979    ",
+            "IntRate": "0.94"
+        },
+        {
+            "DueDt": "2009-09-09",
+            "TDIssDt": "2009-03-09",
+            "Currency": "TWD",
+            "PrncplAmt": "600000",
+            "AcctNo": "006119482982    ",
+            "IntRate": "1.175"
+        },
+        {
+            "DueDt": "2009-12-09",
+            "TDIssDt": "2009-03-09",
+            "Currency": "TWD",
+            "PrncplAmt": "900000",
+            "AcctNo": "006119482995    ",
+            "IntRate": "1.31"
+        },
+        {
+            "DueDt": "2009-04-09",
+            "TDIssDt": "2009-03-09",
+            "Currency": "USD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006119483004    ",
+            "IntRate": "0.25"
+        },
+        {
+            "DueDt": "2009-04-09",
+            "TDIssDt": "2009-03-09",
+            "Currency": "JPY",
+            "PrncplAmt": "1000000",
+            "AcctNo": "006119483017    ",
+            "IntRate": "0.18"
+        },
+        {
+            "DueDt": "2009-06-09",
+            "TDIssDt": "2009-03-09",
+            "Currency": "HKD",
+            "PrncplAmt": "20000",
+            "AcctNo": "006119483020    ",
+            "IntRate": "0.4"
+        },
+        {
+            "DueDt": "2009-05-25",
+            "TDIssDt": "2009-03-09",
+            "Currency": "TWD",
+            "PrncplAmt": "222000",
+            "AcctNo": "006119483033    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2010-12-29",
+            "TDIssDt": "2010-06-29",
+            "Currency": "USD",
+            "PrncplAmt": "96564",
+            "AcctNo": "006111637081    ",
+            "IntRate": "0"
+        },
+        {
+            "DueDt": "2010-09-18",
+            "TDIssDt": "2010-08-19",
+            "Currency": "TWD",
+            "PrncplAmt": "45666",
+            "AcctNo": "006111638336    ",
+            "IntRate": "0.88"
+        },
+        {
+            "DueDt": "2011-05-20",
+            "TDIssDt": "2010-08-20",
+            "Currency": "EUR",
+            "PrncplAmt": "4100",
+            "AcctNo": "006111638352    ",
+            "IntRate": "0.35"
+        },
+        {
+            "DueDt": "2013-08-20",
+            "TDIssDt": "2012-08-20",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111641792    ",
+            "IntRate": "1.345"
+        },
+        {
+            "DueDt": "2013-04-27",
+            "TDIssDt": "2012-08-27",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111641802    ",
+            "IntRate": "1.09"
+        },
+        {
+            "DueDt": "2013-09-27",
+            "TDIssDt": "2012-08-27",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111641815    ",
+            "IntRate": "1.345"
+        },
+        {
+            "DueDt": "2013-09-03",
+            "TDIssDt": "2012-09-03",
+            "Currency": "TWD",
+            "PrncplAmt": "10000",
+            "AcctNo": "006111641828    ",
+            "IntRate": "1.345"
+        }
+    ],
+    "Result": 4001
+    }
+  }
+}
+

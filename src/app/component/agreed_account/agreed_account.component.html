@@ -1,0 +1,288 @@
+<!-- Fullscreen start -->
+<div class="fullscreen">
+    <!-- Root start -->
+    <div>
+        <!-- Input page start -->
+        <div class="bgoverflowhidden" *ngIf="NowStatus == 0">
+            <div class="bg-fixed-195 bg-color-gradient"></div>
+
+            <section class="col-xs-12 section-content-sub pre-defined-pg">
+
+                <form method="post">
+                    <div class="row">
+                        <div class="ct-form-section pre-defined-form1-sec">
+                            <div class="form-section-wrapper pre-defined-form1">
+                                <div class="trans-form-section-title pre-defined-form1-title center-parent">
+                                    <p class="center-child">{{'AGREEDACCOUNT.TRANS_USER' | translate}}</p>
+                                </div>
+
+                                <div class="trans-form-section-content pre-defined-form1-content">
+                                    <p>{{UserName}}</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="ct-form-section pre-defined-form2-sec">
+                            <div class="form-section-wrapper2 pre-defined-form2">
+                                <div class="trans-form-section-title2 pre-defined-form2-title center-parent">
+                                    <p class="center-child">{{'AGREEDACCOUNT.TRANS_CONTENT' | translate}}</p>
+                                </div>
+
+                                <div class="trans-form-section-content2 pre-defined-form2-content" style="width:100%;">
+
+                                    <!--表單popup種類2 - 100% - 日曆單列 -->
+                                    <div class="row">
+                                        <div class="select-pop-group-style">
+                                            <div class="select-pop-form-group pop-form-group pop-form-group-100">
+                                                <label class="select-pop-label">{{'AGREEDACCOUNT.TRANS_DATE' | translate}}</label>
+                                                <div class="select-date-input-wrapper" (click)="onDatePickerButtonClick()">
+                                                    <div class="input-group date select-date-input-group" id="datetimepicker1">
+                                                        <input readonly class="form-control select-date-input transparent" placeholder="{{TransDate}}" [(ngModel)]="TransDate" name="TransDate"
+                                                            disabled="disabled">
+                                                        <span class="input-group-addon select-date-input">
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="errMsg" *ngIf="errorMsg1">
+                                                        {{errorMsg1}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 表單popup種類2 //End-->
+                                    <!--表單popup種類2-1 - 100% - 下拉單列 -->
+                                    <div class="row">
+                                        <div class="select-pop-group-style">
+                                            <div class="select-pop-form-group pop-form-group pop-form-group-100">
+                                                <label class="select-pop-label">{{'AGREEDACCOUNT.REL_ACCT' | translate}}</label>
+                                                <!-- 下拉 Start-->
+                                                <div class="select-pop-bt-wrapper bt-wrapper-100">
+                                                    <button type="button" class="btn btn-default dropdown-toggle btn-select-pop" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false" (click)="openRelAcctSelect()">
+                                                        <p class="select-pop-content">
+                                                            {{getRelAcctSelectValue()}}
+                                                        </p>
+                                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                                    </button>
+                                                </div>
+                                                <!-- 下拉 End -->
+                                                <div>{{relAcctCustomerIdName}}</div>
+                                                <div class="errMsg" *ngIf="errorMsg2">
+                                                    {{errorMsg2}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 表單popup種類2-1 //End----------------------------------------------------------------------->
+                                    <!--表單popup種類2-2 - 100% - 附言 單列 -->
+                                    <div class="row">
+                                        <div class="select-pop-group-style">
+                                            <div class="select-pop-form-group pop-form-group pop-form-group-100">
+                                                <label class="select-pop-label">{{'AGREEDACCOUNT.AMOUNT' | translate}}</label>
+                                                <div class="select-date-input-wrapper">
+
+                                                    <div class="input-group date select-date-input-group" id="datetimepicker2">
+                                                        <span>{{AmountCur}}&nbsp;</span><input maxlength="30" type="number" class="form-control select-date-input"
+                                                            placeholder="{{'AGREEDACCOUNT.AMOUNT_HINT' | translate}}" [(ngModel)]="Amount"
+                                                            name="Amount">
+                                                    </div>
+
+                                                </div>
+                                                <div class="errMsg" *ngIf="errorMsg3">
+                                                    {{errorMsg3}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 表單popup種類2-2 //End----------------------------------------------------------------------->
+
+                                    <!--ct-s表單區域分隔線 種類1 -->
+
+                                    <div class="row">
+                                        <div class="form-inside-line-wrapper">
+                                            <div class="form-inside-line-l">
+                                            </div>
+                                            <div class="form-inside-line-icon">
+                                            </div>
+                                            <div class="form-inside-line-r">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--//ct-s表單區域分隔線 種類1 -->
+
+                                    <!--表單popup種類2-1 - 100% - 下拉單列 -->
+                                    <div class="row">
+                                        <div class="select-pop-group-style">
+                                            <div class="select-pop-form-group pop-form-group pop-form-group-100">
+                                                <label class="select-pop-label">{{'AGREEDACCOUNT.PAYEE_ACCT' | translate}}</label>
+                                                <!-- 下拉 Start-->
+                                                <div class="select-pop-bt-wrapper bt-wrapper-100">
+                                                    <button type="button" class="btn btn-default dropdown-toggle btn-select-pop" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false" (click)="openPayeeAcctSelect()">
+                                                        <p class="select-pop-content">
+                                                            {{getPayeeAcctSelectValue()}}
+                                                        </p>
+                                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                                    </button>
+                                                </div>
+                                                <div>{{payeeAcctCustomerIdName}}</div>
+                                                <div class="errMsg" *ngIf="errorMsg4">
+                                                    {{errorMsg4}}
+                                                </div>
+                                                <!-- 下拉 End -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 表單popup種類2-1 //End----------------------------------------------------------------------->
+                                    <!--表單popup種類2-2 - 100% - 附言 單列 -->
+                                    <div class="row">
+                                        <div class="select-pop-group-style">
+                                            <div class="select-pop-form-group pop-form-group pop-form-group-100">
+                                                <label class="select-pop-label">{{'AGREEDACCOUNT.MEMO' | translate}}</label>
+                                                <div class="select-date-input-wrapper">
+
+                                                    <div class="input-group date select-date-input-group" id="datetimepicker8">
+                                                        <input type="text" class="form-control select-date-input" placeholder="{{'AGREEDACCOUNT.MEMO_HINT' | translate}}" [(ngModel)]="Memo"
+                                                            name="Memo" maxlength="7">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 表單popup種類2-2 //End----------------------------------------------------------------------->
+                                    <!-- button-set種類1 - 2個按鈕-->
+
+                                    <div class="row">
+                                        <div class="bt-center-group align-two-side">
+                                            <button type="button" class="btn btn-group-sm" *ngIf="false"> {{'AGREEDACCOUNT.CANCEL'
+                                                | translate}}</button>
+                                            <button type="submit" class="btn btn-group-sm btn-confirm" (click)="onNextClick()"> {{'AGREEDACCOUNT.NEXT'
+                                                | translate}}</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- button-set種類1 - 2個按鈕 //End-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <!-- RelAcctSelected page -->
+        <div class="row" *ngIf="SelectStatus == 88">
+            <div class="shadow active"></div>
+            <div class="pop-box-container active">
+                <div class="pop-box-area">
+                    <div class="pop-content-wrapper">
+                        <div class="pop-close-bt" (click)="CloseSelect()">
+                            <div class="i-close"></div>
+                        </div>
+                        <div class="pop-title-l2">
+
+                            <p>{{'AGREEDACCOUNT.REL_ACCT' | translate}}</p>
+                            
+                        </div>
+                        <div class="pop-content-l2">
+                            <!--pop視窗內容開始-->
+
+                            <!-- pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+
+                            <div class="pop-li-section pop-li-border {{item == RelAcctSelected ? selectedClass:''}}" *ngFor="let item of RelAcctSelectList; let listIndex = index"
+                                (click)="onRelAcctChange(item)">
+                                <div class="pop-li-l-100">
+                                    <div class="pop-li-l-option">
+                                        <p>{{item.CurCode}}-{{item.AcctNo}} {{item.CustomerName}}</p>
+                                    </div>
+                                </div>
+                                <div class="pop-right-icon-wrap">
+                                    <img class="check-icon" src="assets/design/image/icon/check-icon.png" alt="">
+                                </div>
+                            </div>
+                            <!-- //pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+
+                        </div>
+                        <!--pop視窗內容結束-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PayeeAcctSelected page -->
+        <div class="row" *ngIf="SelectStatus == 99">
+            <div class="shadow active"></div>
+            <div class="pop-box-container active">
+                <div class="pop-box-area">
+                    <div class="pop-content-wrapper">
+                        <div class="pop-close-bt" (click)="CloseSelect()">
+                            <div class="i-close"></div>
+                        </div>
+                        <div class="pop-title-l2">
+
+                            <p>{{'AGREEDACCOUNT.PAYEE_ACCT' | translate}}</p>
+
+                        </div>
+                        <div class="pop-content-l2">
+                            <!--pop視窗內容開始-->
+
+                            <!-- pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+
+                            <div class="pop-li-section pop-li-border {{item == PayeeAcctSelected ? selectedClass:''}}" *ngFor="let item of PayeeAcctSelectList; let listIndex = index"
+                                (click)="onPayeeAcctChange(item)">
+                                <div class="pop-li-l-100">
+                                    <div class="pop-li-l-option">
+                                        <p>{{item.CurCode}}-{{item.AcctNo}} {{item.BankName}}</p>
+                                    </div>
+                                </div>
+                                <div class="pop-right-icon-wrap">
+                                    <img class="check-icon" src="assets/design/image/icon/check-icon.png" alt="">
+                                </div>
+                            </div>
+                            <!-- //pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+                        </div>
+                        <!--pop視窗內容結束-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pattern_lock_form" class="row">
+            <div class="shadow {{ patternFlag ? 'active' : ''}}"></div>
+
+            <div class="pop-box-container  {{patternFlag ? 'active':''}}">
+                <div class="pop-box-area">
+                    <div (click)="hiddenPatterClick()" class="pop-close-bt">
+                        <div class="i-close"></div>
+                    </div>
+                    <div>
+                        <p>{{'LOGINOUT.ENTER_PATTERN_LOCK' | translate}}</p>
+                    </div>
+                    <div>
+                        <p class="pattern_error"></p>
+                    </div>
+                    <!-- 圖形鎖 -->
+                    <div style="margin: auto" id="patternHolder"></div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirm page start -->
+        <app-agreed-account-comfirm *ngIf="NowStatus == 1" [UserName]="UserName" [ViewObject]="ViewObject" [PayeeAcctSelected]="PayeeAcctSelected"
+            [RelAcctSelected]="RelAcctSelected" [Fee]="Fee" (comfirm)="onConfirmClick($event)"></app-agreed-account-comfirm>
+        <!-- Confirm page end -->
+
+
+        <!-- Finish page start -->
+        <app-agreed-account-finish *ngIf="NowStatus == 2" [DataResult]="DataResult" [ViewObject]="ViewObject" [UserName]="UserName"
+            [BatchId]="BatchId" [PayeeAcctSelected]="PayeeAcctSelected" [RelAcctSelected]="RelAcctSelected" [Fee]="Fee" (comfirm)="onConfirmClick($event)"></app-agreed-account-finish>
+        <!-- Finish page end -->
+    </div>
+    <!-- Root end -->
+</div>
+<!-- Fullscreen end -->

@@ -1,0 +1,76 @@
+.exchange-rate-converter {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.select-info-group {
+  padding: 5px 20px;
+}
+
+.pop-form-group-50 {
+  width: 50%;
+}
+
+.pop-form-group-50 .time-show-wrapper {
+  text-align: right;
+  padding: 0;
+  margin: 6px 0;
+}
+
+.pop-form-group-l {
+  padding-right: 5px;
+}
+
+.link-wrapper {
+  padding: 5px 0px;
+  -webkit-align-items: center;
+  align-items: center;
+  line-height: 2rem;
+  text-align: left;
+}
+.exchangerate-group input {
+	appearance: none;
+	background-color: none;
+	line-height: 1.6rem;
+	font-size: 1.6rem;
+	font-weight: normal;
+	width: 100%;
+	border: none;
+	display: block;
+	box-sizing: border-box;
+	padding: 15px;
+	color: #838383;
+	/* position: relative; */
+	/* z-index: 1; */
+	border-bottom: solid 1px #e5e5e5;
+	height: inherit;
+}
+.exchangerate-group input:focus {
+	outline: none;
+	background: #dcf1f2;
+	color: #333;
+	text-align: right;
+}
+.exchangerate-group input:valid {
+ text-align: right;
+}
+.exchangerate-group input:focus ~ label {
+	color: #fff;
+	background: #107778;
+	border-radius: 5px;
+	padding: 3px 10px;
+	z-index: 9;
+}
+.exchangerate-group input:valid ~ label {
+ text-transform: uppercase;
+}
+
+.exchangerate-group input ~ label.fake-label, 
+.exchangerate-group input ~ label:focus.fake-label {
+	width: 100%;
+	padding: 24px;
+	margin-left: -20px;
+	margin-top: -10px;
+	border: none;
+	background: none;
+}

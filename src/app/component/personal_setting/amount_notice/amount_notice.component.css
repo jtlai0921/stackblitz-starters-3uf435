@@ -1,0 +1,127 @@
+
+.margin_top_30{
+  margin-top: 30px;
+}
+
+.questionPage{
+  /* background-image:url('../../../assets/ui/images/sky.jpg'); */
+  overflow:hidden;
+  position: absolute;
+  padding-top:24vh;
+  width: 100vw;height: 96vh;
+  top:-90px;
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: 50% 0; 
+  background-size:cover;
+}
+.area_ex{
+  margin:10px 10px 10px 20px;
+  width: 85%;
+}
+
+.area_ex h3 {
+  line-height:0px;/* 行高 */
+  }
+
+.area_ex_select {
+  border: none;
+  border: 1px solid #D3D3D3;
+  background: #F5F5F5;
+  height: 30px;
+  font-size: 16px;
+  width: 100%;
+}
+.area_ex p {
+  line-height:10px;
+  text-align:right;
+}
+
+.area_ex2{
+  margin:10px 10px 10px 30px;
+  width: 100%;
+}
+.area_ex2_column{
+  margin:10px 10px 10px 0px;
+}
+.area_ex2_column span{
+  background-color: rgba(22, 155, 213, 1);
+  color:#ffffff;
+  height:25px; 
+  width:75px; 
+  display:inline-block;
+  border-radius: 5px;
+}
+
+.inp_box{
+  margin: 10px 10px 10px 10px;
+  width: 90%;
+}
+.inp_box div{
+  margin: 0px;
+  border: 1px solid #b1b1b1;
+  background-color: #e0e0e0;
+  position: relative;
+}
+.inp_box div input, .inp_box div select{
+  border: none;
+  width: 80%;
+  font-size: 16px;
+  display: inline-block;
+  padding: 10px;
+}
+.inp_box div p{
+  margin: 10px 0px 10px 10px;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+  color: #000000;
+}
+.edit_img{
+  background-image:url('../../../../assets/ui/images/u11483.png');
+  width: 45px;
+  height: 30px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-top: -15px;
+}
+
+
+.inp_box div hr{
+  margin: 0px;
+  width: 80%;
+
+}
+
+
+.inp_box div i{
+  display: block;
+  width: 25px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.area_ex_but{
+  background-color:#1a756c;
+  width: 161px;
+  height: 42px;
+  margin: 0px auto;
+}
+.area_ex_but p{
+  color:#ffffff;
+  text-align: center;
+  font-size:20px;
+  font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+  font-weight: 700;
+  font-style: normal;
+  ;line-height:40px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bl-trade-title-col1 p, .bl-trade-title-col4 p{
+  overflow: visible;
+}

@@ -1,0 +1,34 @@
+<div class="pop_mask" *ngIf="Isopen">
+        <div class="pop_mid">
+            <div class="pop_block">
+                <h3 *ngIf="!(title == '')">{{title}}</h3>
+                <div class="pop_content">
+                    <div class="pop_form_group">
+                        <h4>{{content}}</h4>
+                    </div>
+
+                    <!-- <div class="pop_form_group" *ngFor="let item of data; let i = index;">
+                        <input type="{{checkType}}" name="checkitem" id="f{{i}}" 
+                        [checked]="item.checked" (change)="item.checked = !item.checked"/>
+                        <label for="f{{i}}">{{item.desc}}</label>
+                    </div> -->
+                    <!-- <div class="pop_form_group">
+                        <input type="text" value="" placeholder="6-12碼英數字"/>
+                    </div> -->
+                    <div class="pop_form_group">
+                          <select (change)="SetItem($event.target.value)">
+                              <option *ngFor="let item of data; let i = index;" [value]="item.value">{{item.name}}</option>
+                          </select>
+                          <p class="pop_right" *ngIf="Seleted">
+                            ({{Seleted.local}}){{Seleted.no}}<br/>
+                            {{Seleted.company}}
+                          </p>
+                    </div>
+                </div>
+                <div class="btn_group">
+                    <div class="cancel" (click)="Cancel()">{{(cancelTxt == '') ? '取消' : cancelTxt}}</div>
+                    <div class="check" (click)="Submit()">{{(checkTxt == '') ? '確定' : checkTxt}}</div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,32 @@
+li {
+    list-style: none;
+}
+#font-size-14{
+    font-size:14px;
+}
+#red{
+    color:red;
+    text-align: right;
+}
+#button{
+    margin-right:5vw;
+}
+#remind{
+    right: 5vw;
+    position: absolute;
+}
+
+.type10{
+    line-height: 2rem;
+    text-align: initial;
+  }
+.bold{
+    font-weight: bold;
+}
+.font-size-16{
+    font-size:16px;
+}
+
+.break_word{
+    word-break: break-word;
+}

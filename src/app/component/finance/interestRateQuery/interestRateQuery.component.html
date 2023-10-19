@@ -1,0 +1,586 @@
+<!-- 利率查詢頁 -->
+<div class="">
+  <div class="">
+    <section class="col-xs-12 section-content-tab rate-table-pg noTop" scrollTop dropReload>
+
+      <div class="row">
+        <div class="select-pop-group-style select-pop-group-style-row">
+          <!-- 國別選單 -->
+          <div class="select-pop-form-group pop-form-group-l pop-form-group-90">
+            <div class="select-pop-bt-wrapper bt-wrapper-100" (click)="ShowCountry(CountrySelected)">
+              <button type="button" class="btn btn-default dropdown-toggle btn-selectline-pop" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <p class="select-pop-content">{{CountrySelected.location | translate}}</p>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <!-- 篩選器 -->
+          <div class="select-pop-form-group pop-form-group-r pop-form-group-10">
+            <div class="select-pop-input-wrapper link-wrapper" (click)="ShowFilter()" *ngIf="(CountrySelected.country == 'TW' && TopSelecter!=1) || (CountrySelected.country != 'TW' && TopSelecter!=2)">
+              <p class="content-li-text-ct-style text-center">
+                <i class="icon-filter"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB-L3 - 三選項 -->
+      <div class="row">
+        <div class="nav-l3 rate-nav-fix" *ngIf="IsShowTopSelecter" >
+          <!-- [台灣] 存款 | 放款 | 其他 -->
+          <!-- [其他] 本幣 | 外幣 | 放款 -->
+          <a (click)="TopSelectChange(0)" class="col-xs-4 tab-l3-set-3 tab-l3-set-l {{TopSelecter == 0 ? 'active':''}}">
+            {{ TopSelecters[0] | translate }}
+          </a>
+          <a (click)="TopSelectChange(1)" class="col-xs-4 tab-l3-set-3 tab-l3-set-{{IsShowTopSelecter2? 'm' : 'r'}} {{TopSelecter == 1 ? 'active':''}}">
+            {{ TopSelecters[1] | translate }}
+          </a>
+          <a *ngIf="IsShowTopSelecter2" (click)="TopSelectChange(2)" class="col-xs-4 tab-l3-set-3 tab-l3-set-r {{TopSelecter == 2 ? 'active':''}}">
+            {{ TopSelecters[2] | translate }}
+          </a>
+        </div>
+      </div>
+
+      <!-- TAB-L4 - 二選項 ＋ 下拉 -->
+      <div class="row">
+        <div class="rate-tag-between" *ngIf="IsShowSubSelecter">
+          <!-- [台灣] 本幣 | 外幣 -->
+          <!-- [其他] 活期 | 定期 -->
+          <div *ngIf="IsShowSubSelecter" class="rate-tag-green {{SubSelecter == 0 ? 'active':''}}" (click)="SubSelectChange(0)">
+            <p class = "padding-lr">
+              {{ SubSelecters[0] | translate }}
+            <p>
+          </div>
+          <div *ngIf="IsShowSubSelecter" class="rate-tag-green {{SubSelecter == 1 ? 'active':''}}" (click)="SubSelectChange(1)">
+            <p class = "padding-lr">
+              {{ SubSelecters[1] | translate }}
+            <p>
+          </div>
+
+          <!-- 期別選單(僅台灣時顯示) -->
+          <div *ngIf="IsShowTermSelecter" class="select-pop-form-group pop-form-group pop-form-group-30 ">
+            <div class="select-pop-bt-wrapper bt-wrapper-100" (click)="ShowTerm()">
+              <button type="button" class="btn btn-default dropdown-toggle rate-selectline" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <p class="rate-select-content">{{TermSelected.value | translate}}</p>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 利率單位 & 時間-->
+      <div class="row">
+        <div class="time-show-wrapper align-two-side">
+          <p>{{'INTEREST_RATE.RATE_UNIT' | translate}}</p>
+          <p>{{ nowTime | _datetime:'yyyy/MM/dd hh:mm:ss'}}</p>
+        </div>
+      </div>
+
+      <!-- 利率數據表格 Start -->
+      <div *ngIf="ShowList != undefined && ShowList.length > 0">
+
+        <div class="row" *ngIf="ShowValueCount == 2">
+          <div class="ct-table-title-section rate-title-section">
+            <div class="ct-table-title-wrapper rate-title-wrapper">
+              <div class="col-xs-4 ct-table-title-col1 rate-title-col1">
+                <p>{{ShowListTitle.name | translate}}</p>
+              </div>
+              <div class="col-xs-2 ct-table-title-col2 rate-title-col2">
+                <p></p>
+              </div>
+              <div class="col-xs-3 ct-table-title-col3 rate-title-col3">
+                <p></p>
+              </div>
+              <div class="col-xs-3 ct-table-title-col4 rate-title-col4">
+                <p>{{ShowListTitle.value1 | translate}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ct-table-content-section rate-content-section" *ngFor="let item of ShowList; let listIndex = index">
+            <div class="ct-table-content-wrapper rate-content-wrapper">
+              <ul>
+                <li >
+                  <div class="col-xs-4 ct-table-content-col1 rate-content-col1">
+                    <p>{{item.name}}
+                      <span *ngIf = item.cur>({{item.cur}})</span>
+                    </p>
+                  </div>
+                  <div class="col-xs-2 ct-table-content-col2 rate-content-col2">
+                    <p>{{item.value4}}</p>
+                  </div>
+                  <div class="col-xs-3 ct-table-content-col3 rate-content-col3">
+                    <p>{{item.value5}}</p>
+                  </div>
+                  <div class="col-xs-3 ct-table-content-col4 rate-content-col4">
+                    <p>{{item.value6}}</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" *ngIf="ShowValueCount == 3">
+          <div class="ct-table-title-section rate-title-section">
+            <div class="ct-table-title-wrapper rate-title-wrapper">
+              <div class="col-xs-4 ct-table-title-col1 rate-title-col1">
+                <p>{{ShowListTitle.name | translate}}</p>
+              </div>
+              <div class="col-xs-2 ct-table-title-col2 rate-title-col2">
+                <p></p>
+              </div>
+              <div class="col-xs-3 ct-table-title-col3 rate-title-col3">
+                <p>{{ShowListTitle.value1 | translate}}</p>
+              </div>
+              <div class="col-xs-3 ct-table-title-col4 rate-title-col4">
+                <p>{{ShowListTitle.value2 | translate}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ct-table-content-section rate-content-section">
+            <div class="ct-table-content-wrapper rate-content-wrapper">
+              <ul>
+                <li *ngFor="let item of ShowList; let listIndex = index">
+                  <div class="col-xs-4 ct-table-content-col1 rate-content-col1">
+                    <p>{{item.name}}
+                      <span *ngIf = item.cur>({{item.cur}})</span>
+                    </p>
+                  </div>
+                  <div class="col-xs-2 ct-table-content-col2 rate-content-col2">
+                    <p></p>
+                  </div>
+                  <div class="col-xs-3 ct-table-content-col3 rate-content-col3">
+                    <p>{{item.value1}}</p>
+                  </div>
+                  <div class="col-xs-3 ct-table-content-col4 rate-content-col4">
+                    <p>{{item.value2}}</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" *ngIf="ShowValueCount == 4">
+          <div class="ct-table-title-section rate-title-section">
+            <div class="ct-table-title-wrapper rate-title-wrapper">
+              <div class="col-xs-4 ct-table-title-col1 rate-title-col1">
+                <p>{{ShowListTitle.name | translate}}</p>
+              </div>
+              <div class="col-xs-2 ct-table-title-col2 rate-title-col2">
+                <p>{{ShowListTitle.value1 | translate}}</p>
+              </div>
+              <div class="col-xs-3 ct-table-title-col3 rate-title-col3">
+                <p>{{ShowListTitle.value2 | translate}}</p>
+              </div>
+              <div class="col-xs-3 ct-table-title-col4 rate-title-col4">
+                <p>{{ShowListTitle.value3 | translate}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ct-table-content-section rate-content-section">
+            <div class="ct-table-content-wrapper rate-content-wrapper">
+              <ul>
+                <li *ngFor="let item of ShowList; let listIndex = index">
+                  <div class="col-xs-4 ct-table-content-col1 rate-content-col1">
+                    <p>{{item.name}}
+                      <span *ngIf = item.cur>({{item.cur}})</span>
+                    </p>
+                  </div>
+                  <div class="col-xs-2 ct-table-content-col2 rate-content-col2">
+                    <p>{{item.value1}}</p>
+                  </div>
+                  <div class="col-xs-3 ct-table-content-col3 rate-content-col3">
+                    <p>{{item.value2}}</p>
+                  </div>
+                  <div class="col-xs-3 ct-table-content-col4 rate-content-col4">
+                    <p>{{item.value3}}</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" *ngIf="ShowValueCount == 71">
+          <div class="ct-table-title-section rate-title-section">
+            <div class="ct-table-title-wrapper rate-title-wrapper">
+              <div class="col-xs-2 ct-table-rate-next-title-col1 rate-title-col1">
+                <p>{{ShowListTitle.name | translate}}</p>
+              </div>
+              <div class="col-xs-3 ct-table-rate-next-title-col2 rate-title-col2">
+                <p>{{ShowListTitle.value1 | translate}}</p>
+              </div>
+              <div class="col-xs-3 ct-table-rate-next-title-col3 rate-title-col3">
+                <p>{{ShowListTitle.value2 | translate}}</p>
+              </div>
+              <div class="col-xs-3 ct-table-rate-next-title-col4 rate-title-col4">
+                <p>{{ShowListTitle.value3 | translate}}</p>
+              </div>
+              <div class="col-xs-1 ct-table-rate-next-title-col5 rate-title-col5">
+                <a (click)="ChangeShowValueCount(72)">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="ct-table-content-section rate-content-section">
+            <div class="ct-table-content-wrapper rate-content-wrapper">
+              <ul>
+                <li *ngFor="let item of ShowList; let listIndex = index">
+                  <div class="col-xs-2 ct-table-rate-next-content-col1 rate-content-col1">
+                    <p>{{item.name}}
+                      <span *ngIf = item.cur>({{item.cur}})</span>
+                    </p>
+                  </div>
+                  <div class="col-xs-3 ct-table-rate-next-content-col2 rate-content-col2">
+                    <p>{{item.value1}}</p>
+                  </div>
+                  <div class="col-xs-3 ct-table-rate-next-content-col3 rate-content-col3">
+                    <p>{{item.value2}}</p>
+                  </div>
+                  <div class="col-xs-3 ct-table-rate-next-content-col4 rate-content-col4">
+                    <p>{{item.value3}}</p>
+                  </div>
+                  <div class="col-xs-1 ct-table-rate-next-content-col5 rate-content-col5">
+                    <p></p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" *ngIf="ShowValueCount == 72">
+          <div class="ct-table-title-section rate-title-section">
+            <div class="ct-table-title-wrapper rate-title-wrapper">
+              <div class="col-xs-1 ct-table-rate-back-title-col1 rate-title-col1">
+                <a (click)="ChangeShowValueCount(71)">
+                  <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="col-xs-2 ct-table-rate-back-title-col2 rate-title-col2">
+                <p>{{ShowListTitle.name | translate}}</p>
+              </div>
+              <div class="col-xs-3 ct-table-rate-back-title-col3 rate-title-col3">
+                <p>{{ShowListTitle.value4 | translate}}</p>
+              </div>
+              <div class="col-xs-3 ct-table-rate-back-title-col4 rate-title-col4">
+                <p>{{ShowListTitle.value5 | translate}}</p>
+              </div>
+              <div class="col-xs-3 ct-table-rate-back-title-col5 rate-title-col5">
+                <p>{{ShowListTitle.value6 | translate}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ct-table-content-section rate-content-section">
+            <div class="ct-table-content-wrapper rate-content-wrapper">
+              <ul>
+                <li *ngFor="let item of ShowList; let listIndex = index">
+                  <div class="col-xs-1 ct-table-rate-back-content-col1 rate-content-col1">
+                    <p></p>
+                  </div>
+                  <div class="col-xs-2 ct-table-rate-back-content-col2 rate-content-col2">
+                    <p>{{item.name}}
+                      <span *ngIf = item.cur>({{item.cur}})</span>
+                    </p>
+                  </div>
+                  <div class="col-xs-3 ct-table-rate-back-content-col3 rate-content-col3">
+                    <p>{{item.value4}}</p>
+                  </div>
+                  <div class="col-xs-3 ct-table-rate-back-content-col4 rate-content-col4">
+                    <p>{{item.value5}}</p>
+                  </div>
+                  <div class="col-xs-3 ct-table-rate-back-content-col5 rate-content-col5">
+                    <p>{{item.value6}}</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- 利率數據表格 End -->
+
+      <!-- 無資料畫面 -->
+      <app-no-data *ngIf="ShowList!=undefined && ShowList.length == 0"></app-no-data>
+
+      <!-- 備註 -->
+      <div class="memo-info-interestratequery">
+        <ol class="memo-info-list">
+          <li>{{'INTEREST_RATE.MEMO_TITLE' | translate}}</li>
+          <li>{{'INTEREST_RATE.MEMO_LINE_1' | translate}}</li>
+          <li>{{'INTEREST_RATE.MEMO_LINE_2' | translate}}</li>
+        </ol>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- 篩選器視窗畫面 Start -->
+  <div class="" *ngIf="SelectStatus ==77">
+    <div class="shadow active"></div>
+    <div class="pop-box-container active">
+      <div class="pop-box-area">
+        <div class="pop-close-bt" (click)="CloseFilter()">
+          <div class="i-close"></div>
+        </div>
+        <div class="pop-content-wrapper">
+          <div class="pop-title">
+            <p>{{'INTEREST_RATE.FilterTitle'| translate}}</p>
+          </div>
+
+          <!-- pop-tab 種類1 - 兩欄 -->
+          <div class="nav-l3 pop-nav-l3" *ngIf="false">
+            <a (click)="FilterTopSelectChange(0)" class="col-xs-6 tab-l3-set-2 tab-l3-set-l {{FilterValue.TopSelecter==0?'active':''}}">{{'INTEREST_RATE.RATE_TYPE_S'
+              | translate}}</a>
+            <a (click)="FilterTopSelectChange(1)" class="col-xs-6 tab-l3-set-2 tab-l3-set-r {{FilterValue.TopSelecter==1?'active':''}}">{{'INTEREST_RATE.RATE_TYPE_L'
+              | translate}}</a>
+          </div>
+          <!-- //pop-tab 種類1 - 兩欄 -->
+
+          <div class="pop-content">
+            <!--pop視窗內容開始-->
+
+            <!-- pop-sub-title 種類1 - 黑字灰線 -->
+            <div class="pop-sub-title" *ngIf="false">
+              <p class="">{{'INTEREST_RATE.Country' | translate}}</p>
+            </div>
+            <!-- //pop-sub-title 種類1 - 黑字灰線 -->
+
+            <!-- pop-li-section 種類2 - 左側文字 -->
+
+            <div class="pop-li-section" (click)="ShowCountry(FilterValue.Country)" *ngIf="false">
+              <div class="pop-li-l-100">
+                <div class="pop-li-l-option">
+                  <p>{{FilterValue.Country.location | translate}}</p>
+                </div>
+              </div>
+              <div class="pop-right-icon-wrap right-icon-ellipsis">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <!-- //pop-li-section 種類2 - 左側文字 -->
+
+            <!-- pop-sub-title 種類1 - 黑字灰線 -->
+            <div class="pop-sub-title">
+              <p class="">{{'INTEREST_RATE.CurCode' | translate}}</p>
+            </div>
+            <!-- //pop-sub-title 種類1 - 黑字灰線 -->
+
+            <!-- pop-tag-wrapper 種類2 - 幣別 -->
+            <div class="pop-tag-wrapper">
+              <div class="pop-date-tag2-currency {{item.key == FilterValue.CurCode.key ? 'active':''}} " *ngFor="let item of CurList; let listIndex = index"
+                (click)="CurSelectChange(item)">
+                <p>{{item.value}}</p>
+              </div>
+            </div>
+            <!-- //pop-tag-wrapper 種類2 - 幣別 -->
+
+            <!-- pop-sub-title 種類1 - 黑字灰線 -->
+            <div class="pop-sub-title">
+              <p class="">{{'INTEREST_RATE.ProductType' | translate}}</p>
+            </div>
+            <!-- //pop-sub-title 種類1 - 黑字灰線 -->
+
+            <!-- pop-li-section 種類2 - 左側文字 -->
+
+            <div class="pop-li-section" (click)="ShowProductTypeSelecter()">
+              <div class="pop-li-l-100">
+                <div class="pop-li-l-option">
+                  <p>{{FilterValue.ProductType.value | translate}}</p>
+                </div>
+              </div>
+              <div class="pop-right-icon-wrap right-icon-ellipsis">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <!-- //pop-li-section 種類2 - 左側文字 -->
+
+            <!-- pop-sub-title 種類1 - 黑字灰線 -->
+            <div class="pop-sub-title" *ngIf="IsShowFilterTermSelecter">
+              <p class="">{{'INTEREST_RATE.Tenor' | translate}}</p>
+            </div>
+            <!-- //pop-sub-title 種類1 - 黑字灰線 -->
+
+            <!-- pop-tag-wrapper 種類3 - 期別區間 -->
+            <div class="pop-tag-wrapper" *ngIf="IsShowFilterTermSelecter">
+              <div class="pop-date-tag3 {{item.key==FilterValue.Tenor.key ? 'active':''}}" *ngFor="let item of FilterTermList; let listIndex = index"
+                (click)="FilterTermSelectChange(item)">
+                <p>{{item.value | translate}}</p>
+              </div>
+              <!--表單popup種類12 - 金額區間輸入  -->
+
+              <div class="pop-input-flex-group pop-tag-flex">
+                <div class="pop-form-group-45">
+                  <div class="select-date-input-wrapper">
+                    <div class="input-group pop-select-bk-style" id="">
+                      <input maxlength="30" type="tel" [(ngModel)]="FilterValue.TenorMin" (change)="TenorMinMaxChange()" class="form-control select-date-input"
+                        placeholder="{{'INTEREST_RATE.TenorHint' | translate}}">
+                    </div>
+                  </div>
+                </div>
+                <p> {{'INTEREST_RATE.To' | translate}} </p>
+                <div class="pop-form-group-45">
+                  <div class="select-date-input-wrapper">
+                    <div class="input-group pop-select-bk-style" id="">
+                      <input maxlength="30" type="tel" [(ngModel)]="FilterValue.TenorMax" (change)="TenorMinMaxChange()" class="form-control select-date-input"
+                        placeholder="{{'INTEREST_RATE.TenorHint' | translate}}">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 表單popup種類12 //End-->
+            </div>
+            <!-- //pop-tag-wrapper 種類3 - 期別區間 -->
+
+          </div>
+          <!--pop視窗內容結束-->
+
+        </div>
+
+        <!--pop-bt-group- 兩個 -->
+        <div class="pop-bt-group">
+          <button type="button" (click)="FilterReset()" class="btn btn-cancel btn-pop-cancel">{{'INTEREST_RATE.Reset' | translate}}</button>
+          <button type="submit" (click)="FilterComfirm()" class="btn btn-confirm btn-pop-confirm">{{'INTEREST_RATE.Submit'
+            | translate}}</button>
+        </div>
+        <!--//pop-bt-group-兩個一組-->
+
+      </div>
+    </div>
+  </div>
+  <!-- 篩選器視窗畫面 End -->
+
+  <!-- 台灣期別選單 Start -->
+  <div class="row" *ngIf="SelectStatus == 88">
+    <div class="shadow active"></div>
+    <div class="pop-box-container active">
+      <div class="pop-box-area">
+        <div class="pop-content-wrapper">
+          <div class="pop-title-l2">
+
+            <div class="pop-pageback-bt" (click)="CloseSelect()">
+              <a href="javascript:void(0)">
+                <img src="assets/design/image/icon/i-pop-pageback.svg" alt="">
+              </a>
+            </div>
+            <p>{{'INTEREST_RATE.Select' | translate}}</p>
+          </div>
+          <div class="pop-content-l2">
+            <!--pop視窗內容開始-->
+
+            <!-- pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+
+            <div class="pop-li-section pop-li-border {{item == TermSelected ? 'pop-li-default':''}}" *ngFor="let item of TermList; let listIndex = index"
+              (click)="TermChange(item)">
+              <div class="pop-li-l-100">
+                <div class="pop-li-l-option">
+                  <p>{{item.value | translate}}</p>
+                </div>
+              </div>
+              <div class="pop-right-icon-wrap">
+                <img class="check-icon" src="assets/design/image/icon/check-icon.png" alt="">
+              </div>
+            </div>
+            <!-- //pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+
+          </div>
+          <!--pop視窗內容結束-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 台灣期別選單 End -->
+
+  <!-- 國別選單 Start -->
+  <div class="row" *ngIf="SelectStatus == 99">
+    <div class="shadow active"></div>
+    <div class="pop-box-container active">
+      <div class="pop-box-area">
+        <div (click)="CloseSelect()" class="pop-close-bt">
+            <div class="i-close"></div>
+          </div>
+        <div class="pop-content-wrapper">
+          <div class="pop-title-l2">
+            <p>{{'INTEREST_RATE.Select' | translate}}</p>
+          </div>
+          <div class="pop-content-l2">
+            <!--pop視窗內容開始-->
+
+            <!-- pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+
+            <div *ngFor="let item of CountryList; let listIndex = index" class="pop-li-section pop-li-border {{item == CountryListSelected ? 'pop-li-default':''}}"
+              (click)="CountryChange(item)">
+              <div class="pop-li-l-100">
+                <div class="pop-li-l-option">
+                  <p>{{item.location | translate}}</p>
+                </div>
+              </div>
+              <div class="pop-right-icon-wrap">
+                <img class="check-icon" src="assets/design/image/icon/check-icon.png" alt="">
+              </div>
+            </div>
+            <!-- //pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+          </div>
+          <!--pop視窗內容結束-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 國別選單 End -->
+
+  <!-- 篩選器子項目 產品別選單 Start -->
+  <div class="row" *ngIf="SelectStatus == 1010">
+    <div class="shadow active"></div>
+    <div class="pop-box-container active">
+      <div class="pop-box-area">
+        <div class="pop-content-wrapper">
+          <div class="pop-title-l2">
+            <div class="pop-pageback-bt" (click)="CloseSelect()">
+              <a href="javascript:void(0)">
+                <img src="assets/design/image/icon/i-pop-pageback.svg" alt="">
+              </a>
+            </div>
+
+            <p>{{'INTEREST_RATE.SelectProductType' | translate}}</p>
+
+          </div>
+          <div class="pop-content-l2">
+            <!--pop視窗內容開始-->
+
+            <!-- pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+
+            <div *ngFor="let item of FilterProductTypeList; let listIndex = index" class="pop-li-section pop-li-border {{item == FilterTermSelected ? 'pop-li-default':''}}"
+              (click)="ProductTypeSelectChange(item)">
+              <div class="pop-li-l-100">
+                <div class="pop-li-l-option">
+                  <p>{{item.value}}</p>
+                </div>
+              </div>
+              <div class="pop-right-icon-wrap">
+                <img class="check-icon" src="assets/design/image/icon/check-icon.png" alt="">
+              </div>
+            </div>
+            <!-- //pop-li-section 種類3 - 左側文字+右側打勾 預設選項-->
+          </div>
+          <!--pop視窗內容結束-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 篩選器子項目 產品別選單 End -->
+
+</div>

@@ -1,0 +1,81 @@
+<div class="bg-fixed-60">
+</div>
+<section class="col-xs-12 section-content no-footer">
+
+        <form method="post">
+
+                <!--表單popup種類6-3 - 整行標題+ 整行input-->
+                <div class="row">
+                        <div class="form-group ct-info-text-wrap select-pop-group-style-column">
+                                <!-- 原使用者代號 -->
+                                <label for="com_id1" class="select-pop-label">{{'USERCODECHANGE.OLD_USERID' | translate}}<span
+                                                class="star_singn">*</span></label>
+                                <div class="field-input pop-form-group-100">
+                                        <h4 class="oldUserId">{{oldUserId}}</h4>
+                                </div>
+                        </div>
+                </div>
+                <!-- 表單popup種類6-3 //End----------------------------------------------------------------------->
+
+                <!-- 表單分隔線-->
+                <div class="row">
+
+                        <p class="form-seperator-line"></p>
+                </div>
+                <!-- 表單分隔線-->
+
+                <!--表單popup種類6-3 - 整行標題+ 整行input-->
+                <div class="row">
+                        <div class="form-group ct-info-text-wrap select-pop-group-style-column">
+                                <!-- 新使用者代號 -->
+                                <label for="com_id2" class="select-pop-label">{{'USERCODECHANGE.NEW_USERID' | translate}}<span
+                                                class="star_singn">*</span></label>
+                                <div class="field-input pop-form-group-100">
+                                        <!-- 請輸入新使用者代號(6-12碼英數字) -->
+                                        <input type="" class="form-control input-non-bg {{error_new ? 'active':''}}" id="com_id2" name="com_id" value=""
+                                                placeholder="{{'USERCODECHANGE.ENTER_NEW_USERID' | translate}}({{'LOGINOUT.USER_CODE_CHECK' | translate}})"
+                                                 [(ngModel)]="newuserid" (focusout)="newuseridCheck()">
+                                        <span class="input-pop-otp-password-alert">{{error_new | translate}}</span>
+                                </div>
+                        </div>
+                </div>
+                <!-- 表單popup種類6-3 //End----------------------------------------------------------------------->
+
+                <!--表單popup種類6-3 - 整行標題+ 整行input-->
+                <div class="row">
+                        <div class="form-group ct-info-text-wrap select-pop-group-style-column">
+                                <!-- 確認新使用者代號 -->
+                                <label for="com_id3" class="select-pop-label">{{'USERCODECHANGE.CONFIRM_NEW_USERID' | translate}}<span
+                                                class="star_singn">*</span></label>
+                                <div class="field-input pop-form-group-100">
+                                        <!-- 請再次輸入新使用者代號(6-12碼英數字) -->
+                                        <input type="" class="form-control input-non-bg {{error_confirm ? 'active':''}}" id="com_id3" name="com_id" value=""
+                                                placeholder="{{'USERCODECHANGE.ENTER_NEW_USERID_AGAIN' | translate}}({{'LOGINOUT.USER_CODE_CHECK' | translate}})"
+                                                 [(ngModel)]="confirmid" (focusout)="comfirmidCheck()">
+                                        <span class="input-pop-otp-password-alert">{{error_confirm | translate}}</span>
+                                </div>
+                        </div>
+                </div>
+                <!-- 表單popup種類6-3 //End----------------------------------------------------------------------->
+
+                <!-- button-set種類1 - 2個按鈕-->
+
+                <div class="row">
+                        <div class="bt-center-group ">
+                                <button type="button" (click)="onPreviousClick()" class="btn btn-group-sm btn-cancel">
+                                        <!-- 回上頁 -->
+                                        {{'BTN.PREVIOUSPAGE' | translate}}
+                                </button>
+                                <button type="submit" (click)="change()" class="btn btn-group-sm btn-confirm">
+                                        <!-- 確認變更 -->
+                                        {{'LOGINOUT.CHANGE_PASSWORD_CHECK' | translate}}
+                                </button>
+                        </div>
+                </div>
+
+                <!-- button-set種類1 - 2個按鈕 //End----------------------------------------------------------------------->
+
+
+        </form>
+
+</section>

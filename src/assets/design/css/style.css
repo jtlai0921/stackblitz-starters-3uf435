@@ -1,0 +1,7256 @@
+/*背景圖 樣式-------------------------------*/
+
+/*Navbar back btn*/
+.side-back {
+}
+.fa-side-back {
+	color: #fff;
+	font: normal normal normal 35px/2 FontAwesome;
+}
+/*section 樣式--section-sec-area-----------------------------*/
+.section-content {
+	position: absolute;
+	top: 60px;
+	bottom: 64px;
+	overflow: scroll;
+}
+/*消除頁面scrollBar*/
+.section-content { /*-webkit-overflow-scrolling: touch;*/
+}
+ .section-content::-webkit-scrollbar {
+ width: 0px;
+ height: 0px;
+ background-color: rgba(0,0,0,0.60);
+}
+ .section-content::-webkit-scrollbar-thumb {
+ background: transparent;
+}
+/*百分比 樣式-------------------------------*/
+.btn { /*margin-left: 1.333%;*/
+	margin: 0;
+	outline-width: 0;
+	outline-style: none;
+	outline: none !important;
+}
+.btn-clear, .btn-confirm, .btn-cancel, .btn-disable, .btn-more-load {
+	/*按鈕百分比固定設定法,但不同螢幕尺寸要設定不同的%和上下padding*/
+	padding: 10px 0;
+	width: 100%;
+	line-height: normal;
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: normal;
+}
+.btn-cancel:hover, .btn-cancel:active, .btn-cancel:focus, .btn-clear:hover, .btn-clear:active, .btn-clear:focus, .btn-confirm:hover, .btn-confirm:active, .btn-confirm:focus, .btn-disable:hover, .btn-disable:active, .btn-disable:focus, .btn-more-load:hover, .btn-more-load:active, .btn-more-load:focus,  {
+	/*按鈕百分比固定設定法,但不同螢幕尺寸要設定不同的%和上下padding*/
+	padding: 10px 0;
+	width: 100%;
+	line-height: normal;
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: normal;
+}
+/*按鈕-*/
+
+/* 可以共用的 bottom-set 底線 */
+.bt-center-group-bottomLine {
+	border-bottom: 1px solid #a0aaae;
+}
+/*背景色統一樣式-------------------------------------------------------------------------------------------------------------*/
+/*背景色統一樣式統一樣式-------------------------------*/
+
+/*-- Card 系列背景顏色設定 - 白灰  -----------------------------------------------------------------------*/
+.card-order-wg > div:nth-child(odd) {
+	background-color: #FFFFFF;
+}
+.card-order-wg > div:nth-child(even) {
+	background-color: #f3f6f8;
+}
+.card-order-wg > div:last-child {
+	border-bottom: 1px solid #a0aaae;
+}
+/*-- Card系列背景顏色設定 - 白灰  //End-----------------------------------------------------------------------*/
+
+/*-- Card 系列背景顏色設定 - 灰白  -----------------------------------------------------------------------*/
+.card-order-gw > div:nth-child(odd) {
+	background-color: #f3f6f8;
+}
+.card-order-gw > div:nth-child(even) {
+	background-color: #FFFFFF;
+}
+.card-order-gw > div:last-child {
+	border-bottom: 1px solid #a0aaae;
+}
+/*-- Card 系列背景顏色設定 - 灰白  //End-----------------------------------------------------------------------*/
+
+/*-- 詳細資料 系列背景顏色設定 - 白灰  -----------------------------------------------------------------------*/
+.list-order-wg > li:nth-child(odd) {
+	background-color: #FFFFFF;
+}
+.list-order-wg > li:nth-child(even) {
+	background-color: #f3f6f8;
+}
+.list-order-wg > div:last-child {
+	border-bottom: 1px solid #a0aaae;
+}
+/*-- 詳細資料 系列背景顏色設定 - 白灰  //End-----------------------------------------------------------------------*/
+
+/*-- 詳細資料 系列背景顏色設定 - 灰白  -----------------------------------------------------------------------*/
+.list-order-gw > li:nth-child(odd) {
+	background-color: #f3f6f8;
+}
+.list-order-gw > li:nth-child(even) {
+	background-color: #FFFFFF;
+}
+.list-order-gw > div:last-child {
+	border-bottom: 1px solid #a0aaae;
+}
+/*-- 詳細資料 系列背景顏色設定 - 灰白  //End-----------------------------------------------------------------------*/
+
+/*背景色統一樣式//END-------------------------------------------------------------------------------------------------------------*/
+
+/*memo-info共同樣式
+-------------------------------------------------------------------------------------------------------------*/
+
+.sec-info-list {
+	list-style-type: none;
+	padding-left: 1.6rem;
+}
+ol.sec-info-list li {
+	font-size: 14px;
+	line-height: 1.43;
+	color: #606a6f;
+	text-align: left;
+	font-weight: 200;
+	list-style: disc;
+}
+/*memo-info共同樣式-------------------------------------------------------------------------------------------------------------*/
+
+/*背景色統一樣式 -------------------------------------------------------------------------------------------------------------*/
+
+/*卡片-------------------------------------------------------------------------------------------------------------*/
+/*卡片統一樣式-------------------------------*/
+
+/*卡片一般樣式*/
+.list-card-style {
+	padding: 10px 15px;
+	font-size: 1.6rem;
+	min-height: 50px;
+}
+.cd-timeline__content p {
+	margin: 0;
+}
+/* 20180716 查詢帳戶卡片樣式 1  */
+.card-account {
+	margin: 5px 15px;
+	background-color: white;
+	border-radius: 6px;
+	border-left: 6px solid #1e696b;
+	box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+	position: relative;
+}
+.card-inside-line {
+	border-bottom: 1px solid gray;
+	margin: 5px 0;
+}
+span.card-tag-black {
+	padding: 3px 8px;
+	border: 2px solid #107778;
+	color: #107778;
+	font-size: 1.5rem;
+	font-weight: 400;
+	border-radius: 10px;
+	margin-right: 5px;
+}
+.amount-bold-style {
+	font-weight: bold;
+	color: #fa355a;
+}
+.amount-bold-style .currency {
+	font-size: 1.4rem;
+	margin-top: -5px;
+	margin-right: 5px;
+	display: block;
+}
+.amount-bold-style .amount-number {
+	font-size: 20px;
+}
+/* 20180716 查詢帳戶卡片樣式 1 --- End  */
+
+/*卡片錯誤樣式*/
+.card-error-style {
+	color: #d0021b;
+}
+/*卡片錯誤樣式 右側黑色三點icon*/
+.card-error-style .fa-ellipsis-v {
+	color: #333;
+}
+.state-error-style {
+	text-align: center;
+}
+/*item.文字 左右編排*/
+.align-two-side {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.align-row-start {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+}
+/*item.文字 左右編排*/
+
+
+/*卡片內文li文字padding*/
+.card-li-style {
+	padding: 3px 0;
+	line-height: 1.6rem;
+	font-size: 1.6rem;
+}
+.card-li-money {
+	padding: 3px 0;
+	line-height: 2rem;
+	font-size: 1.6rem;
+}
+/*卡片內文li文字 文字溢出設定-------------------------------*/
+/*左右有icon-單獨整行 文字溢出設定*/
+.card-li-single-style {
+	max-width: 19em;
+}
+/*左無icon-右有icon 文字溢出設定*/
+.card-li-single-style-max {
+	max-width: 20em;
+}
+/*左右無icon-單獨整行 文字溢出設定*/
+.card-li-single-style-noSelect {
+	max-width: 22em;
+}
+/*左-八字 文字溢出設定*/
+.card-li-style-9 {
+	max-width: 9em;
+}
+/*卡片左右無icon-------------------------------*/
+
+/*卡片-左側內文*/
+
+.card-text-left {
+	text-align: left;
+	max-width: 5em;
+}
+.card-text-right {
+	text-align: right;
+	max-width: 11em;
+}
+/*卡片右有icon-------------------------------*/
+
+
+
+/*卡片公司名置右-------------------------------*/
+/*卡片-左側內文*/
+.card-left-wrap {
+	width: 100%;
+	padding-right: 7px;
+}
+/*卡片-右側黑色三點icon*/
+.card-right-icon-wrap .fa-ellipsis-v {
+	width: 18px;
+	height: 18px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 21px;
+	-webkit-text-stroke: 1px #fff;
+}
+/*卡片-右側黑色箭頭icon*/
+
+.card-right-icon-wrap {
+	position: relative;
+	width: 25px;
+	height: 50px;
+	/* z-index: 300; */
+}
+.card-right-icon-wrap .fa-chevron-right {
+	width: 18px;
+	height: 18px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 21px;
+	-webkit-text-stroke: 2.5px #fff;
+	position: absolute;
+	top: 50%;
+	margin-top: -9px;
+	right: 50%;
+	margin-right: -9px;
+}
+/*卡片-右側藍色箭頭icon*/
+.card-right-icon-wrap .fa-chevron-circle-right {
+	font-weight: lighter;
+	-webkit-text-stroke: 1px #4990e2;
+}
+/*卡片左右有icon-------------------------------*/
+
+.card-left-icon-wrap {
+	height: 26px;
+	width: 30px;
+	margin-right: 0;
+	text-align: center;
+}
+.card-middle-wrap {
+	min-width: 84%;
+	width: 100%;
+	padding-right: 7px;
+	padding-left: 5px; /* 因應左邊icon的padding*/
+}
+/*左邊select-icon 要設定高度才會置中*/
+.card-left-icon .fbo-radio + label, .card-left-icon .fbo-checkbox + label {
+	line-height: 20px;
+	height: 20px;
+}
+.card-left-icon {
+	padding-right: 5px;
+}
+/*卡片左右無icon-------------------------------*/
+
+/*文字溢出點點點-------------------------------*/
+.text-overflow-box {
+}
+.text-overflow {
+	width: 8em;
+}
+.ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+/*卡片 - 註記取消 -------------------------------*/
+
+.bookmark-cancel-checkbox {
+	position: absolute;
+	display: none;
+}
+.bookmark-cancel-checkbox + label {
+	position: relative;
+	display: block;
+	padding-left: 30px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.bookmark-cancel-checkbox + label:before {
+	position: absolute;
+	top: 3px;
+	right: 5px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	content: '';
+	background: #fff;
+	border: 2px solid #777;
+}
+.bookmark-cancel-checkbox + label:before {
+	border-radius: 2px;
+}
+input.bookmark-cancel-checkbox[type=checkbox] + label:before {
+	font-family: FontAwesome;
+	display: inline-block;
+}
+input.bookmark-cancel-checkbox[type=checkbox]:checked + label:after {
+	font-family: FontAwesome;
+	content: "\f00d";
+	color: white;
+	display: inline-block;
+	font-weight: lighter;
+	position: absolute;
+	font-size: 1.6rem;
+	top: 1px;
+	left: 9px;
+}
+.bookmark-cancel-checkbox:checked + label:before {
+	border: #eb404d;
+	background: #eb404d;
+}
+/*卡片種類5- 左icon - 一列 -------------------------------*/
+
+.list-card-style-one-line {
+	padding: 10px 10px;
+	font-size: 1.6rem;
+	border-bottom: 1px solid #a0aaae;
+}
+/*卡片種類6 無資訊 -----------------------------------------------------------------------*/
+
+.liscard-noInfo-style {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	border-bottom: 1px solid #a0aaae;
+}
+.liscard-noInfo-style p {
+	width: 100%;
+	text-align: center;
+}
+/*卡片種類6 無資訊 // End-----------------------------------------------------------------------*/
+
+/*---卡片種類7------------------------------------------*/
+
+.total-card-style {
+	background-color: #3D86C2;
+	color: white;
+	min-height: 70px;
+}
+.align-two-side-up {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: flex-start;
+	align-items: flex-start;
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+}
+.total-card-inner-left {
+	font-size: 1.8rem;
+	line-height: normal;
+	font-weight: bold;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+}
+.total-card-open-icon {
+	padding-left: 8px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.total-card-inner-right-title {
+	font-weight: bold;
+}
+/*---卡片種類7 // END -----------------------------------------*/
+
+/* 20180727 語系選擇頁 --------------------------------------*/
+
+.section-content.language-pg {
+	background-color: #F0F2F3;
+}
+.language-card-style {
+	padding: 10px 25px;
+	font-size: 1.6rem;
+	min-height: 80px;
+	background-color: transparent;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.language-card-style.active {
+	background-color: white;
+	box-shadow: 0 2px 5px 0 rgba(130, 135, 137, 0.25);
+}
+.language-card-style .card-right-icon-wrap .check-icon {
+	width: 1.6rem;
+	height: 17px;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	margin-top: -6px;
+}
+.language-card-style.active .card-right-icon-wrap .check-icon {
+	opacity: 1;
+}
+.language-bold-title {
+	font-size: 1.6rem;
+	font-weight: 500;
+	letter-spacing: 1px;
+	line-height: 24px;
+}
+.language-semi-title {
+	font-size: 1.4rem;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+/* // 20180728 區域選擇 - 一列25頁    --------------------------------------*/
+
+.country-area-card-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.country-title {
+	color: #fff;
+}
+/* 區域選擇頁面共用 - 一列25 頁 */
+
+.country-area-card-25 {
+	height: 25%;
+}
+.country-title-bk-25 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 48px;
+	width: 100%;
+	padding: 0 15px;
+	line-height: 48px;
+	color: white;
+	font-weight: bold;
+	font-size: 1.8rem;
+	letter-spacing: 1.5px;
+	text-shadow: 1px 1px 1px black;
+}
+/* // 20180728 區域選擇 - 一列25頁    --------------------------------------*/
+
+/* // 20180728 區域選擇 - 一列30頁    --------------------------------------*/
+
+.country-area-card-30 {
+	height: 33.333%;
+}
+.country-title-bk-30 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 55px;
+	width: 100%;
+	padding: 0 15px;
+	line-height: 55px;
+	color: white;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 1.5px;
+	text-shadow: 1px 1px 1px black;
+}
+/* // 20180728 區域選擇 - 一列30頁    --------------------------------------*/
+
+/* 20180728 區域選擇 - 一列50頁    --------------------------------------*/
+
+.country-area-card-50 {
+	height: 50%;
+}
+.country-title-bk-50 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 55px;
+	width: 100%;
+	padding: 0 15px;
+	line-height: 55px;
+	color: white;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 1.5px;
+	text-shadow: 1px 1px 1px black;
+}
+/* // 20180728 區域選擇 - 一列50頁    --------------------------------------*/
+
+/* // 20180727 語系選擇頁 --------------------------------------*/
+
+/* 20180727 區域選擇頁    --------------------------------------*/
+
+/* 區域選擇 卡片共用*/
+
+.country-area-card {
+	height: 142px;
+}
+.country-title-bk {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 48px;
+	width: 100%;
+	padding: 0 15px;
+	line-height: 48px;
+	color: white;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 1.5px;
+	text-shadow: 1px 1px 1px black;
+}
+.country-area-card-wrapper div:nth-child(odd) .country-title-bk-25 {
+	background: linear-gradient(-135deg, rgba(37, 175, 176, 0.60) 0%, rgba(16, 119, 120, 0.35) 100%);
+}
+.country-area-card-wrapper div:nth-child(even) .country-title-bk-25 {
+	background: linear-gradient(134deg, rgba(255, 225, 0, 0.60) 0%, rgba(16, 119, 120, 0.30) 100%);
+}
+/* .bk-ingredient-green {
+	background: linear-gradient(-135deg, rgba(37,175,176,0.60) 0%, rgba(16,119,120,0.35) 100%);
+}
+.bk-ingredient-yellow {
+	background: linear-gradient(134deg, rgba(255,225,0,0.60) 0%, rgba(16,119,120,0.30) 100%);
+} */
+/* // 區域卡片共用*/
+
+/* 20180831 非登入狀態 section-content 樣式----------------------------------*/
+.UnLogin .section-content {
+	position: absolute;
+	top: 60px;
+	bottom: 0px;
+	overflow: scroll;
+}
+/* 20180831 非登入狀態 section-content 樣式----------------------------------*/
+
+
+/* 20180728 頁面統一設定共用 - no-footer----------------------------------*/
+
+.section-content.no-footer {
+	position: absolute;
+	top: 60px;
+	bottom: 0px;
+	overflow: scroll;
+}
+/* // 20180728 頁面統一設定共用 - no-footer----------------------------------*/
+/* 區域選擇 卡片各個背景設定*/
+/* 所有國別碼 zhTW zhHK enUS viVN idID zhSG zhCN jaJP*/
+.country-area-zhTW {
+	background: url("../image/country-bk-tw.jpg");
+	background-size: 100% 100%;
+}
+.country-area-zhHK {
+	background: url("../image/country-bk-hk.jpg");
+	background-size: 100% 100%;
+}
+.country-area-enUS {
+	background: url("../image/country-bk-usa.jpg");
+	background-size: 100% 100%;
+}
+.country-area-viVN {
+	background: url("../image/country-bk-vn.jpg");
+	background-size: 100% 100%;
+}
+.country-area-idID {
+	background: url("../image/country-bk-india.jpg");
+	background-size: 100% 100%;
+}
+.country-area-zhSG {
+	background: url("../image/country-bk-sg.jpg");
+	background-size: 100% 100%;
+}
+.country-area-zhCN {
+	background: url("../image/country-bk-cn.jpg");
+	background-size: 100% 100%;
+}
+.country-area-jaJP {
+	background: url("../image/country-bk-jp.jpg");
+	background-size: 100% 100%;
+}
+/* // 區域選擇 卡片各個背景設定*/
+
+/* // 20180727 區域選擇頁    --------------------------------------*/
+
+/*按鈕----------------------------------------------------  ---------------------------------------------------------*/
+/*右方圓圓按鈕-------------------------*/
+
+/*藍色滿版按鈕------------------------*/
+.fa-blue-icon {
+	color: #4990e2;
+	font-size: 21px;
+	vertical-align: baseline;
+}
+/*子項目標題(淺藍)----------------------------------------------------------------------------------------------------------*/
+/*子項目標題(淺藍)統一樣式-------------------------------*/
+
+.item-title-style {
+	padding: 10px 10px;
+	font-size: 1.6rem;
+	min-height: 30px;
+	height: auto;
+	background-color: #D9EAFB;
+}
+.item-title-li-style {
+	padding: 0;
+	position: relative;
+}
+/*子項目標題(淺藍)-黑色下拉icon --------------------------------*/
+
+/*整體選單位置*/
+.dropdown-menu-sec {
+	margin-top: 4px;
+	padding-left: 0;
+}
+li.item-li-style.align-two-side {
+	position: relative;
+}
+/*下拉選單箭頭位置*/
+.btn .caret {
+	margin-left: 0px;
+}
+/*子項目標題(淺藍)-左有checkbox -------------------------------*/
+
+.item-title-middle-wrap {
+	width: 100%;
+}
+/* title 勾選checkbox背景色調整*/
+.item-title-style .fbo-radio + label:before, .fbo-checkbox + label:before {
+	background: transparent;
+}
+/* title 勾選checkbox位移調整*/
+.title-left-icon-wrap {
+	margin-right: 5px;
+}
+.title-left-icon {
+}
+/*左邊checkbox-icon 要設定高度才會置中*/
+.title-left-icon .fbo-checkbox + label, .card-left-icon .fbo-checkbox + label {
+	line-height: 20px;
+	height: 20px;
+}
+/*子項目標題(淺藍)-左欄註記取消 -------------------------------*/
+/*註記取消title*/
+.bookmark-cancel-title {
+	min-width: 30px;
+	width: 2em;
+	display: block;
+	text-align: center;
+}
+/* title - 金額級距 - 設定-------------------------------*/
+.item-title-money-range {
+	padding: 5px 10px;
+}
+/*公司卡片----------------------------------------------------------------------------------------------------------*/
+/*公司卡片 統一樣式-------------------------------*/
+
+.card-company-white-style { /*width: 100%;*/
+	border-bottom: 2px solid #4189C4;
+	min-height: 70px;
+	color: #4189C4;
+	font-weight: bold;
+	padding: 10px;
+	display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+	display: -moz-box; /* Firefox 17- */
+	display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+	display: -moz-flex; /* Firefox 18+ */
+	display: -ms-flexbox; /* IE 10 */
+	display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+	/* 解決各裝置與IOS8以上 flex問題 --------------------END */
+	flex-direction: row;
+	-webkit-flex-direction: row; /* Safari 6.1+ */
+	/* 解決各裝置與IOS8以上 flex問題 --------------------END */
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	/* 解決各裝置與IOS8以上 flex問題 --------------------END */
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between; /* 解決各裝置與IOS8以上 flex問題 --------------------END */
+}
+.card-company-blue-style {
+	min-height: 70px;
+	background-color: #3D86C2;
+	border-bottom: 2px solid white;
+	color: white;
+	font-weight: bold;
+	padding: 10px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.card-company-blue-style.active {
+	border-bottom: none;
+}
+.card-company-blue-inner-wrap p, .card-company-white-title p {
+	font-size: 1.6rem;
+}
+.card-company-blue-inner-style {
+	width: 100%;
+}
+.card-company-white-title, .card-company-blue-inner-wrap {
+	padding-right: 8px;
+}
+p.card-company-blue-title {
+	font-size: 1.8rem; /* 不同裝置要再設定字型大小;*/
+	font-weight: bold;
+}
+.card-company-blue-inner-wrap p {
+	font-size: 1.6rem;
+}
+.card-company-blue-inner-wrap p.card-company-blue-title {
+	font-size: 1.6rem;
+}
+/*資訊欄位----------------------------------------------------------------------------------------------------------*/
+/*資訊欄位 統一樣式-------------------------------*/
+
+.top-info-style {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+	padding: 10px;
+	min-height: 65px;
+}
+.top-info-style-bottom-line {
+	border-bottom: 1px solid #D5DDE1;
+}
+.top-info-blue-bk {
+	background-color: #d9eafb;
+}
+.top-info-left-wrapper p {
+	font-size: 1.4rem;
+}
+.top-info-bold-title {
+	font-weight: bold;
+}
+.icon-info-blue, .icon-info-red {
+	margin-left: 5px;
+}
+.icon-info-blue img, .icon-info-red img {
+	/*位置微調*/
+	margin-top: -3px;
+}
+/* 資訊欄位種類6 - 白 - 編輯頁面步驟 ---------------------------------------------------------------------*/
+
+.top-info-step-style {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+	width: 100%;
+}
+.info-step-box-wrapper {
+	margin-left: 5px;
+	line-height: normal;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.info-step-box {
+	width: 27px;
+	height: 27px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 27px;
+	color: white;
+	font-weight: bold;
+}
+.info-step-line {
+	display: block;
+	width: 32%; /*因應ipad版型設定成百分比*/
+	height: 2px;
+}
+.info-step-title {
+	width: 2em;
+	font-size: 1.6rem;
+	font-weight: bold;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+/*步驟 active 樣式設定*/
+
+.info-step-box.active, .info-step-line.active {
+	background-color: #4685c1;
+}
+.info-step-title.active {
+	color: #4685c1;
+}
+/*步驟 disabled 樣式設定*/
+
+.info-step-line.disabled {
+	background-color: transparent;
+	border: 1px solid #D5DDE1;
+	color: #c5cbcf;
+	line-height: 23px;
+}
+.info-step-box.disabled {
+	background-color: transparent;
+	border: 2px solid #D5DDE1;
+	color: #c5cbcf;
+	line-height: 23px;
+}
+.info-step-title.disabled {
+	color: #D5DDE1;
+}
+/*資訊欄位種類7 - 白 - 帳號搜尋 - 三按鈕組 -------------------------*/
+
+.top-info-bt-3sec-wrapper {
+	width: 100%;
+	padding: 5px 10px 10px 10px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-box-pack: flex-end;
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: flex-end;
+	justify-content: flex-end;
+}
+/*資訊欄位種類7 - 白 - 帳號搜尋 - 三按鈕組 // END-------------------------*/
+
+/* 表單 下拉清單樣式Ａ 單列 下底線 */
+.btn-selectline-pop {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+	margin-left: 0;
+	background: none;
+	border: none;
+	border-color: transparent;
+	box-shadow: none;
+	background-image: none;
+	border-bottom: #979797 2px solid;
+	border-radius: 0;
+	font-size: 1.6rem;
+	text-align: left;
+	padding-left: 0;
+	padding: 6px 10px;
+	width: 100%;
+	outline: none;
+	margin-left: 0;
+	margin-right: 0;
+	position: relative;
+}
+.btn-selectline-pop:hover {
+	background: none;
+	border-bottom: #979797 2px solid;
+	box-shadow: none;
+	background-image: none;
+	font-size: 1.6rem;
+	text-align: left;
+	width: 100%;
+	outline: none;
+	color: #979797;
+}
+.btn-selectline-pop.active, .btn-selectline-pop:active, .open > .dropdown-toggle.btn-selectline-pop {
+	color: #979797;
+	background-color: transparent;
+	border-color: transparent;
+}
+/*改寫bootstrap default按鈕*/
+
+.btn-selectline-pop.btn-default.active.focus, .btn-selectline-pop.btn-default.active:focus, .btn-selectline-pop.btn-default.active:hover, .btn-selectline-pop.btn-default:active.focus, .btn-selectline-pop.btn-default:active:focus, .btn-selectline-pop.btn-default:active:hover, .open > .dropdown-toggle.btn-selectline-pop.focus, .open > .dropdown-toggle.btn-selectline-pop:focus, .open > .dropdown-toggle.btn-selectline-pop:hover {
+	color: #979797;
+	background-color: transparent;
+	border-bottom: 2px solid #979797;
+}
+/*表單 下拉清單樣式Ａ 單列 下底線 // END-------------------------*/
+/*資訊欄位//END----------------------------------------------------------------------------------------------------------*/
+
+/*eddit-form表單-------------------------------------------------------------------------------------------------------------*/
+/*popup表單共用-------------------------------*/
+
+/*選項select-popup------------------------------------------------------------------------------*/
+/*選項select-popup 統一樣式-------------------------------*/
+
+
+
+
+.select-pop-group-style {
+	padding: 10px 20px 5px;
+}
+.pop-input-text {
+	font-size: 1.6rem;
+	padding: 0 5px;
+}
+/* 20180824 篩選表單 */
+span.country {
+	width: 10%;
+	min-width: 70px;
+	font-size: 1.6rem;
+	padding: 6px;
+}
+.icon-filter {
+	background: url(../image/icon/i-filter.svg) no-repeat 0 0;
+	display: inline-block;
+	vertical-align: text-top;
+	height: 30px;
+	width: 30px;
+	background-size: cover;
+}
+/* //20180824 篩選表單 */
+
+
+/* 20180804修改 */
+.select-pop-label {
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: #3d4953;
+	margin-bottom: 2px;
+	margin-left: 10px;
+}
+/*選項select-popup 按鈕 統一樣式-------------------------------*/
+.fa-chevron-down, .fa-chevron-up, .fa-chevron-circle-up, .fa-chevron-circle-down, .fa-map-marker {
+	font-weight: lighter;
+	-webkit-text-stroke: 1px #fff;
+	color: #454545;
+}
+.btn-select-pop {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+	margin-left: 0; /* 解除btn原先設定*/
+	/*原先設定*/
+	background: none;
+	border: none;
+	border-color: transparent;
+	box-shadow: none;
+	background-image: none;
+	border: #107778 1px solid;
+	border-radius: 6px;
+	font-size: 1.6rem;
+	text-align: left;
+	padding-left: 0;
+	padding: 12px 15px;
+	padding-right: 15px;
+	width: 100%;
+	outline: none;
+	margin-left: 0;
+	margin-right: 0;
+}
+.btn-select-pop:hover {
+	background: none;
+	border: #107778 1px solid;
+	box-shadow: none;
+	background-image: none;
+	font-size: 1.6rem;
+	text-align: left;
+	width: 100%;
+	outline: none;
+	color: #333;
+}
+.btn-select-pop.active, .open > .dropdown-toggle.btn-select-pop {
+	color: #333;
+	background-color: transparent;
+	border-color: transparent;
+}
+/*改寫bootstrap default按鈕*/
+
+.btn-select-pop.btn-default.active.focus, .btn-select-pop.btn-default.active:focus, .btn-select-pop.btn-default.active:hover, .btn-select-pop.btn-default:active.focus, .btn-select-pop.btn-default:active:focus, .btn-select-pop.btn-default:active:hover, .open > .dropdown-toggle.btn-select-pop.focus, .open > .dropdown-toggle.btn-select-pop:focus, .open > .dropdown-toggle.btn-select-pop:hover {
+	color: #333;
+	background-color: transparent;
+	border: 1px solid #107778;
+	border-bottom: 1px solid #107778;
+}
+.pop-form-group-100 input.search-input-text {
+	padding-left: 0;
+}
+/*選項select-popup 選項內文 統一樣式-------------------------------*/
+
+.select-pop-content {
+	display: block;
+	width: 100%; /* 文字溢出寬度*/
+	/* 文字溢出設定 可以加共用class name >> ellipsis  */
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #838383;
+}
+.select-pop-group-style-row {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.select-pop-group-style-column {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+.select-pop-group-inner-row {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+}
+/*20180828新增 表單樣式+篩選頁+自行輸入金額或是文字*/
+
+.pop-input-flex-group {
+	width: 100%;
+	padding: 10px 20px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+}
+.pop-input-flex-group p {
+	font-size: 1.6rem;
+	margin: 0 5px;
+}
+/* 篩選欄位金額 / 時間範圍 2個輸入欄位 單列 */
+
+.pop-li-flex {
+	padding: 15px 20px;
+}
+.pop-li-flex .ct-checkbox + label {
+	padding-left: 25px;
+}
+.pop-tag-flex {
+	padding: 5px;
+}
+.pop-form-group-l {
+	padding-right: 5px;
+}
+.pop-form-group-r {
+	padding-left: 5px;
+}
+/* checkbox + input 左右兩欄 */
+.pop-input-l-30 {
+	width: 30%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+.pop-input-l-60 {
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+.pop-input-r-40 {
+	width: 40%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+.pop-input-r-70 {
+	width: 70%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+/*選項select-popup 寬度類型設定-------------------------------*/
+
+.pop-form-group-100 {
+	width: 100%;
+}
+.pop-form-group-90 {
+	width: 90%;
+}
+.pop-form-group-80 {
+	width: 80%;
+}
+.pop-form-group-70 {
+	width: 70%;
+}
+.pop-form-group-60 {
+	width: 60%;
+}
+.pop-form-group-50 {
+	width: 50%;
+}
+.pop-form-group-45 {
+	width: 45%;
+}
+.pop-form-group-40 {
+	width: 40%;
+}
+.pop-form-group-30 {
+	width: 30%;
+}
+.pop-form-group-20 {
+	width: 20%;
+}
+.pop-form-group-10 {
+	width: 10%;
+}
+/*選項datepicker-popup 寬度類型設定-------------------------------*/
+
+.select-date-input {
+	background: transparent;
+	border: transparent;
+	box-shadow: none;
+	border-radius: 0;
+	font-size: 1.6rem;
+	font-weight: normal;
+	text-align: left;
+	height: auto;
+}
+/* 表單popup種類6 - 左popup + 右input  ------------------------------*/
+
+.search-input-text {
+	background: transparent;
+	border: transparent;
+	box-shadow: none;
+	border-radius: 0;
+	font-size: 1.6rem;
+	font-weight: normal;
+	text-align: left;
+	padding-left: 5px;
+	height: auto;
+}
+.search-input-group {
+	width: 100%;
+	text-align: left;
+}
+/* 表單popup種類8 - 50% - 左文字顯示 - 右disabled  ------------------------------*/
+
+.select-pop-input-wrapper {
+	font-size: 1.6rem;
+}
+.link-wrapper {
+	padding: 5px 0px;
+	-webkit-align-items: center;
+	align-items: center;
+	line-height: 2rem;
+}
+.icon-editmoney {
+	background: url(../image/icon/icon-editmoney.svg) no-repeat 0 0;
+	display: inline-block;
+	vertical-align: sub;
+	height: 20px;
+	width: 20px;
+	margin-right: 5px;
+}
+/*表單popup種類6-3 - 整行標題+ 整行input*/
+.ct_info_text_wrap.select-pop-group-style-column {
+	height: auto;
+}
+.ct-info-text-wrap {
+	align-items: baseline;
+	margin-bottom: 5px;
+	height: auto;
+	padding: 20px 20px 10px;
+}
+/*表單 //END-------------------------------------------------------------------------------------------------------------*/
+
+/*search-form表單 -------------------------------------------------------------------------------------------------------------*/
+
+/*查詢時間套組 (+1)---------------------------*/
+
+.search-group {
+	background-color: white;
+	line-height: 40px;
+	padding: 10px 10px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: flex-start;
+	align-items: flex-start;
+}
+.tab_wrap {
+	align-self: center;
+	height: 54px;
+	background: white;
+	margin-top: -1px;
+	margin-left: 0px;
+	padding: 0 10px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: center;
+	-webkit-flex-direction: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+}
+/*查詢時間套組(+1) // END ---------------------------*/
+
+/*表單popup種類1 - 100% - 單列 (+1)---------------------------*/
+
+.ct_info_text_wrap {
+	padding: 6px 10px;
+	align-items: baseline;
+	margin-bottom: 5px;
+	height: auto;
+}
+/*表單popup種類1 - 100% - 單列 (+1)//END---------------------------*/
+
+/* 表單radio-種類1 - 2個選項 - 單列 ---------------------------*/
+
+.radio-outer-wrapper {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: flex-start;
+	align-items: flex-start;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding: 10px 10px;
+	margin-bottom: 0;
+}
+.radio-outer-label-style {
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: #3d4953;
+	width: 100%;
+}
+.radio-inner-wrapper {
+	width: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+}
+.radio-option-group {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: flex-start;
+	align-items: flex-start;
+	-webkit-box-pack: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+	height: 100%;
+}
+.radio-option-group span {
+	height: 26px;
+	line-height: 26px;
+	font-size: 1.6rem;
+}
+/* 表單radio - 選項寬度設定 ---*/
+
+.radio-group-style-50 {
+	width: 50%;
+}
+.radio-group-style-33 {
+	width: 33%;
+}
+/* 表單radio-種類1 - 2個選項 - 單列 //END---------------------------*/
+
+/*search-form表單 //END-------------------------------------------------------------------------------------------------------------*/
+
+/*popup視窗 - pop-area -------------------------------------------------------------------------------------------------------------*/
+/*popup視窗 - pop-area 統一樣式-------------------------------*/
+.pop-area {
+	margin: auto;
+	width: 90%;
+	height: -webkit-fit-content !important;
+	height: -moz-fit-content !important;
+	height: fit-content !important;
+	z-index: 1001;
+	border-radius: 5px;
+	display: none;
+	transition: top .25s ease;
+	position: relative;
+}
+.section_area1 {
+	font-size: 1.6rem;
+}
+.section_area1 strong, .section_area_2col strong {
+	font-size: 1.8rem;
+}
+/* pop-area -高度尺寸統一設定 -------------------------------*/
+.pop-area .pop_content {
+	background: #fff;
+	z-index: 1001;
+	position: relative;
+	margin: 0;
+	border-radius: 0 0 5px 5px;
+	padding: 0;
+	overflow: scroll;
+	height: auto;
+	max-height: 450px;
+}
+/* pop-area - circle_cancle按鈕 -移動-------------------------------*/
+
+.pop-area .circle_cancle_45 {
+	right: 25px !important;
+	top: -20px;
+}
+section.section-content .pop-area .circle_cancle {
+	right: 35px;
+}
+.popoupFlexBox {
+	z-index: 1001;
+}
+/* pop-area - 1line-lr -版型設定 -------------------------------*/
+
+.section_info_l_2 {
+	width: 5em;
+	align-items: baseline;
+}
+.section_info_r {
+	max-width: 13em;
+}
+/* pop-area - 2line/3line -版型設定 -------------------------------*/
+/*section_area1_column內文垂直共用-------------------------------*/
+
+.section-area1-column {
+	width: 100%;
+	color: #606a6f;
+	line-height: 23px;
+	padding: 12px 20px;
+	text-align: left;
+	border-bottom: 1px solid #8b999f;
+	font-size: 1.6rem;
+	height: auto;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: flex-start;
+	align-items: flex-start;
+	-webkit-box-pack: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+}
+/* pop-area - info-nobt -版型設定 -------------------------------*/
+
+/* 倒數警示文字 設定 */
+
+.time-count-down-info {
+	text-align: center;
+	color: red;
+	width: 100%;
+}
+/* 純提示文字 設定 */
+.section-basic-info {
+	padding: 10px 20px;
+	color: #606a6f;
+	font-size: 1.6rem;
+	line-height: 28px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: flex-start;
+	align-items: flex-start;
+}
+/* popup裡面有按鈕版型- 設定 */
+.bt-pop-center-group {
+	padding: 10px 0px 20px;
+	text-align: center;
+}
+/* pop-area - info-bt -版型設定 -------------------------------*/
+
+/*警示文字設定-共用*/
+
+.info-alert-text {
+	padding: 10px 0;
+}
+.info-alert-text-style {
+	color: red;
+}
+/* pop-area - otp -版型設定 -------------------------------*/
+
+.form-pop-otp {
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+.pop-info-opt-text-wrap {
+	padding: 10px 20px 0;
+	width: 100%;
+}
+.pop-info-opt-text-wrap input {
+	border: none;
+	border-bottom: 1px solid #9b9b9b;
+	background-color: transparent;
+	padding-bottom: 5px;
+	font-size: 1.6rem;
+}
+.input-pop-otp-password {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+.input-pop-otp-password input.form-control {
+	width: 100%;
+}
+/* input alert - 錯誤提示文字 */
+/*20180804修改*/
+.input_alert_info, .input-pop-otp-password-alert {
+	color: #d0011b;
+	font-size: 1.4rem;
+	margin: 5px;
+	text-align: right;
+	display: block;
+}
+/* 輸入錯誤提示底線 - 日期(日曆) 請使用於 <div class="input-group active"></div> 
+/  登入頁錯誤提示 - 請使用 <div class="label-input-group login-input-group active"></div>  */
+.field-input input.form-control.active, .input-pop-otp-password input.form-control.active, .form-group .input-group.active, .label-input-group.login-input-group.active {
+	border: 1px solid #d0011b;
+}
+/* pop-area - info-bt-input -版型設定 -------------------------------*/
+
+.pop-info-text-wrap {
+	padding: 0 20px 0;
+	width: 100%;
+}
+.pop-info-text-wrap input {
+	border: none;
+	border-bottom: 1px solid #9b9b9b;
+	background-color: transparent;
+	padding-bottom: 5px;
+	font-size: 1.6rem;
+}
+.input-pop-text {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+.input-pop-text-alert {
+	color: #d0011b;
+	font-size: 1.6rem;
+}
+/*pop-area種類-  1line-lr2line - 左右資訊右邊兩行*/
+.field-input {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+/*20180804修改 */
+.field-input input.form-control {
+	width: 100%;
+	border: 1px solid #107778;
+	height: 46px;
+	padding: 12px 12px;
+	font-size: 1.6rem;
+}
+.pop-info-text-align-right {
+	text-align: right;
+}
+.section-area1-align-up {
+	-webkit-align-items: flex-start;
+	-ms-flex-align: flex-start;
+	align-items: flex-start;
+}
+/*pop-area種類-  1line-lr2line - 左右資訊右邊兩行//END*/
+
+/*pop-area種類-  areaScroll - 內文捲動樣式--------------*/
+
+.pop-area .pop-content-stable {
+	background: #fff;
+	z-index: 1001;
+	position: relative;
+	margin: 0;
+	border-radius: 0 0 5px 5px;
+	padding: 0;
+	height: auto;
+	max-height: 450px;
+}
+.pop-content-stable-inner {
+	position: relative;
+	overflow: scroll;
+	height: auto;
+	max-height: 350px;
+}
+.pop-content-stable-inner-info {
+	padding: 15px 20px;
+	font-size: 1.6rem;
+}
+.pop-content-stable-inner-info ul {
+	line-height: 33px;
+}
+.bt-pop-center-group-fix {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+/*pop-area種類-  areaScroll - 內文捲動樣式 // END--------------*/
+
+/*pop-area種類- 國旗 ---------------------------------------------------------*/
+
+.sec-pop-flags {
+	-webkit-box-pack: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+}
+/*pop-area種類- 國旗 // END ---------------------------------------------------------*/
+
+/*pop-area種類- 國旗lr - 右側黑色箭頭 --------------------------------------*/
+
+.sec-pop-flagsText {
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+}
+.sec-pop-flags-l {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 10em;
+}
+.sec-pop-flags-r {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: flex-end;
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: flex-end;
+	justify-content: flex-end;
+	width: 7em;
+}
+.sec-pop-flags-r p {
+	margin-right: 7px;
+}
+.sec-pop-flags-r .fa-chevron-right {
+	width: 18px;
+	height: 18px;
+	line-height: 20px;
+	text-align: right;
+	cursor: pointer;
+	font-size: 2.1rem;
+	-webkit-text-stroke: 1.5px #fff;
+}
+/*pop-area種類- 國旗lr - 右側黑色箭頭 // END--------------------------------------*/
+
+/*popup視窗 - pop-area  // END-------------------------------------------------------------------------------------------------------------*/
+
+/*content-li-------------------------------------------------------------------------------------------------------------*/
+/*content-li統一樣式-------------------------------*/
+
+.content-li-wrapper {
+/*padding: 10px 10px;*/
+    /*font-size: 1.6rem;*/
+    /*min-height: 80px;*/
+    /*border: 1px solid lightseagreen;*/
+}
+/*.content-li-wrapper li:nth-child(odd){background-color: #FFFFFF;}*/
+/*.content-li-wrapper li:nth-child(even){background-color: #f3f6f8;}*/
+
+.content-li-wrapper-bottomLine li:last-child { /*border-bottom: 1px solid #d5dde1; /* 最後一項底線用另一classname >> content-li-wrapper-bottomLine */
+}
+.content-li-style {
+	padding: 10px 10px;
+	font-size: 1.6rem;
+	align-items: center;
+}
+/* 左右兩欄list或是card 內容置上對齊 */
+.li-style-top {
+	align-items: baseline;
+}
+.content-li-text-left {
+	max-width: 30rem;
+}
+.content-li-title-style .content-li-text-left {
+	max-width: 100%;
+}
+.content-li-text-right {
+	text-align: right;
+	max-width: 19rem;
+}
+.li-text-overflow-r {
+	max-width: 20em;
+	text-align: right;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.content-li-text-left p, .content-li-text-right p {
+	word-wrap: break-word;
+	overflow: hidden
+}
+/*contentli單行置左 - 共用classname --------------------------- */
+
+.content-li-text-left-all {
+	width: 100%;
+}
+/*contentli-group內交易分隔線 - 共用classname(版型共用自-轉帳交易>>> .form-inside-line-wrapper) */
+.content-inside-line-wrapper .form-inside-line-wrapper {
+	margin: 10px 10px;
+}
+/*contentli單行金額 - 共用classname --------------------------- */
+
+.content-li-money-style {
+	padding: 5px 10px;
+	font-size: 1.6rem;
+}
+.content-li-money-left {
+	max-width: 8rem;
+}
+.content-li-money-right {
+	min-width: 11rem;
+	max-width: 19rem;
+}
+/*//contentli單行金額 - 共用classname --------------------------- */
+
+/*content-li種類1-2 - 無icon - 左單列 / 右兩列垂直*/
+.content-li-text-right-column {
+	text-align: right;
+	max-width: 14em;
+}
+/*content-li種類1-2 - 無icon - 左單列 / 右兩列垂直 // END */
+
+/* 左邊icon+文字連結 */
+.content-li-text-ct-style {
+	color: #0fa1b8;
+	font-weight: bold;
+}
+.content-li-left-icon-wrap {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.content-li-name-left {
+	text-align: left;
+	max-width: 12em;
+}
+.content-li-name-right {
+	text-align: left;
+	width: 7em;
+}
+.content-li-name-all {
+	text-align: left;
+	max-width: 20em;
+}
+/*optionLists -------------------------------------------------------------------------------------------------------------*/
+/*optionLists - 統一樣式-------------------------------*/
+
+.sec-option-list ul li {
+	border-bottom: 1px solid #8b999f;
+	height: 60px;
+	line-height: 60px;
+	color: #606a6f;
+	cursor: pointer;
+	background-color: white;
+	padding: 0 15px;
+}
+/*optionLists - 右側資訊設定-------------------------------*/
+
+.option-list-right-wrap {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.option-list-right-wrap .fa-chevron-right {
+	width: 18px;
+	height: 18px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 2.1rem;
+	-webkit-text-stroke: 1.5px #fff;
+}
+.option-list-right-wrap p {
+	margin-right: 7px;
+}
+/*optionLists // END-------------------------------------------------------------------------------------------------------------*/
+
+/*content-li-------------------------------------------------------------------------------------------------------------*/
+/*content-li統一樣式 //END-------------------------------*/
+
+/* 以下為最新新增各頁面  CSS -------@@@@@--------------------------------------------------*/
+/* 以下為最新新增各頁面  CSS -------@@@@@--------------------------------------------------*/
+/* 以下為最新新增各頁面  CSS -------@@@@@--------------------------------------------------*/
+
+/*20180813 頁面統一設定共用 ---------------------------------------------------------*/
+/*20180813 頁面統一設定共用 ---------------------------------------------------------*/
+
+/*按鈕頁template共同 -----------------------------------------*/
+/* button-set種類5 - 1個按鈕 ---------------------------*/
+
+.bt-inner-group-xl {
+	min-width: 290px;
+	width: 75%;
+}
+/* // button-set種類5 - 1個按鈕 ---------------------------*/
+/*// 按鈕頁template共同 -----------------------------------------*/
+
+/* // 20180813 頁面統一設定共用 ---------------------------------------------------------*/
+/* // 20180813 頁面統一設定共用 ---------------------------------------------------------*/
+
+/*20180813 產生OTP頁 ---------------------------------------------------------*/
+/*20180813 產生OTP頁 ---------------------------------------------------------*/
+
+.otp-section {
+	margin-top: 65px;
+}
+.otp-section .btn-confirm {
+	margin-top: 100px;
+}
+.otp-appear-wrapper {
+	text-align: center;
+}
+.otp-show-number {
+	font-weight: bold;
+	font-size: 7.6rem;
+	color: #0FA1B8;
+	letter-spacing: 0;
+	padding: 10px 20px;
+	background-color: #F8F8F8;
+}
+.otp-show-number-bk {
+	font-weight: bold;
+	font-size: 7.6rem;
+	color: #0FA1B8;
+	letter-spacing: 0;
+	background-color: #F8F8F8;
+	padding: 10px 20px;
+}
+.otp-default-dash {
+	font-weight: 300;
+	font-size: 7.6rem;
+	color: #0FA1B8;
+	/* letter-spacing: 17px; */
+	padding: 10px 20px;
+}
+/* OTP timer 樣式設定----------------------------------------------------*/
+.cicle-timer-section {
+	height: 110px;
+	width: 100%;
+	padding: 10px 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.timer-text-left {
+	position: relative;
+	width: 33%;
+	text-align: right;
+	margin-right: 10px;
+	font-weight: normal;
+}
+.timer-text-right {
+	position: relative;
+	width: 33%;
+	text-align: left;
+	margin-left: 10px;
+	font-weight: normal;
+}
+.cicle-timer-wrapper {
+	width: 33%;
+}
+.circle-count-text {
+	position: absolute;
+	top: 20px;
+	text-align: center;
+	width: 100%;
+	font-size: 2rem;
+	color: #2461AA;
+}
+.circle-count-text span {
+	font-size: 1.6rem;
+	color: #3d4953;
+}
+.cicle-timer {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -44px;
+	margin-top: -44px;
+	width: 88px;
+	height: 88px;
+	border-radius: 50%;
+	background: #E2E2E2;
+	background-image: linear-gradient(to right, transparent 50%, #E2E2E2 0);
+	color: #E2E2E2;
+	-webkit-animation: bg2 12s step-end;
+	animation: bg2 12s step-end;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+.cicle-timer::before {
+	content: '';
+	display: block;
+	margin-left: 50%;
+	height: 100%;
+	/* border-radius: 0 100% 100% 0 / 50%;
+	background-color: inherit; */
+	/* -webkit-transform-origin: left;
+	transform-origin: left; */
+	/* -webkit-animation: spin 6s linear 2, bg 12s step-end;
+	animation: spin 6s linear 2, bg 12s step-end;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards; */
+}
+.cicle-timer-content {
+	position: absolute;
+	background: #ffffff;
+	left: 8px;
+	right: 8px;
+	top: 8px;
+	bottom: 8px;
+	z-index: 2;
+	border-radius: 50%;
+}
+ @-webkit-keyframes spin {
+ to {
+ -webkit-transform: rotate(0.5turn);
+ transform: rotate(0.5turn);
+}
+}
+ @keyframes spin {
+ to {
+ -webkit-transform: rotate(0.5turn);
+ transform: rotate(0.5turn);
+}
+}
+ @-webkit-keyframes bg {
+ 50% {
+ background: #E2E2E2;
+}
+}
+ @keyframes bg {
+ 50% {
+ background: #E2E2E2;
+}
+}
+ @-webkit-keyframes bg2 {
+ 100% {
+ background: #E2E2E2;
+}
+}
+ @keyframes bg2 {
+ 100% {
+ background: #E2E2E2;
+}
+}
+/* // OTP timer 樣式設定 -------------------------*/
+
+/* // 20180813 產生OTP頁 ---------------------------------------------------------*/
+/* // 20180813 產生OTP頁 ---------------------------------------------------------*/
+
+/*20180813 帳戶查詢頁 ---------------------------------------------------------*/
+/*20180813 帳戶查詢頁 ---------------------------------------------------------*/
+/*20180813 帳戶查詢頁 ---------------------------------------------------------*/
+
+/* L2 tab-slide 共用框架樣式 -----------------------------------------*/
+/* L2 tab-slide 共用框架樣式 -----------------------------------------*/
+
+.tab-slide-container {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+/* //L2 tab-slide 共用框架樣式 -----------------------------------------*/
+/* //L2 tab-slide 共用框架樣式 -----------------------------------------*/
+
+/* 收合選單 共用框架樣式 -----------------------------------------*/
+/* 收合選單 共用框架樣式 -----------------------------------------*/
+
+.accordion-section {
+	margin-top: 20px;
+}
+/* //下拉選單 共用框架樣式 -----------------------------------------*/
+/* //下拉選單 共用框架樣式 -----------------------------------------*/
+
+/* 下拉選單 統一共用classname -----------------------------------------*/
+.pop-form-group-85 {
+	width: 85%;
+}
+/* // 下拉選單 統一共用classname -----------------------------------------*/
+
+/* L2 存款概要分頁 -----------------------------------------*/
+.list-card-style-l2 {
+	font-size: 1.6rem;
+}
+.card-account-l2 {
+	position: relative;
+	margin-top: 0;
+	background-color: white;
+	border-radius: 6px;
+	border-left: 6px solid #A9CFE1;
+	box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+	max-height: 0;
+	overflow: hidden;
+}
+.card-account-accordion {
+	margin: 5px 15px;
+	padding-bottom: 1px;
+	padding-top: 4px;
+	background-color: white;
+	border-radius: 6px;
+	border-left: 6px solid #1e696b;
+	box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+	position: relative;
+}
+.card-account-accordion.active {
+/*max-height: 100%;*/
+    /*overflow: visible;*/
+}
+/* // L2 存款概要分頁 -----------------------------------------*/
+
+/* L2 存款明細分頁 -----------------------------------------*/
+
+/* L2 存款明細分頁 -----------------------------------------*/
+.card-saving-type {
+	padding: 10px 20px;
+	margin-top: 10px;
+	background-color: white;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.card-saving-title-wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.card-saving-type ul {
+	margin-top: 6px;
+	width: 100%;
+}
+.card-saving-title-left {
+	/*position: absolute;*/
+    /*top: -9px;*/
+    /*left: 0;*/
+	padding: 10px 50px 20px 25px;
+	background: url(../../../assets/design/image/card-saving-title-bk.svg) right top no-repeat;
+	background-size: cover;
+	font-weight: bold;
+	min-width: 10rem;
+	max-width: 70%;
+	margin-left: -20px;
+	margin-top: -20px;
+}
+.card-saving-title-right {
+	width: 25%;
+	/*border: 1px solid pink;*/
+	text-align: right;
+	min-width: 8em;
+}
+.card-saving-title-left p, .card-saving-title-right p {
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.accordion-month-title .accordion-month-title-time {
+	font-size: 1.4rem;
+	text-align: right;
+}
+/* 20180823卡片共同版型  活期存款卡片種類1- 無icon -------------------------------------------*/
+/* 20180823卡片共同版型  活期存款卡片種類1- 無icon -------------------------------------------*/
+
+.card-saving-li-style {
+	padding: 6px 0;
+	line-height: 1.6rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+.card-saving-text-l {
+	max-width: 8em;
+	text-align: left;
+}
+.card-saving-text-r {
+	max-width: 11em;
+	text-align: right;
+}
+.card-saving-text-l p, .card-saving-text-r p {
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.card-saving-money {
+	font-size: 2rem;
+}
+/* //20180823卡片共同版型  活期存款卡片種類1- 無icon -------------------------------------------*/
+/* //20180823卡片共同版型  活期存款卡片種類1- 無icon -------------------------------------------*/
+
+/*// L2 存款明細分頁 -----------------------------------------*/
+
+/*// 20180813 帳戶查詢頁 ---------------------------------------------------------*/
+/*// 20180813 帳戶查詢頁 ---------------------------------------------------------*/
+/*// 20180813 帳戶查詢頁 ---------------------------------------------------------*/
+
+/*// 20180814 預設登入頁 ---------------------------------------------------------*/
+/*// 20180814 預設登入頁 ---------------------------------------------------------*/
+/*// 20180814 預設登入頁 ---------------------------------------------------------*/
+
+/*副標題-種類1 - 黑字黃底線 - 單列 ------------------------*/
+/*副標題-種類1 - 黑字黃底線 - 單列 ------------------------*/
+
+.sub-title {
+	width: 100%;
+	min-height: 50px;
+	font-size: 1.7rem;
+	font-weight: bold;
+	border-bottom: 3px solid #FFD100;
+	background: #F0F2F3;
+	padding: 20px 25px 0px 25px;
+}
+.ct-radio-option-group span {
+	line-height: 1.6rem;
+	font-size: 1.6rem;
+	width: 100%;
+}
+.ct-radio-outer-wrapper {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: flex-start;
+	align-items: flex-start;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding: 0;
+	margin-bottom: 0;
+}
+.ct-radio-option-group {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: flex-start;
+	align-items: flex-start;
+	-webkit-box-pack: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+	height: 100%;
+	padding: 15px 20px 15px 20px;
+}
+.radio-group-style-100 {
+	width: 100%;
+}
+/* radio & checkbox 樣式*/
+.pop-checkbox {
+	position: relative;
+	top: -9px;
+	left: 0;
+	margin-right: 5px;
+}
+.ct-radio, .ct-checkbox {
+	position: absolute;
+	display: none;
+}
+.ct-radio + label, .ct-checkbox + label {
+	position: relative;
+	display: block;
+	padding-left: 30px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.ct-radio + label:before {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	content: '';
+	background: #fff;
+	border: 2px solid #107778;
+	border-radius: 50%;
+}
+.ct-checkbox + label:before {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	content: '';
+	background: #fff;
+	border: 2px solid #107778;
+	border-radius: 5px;
+}
+.ct-radio + label:before, .ct-checkbox + label:before {
+	background: transparent;
+}
+.ct-radio + label:after, .ct-checkbox + label:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+.ct-radio + label:after {
+	top: 5px;
+	right: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #107778;
+}
+.ct-checkbox + label:after {
+	top: 3px;
+	right: 7px;
+	box-sizing: border-box;
+	width: 8px;
+	height: 15px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	border-width: 2px;
+	border-style: solid;
+	border-color: #fff;
+	border-top: 0;
+	border-left: 0;
+}
+.ct-checkbox[type=checkbox]:checked + label:before {
+	background-color: #107778;
+}
+.ct-radio:checked + label:after, .ct-checkbox:checked + label:after {
+	display: block;
+}
+.radio-outer-margin-20 {
+	padding: 16px 20px;
+}
+.radio-bottom-line, .option-list-accordion {
+	border-bottom: 1px solid #E5E5E5;
+}
+/*ct-radio-第二層 樣式----------------------------*/
+.ct-radio-option-group-l2 {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: flex-start;
+	align-items: flex-start;
+	-webkit-box-pack: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+	height: 100%;
+	padding: 15px 0px 15px 15px;
+	position: relative;
+}
+.ct-radio-option-group-l2 span {
+	line-height: 1.5rem;
+	font-size: 1.5rem;
+	width: 100%;
+}
+.ct-radio-option-group-l2::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5px;
+	display: block;
+	width: 3px;
+	height: 100%;
+	background: #A9CFE1;
+}
+
+.ct-radio-option-group-l2-bottom{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: flex-start;
+	align-items: flex-start;
+	-webkit-box-pack: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+	height: 100%;
+	padding: 15px 0px 15px 15px;
+	position: relative;
+}
+
+
+/*收合階 optionlist 樣式  ----------------------------*/
+
+.option-list-accordion {
+	font-size: 1.6rem;
+	min-height: 50px;
+	/*margin: 5px 15px;*/
+	background-color: white;
+	/*max-height: 50px;*/
+    /*overflow: hidden;*/
+	padding: 12px 20px 0 20px;
+	width: 100%;
+}
+.option-list-accordion.active .fa-chevron-down {
+}
+.option-list-accordion-inner {
+	position: relative;
+	margin-top: 12px;
+	width: 100%;
+	overflow: hidden;
+	max-height: 0;
+}
+.option-list-accordion-inner.active {
+	max-height: 100%;
+	overflow: visible;
+}
+.option-list-accordion-inner ul {
+	position: relative;
+	margin-top: 12px;
+	width: 100%;
+	overflow: hidden;
+	max-height: 0;
+}
+.option-list-accordion-inner ul.active {
+	max-height: 100%;
+}
+.list-accordion-left {
+	width: 100%;
+	padding-right: 7px;
+}
+.list-right-icon-wrap .fa-chevron-down {
+	width: 20px;
+	height: 20px;
+	line-height: 25px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 21px;
+	-webkit-text-stroke: 2.5px #fff;
+}
+.list-right-icon-wrap .fa-chevron-up {
+	width: 20px;
+	height: 20px;
+	line-height: 25px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 21px;
+	-webkit-text-stroke: 2.5px #fff;
+}
+/* 20180815 裝置管理頁 -------------------------------------------*/
+/* 20180815 裝置管理頁 -------------------------------------------*/
+
+.section-content.setting-pg {
+	background-color: #F0F2F3;
+}
+/*副標題-種類2 - 黑字灰底線 - 單列 ------------------------*/
+/*副標題-種類2 - 黑字灰底線 - 單列 ------------------------*/
+.sub-title-46 {
+	border-bottom: 1px solid #C7C7CC;
+}
+.sub-title-46 p {
+	padding: 10px 25px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	min-height: 43px;
+	border-bottom: 3px solid #FFD100;
+}
+
+.sub-title-46-registered {
+	border-bottom: 1px solid #C7C7CC;
+}
+.sub-title-46-registered p {
+	padding: 10px 20px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	min-height: 43px;
+}
+
+.sub-title-46-quicklogin {
+	border-bottom: 1px solid #C7C7CC;
+}
+
+.sub-title-46-quicklogin p {
+	padding: 10px 25px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	min-height: 43px;
+}
+/*副標題-種類2 - 黑字灰底線 - 單列 ------------------------*/
+/*副標題-種類2 - 黑字灰底線 - 單列 ------------------------*/
+
+.setting-info-wrapper-top {
+	background: #FFFFFF;
+	width: 100%;
+	padding: 12px 20px;
+	box-shadow: 2px 4px 6px 0 rgba(135, 135, 135, 0.20);
+}
+.setting-info-wrapper-top li {
+	font-size: 1.6rem;
+	padding: 2px 0;
+}
+.icon-delete {
+	height: 25px;
+	background-image: url(../image/icon/i-delete-bin.svg);
+	background-size: 20px 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.setting-info-wrapper-bottom {
+	background: #ffffff;
+	width: 100%;
+	padding: 12px 0;
+	box-shadow: 2px 4px 6px 0 rgba(135, 135, 135, 0.20);
+	margin-bottom: 25px;
+}
+.setting-list-title {
+	display: flex;
+	padding: 14px 20px 12px 20px;
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+}
+.setting-info-wrapper-bottom li {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+	padding: 12px 20px;
+}
+.setting-title-col1 {
+	width: 30%;
+	padding-right: 6px;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.setting-title-col2 {
+	width: 30%;
+	padding-right: 6px;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.setting-title-col3 {
+	width: 30%;
+	padding-right: 6px;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.setting-title-col4 {
+	width: 10%;
+	text-align: center;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.setting-list-col1 {
+	width: 30%;
+	padding-right: 6px;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.setting-list-col1 p, .setting-list-col2 p, .setting-list-col3 p {
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.setting-list-col2 {
+	width: 30%;
+	padding-right: 6px;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.setting-list-col3 {
+	width: 30%;
+	padding-right: 6px;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.setting-list-col4 {
+	width: 10%;
+	text-align: center;
+}
+/* .setting-list-content li:nth-child(odd) {
+	background-color: #E5E5E5;
+}
+.setting-list-content li:nth-child(even) {
+	background-color: #ffffff;
+	border-bottom: 1px solid #e5e5e5;
+} */
+
+.setting-color-change ul:nth-child(odd) {
+	background-color: #ffffff;
+	
+}
+
+.setting-color-change ul:nth-child(even) {
+	background-color: #E5E5E5;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+
+
+
+.setting-device-name p {
+	font-weight: bold;
+	color: #0FA1B8;
+	cursor: pointer;
+}
+.setting-device-name {
+	font-weight: bold;
+	color: #0FA1B8;
+	cursor: pointer;
+}
+/* // 20180815 裝置管理頁 -------------------------------------------*/
+/* // 20180815 裝置管理頁 -------------------------------------------*/
+
+/* 20180816 通知訊息-登入後通知頁-------------------------------------*/
+/* 20180816 通知訊息-登入後通知頁-------------------------------------*/
+
+.section-content.new-info-page {
+	background-color: #F0F2F3;
+}
+.new-info-tag-container {
+	padding-bottom: 5px;
+	display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.msg-tag-wrap {
+	padding: 5px 0;
+	/* display: inline; */
+}
+
+span.msg-tag-green {
+	padding: 2px 13px;
+	border: 2px solid #107778;
+	background-color: #ffffff;
+	color: #107778;
+	font-weight: normal;
+	border-radius: 10px;
+	margin-right: 5px;
+	font-size: 1.5rem;
+}
+
+.new-info-content p {
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.new-info-content div p {
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* width: 52%; */
+}
+
+.new-info-content-title {
+	/* display: inline; */
+	padding-bottom: 0;
+	line-height: 2.2rem;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+.new-info-content-detail {
+	font-size: 1.4rem;
+	color: #838383;
+}
+.new-info-notice {
+	text-align: center;
+}
+.new-info-notice p {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 50%;
+	background-color: #FFD100;
+}
+.new-info-icon div {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+
+.new-info-icon-authorize {
+	background-color: #FFD100;
+	background-image: url(../image/icon/i-info-authorize.svg);
+	background-size: 40px;
+	background-position: 12px 8px;
+	background-repeat: no-repeat;
+}
+
+.new-info-icon-rate {
+	background-color: #2461AA;
+	background-image: url(../image/icon/i-info-rate.svg);
+	background-size: 35px 35px;
+	background-position: 14px 12px;
+	background-repeat: no-repeat;
+}
+
+.new-info-icon-account {
+	background-color: #107778;
+	background-image: url(../image/icon/i-info-account.svg);
+	background-size: 38px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.new-info-icon-trade{
+	background-color: #107778;
+	background-image: url(../image/icon/i-info-trade.svg);
+	background-size: 40px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.new-info-icon-check{
+	background-color: #1CBEAD;
+	background-image: url(../image/icon/i-info-check.svg);
+	background-size: 38px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.new-info-icon-market{
+	background-color: #27C7DB;
+	background-image: url(../image/icon/i-info-market.svg);
+	background-size: 40px;
+	background-position: 12px 8px;
+	background-repeat: no-repeat;
+}
+
+.new-info-icon-security{
+	background-color: #8CDD91;
+	background-image: url(../image/icon/i-info-security.svg);
+	background-size: 40px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.new-info-icon{  position: relative;  }
+
+.new-info-sideIcon:after{
+	content: "";
+	display: block;
+	position: absolute;
+	right: -5px;
+	bottom: 0;
+
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: #FFFFFF;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.33);
+
+	background-image: url(../image/icon/i-info-side-fail.svg);
+	background-size: 65%;
+	background-position: center;
+	background-repeat: no-repeat;
+
+}
+/* // 20180816 通知訊息-登入後通知頁-------------------------------------*/
+/* // 20180816 通知訊息-登入後通知頁-------------------------------------*/
+
+/* 20180816 ct-switch 樣式統一設定 ------------------------------------------*/
+/* 20180816 ct-switch 樣式統一設定 ------------------------------------------*/
+
+.ct-onoffswitch {
+	position: relative;
+	width: 48px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+.ct-onoffswitch-checkbox {
+	display: none;
+}
+.ct-onoffswitch-label {
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	height: 26px;
+	padding: 0;
+	line-height: 25px;
+	border: 1px solid #828282;
+	border-radius: 25px;
+	background-color: #828282;
+	margin-bottom: 0;
+}
+.ct-onoffswitch-label:before {
+	content: "";
+	display: block;
+	width: 19px;
+	height: 19px;
+	margin: 3px;
+	background: #FFFFFF;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 22px;
+	border-radius: 19px;
+}
+.ct-onoffswitch-checkbox:checked + .ct-onoffswitch-label {
+	background-color: #107778;
+}
+.ct-onoffswitch-checkbox:checked + .ct-onoffswitch-label, .ct-onoffswitch-checkbox:checked + .ct-onoffswitch-label:before {
+	border-color: #107778;
+}
+.ct-onoffswitch-checkbox:checked + .ct-onoffswitch-label .ct-onoffswitch-inner {
+	margin-left: 0;
+}
+.ct-onoffswitch-checkbox:checked + .ct-onoffswitch-label:before {
+	right: 0px;
+	background-color: #FFFFFF;
+}
+/* // 20180816 ct-switch 樣式統一設定 ------------------------------------------*/
+/* // 20180816 ct-switch 樣式統一設定 ------------------------------------------*/
+
+/* 20180816 switch-group 樣式統一設定 ------------------------------------------*/
+/* 20180816 switch-group 樣式統一設定 ------------------------------------------*/
+
+.switch-group-wrapper {
+	background-color: #ffffff;
+	border-bottom: 1px solid #e5e5e5;
+}
+.switch-inner-container {
+	border-bottom: 1px solid #e5e5e5;
+	margin-left: 25px;
+	padding: 15px 20px 15px 0;
+}
+
+
+.switch-inner-no {
+	border-bottom: 1px solid #e5e5e5;
+	margin-left: 25px;
+	padding: 15px 20px 15px 0;
+}
+
+
+
+.switch-group-style-100 {
+	width: 100%;
+}
+.ct-switch-left-wrap {
+	width: 100%;
+	font-size: 1.6rem;
+	margin-right: 10px;
+}
+.ct-switch-left-wrap p {
+	word-wrap: break-word;
+	overflow: hidden;
+}
+
+
+
+.switch-inner-container.disabled .ct-switch-left-wrap p {
+	color: #b3b3b3;
+	
+}
+
+.switch-inner-container.disabled .ct-onoffswitch-label {
+    border: 1px solid #b3b3b3;
+    background-color: #b3b3b3;
+}
+
+.disable-memo {
+	padding: 15px 20px 15px 25px;
+    background: #dfdfdf;
+}
+
+
+.switch-group-wrapper :last-child .switch-inner-container {
+	border-bottom: none;
+}
+/* 20180909 新版型樣式 */
+
+/*fastlog-li-section 種類1 - 左右兩側文字 ----------------*/
+.fast-log-setting-pg-l3 {
+	margin-bottom: 30px;
+}
+.fastlog-row-space {
+}
+.fastlog-li-section {
+	padding: 15px 20px 15px 25px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.6rem;
+	background: #fff;
+	cursor: pointer;
+	margin-bottom: 25px;
+}
+.fastlog-li-l-50 {
+	width: 50%;
+}
+.fastlog-li-l-option {
+	word-wrap: break-word;
+	overflow: hidden;
+	padding-right: 6px;
+}
+.fastlog-li-l-option p {
+	font-weight: 500;
+}
+.fastlog-li-r-50 {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+.fastlog-li-r-option {
+	word-wrap: break-word;
+	overflow: hidden;
+	text-align: right;
+	padding-right: 12px;
+}
+.fastlog-right-icon-wrap {
+	position: relative;
+	width: 18px;
+	height: 18px;
+	z-index: 300;
+}
+.fastlog-right-icon-wrap .fa-chevron-right {
+	width: 18px;
+	height: 18px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 21px;
+	-webkit-text-stroke: 2.5px #fff;
+	position: absolute;
+	top: 50%;
+	margin-top: -9px;
+	right: 50%;
+	margin-right: -9px;
+}
+/*// pop-li-section 種類1 - 左右兩側文字 ----------------*/
+
+
+/*  // 20180816 switch-group 樣式統一設定 ------------------------------------------*/
+/*  // 20180816 switch-group 樣式統一設定 ------------------------------------------*/
+
+/* 20180904 ct-li-group 樣式統一設定 ------------------------------------------*/
+/* 20180904 ct-li-group 樣式統一設定 ------------------------------------------*/
+
+.ct-li-group-style-100 {
+	width: 100%;
+	position: relative;
+}
+.ct-li-inner-container {
+	border-bottom: 1px solid #e5e5e5;
+	margin-left: 25px;
+	padding: 10px 20px 10px 0;
+}
+.ct-li-left-wrap {
+	width: 100%;
+	font-size: 1.6rem;
+	margin-right: 10px;
+}
+.ct-li-left-wrap p {
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.ct-li-right-wrap {
+	position: relative;
+	z-index: 300;
+}
+.ct-li-right-wrap .fa-chevron-right {
+	width: 48px;
+	height: 26px;
+	line-height: 26px;
+	text-align: right;
+	cursor: pointer;
+	font-size: 21px;
+	-webkit-text-stroke: 2.5px #fff;
+}
+.ct-li-group-wrapper {
+	background-color: #ffffff;
+	border-bottom: 1px solid #e5e5e5;
+}
+.ct-li-group-wrapper :last-child .ct-li-inner-container {
+	border-bottom: none;
+}
+.ct-icon-right-wrap .fa.fa-chevron-right:before {
+	position: relative;
+	top: 1px;
+}
+/* //20180904 ct-li-group 樣式統一設定 ------------------------------------------*/
+/* //20180904 ct-li-group 樣式統一設定 ------------------------------------------*/
+
+
+/*20180816 預設幣別頁 radio特殊版型-------------------------------*/
+/*20180816 預設幣別頁 radio特殊版型-------------------------------*/
+
+.bg-sub-currencysetting {
+	background-image: url(../image/bg-sub-currencysetting.svg), url(../image/bg-green.jpg);
+	background-size: 220px auto, 100%;
+	background-position: top center, left -60px;
+	background-repeat: no-repeat;
+}
+.ct-radio-inner-row {
+	width: 100%;
+	padding: 10px 20px;
+	border-bottom: 1px solid #e5e5e5;
+	background-color: #ffffff;
+}
+.ct-radio-option-group-row {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-betweens;
+}
+.ct-radio-option-group-row span {
+	font-size: 1.6rem;
+	word-break: break-word;
+	line-height: 1.6rem;
+	padding-right: 6px;
+}
+.radio-group-style-50 {
+	width: 50%;
+}
+.currency-radio-wrapper .radio-group-style-50:nth-child(even) {
+	position: relative;
+	padding-left: 20px;
+}
+.currency-radio-wrapper .radio-group-style-50:nth-child(odd) {
+	position: relative;
+	padding-right: 20px;
+}
+.ct-radio-option-group-row.radio-group-style-50:nth-child(odd)::after {
+	content: "";
+	position: absolute;
+	top: -10px;
+	right: 0;
+	bottom: -10px;
+	display: block;
+	width: 1px;
+	/*height: 100%;*/
+	background-color: #e5e5e5;
+}
+.ct-radio-option-group-row.radio-group-style-50:nth-child(even):before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: -1px;
+	bottom: -10px;
+	display: block;
+	width: 1px;
+	/*height: 100%;*/
+	background-color: #e5e5e5;
+}
+.currency-add-bt {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+	cursor: pointer;
+	color: #0FA1B8;
+	font-weight: bold;
+	position: relative;
+}
+.currency-add-bt:after {
+	content: "";
+	position: absolute;
+	right: -20px;
+	bottom: -10px;
+	display: block;
+	height: 3px;
+	left: 0px;
+	background-color: #0FA1B8;
+}
+.currency-add-icon {
+	position: relative;
+	display: block;
+	padding-left: 20px;
+	cursor: pointer;
+
+	width: 20px;
+	height: 18px;
+	background-image: url(../image/icon/i-currency-add.svg);
+	background-size: 19px 19px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.currency-add-bt span {
+	font-size: 1.6rem;
+	line-height: 1.6rem;
+}
+/* 20180816 預設幣別頁 radio特殊版型 ** 此版型radio高度微調--------*/
+/* 20180816 預設幣別頁 radio特殊版型 ** 此版型radio高度微調--------*/
+
+.ct-radio-option-group-row.radio-group-style-50 .ct-radio + label, .ct-radio-option-group-row.radio-group-style-50 .ct-checkbox + label {
+	position: relative;
+	display: block;
+	padding-left: 30px;
+	cursor: pointer;
+	vertical-align: middle;
+	top: -8px;
+}
+/* // 20180816 預設幣別頁 radio特殊版型-------------------------------*/
+/* // 20180816 預設幣別頁 radio特殊版型-------------------------------*/
+
+/*20180820 row 時間版型 共用 ---------------------------------------------------------*/
+/*20180820 row 時間版型 共用 ---------------------------------------------------------*/
+
+.time-show-wrapper {
+	text-align: right;
+	padding: 0 20px;
+	margin: 0 0 6px 0;
+}
+.time-show-wrapper p {
+	font-size: 1.4rem;
+}
+.pop-form-group-50 .time-show-wrapper {
+	text-align: right;
+	padding: 0;
+	margin: 6px 0;
+}
+/* // 20180820 row 時間版型 共用 ---------------------------------------------------------*/
+/* // 20180820 row 時間版型 共用 ---------------------------------------------------------*/
+
+/*20180820 ct-table 表格版型 共用 ---------------------------------------------------------*/
+/*20180820 ct-table 表格版型 共用 ---------------------------------------------------------*/
+
+.ct-table-title-section {
+	padding: 9px 0 6px 0;
+	background-color: #71B7B8;
+	position: relative;
+	line-height: 1.5rem;
+	font-size: 1.5rem;
+}
+.ct-table-content-section {
+	position: relative;
+	line-height: 1.5rem;
+	font-size: 1.5rem;
+}
+.ct-table-title-wrapper {
+	padding: 0 15px;
+	position: relative;
+	width: 100%;
+	display: inline-block;
+}
+.ct-table-content-wrapper {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+}
+.ct-table-content-wrapper ul {
+	position: relative;
+	width: 100%;
+}
+.ct-table-content-wrapper ul li {
+	position: relative;
+	width: 100%;
+	padding: 10px 15px;
+	float: left;
+}
+.ct-table-content-wrapper ul li:nth-child(odd) {
+	background-color: #DCF2F1;
+}
+.ct-table-content-wrapper ul li:nth-child(even) {
+	background-color: #ffffff;
+}
+.ct-table-title-wrapper div, .ct-table-content-wrapper div {
+	padding: 0 5px;
+}
+.ct-table-title-col1 p, .ct-table-title-col2 p, .ct-table-title-col3 p, .ct-table-title-col4 p {
+	color: #ffffff;
+}
+/* ct-table -- 4欄位文字 對齊設定 ---------------------------------------------------------*/
+
+.ct-table-title-wrapper .ct-table-title-col1, .ct-table-content-wrapper .ct-table-content-col1 {
+	text-align: left;
+}
+.ct-table-title-wrapper .ct-table-title-col2, .ct-table-content-wrapper .ct-table-content-col2 {
+	text-align: center;
+}
+.ct-table-title-wrapper .ct-table-title-col3, .ct-table-content-wrapper .ct-table-content-col3 {
+	text-align: right;
+}
+.ct-table-title-wrapper .ct-table-title-col4, .ct-table-content-wrapper .ct-table-content-col4 {
+	text-align: right;
+}
+/* ct-table -- 4欄位文字 多語系折行設定 ---------------------------------------------------------*/
+
+.ct-table-title-col1 p, .ct-table-title-col2 p, .ct-table-title-col3 p, .ct-table-title-col4 p {
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.ct-table-content-wrapper .ct-table-content-col1 p, .ct-table-content-wrapper .ct-table-content-col2 p, .ct-table-content-wrapper .ct-table-content-col3 p, .ct-table-content-wrapper .ct-table-content-col4 p {
+	word-wrap: break-word;
+	overflow: hidden;
+	line-height: 22px;
+}
+/*增加的table設定，當寬度沒有使用bootstrap隔線系統時*/
+.ct-table-title-wrapper div {
+	float: left;
+}
+.ct-table-content-wrapper ul li div {
+	float: left;
+}
+/*//增加的table設定，當寬度沒有使用bootstrap隔線系統時*/
+/* // ct-table -- 4欄位文字 多語系折行設定 ---------------------------------------------------------*/
+
+/* // ct-table -- 4欄位文字 對齊設定 ---------------------------------------------------------*/
+
+
+/* 利率 Money Martekct 表格使用 table-rate  4欄位文字 對齊設定 --------------------------------------*/
+/* 利率 Money Martekct 表格使用 table-rate  4欄位文字 對齊設定 --------------------------------------*/
+
+/* Money Martek 第一層 ------------------------------------------------------*/
+
+.ct-table-rate-next-title-col1 p, .ct-table-rate-next-title-col2 p, .ct-table-rate-next-title-col3 p, .ct-table-rate-next-title-col4 p, .ct-table-rate-next-title-col5 p  {
+	color: #ffffff;
+}
+/* ct-table-rate-next -- 4欄位文字 對齊設定 ---------------------------------------------------------*/
+
+.ct-table-title-wrapper .ct-table-rate-next-title-col1, .ct-table-content-wrapper .ct-table-rate-next-content-col1 {
+	text-align: center;
+}
+.ct-table-title-wrapper .ct-table-rate-next-title-col2, .ct-table-content-wrapper .ct-table-rate-next-content-col2 {
+	text-align: right;
+}
+.ct-table-title-wrapper .ct-table-rate-next-title-col3, .ct-table-content-wrapper .ct-table-rate-next-content-col3 {
+	text-align: right;
+}
+.ct-table-title-wrapper .ct-table-rate-next-title-col4, .ct-table-content-wrapper .ct-table-rate-next-content-col4 {
+	text-align: right;
+}
+.ct-table-title-wrapper .ct-table-rate-next-title-col5, .ct-table-content-wrapper .ct-table-rate-next-content-col5 {
+	text-align: right;padding: 0;
+}
+/* ct-table-rate-next -- 4欄位文字 多語系折行設定 ---------------------------------------------------------*/
+
+.ct-table-rate-next-title-col1 p, .ct-table-rate-next-title-col2 p, .ct-table-rate-next-title-col3 p, .ct-table-rate-next-title-col4 p {
+	word-wrap: break-word;
+	overflow: hidden;
+}
+
+
+
+/* // ct-table -- 4欄位文字 多語系折行設定 ---------------------------------------------------------*/
+
+/* // ct-table -- 4欄位文字 對齊設定 ---------------------------------------------------------*/
+
+
+/* // Money Martek 第一層 ------------------------------------------------------*/
+
+/* Money Martek 第二層 ------------------------------------------------------*/
+
+.ct-table-rate-back-title-col1 p, .ct-table-rate-back-title-col2 p, .ct-table-rate-back-title-col3 p, .ct-table-rate-back-title-col4 p, .ct-table-rate-back-title-col5 p {
+	color: #ffffff;
+}
+/* ct-table-rate-back -- 4欄位文字 對齊設定 ---------------------------------------------------------*/
+
+.ct-table-title-wrapper .ct-table-rate-back-title-col1, .ct-table-content-wrapper .ct-table-rate-back-content-col1 {
+	text-align: left; padding: 0;
+}
+.ct-table-title-wrapper .ct-table-rate-back-title-col2, .ct-table-content-wrapper .ct-table-rate-back-content-col2 {
+	text-align: center;
+}
+.ct-table-title-wrapper .ct-table-rate-back-title-col3, .ct-table-content-wrapper .ct-table-rate-back-content-col3 {
+	text-align: right;
+}
+.ct-table-title-wrapper .ct-table-rate-back-title-col4, .ct-table-content-wrapper .ct-table-rate-back-content-col4 {
+	text-align: right;
+}
+.ct-table-title-wrapper .ct-table-rate-back-title-col5, .ct-table-content-wrapper .ct-table-rate-back-content-col5 {
+	text-align: right; 
+}
+/* ct-table-rate-back -- 4欄位文字 多語系折行設定 ---------------------------------------------------------*/
+
+.ct-table-rate-back-title-col1 p, .ct-table-rate-back-title-col2 p, .ct-table-rate-back-title-col3 p, .ct-table-rate-back-title-col4 p {
+	word-wrap: break-word;
+	overflow: hidden;
+}
+
+
+
+/* // ct-table -- 4欄位文字 多語系折行設定 ---------------------------------------------------------*/
+
+/* // ct-table -- 4欄位文字 對齊設定 ---------------------------------------------------------*/
+
+
+/* // Money Martek 第一層 ------------------------------------------------------*/
+
+.ct-table-title-wrapper i.fa-chevron-right, .ct-table-title-wrapper i.fa-chevron-left { 
+	color: #fff; 
+	font-size: 1.6rem;
+    -webkit-text-stroke: 1.5px #71B7B8;
+}
+
+
+
+
+
+
+
+.content-inside-line {
+	border-bottom: 1px solid gray;
+	margin: 5px 0;
+}
+/* // 20180820 ct-table 表格版型 共用 ---------------------------------------------------------*/
+/* // 20180820 ct-table 表格版型 共用 ---------------------------------------------------------*/
+
+/* 20180820 匯率查詢頁 ------------------------------------------------------------------------*/
+/* 20180820 匯率查詢頁 ------------------------------------------------------------------------*/
+
+.icon-drag {
+	height: 25px;
+	background-image: url(../image/icon/i-drag.svg);
+	background-size: 20px 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.rate-table-pg-l3 {
+	margin: 10px 0 0 0;
+}
+/* // 20180820 匯率查詢頁 ------------------------------------------------------------------------*/
+/* // 20180820 匯率查詢頁 ------------------------------------------------------------------------*/
+
+/* 20180821 ctbc-card共用版型 右icon - 有第二層卡片 --------------------------------------------------*/
+/* 20180821 ctbc-card共用版型 右icon - 有第二層卡片 --------------------------------------------------*/
+
+.card-left-wrap-2 {
+	width: 100%;
+	padding-right: 7px;
+}
+.card-right-icon-wrap-2 {
+	position: relative;
+	width: 25px;
+	height: 38px;
+	z-index: 300;
+}
+.card-right-icon-wrap-2 .fa-chevron-right {
+	width: 18px;
+	height: 18px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 21px;
+	-webkit-text-stroke: 2.5px #fff;
+	position: absolute;
+	top: 50%;
+	margin-top: -9px;
+	right: 0;
+}
+.card-account-l2 .card-left-wrap-2 {
+	padding-right: 7px;
+	padding-left: 6px;
+}
+.card-right-icon-wrap-2 .fa-plus {
+	width: 18px;
+	height: 18px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 21px;
+	-webkit-text-stroke: 2.5px #fff;
+	position: absolute;
+	top: 50%;
+	margin-top: -9px;
+	right: 50%;
+	margin-right: -9px;
+}
+.card-right-icon-wrap-2 .fa-minus {
+	width: 18px;
+	height: 18px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 21px;
+	-webkit-text-stroke: 2.5px #fff;
+	position: absolute;
+	top: 50%;
+	margin-top: -9px;
+	right: 50%;
+	margin-right: -9px;
+}
+.card-account-l2.active {
+	max-height: 100%;
+	margin-bottom: 10px;
+}
+.card-account-l2 .card-right-icon-wrap-l2 {
+	position: relative;
+	width: 25px;
+	height: 50px;
+	right: 5px;
+}
+.card-account-l2 .card-right-icon-wrap-l2 .fa-chevron-right {
+	width: 18px;
+	height: 18px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 21px;
+	-webkit-text-stroke: 2.5px #fff;
+	position: absolute;
+	top: 50%;
+	margin-top: -9px;
+	right: 0;
+}
+.card-li-money-left {
+	max-width: 5em;
+}
+.card-li-money-right {
+	max-width: 11em;
+	text-align: right;
+}
+.card-text-left-l2 {
+	max-width: 6em;
+}
+.card-text-right-l2 {
+	max-width: 11em;
+	text-align: right;
+}
+.card-li-money-left-l2 {
+	max-width: 4em;
+}
+.card-li-money-right-l2 {
+	max-width: 11em;
+}
+.card-text-left p, .card-text-right p, .card-li-money-left p, .card-li-money-right b, .card-text-left-l2 p, .card-text-right-l2 p, .card-li-money-left-l2 p, .card-li-money-left-l2 p, .card-li-money-right-l2 b {
+	word-wrap: break-word;
+	overflow: hidden;
+	font-size: 16px;
+}
+/* // 20180820 ctbc-card共用版型 右icon - 有第二層卡片 ------------------------------------------------------------------------*/
+/* // 20180820 ctbc-card共用版型 右icon - 有第二層卡片 ------------------------------------------------------------------------*/
+
+/* 20180822  常見問題卡片 共用版型 ------------------------------------------------------*/
+/* 20180822  常見問題卡片 共用版型 ------------------------------------------------------*/
+
+.card-ques-accordion {
+	margin: 5px 15px;
+	background-color: white;
+	border-radius: 6px;
+	border-left: 6px solid #1e696b;
+	box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+	position: relative;
+}
+.ques-pg-q {
+	width: 100%;
+	padding-right: 25px;
+}
+.ques-pg-q p {
+	font-size: 1.5rem;
+	font-weight: normal;
+	color: #107778;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.ques-pg-a {
+	width: 100%;
+	padding-right: 25px;
+}
+.ques-pg-a p {
+	font-size: 1.4rem;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+/* //20180822  常見問題卡片 共用版型 ------------------------------------------------------*/
+/* //20180822  常見問題卡片 共用版型 ------------------------------------------------------*/
+
+/* 20180822   常見問題卡片種類1 - 右icon - 有第二層卡片 (含子標題) -----------------------------------------*/
+/* 20180822   常見問題卡片種類1 - 右icon - 有第二層卡片 (含子標題) -----------------------------------------*/
+
+.card-ques-l2 {
+	position: relative;
+	margin-top: 0;
+	background-color: white;/*border-left: 6px solid #A9CFE1;*//*max-height: 3.2rem;*//*overflow: hidden;*/
+}
+.card-ques-l2.active {
+	border-left: 5px solid #A9CFE1;
+}
+.card-ques-l2 .ques-pg-a {
+	max-height: 3.2rem;
+	overflow: hidden;
+}
+.card-ques-l2.active .ques-pg-a {
+	max-height: 100%
+}
+.card-ques-l2.active .ques-pg-a p {
+	padding-left: 10px;
+}
+/* //20180822   常見問題卡片種類1 - 右icon - 有第二層卡片 (含子標題) -----------------------------------------*/
+/* //20180822   常見問題卡片種類1 - 右icon - 有第二層卡片 (含子標題) -----------------------------------------*/
+
+/* 20180822   常見問題卡片種類2 - 右icon - 有第二層卡片 (無子標題) -----------------------------------------*/
+/* 20180822   常見問題卡片種類2 - 右icon - 有第二層卡片 (無子標題) -----------------------------------------*/
+
+.card-ques-l2-2 {
+	position: relative;
+	margin-top: 0;
+	background-color: white;
+	border-left: 5px solid #A9CFE1;
+	max-height: 0;
+	overflow: hidden;
+}
+.card-ques-l2-2.active {
+	max-height: 100%;
+}
+.card-ques-l2-2 .ques-pg-a p {
+	padding-left: 10px;
+}
+/* //20180822   常見問題卡片種類2 - 右icon - 有第二層卡片 (無子標題) -----------------------------------------*/
+/* //20180822   常見問題卡片種類2 - 右icon - 有第二層卡片 (無子標題) -----------------------------------------*/
+
+/* 20180822   ct-content-card種類- 聯絡客服 -左tag icon -----------------------------------------*/
+/* 20180822   ct-content-card種類- 聯絡客服 -左tag icon -----------------------------------------*/
+
+.ct-content-card.contact-service-card {
+	padding: 10px 10px;
+}
+.ct-content-card-column {
+	display: flex;
+	flex-direction: column;
+}
+.ct-content-card-column.contact-service-card {
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.content-card-column-wrap {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+	padding: 2px 0;
+}
+.content-card-column-wrap {
+	padding-top: 2px;
+}
+.card-tag-green-text {
+	min-width: 53px;
+	margin-right: 6px;
+}
+.card-tag-green-icon {
+	min-width: 53px;
+	margin-right: 6px;
+	height: 25px;
+	padding: 3px 13px;
+	background-color: #1A7778;
+	border-radius: 12.5px;
+}
+.tag-icon-email {
+	width: 100%;
+	height: 100%;
+	background-image: url("../image/icon/i-tag-email.svg");
+	background-size: 20px 15px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.card-tag-green-text p {
+	padding: 3px 13px;
+	height: 25px;
+	background-color: #1A7778;
+	border-radius: 12.5px;
+	text-align: center;
+	color: #ffffff;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.contact-service-content {
+	width: 75%
+}
+.contact-service-content p {
+	font-size: 1.4rem;
+	word-wrap: break-word;
+	overflow: hidden;
+	padding: 3px 0;
+}
+/* //20180822   ct-content-card種類- 聯絡客服 -左tag icon -----------------------------------------*/
+/* //20180822   ct-content-card種類- 聯絡客服 -左tag icon -----------------------------------------*/
+       /*卡片公司名置右-------------------------------*/
+.text-overflow-width-r {
+	max-width: 100vw;
+	text-align: right;
+	word-wrap: break-word;
+	overflow: hidden;/*line-height: 24px;*/
+}
+/* 20180822   匯率換算器  -----------------------------------------*/
+/* 20180822   匯率換算器 -----------------------------------------*/
+.exchangerate-text-style {
+	padding: 0;
+}
+.exchangerate-group {
+	/* position: relative; */
+	width: 100%;
+	padding: 0;
+}
+.exchangerate-input {
+	background: #fff;
+	border: transparent;
+	box-shadow: none;
+	border-radius: 0;
+	font-size: 1.6rem;
+	text-align: right;
+	font-weight: normal;
+	height: auto;
+	padding: 0 10px 0 0;
+}
+.exchangerate-group label {
+	-moz-transform: translate(20px, 10px);
+	-ms-transform: translate(20px, 10px);
+	-webkit-transform: translate(20px, 10px);
+	transform: translate(20px, 10px);
+	transform-origin: left center;
+	color: #107778;
+	border: 1px solid #107778;
+	border-radius: 5px;
+	font-size: 1.5rem;
+	font-weight: 500;
+	box-sizing: border-box;
+	padding: 3px 10px;
+	display: block;
+	position: absolute;
+	margin-top: 0px;
+	z-index: 2;
+	/* pointer-events: none; */
+	width: 15%;
+}
+.exchangerate-group input[type="text"] {
+	appearance: none;
+	background-color: none;
+	line-height: 1.6rem;
+	font-size: 1.6rem;
+	font-weight: normal;
+	width: 100%;
+	border: none;
+	display: block;
+	box-sizing: border-box;
+	padding: 15px;
+	color: #838383;
+	position: relative;
+	z-index: 1;
+	border-bottom: solid 1px #e5e5e5;
+}
+.exchangerate-group input[type="text"]:focus {
+	outline: none;
+	background: #dcf1f2;
+	color: #333;
+	text-align: right;
+}
+.exchangerate-group input[type="text"]:valid {
+ text-align: right;
+}
+.exchangerate-group input[type="text"]:focus ~ label {
+	color: #fff;
+	background: #107778;
+	border-radius: 5px;
+	padding: 3px 10px;
+	z-index: 9;
+}
+.exchangerate-group input[type="text"]:valid ~ label {
+	text-transform: uppercase;
+}
+/* 自訂幣別或時間資訊上下間距 */
+.select-info-group {
+	padding: 5px 20px;
+}
+/* 針對 換算器游標 顏色設定 */
+.exchangerate-group input {
+	caret-color: #fb4f6e;
+}
+@supports (-webkit-mask: none) and (not (caret-color: #fb4f6e)) {
+.exchangerate-group input {
+color: #fb4f6e;
+}
+.exchangerate-group input::first-line {
+color: #fb4f6e;
+}
+}
+.exchangerate-group input, textarea {
+	color: #fb4f6e; /* 游標的顏色*/
+	text-shadow: 0px 0px 0px #838383; /* 文字顏色 */
+	-webkit-text-fill-color: transparent;
+}
+/* //20180822   匯率換算器  -----------------------------------------*/
+/* //20180822   匯率換算器 -----------------------------------------*/
+
+
+/* 20180824   帳戶查詢-存款明細-結構型  -----------------------------------------*/
+/* 20180824   帳戶查詢-存款明細-結構型  -----------------------------------------*/
+
+.deposit-activity-cons-pg .time-show-wrapper {
+	margin: 6px 0 6px 0;
+}
+/* //20180824   帳戶查詢-存款明細-結構型  -----------------------------------------*/
+/* //20180824   帳戶查詢-存款明細-結構型  -----------------------------------------*/
+
+
+/* 20180827   約定轉帳頁  -----------------------------------------*/
+/* 20180827   約定轉帳頁  -----------------------------------------*/
+.form-section-wrapper {
+	padding: 10px 20px 10px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	background-color: #ffffff;
+	box-shadow: 0.2px 2.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+}
+.trans-form-section-title, .trans-form-section-title2 {
+	display: inline-block;
+	min-width: 103px;
+	max-width: 100%;
+	padding: 0 13px;
+	min-height: 27px;
+	border-radius: 12.5px;
+	background-color: #ffffff;
+	border: solid 1px #107778;
+	text-align: center;
+	font-size: 1.6rem;
+	line-height: 2.1rem;
+	font-weight: bold;
+	margin-top: -23px;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.trans-form-section-title p, .trans-form-section-title2 p {
+	color: #107778;
+}
+.trans-form-section-content {
+	padding: 10px 0;
+	font-size: 1.6rem;
+}
+.trans-form-section-content p {
+	padding-left: 10px;
+}
+.ct-form-section {
+	margin-top: 25px;
+}
+.form-section-wrapper2 {
+	padding: 10px 20px 10px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	background-image: linear-gradient(-135deg, #FFFFFF 0%, #F6F6F6 100%);
+}
+.trans-form-section-content2 {
+	font-size: 1.6rem;
+}
+.form-inside-line-wrapper {
+	margin: 10px 20px;
+	/* padding: 10px 0; */
+	height: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.form-inside-line-l {
+	border-bottom: 1px solid #e5e5e5;
+	width: 100%;
+	margin-right: 10px;
+}
+.form-inside-line-r {
+	border-bottom: 1px solid #e5e5e5;
+	width: 100%;
+	margin-left: 10px;
+}
+.form-inside-line-icon {
+	height: 25px;
+	width: 40px;
+	background-image: url(../image/icon/i-form-inseide-line.svg);
+	background-size: 20px 18px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+/* // 20180827   約定轉帳頁  -----------------------------------------*/
+/* // 20180827   約定轉帳頁  -----------------------------------------*/
+
+/* 20180827   APP更新頁  -----------------------------------------*/
+/* 20180827   APP更新頁  -----------------------------------------*/
+
+.app-update-time-wrapper {
+	padding: 12px 20px;
+	text-align: center;
+}
+.app-update-show-time {
+	padding: 0 13px;
+	background-color: #ffffff;
+	border: 1px solid #107778;
+	border-radius: 6px;
+	/* text-align: center; */
+	min-width: 60px;
+	/* margin: 0 auto; */
+	display: inline-block;
+}
+.app-update-show-time p {
+	color: #107778;
+}
+.app-update-sub-wrapper {
+	padding: 0 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+.app-update-type-icon {
+	width: 40px;
+	height: 40px;
+	margin-right: 6px;
+}
+.app-update-type {
+	width: 40px;
+	height: 40px;
+	background-color: #ffc107;
+	border-radius: 50%;
+	background-size: 21px 21px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.app-update-announce {
+	background-image: url("../../../assets/design/image/icon/i-announce.svg");
+}
+.app-update-sub-title {
+	padding-left: 6px;
+}
+.app-update-card-wrapper {
+	padding: 0 30px;
+	margin-top: 6px;
+}
+.app-update-card {
+	background-color: #ffffff;
+	box-shadow: 0 4px 6px 0 rgba(135,135,135,0.20);
+	border-radius: 5px;
+}
+.app-update-card-content {
+	padding: 12px 10px;
+}
+.app-update-card-content li {
+	background: url(../../../assets/design/image/icon/i-list-style-disc.svg) no-repeat left 10px;
+	margin-left: 6px;
+	padding: 6px 0 6px 15px;
+}
+.app-update-card-content li .uptade-inner-content {
+	margin-left: -15px;
+}
+.app-update-read-status {
+	padding: 6px 0;
+	text-align: right;
+}
+.app-update-read-status p {
+	color: #838383;
+}
+.card-bottom-bt-wraaper {
+	border-top: 1px solid #8aa1ac;
+}
+.card-bottom-bt {
+	padding: 10px 20px;
+	text-align: center;
+	width: 100%;
+	background: #FFFFFF;
+}
+.card-bottom-bt p {
+	font-size: 1.6rem;
+	color: #0fa1b8;
+	font-weight: bold;
+	letter-spacing: 4px;
+}
+.card-bottom-bt.card-btn-disable p {
+	color: #ffffff;
+}
+.card-bottom-bt.card-btn-disable {
+	background: #e2e2e2;
+}
+/* //20180827   APP更新頁  -----------------------------------------*/
+/* //20180827   APP更新頁  -----------------------------------------*/
+
+
+
+/* 20180828   POPUP篩選內文  統一設定-----------------------------------------*/
+/* 20180828   POPUP篩選內文  統一設定-----------------------------------------*/
+
+
+ /*pop-sub-title 種類1 - 黑字灰線 ------------------*/
+
+.pop-sub-title {
+	border-bottom: 1px solid #d0d0d0;
+	width: 100%;
+	font-weight: 500;
+}
+.pop-sub-title p {
+	font-size: 1.6rem;
+	padding: 15px 20px 6px 20px;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+/*//pop-sub-title 種類1 - 黑字灰線 -----------------*/
+
+/*pop-tag-wrapper 種類1 - 日期區間 ------------------*/
+
+.pop-tag-wrapper {
+	padding: 15px 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.pop-date-tag {
+	font-size: 1.6rem;
+	padding: 6px 13px;
+	border: 1px solid #565656;
+	background-color: #ffffff;
+	border-radius: 10px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.pop-date-tag.active {
+	background-color: #ffd100;
+	border: 1px solid #ffd100;
+}
+/*//pop-tag-wrapper 種類1 - 日期區間 ----------------*/
+
+/*pop-li-section 種類1 - 左右兩側文字 ----------------*/
+
+.pop-li-section {
+	padding: 15px 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.6rem;
+	cursor: pointer;
+}
+.pop-li-l-50 {
+	width: 50%;
+}
+.pop-li-l-option {
+	word-wrap: break-word;
+	overflow: hidden;
+	padding-right: 6px;
+}
+.pop-li-r-50 {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+.pop-li-r-option {
+	word-wrap: break-word;
+	overflow: hidden;
+	text-align: right;
+	padding-right: 12px;
+}
+
+.pop-li-r-option-tranlog {
+	word-wrap: break-word;
+	overflow: hidden;
+	text-align: right;
+	padding: 12px;
+}
+
+
+.pop-right-icon-wrap {
+	position: relative;
+	width: 18px;
+	height: 18px;
+	z-index: 300;
+}
+.pop-right-icon-wrap .fa-chevron-right {
+	width: 18px;
+	height: 18px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 21px;
+	-webkit-text-stroke: 2.5px #fff;
+	position: absolute;
+	top: 50%;
+	margin-top: -9px;
+	right: 50%;
+	margin-right: -9px;
+}
+/*// pop-li-section 種類1 - 左右兩側文字 ----------------*/
+
+/*pop-li-section 種類2 - 左側文字 ----------------*/
+
+.pop-li-l-100 {
+	width: 100%;
+}
+/*//pop-li-section 種類2 - 左側文字 ----------------*/
+
+
+/* //20180828   POPUP篩選內文  統一設定-----------------------------------------*/
+/* //20180828   POPUP篩選內文  統一設定-----------------------------------------*/
+
+
+/* 20180828   POPUP篩選內文  第二層表單 統一設定-----------------------------------------*/
+/* 20180828   POPUP篩選內文  第二層表單 統一設定-----------------------------------------*/
+
+/*POPUP篩選內文  第二層表單 標題---------------------*/
+
+.pop-content-l2 {
+	width: 100%;
+	overflow: scroll;
+	position: relative;
+	top: 0;
+	margin-bottom: 0;
+}
+.pop-pageback-bt {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50px;
+	cursor: pointer;
+	text-align: center;
+	z-index: 10;
+}
+.pop-pageback-bt a {
+	display: block;
+	text-decoration: none;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+}
+/*//POPUP篩選內文  第二層表單 標題---------------------*/
+
+
+/*pop-li-section 種類3 - 左側文字+右側打勾 -------------*/
+.pop-right-icon-wrap .check-icon {
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+	display: none;
+	width: 20px;
+	height: 15px;
+}
+.pop-li-section.pop-li-default .pop-right-icon-wrap .check-icon {
+	display: block;
+}
+/*//pop-li-section 種類3 - 左側文字+右側打勾 -------------*/
+
+
+/*POPUP篩選內文  第二層表單 打勾icon---------------------*/
+
+.pop-li-border {
+	border-bottom: 1px solid #e5e5e5;
+}
+/* //20180828   POPUP篩選內文  第二層表單 統一設定-----------------------------------------*/
+/* //20180828   POPUP篩選內文  第二層表單 統一設定-----------------------------------------*/
+
+
+
+/* 20180829   POPUP各版型 統一設定-----------------------------------------*/
+/* 20180829   POPUP各版型 統一設定-----------------------------------------*/
+
+
+/* CT-POPUP 種類3 標題+搜尋bar-------------------------------------------*/
+
+.pop-input-search-group {
+	padding: 10px 20px 10px;
+	box-shadow: 0 2px 20px 0 rgba(0,0,0,0.15);
+}
+.pop-tag-flex-wrapper {
+	padding: 5px 20px;
+}
+.pop-select-bk-style {
+	border: 1px solid #565656;
+	border-radius: 10px;
+}
+/*// CT-POPUP 種類3 標題+搜尋bar-------------------------------------------*/
+
+/* CT-POPUP 種類4 標題+L3tab ------------------------------------*/
+
+/*pop-tag-wrapper 種類2 - 幣別(固定寬度) -----------------------*/
+
+.pop-date-tag2.active {
+	background-color: #ffd100;
+	border: 1px solid #ffd100;
+}
+.pop-date-tag2 {
+	font-size: 1.6rem;
+	padding: 6px 13px;
+	border: 1px solid #565656;
+	background-color: #ffffff;
+	border-radius: 10px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	/* width: 22%; */
+	text-align: center;
+}
+
+.pop-date-tag2-currency {
+	font-size: 1.6rem;
+	padding: 6px 13px;
+	width: 29%;
+	border: 1px solid #565656;
+	background-color: #ffffff;
+	border-radius: 10px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	/* width: 22%; */
+	text-align: center;
+}
+
+.pop-date-tag2-currency.active {
+	background-color: #ffd100;
+	border: 1px solid #ffd100;
+}
+
+
+/*//pop-tag-wrapper 種類2 - 幣別(固定寬度) -----------------------*/
+
+
+/*pop-tag-wrapper 種類3 - 期別區間 ------------*/
+
+.pop-date-tag3 {
+	font-size: 1.6rem;
+	padding: 6px 13px;
+	border: 1px solid #565656;
+	background-color: #ffffff;
+	border-radius: 10px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 22%;
+	text-align: center;
+}
+.pop-date-tag3.active {
+	background-color: #ffd100;
+	border: 1px solid #ffd100;
+}
+/*//pop-tag-wrapper 種類3 - 期別區間 ------------*/
+
+/*// CT-POPUP 種類4 標題+L3tab ------------------------------------*/
+
+/*CT-POPUP 種類5  共用框架----------*/
+.pop-content-calender {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	margin-bottom: 46px;
+	height: 100%;
+}
+/*//CT-POPUP 種類5  共用框架----------*/
+
+/* CT-POPUP 種類6 置中+打勾清單選擇----------*/
+.pop-radio-option-group {
+	padding: 15px 20px;
+	font-size: 1.6rem;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+.pop-radio-option-group .ct-radio + label, .pop-radio-option-group .ct-checkbox + label {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+	margin-right: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/*//CT-POPUP 種類6 置中+打勾清單選擇----------*/
+
+
+/* //20180829   POPUP各版型 統一設定-----------------------------------------*/
+/* //20180829   POPUP各版型 統一設定-----------------------------------------*/
+
+
+/* 20180830   交易結果卡片 種類1 全部成功/失敗 -----------------------------------------*/
+/* 20180830   交易結果卡片 種類1 全部成功/失敗 -----------------------------------------*/
+
+.font-500-style {
+	font-weight: 500;
+}
+
+.font-800-style {
+	font-weight: 800;
+}
+.trans-result-container {
+    background: url(../../../assets/design/image/bg-green.jpg) top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 0 0 0;
+    background-attachment: fixed;
+}
+
+.trans-result-sub-wrapper {
+	padding: 5px 20px 0 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+.result-sub-icon {
+	width: 56px;
+	height: 56px;
+	border: solid 2px #ffffff;
+	border-radius: 50%;
+}
+.result-sub-icon-pass {
+	background-color: #ffd100;
+	background-image: url("../image/icon/i-result-pass.svg");
+	background-position: center center;
+	background-size: 35px 28px;
+	background-repeat: no-repeat;
+}
+.result-sub-icon-fail {
+	background-color: #fb4f6e;
+	background-image: url("../image/icon/i-result-fail.svg");
+	background-position: center center;
+	background-size: 35px 28px;
+	background-repeat: no-repeat;
+}
+.result-sub-title {
+	font-size: 1.6rem;
+	font-weight: 500;
+	width: 100%;
+	text-align: center;
+}
+.result-sub-title p {
+	color: #ffffff;
+	padding: 14px 0 10px 0;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.wau-sub-title{
+	font-size: 1.8rem;
+    text-align: left;
+    font-weight: bold;
+	width: 100%;
+}
+.wau-sub-title p{
+    color: #fff;
+}
+.card-result {
+	padding: 5px 20px;
+	line-height: 24px;
+}
+.card-result ul li div p {
+	color: #ffffff;
+}
+.card-inside-line-white {
+	border-bottom: 1px solid #ffffff;
+	margin: 5px 0;
+}
+.text-overflow-width-l-all {
+	max-width: 100%;
+	text-align: left;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.text-overflow-width-r-all {
+	max-width: 100%;
+	text-align: right;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.card-li-money-l2 {
+	padding: 3px 0;
+	line-height: 1.5rem;
+	font-size: 1.4rem;
+}
+.card-li-money-l2.money-l2-space {
+	padding-left: 2.8rem;
+}
+.card-li-money-l2-left {
+	max-width: 9em;
+	font-size: 1.4rem;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.card-li-money-l2-right {
+	max-width: 11em;
+	font-size: 1.4rem;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.card-li-money-l2-right .amount-number {
+	color: #ffffff;
+	font-weight: normal;
+	font-size: 1.4rem;
+}
+.amount-l2-bold-style .amount-number {
+	font-size: 1.8rem;
+	font-weight: normal;
+	color: #ffffff;
+}
+/*20180830 授權交易頁-下方授權交易卡片區塊 外框架-----------------*/
+
+.card-auth-result-wrapper {
+	width: 100%;
+	height: 100%;
+	background-color: #F0F2F3;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+/*//20180830 授權交易頁-下方授權交易卡片區塊 外框架-----------------*/
+
+/*20180830 授權交易卡片 種類1 (與timeline卡片架構相同)-----------------*/
+
+.card-auth-result {
+	margin: 10px 10px;
+	background-color: white;
+	border-radius: 5px;
+	border-left: 5px solid #1e696b;
+	box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+}
+/*//20180830 授權交易卡片 種類1 (與timeline卡片架構相同)-----------------*/
+
+/* // 20180830  交易結果卡片 種類1 全部成功/失敗 -----------------------------------------*/
+/* // 20180830  交易結果卡片 種類1 全部成功/失敗 -----------------------------------------*/
+
+/* 20180830   交易結果卡片 種類2 部分成功/失敗 -----------------------------------------*/
+/* 20180830   交易結果卡片 種類2 部分成功/失敗 -----------------------------------------*/
+
+.result-sub-icon-s {
+	width: 30px;
+	height: 30px;
+	border: solid 2px #ffffff;
+	border-radius: 50%;
+}
+.result-sub-icon-s.result-sub-icon-pass {
+	background-color: #ffd100;
+	background-image: url("../image/icon/i-result-pass.svg");
+	background-position: center center;
+	background-size: 18.3px 14.4px;
+	background-repeat: no-repeat;
+}
+.result-sub-icon-s.result-sub-icon-fail {
+	background-color: #fb4f6e;
+	background-image: url("../image/icon/i-result-fail.svg");
+	background-position: center center;
+	background-size: 15.2px 15.2px;
+	background-repeat: no-repeat;
+}
+.text-overflow-all-icon {
+	max-width: 87%;
+	text-align: left;
+	word-wrap: break-word;
+	overflow: hidden;
+	margin-left: 10px;
+}
+/* //20180830   交易結果卡片 種類2 部分成功/失敗 -----------------------------------------*/
+/* //20180830   交易結果卡片 種類2 部分成功/失敗 -----------------------------------------*/
+
+
+/*20180831預約轉帳明細-週期--------------------------------*/
+/*20180831預約轉帳明細-週期--------------------------------*/
+
+/*預約轉帳明細-週期 上層表單設定(版型為>>利率查詢 (ct-表格 種類1 - 4欄))--------------------------------*/
+
+
+.pre-def-detail-cycle-pg .card-pre-def-cycle {
+	margin-bottom: 15px;
+}
+.card-pre-def-cycle {
+	margin: 5px 20px;
+	background-color: white;
+	border-radius: 5px;
+	/* border-left: 5px solid #1e696b; */
+	box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+	/* border-bottom: 5px solid #1e696b; */
+	line-height: 24px;
+}
+/*此頁卡片內文左右寬度特別設定，要再寫 RWD--------------------------------*/
+.card-pre-def-cycle .card-text-left {
+	max-width: 7em;
+}
+.card-pre-def-cycle .card-li-money-left {
+	max-width: 7em;
+}
+/*//此頁卡片內文左右寬度特別設定，要再寫 RWD--------------------------------*/
+
+.pre-def-title-wrapper div, .pre-def-content-wrapper div {
+	padding: 0 6px 0 0;
+}
+.pre-def-title-wrapper div.pre-def-title-col4, .pre-def-content-wrapper div.pre-def-content-col4 {
+	padding: 0;
+}
+.pre-def-title-wrapper .pre-def-title-col2, .pre-def-content-wrapper .pre-def-content-col2 {
+	text-align: left;
+}
+.pre-def-content-wrapper ul li {
+	line-height: 2rem;
+}
+.pre-def-content-wrapper ul li:last-child {
+	border-bottom: solid 1px #e5e5e5;
+}
+.pre-def-title-col1 p, .pre-def-title-col2 p, .pre-def-title-col3 p, .pre-def-title-col4 p {
+	color: #3d4953;
+}
+.pre-def-title-section {
+	background-color: #ffffff;
+	padding: 14px 0 10px 0;
+	line-height: 1.5rem;
+	font-size: 1.5rem;
+}
+.pre-def-title-col1 {
+	width: 20%;
+}
+.pre-def-title-col2 {
+	width: 28%;
+}
+.pre-def-title-col3 {
+	width: 42%;
+}
+.pre-def-title-col4 {
+	width: 10%;
+}
+.pre-def-content-section {
+	padding-bottom: 0;
+	background-color: #f0f2f3;
+}
+.pre-def-content-col1 {
+	width: 20%;
+}
+.pre-def-content-col2 {
+	width: 28%;
+}
+.pre-def-content-col3 {
+	width: 42%;
+}
+.pre-def-content-col4 {
+	width: 10%;
+}
+.pre-def-content-col4 .icon-delete {
+	width: 100%;
+	padding: 0;
+	background-position: right 6px center;
+}
+/*//預約轉帳明細-週期 上層表單設定(版型為>>利率查詢 (ct-表格 種類1 - 4欄))--------------------------------*/
+
+/*預約轉帳明細-週期 下層表單設定(版型為>>匯率查詢 (ct-表格 種類1 - 3欄))--------------------------------*/
+
+.pre-def-tb-wrapper div, .pre-def-cb-wrapper div {
+	padding: 0 6px 0 0;
+}
+.pre-def-tb-wrapper .pre-def-tb-col3, .pre-def-cb-wrapper .pre-def-cb-col3 {
+	text-align: left;
+}
+.pre-def-cb-wrapper ul li:last-child {
+	border-bottom: solid 1px #e5e5e5;
+}
+.pre-def-tb-section {
+	background-color: #ffffff;
+	padding: 14px 0 10px 0;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+}
+.pre-def-tb-col1 p, .pre-def-tb-col3 p, .pre-def-tb-col4 p {
+	color: #3d4953;
+}
+.pre-def-tb-col1 {
+	width: 20%;
+}
+.pre-def-tb-col3 {
+	width: 30%;
+}
+.pre-def-tb-col4 {
+	width: 50%;
+}
+.pre-def-cb-section {
+	padding-bottom: 12px;
+	background-color: #f0f2f3;
+}
+.pre-def-cb-col1 {
+	width: 20%;
+}
+.pre-def-cb-col3 {
+	width: 30%;
+}
+.pre-def-cb-col4 {
+	width: 50%;
+}
+/*預約轉帳明細-週期 下層表單設定(版型為>>匯率查詢 (ct-表格 種類1 - 3欄))--------------------------------*/
+
+/*//20180831預約轉帳明細-週期--------------------------------*/
+/*//20180831預約轉帳明細-週期————————————————*/
+
+
+
+/*20180831 card-tag-wrap 右側文字 相關設定--------------------------------*/
+/*20180831 card-tag-wrap 右側文字 相關設定--------------------------------*/
+
+/*如果要特別限制card-tag-wrap 右側文字長度的話(因為有的用p包 有的用div包)*/
+
+/*html格式1*/
+
+/*ctbc-card.html*/ /*待授權明細.html*/
+
+/*<div class="card-text-right card-font-s">*/
+/*<p>最後異動人員</p>*/
+/*</div>*/
+
+/*//html格式1*/
+
+/*html格式2*/
+
+/*（New） 已授權.html*/  /*（New） 待授權.html*/ /*交易結果-全部.html*/ /*交易結果-部分.html*/
+
+/*<p class="card-text-right card-font-s font-blue-highlight">銀行處理中</p>*/
+
+/*//html格式2*/
+
+
+.card-tag-wrap ~ .card-text-right p {
+	/*border: 1px solid pink;*/
+	max-width: 8rem;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.card-tag-wrap ~ .card-text-right {
+	/*border: 1px solid pink;*/
+	max-width: 8rem;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+/*如果要特別限制card-tag-wrap 右側文字長度的話*/
+
+.card-li-style .font-blue-highlight p {
+	color: #2461aa;
+}
+/*///////如果要特別限制card-tag-wrap 右側文字長度的話(因為有的用p包 有的用div包)*/
+
+/*//20180831 card-tag-wrap 右側文字 相關設定--------------------------------*/
+/*//20180831 card-tag-wrap 右側文字 相關設定--------------------------------*/
+
+
+/* 20180903 大額交易通知列表頁 表單設定(版型為>>匯率查詢 (ct-表格 種類2 - 2欄))--------------------------------*/
+/* 20180903 大額交易通知列表頁 表單設定(版型為>>匯率查詢 (ct-表格 種類2 - 2欄))--------------------------------*/
+
+.bl-trade-content-section {
+	padding-bottom: 15px;
+	background-color: white;
+	margin-bottom: 25px;
+	box-shadow: 2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+}
+.bl-trade-title-section {
+	padding: 14px 0 10px 0;
+	background-color: #ffffff;
+	line-height: 1.5rem;
+	font-size: 1.5rem;
+}
+.bl-trade-title-col1 p, .bl-trade-title-col4 p {
+	color: #3d4953;
+}
+.bl-trade-title-wrapper {
+	padding: 0 20px;
+	font-size: 1.5rem;
+}
+.bl-trade-title-col1 {
+	width: 85%;
+}
+.bl-trade-title-col4 {
+	width: 15%;
+}
+.bl-trade-content-wrapper .bl-trade-content-col1 {
+	font-size: 1.4rem;
+}
+.bl-trade-content-wrapper ul li {
+	position: relative;
+	width: 100%;
+	padding: 10px 20px;
+	float: left;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.bl-trade-content-col1 {
+	width: 85%;
+}
+.bl-trade-content-col4 {
+	width: 15%;
+}
+.icon-edit {
+	height: 28px;
+	background-image: url(../../../assets/design/image/icon/i-edit.svg);
+	background-size: 24px 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.bl-trade-content-col4 .icon-edit {
+	width: 100%;
+	padding: 0;
+	background-position: right center;
+}
+.bl-trade-content-wrapper ul li:nth-child(odd) {
+	background-color: #e5e5e5;
+}
+.bl-trade-content-wrapper ul li:nth-child(even) {
+	background-color: #ffffff;
+}
+.bl-trade-content-wrapper ul li:last-child {
+	border-bottom: solid 1px #e5e5e5;
+}
+/* // 20180903 大額交易通知列表頁 表單設定(版型為>>匯率查詢 (ct-表格 種類2 - 2欄))--------------------------------*/
+/* // 20180903 大額交易通知列表頁 表單設定(版型為>>匯率查詢 (ct-表格 種類2 - 2欄))--------------------------------*/
+
+/* // 20180902 登入頁 / 登出頁 設定--------------------------------*/
+/* // 20180902 登入頁 / 登出頁 設定--------------------------------*/
+
+.cb-slideshow, .cb-slideshow:after {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+}
+.cb-slideshow:after {
+	content: '';
+}
+.cb-slideshow li span {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: transparent;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	opacity: 0;
+	z-index: 0;
+	-webkit-backface-visibility: hidden;
+	-webkit-animation: imageAnimation 18s linear 0s infinite;
+	-moz-animation: imageAnimation 18s linear 0s infinite;
+	-o-animation: imageAnimation 18s linear 0s infinite;
+	-ms-animation: imageAnimation 18s linear 0s infinite;
+	animation: imageAnimation 18s linear 0s infinite;
+}
+.cb-logout li span {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: transparent;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	opacity: 1;
+	z-index: 0;
+	animation: none;
+}
+.cb-slideshow.cb-logout li:nth-child(1) span {
+	background-image: url(../image/night.png);
+}
+.cb-slideshow li:nth-child(1) span {
+	background-image: url(../image/0.jpg);
+}
+.cb-slideshow li:nth-child(2) span {
+	background-image: url(../image/1.jpg);
+	-webkit-animation-delay: 6s;
+	-moz-animation-delay: 6s;
+	-o-animation-delay: 6s;
+	-ms-animation-delay: 6s;
+	animation-delay: 6s;
+}
+.cb-slideshow li:last-child span {
+	background-image: url(../image/14.jpg);
+	-webkit-animation-name: imageAnimationout;
+	-moz-animation-name: imageAnimationout;
+	-o-animation-name: imageAnimationout;
+	-ms-animation-name: imageAnimationout;
+	animation-name: imageAnimationout;
+	-webkit-animation-delay: 12s;
+	-moz-animation-delay: 12s;
+	-o-animation-delay: 12s;
+	-ms-animation-delay: 12s;
+	animation-delay: 12s;
+}
+
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation {
+ 0% {
+ opacity: 0;
+ -webkit-animation-timing-function: ease-in;
+}
+ 16% {
+ opacity: 1;
+ -webkit-transform: scale(1.05);
+ -webkit-animation-timing-function: ease-out;
+}
+ 34% {
+ opacity: 1;
+ -webkit-transform: scale(1.1);
+}
+ 50% {
+ opacity: 0;
+ -webkit-transform: scale(1.1);
+}
+ 100% {
+opacity: 0
+}
+}
+ @keyframes imageAnimation {
+ 0% {
+ opacity: 0;
+ animation-timing-function: ease-in;
+}
+ 16% {
+ opacity: 1;
+ transform: scale(1.05);
+ animation-timing-function: ease-out;
+}
+ 34% {
+ opacity: 1;
+ transform: scale(1.1);
+}
+ 50% {
+ opacity: 0;
+ transform: scale(1.1);
+}
+ 100% {
+opacity: 0
+}
+}
+
+
+/* Animation for the slideshow images */
+@keyframes imageAnimationout {
+ 0% {
+ opacity: 0;
+ animation-timing-function: ease-in;
+ -webkit-transform: scale(1.2);
+}
+ 16% {
+ opacity: 1;
+ animation-timing-function: ease-out;
+}
+ 34% {
+ opacity: 1;
+ -webkit-transform: scale(1.05);
+}
+ 50% {
+ opacity: 0;
+ -webkit-transform: scale(1.05);
+}
+ 100% {
+opacity: 0
+}
+}
+/* Show at least something when animations not supported */
+.no-cssanimations .cb-slideshow li span {
+	opacity: 1;
+}
+/* Login Forms  logout */
+
+#login {
+	/* 增加高度不夠可滑動css -- start */
+	position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+	overflow: hidden;
+	margin-top: calc( -1 * constant(safe-area-inset-top) );
+	margin-top: calc( -1 * env(safe-area-inset-top) );
+	/* 增加高度不夠可滑動css -- end */
+}
+#logout {
+}
+.login-wrap {
+	padding: 0;
+	position: absolute;
+	left: 5%;
+	margin: auto;/* 因應android調整 */
+	width: 90%;
+	top: 20vh;
+	/* 增加高度不夠可滑動css -- start */
+    height: calc( 100vh - 20vh );
+    overflow: scroll;
+	/* 增加高度不夠可滑動css -- end */
+}
+.logout-wrap {
+	padding: 0;
+	position: relative;
+	margin: 60% auto;
+	width: 90%;
+}
+.welcome-content {
+	width: 50%;
+	margin: 0 auto 20px;
+	font-size: 2rem;
+	font-weight: 600;
+	color: #fff;
+	text-align: center;
+}
+#login form .switch label {
+	width: 100%;
+	background: none;
+	color: #fff;
+	font-size: 16px;
+	font-weight: normal;
+}
+.switch {
+	width: 90%;
+	margin: 0 auto;
+}
+.switch, .switch * {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+.switch label input[type=checkbox] {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+.switch label .lever:before {
+	background-color: rgba(38, 166, 154, 0.15);
+}
+
+.switch label .lever {
+	content: "";
+	display: inline-block;
+	position: relative;
+	width: 46px;
+	height: 25px;
+	vertical-align: middle;
+	border-radius: 15px;
+	transition: background 0.3s ease 0s;
+	margin: 0px 5px;
+}
+.switch label .lever:before {
+	background-color: rgba(38, 166, 154, 0.15);
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+	/*border-bottom: 0 solid #fff;*/
+	-webkit-box-shadow: 0 00 0;
+	box-shadow: 0 0 0 0 #fff;
+}
+/* 登入頁 各式表單 左右兩欄並列＋線框 */
+
+.label-input-group-style {
+	padding: 10px;
+}
+.label-input-group {
+	width: 100%;
+	padding: 10px 20px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+}
+.label-input-group label {
+	width: 35%;
+	margin-right: 20px;
+}
+.label-input-group input {
+	width: 65%;
+}
+/* 登入頁個別使用 */
+.login-location-group {
+	width: 35%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.login-location-group .btn-selectline-pop {
+	border-bottom: none;
+	background-color: rgba(255, 255, 255, 0.95);
+	border-radius: 20px;
+}
+.login-location-group .btn-selectline-pop .fa-map-marker {
+	font-size: 2.1rem;
+	margin-right: 10px;
+}
+.login-location-group .btn-selectline-pop:hover {
+	background-color: rgba(255, 255, 255, 0.95);
+	border-bottom: none;
+	box-shadow: none;
+	background-image: none;
+}
+.login-location-group .btn-selectline-pop.active, .login-location-group .btn-selectline-pop:active, .open > .dropdown-toggle.login-location-group .btn-selectline-pop {
+	background-color: rgba(255, 255, 255, 0.95);
+	border-color: transparent;
+}
+.login-location-group .btn-selectline-pop.btn-default.active.focus, .login-location-group .btn-selectline-pop.btn-default.active:focus, .login-location-group .btn-selectline-pop.btn-default.active:hover, .login-location-group .btn-selectline-pop.btn-default:active.focus, .login-location-group .btn-selectline-pop.btn-default:active:focus, .login-location-group .btn-selectline-pop.btn-default:active:hover, .open > .dropdown-toggle.btn-selectline-pop.focus, .open > .dropdown-toggle.btn-selectline-pop:focus, .open > .dropdown-toggle.btn-selectline-pop:hover {
+	color: #979797;
+	background-color: rgba(255, 255, 255, 0.95);
+	border-bottom: none;
+}
+.login-input-group {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.95);
+	border-radius: 3px;
+	padding: 12px 10px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: space-between;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+}
+.login-wrap .bt-center-group {
+	margin: 0 10px;
+}
+.bt-login-group-xl {
+	width: 100%;
+}
+.btn-login-group.btn-confirm {
+	width: 100%;
+	height: 50px;
+	border-radius: 5px;
+}
+.logout-wrap .bt-center-group .btn-cancel {
+	margin-right: 10px;
+	border: none;
+}
+/* 產生OTP 按鈕*/
+.btn-floating.btn-large {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	padding: 0;
+	transition: none;
+	display: block;
+}
+.floating-tooltip {
+	background: #299fa0;
+	color: #fff;
+	/* position: absolute; */
+	padding-top: 26px !important;
+    margin-left: 60vw;
+	/* bottom: 25px; */
+	/* right: 10%; */
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 20px;
+	text-align: center;
+	font-family: "微軟正黑體", "Arial";
+}
+.floating-tooltip:hover {
+	background: #299fa0;
+}
+/* // 20180902 登入頁 / 登出頁 設定--------------------------------*/
+/* // 20180902 登入頁 / 登出頁 設定--------------------------------*/
+
+/* 20180903 大額交易通知表單內容資訊 設定 ----------------------------*/
+
+/* 大額交易共用表單外框 rate-select-wrap */
+.rate-select-wrap {
+	padding: 15px 20px;
+}
+.select-wrap {
+	padding: 15px 20px;
+}
+.select-group-style {
+}
+.select-group-info {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	text-align: left;
+	padding-top: 8px;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.currency-info {
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+	text-align: right;
+	padding-top: 4px;
+	word-wrap: break-word;
+	overflow: hidden;
+	width: 80%;
+}
+.select-amount-input-group {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.select-amount-input-group label {
+	width: 15%;
+	margin-right: 10px;
+	margin-bottom: 0;
+	font-weight: normal;
+}
+.select-amount-input {
+	background: transparent;
+	border: transparent;
+	box-shadow: none;
+	border-radius: 0;
+	font-size: 1.6rem;
+	text-align: left;
+	font-weight: normal;
+	height: auto;
+	padding: 0;
+}
+.select-flex-group {
+	width: 100%;
+	padding: 10px 20px;
+	display: inline-block;
+	flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.select-row-group-up {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 10px;
+}
+.select-row-group-up .pop-checkbox {
+	left: -5px;
+}
+.select-row-group-down {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+/* //20180903 大額交易通知表單內容資訊 設定 ----------------------------*/
+
+/* 20180904 自設幣別頁 表單設定(版型為>>匯率查詢 (ct-表格 種類1 - 3欄))--------------------------------*/
+/* 20180904 自設幣別頁 表單設定(版型為>>匯率查詢 (ct-表格 種類1 - 3欄))--------------------------------*/
+
+/* 20180904 自設幣別頁 --------------------------------*/
+.pref-currency-pg .pref-currency-select-style {
+	padding: 10px 20px 12px;
+}
+/* //20180904 自設幣別頁--------------------------------*/
+.pref-cur-title-section {
+	background-color: #ffffff;
+	padding: 14px 0 10px 0;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+}
+.pref-cur-title-wrapper {
+	padding: 0 20px;
+}
+.pref-cur-title-wrapper div, .pref-cur-content-wrapper div {
+	padding: 0 6px 0 0;
+}
+.pref-cur-title-col1 {
+	width: 40%;
+}
+.pref-cur-title-col3 {
+	width: 45%;
+}
+.pref-cur-title-col4 {
+	width: 15%;
+}
+.pref-cur-title-col1 p, .pref-cur-title-col3 p, .pref-cur-title-col4 p {
+	color: #3d4953;
+}
+.pref-cur-title-wrapper .pref-cur-title-col3, .pref-cur-content-wrapper .pref-cur-content-col3 {
+	text-align: left;
+}
+.pref-cur-content-section {
+	padding-bottom: 12px;
+	background-color: #f0f2f3;
+}
+.pref-cur-content-wrapper ul li {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 13px 20px;
+}
+.pref-cur-content-wrapper ul li:last-child {
+	border-bottom: 1px solid #e5e5e5;
+}
+.pref-cur-content-col1 {
+	width: 40%;
+}
+.pref-cur-content-col3 {
+	width: 45%;
+}
+.pref-cur-content-col4 {
+	width: 15%;
+}
+.pref-cur-content-col1 .icon-drag {
+	width: 100%;
+	padding: 0;
+	background-position: left 3px center;
+}
+.pref-cur-content-col4 .icon-delete {
+	width: 100%;
+	padding: 0;
+	background-position: right 6px center;
+}
+/* // 20180904 自設幣別頁 表單設定(版型為>>匯率查詢 (ct-表格 種類1 - 3欄))--------------------------------*/
+/* // 20180904 自設幣別頁 表單設定(版型為>>匯率查詢 (ct-表格 種類1 - 3欄))--------------------------------*/
+
+
+/*  20180906 最新公告頁 卡片固定行數--------------------------------*/
+/*  20180906 最新公告頁 卡片固定行數--------------------------------*/
+
+.section-content-news {
+	position: absolute;
+	top: 190px;
+	bottom: 64px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.news-wrap {
+	margin: 10px 0;
+}
+.card-news-top {
+	margin: 5px 15px 20px;
+	background-color: white;
+	border-radius: 6px;
+	border-left: 6px solid #ffd100;
+	box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+}
+.card-news-group {
+	margin: 5px 15px;
+	background-color: white;
+	border-radius: 6px;
+	border-left: 6px solid #107778;
+	box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+	position: relative;
+}
+.news-tag-wrap {
+	padding: 1px 0;
+	max-width: 26rem;
+}
+.news-title {
+	font-size: 1.5rem;
+	max-width: 15em;
+	white-space: nowrap;
+}
+.news-content {
+	
+	/*原先設定*/
+
+	/*font-size: 1.5rem;*/
+	/*text-align: justify;*/
+	/*display: -webkit-box;*/
+	/*overflow: hidden;*/
+	/*text-overflow: ellipsis;*/
+	/*-webkit-line-clamp: 1;*/
+	/*!* autoprefixer: off *!*/
+	/*-webkit-box-orient: vertical;*/
+	/*!* autoprefixer: on *!*/
+	/*max-width: none;*/
+
+	/*2018/12/22 調整文字溢出設定 */
+
+	font-size: 1.5rem;
+	line-height: 1.5;
+	max-width: none;
+}
+
+/*2018/12/22 調整文字溢出設定 */
+
+.news-content p{
+	text-overflow: clip;
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	margin-right: 6px;
+}
+
+/* // 20180906 最新公告頁 卡片固定行數--------------------------------*/
+/* // 20180906 最新公告頁 卡片固定行數--------------------------------*/
+
+/*  20180906 側邊欄--------------------------------*/
+/*  20180906 側邊欄--------------------------------*/
+
+
+.sidenav {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #ffffff;
+	overflow-x: hidden;
+	transition: 0.5s;
+	text-align: center;
+}
+.sidenav .closebtn {
+	color: #b0d1c8;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 40px;
+	margin-left: 0;
+	z-index: 3;
+}
+/*DB 漢堡選單----------------------------------------*/
+
+#nav_left_bar {
+	position: fixed;
+	background: #c8c8c8;
+	/*nav 背景色*/
+	height: 100%;
+	z-index: 3000;
+	color: #ffffff;
+	line-height: 1.2;
+	top: 0;
+	opacity: 1;
+	overflow: scroll;
+	left: -100%;
+}
+#nav_left_bar ul {
+	list-style: none;
+	margin-top: 0;
+	padding: 0;
+	line-height: 32px;
+}
+.left {
+	left: -280px;
+}
+.show {
+	left: 0;
+}
+/* welcome 列 與 第二層小標題  樣式*/
+
+.left_nav_log_welcome, .left_nav_sec_title {
+	color: #ffffff;
+}
+li.left_nav_log_welcome a {
+	height: 120px;
+}
+/*左側icon設定*/
+
+#nav_left_bar ul li.left_nav_log_welcome a, #nav_left_bar ul li.left_nav_sec_title a {
+	font-size: 20px;
+	background: #1A7778;
+	color: white;
+}
+#nav_left_bar ul li.left_nav_log_welcome a {
+	font-size: 24px;
+}
+/*===========================================================================================================*/
+
+    /*首頁leftmenu*/
+
+    /* DB漢堡選單 */
+img.nav_title_icon {
+	width: 28px;
+}
+#nav_left_bar {
+}
+#nav_left_bar ul li.left_nav_log_welcome a, #nav_left_bar ul li.left_nav_sec_title a {
+}
+#nav_left_bar ul li.left_nav_log_welcome a {
+	font-size: 24px;
+}
+#nav_left_bar ul a i {
+	margin-right: 10px;
+	font-size: 14px;
+	margin-top: 3px;
+	width: 20px;
+}
+/* 登入資訊 */
+.user-log-info {
+	width: 85%;
+	padding: 45px 26px 0;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+}
+.log-logo {
+    width: 85px;
+    max-width: 90px;
+	text-align: left;
+}
+.log-logo img {
+	width: 66px;
+	height: 66px;
+	display: block;
+}
+.user-login-box {
+	width: 50%;
+	text-align: left;
+	color: #b0d1c8;
+	font-size: 1.7rem;
+	font-weight: bold;
+	line-height: 2rem;
+}
+.user-logout{
+	color: #fff;
+    font-size: 2rem;
+    line-height: 2.3rem;
+}
+.btn-log-group {
+	width: 25%;
+}
+.btn-log {
+	width: 150%;
+	line-height: normal;
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: normal;
+	background: transparent;
+	color: #b0d1c8;
+	border: 1.5px solid #b0d1c8;
+	border-radius: 12px;
+	padding: 5px 0;
+}
+/*DB 漢堡選單//End----------------------------------------*/
+
+
+
+
+.nav_level1_content {
+	text-align: left;
+	padding-left: 40px;
+}
+.accordion-menu {
+	width: 100%;
+	margin: 60px auto 0;
+	background: #fff;
+	border-radius: 4px;
+	text-align: left;
+}
+.left_nav_log_welcome, .left_nav_sec_title {
+	background: url("../image/sidemenu-bg.svg") 0 bottom;
+	background-color: #fff;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #ffffff;
+	height: 23%;
+}
+.accordion-menu li:nth-child(1) .dropdownlink {
+	background-color: #fff;
+}
+.accordion-menu li:nth-child(2) .dropdownlink {
+	background-color: #fbfbfb;
+}
+.accordion-menu li:nth-child(3) .dropdownlink {
+	background-color: #f7f7f7;
+}
+.accordion-menu li:nth-child(4) .dropdownlink {
+	background-color: #f1f1f1;
+}
+.accordion-menu li:nth-child(5) .dropdownlink {
+	background-color: #e9e9e9;
+}
+.accordion-menu li:nth-child(6) .dropdownlink {
+	background-color: #e5e5e5;
+}
+.accordion-menu li:nth-child(7) .dropdownlink {
+	background-color: #e0e0e0;
+}
+.accordion-menu li:nth-child(8) .dropdownlink {
+	background-color: #dadada;
+}
+.accordion-menu li:nth-child(9) .dropdownlink {
+	background-color: #d5d5d5;
+}
+.accordion-menu li:nth-child(10) .dropdownlink {
+	background-color: #d1d1d1;
+}
+.accordion-menu li:nth-child(11) .dropdownlink {
+	background-color: #cdcdcd;
+}
+.accordion-menu li:nth-child(12) .dropdownlink {
+	background-color: #c8c8c8;
+}
+.accordion-menu li:last-child .dropdownlink {
+	border-bottom: 0;
+}
+.accordion-menu li.open .dropdownlink {
+	color: #ffffff;
+	background: #107778;
+}
+
+
+.accordion-menu li.open .dropdownlink p, .accordion-menu li.open .dropdownlink i {
+	color: #ffffff;
+}
+.accordion-menu li.open .dropdownlink .fa-angle-right {
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	top: 7px;
+	right: 20px;
+}
+.dropdownlink {
+	cursor: pointer;
+	display: block;
+	padding: 18px 20px 18px 85px;
+	font-size: 1.7rem;
+	line-height: 1.7rem;
+	letter-spacing: 1.8px;
+	color: #000;
+	position: relative;
+	-webkit-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+.dropdownlink p {
+	font-size: 1.7rem;
+	line-height: 1.7rem;
+	font-weight: normal;
+	color: #000;
+}
+.dropdownlink i {
+	position: absolute;
+	top: 15px;
+	left: 30px;
+	font-size: 25px;
+	width: 26px;
+	height: 26px;
+	color: #107778;
+}
+.nav-title-icon {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+}
+.nav-title-icon-otp {
+	background-image: url(../image/icon/i-left-otp.svg);
+	background-size: 100%;
+	background-position: center center;
+}
+.accordion-menu li.open .dropdownlink .nav-title-icon-otp {
+	background-image: url(../image/icon/i-left-otp-open.svg);
+}
+
+
+.nav-title-icon-notice {
+	background-image: url(../image/icon/i-left-notice.svg);
+	background-size: 100%;
+	background-position: center center;
+}
+.accordion-menu li.open .dropdownlink .nav-title-icon-notice {
+	background-image: url(../image/icon/i-left-notice-open.svg);
+}
+
+
+.nav-title-icon-authorization {
+	background-image: url(../image/icon/i-left-authorization.svg);
+	background-size: 100%;
+	background-position: center center;
+}
+.accordion-menu li.open .dropdownlink .nav-title-icon-authorization {
+	background-image: url(../image/icon/i-left-authorization-open.svg);
+}
+
+
+.nav-title-icon-inquiry {
+	background-image: url(../image/icon/i-left-inquiry.svg);
+	background-size: 100%;
+	background-position: center center;
+}
+.accordion-menu li.open .dropdownlink .nav-title-icon-inquiry {
+	background-image: url(../image/icon/i-left-inquiry-open.svg);
+}
+
+.nav-title-icon-transaction {
+	background-image: url(../image/icon/i-left-transaction.svg);
+	background-size: 100%;
+	background-position: center center;
+}
+.accordion-menu li.open .dropdownlink .nav-title-icon-transaction {
+	background-image: url(../image/icon/i-left-transaction-open.svg);
+}
+
+
+.nav-title-icon-setting {
+	background-image: url(../image/icon/i-left-setting.svg);
+	background-size: 100%;
+	background-position: center center;
+	margin-left: 1px;
+}
+.accordion-menu li.open .dropdownlink .nav-title-icon-setting {
+	background-image: url(../image/icon/i-left-setting-open.svg);
+}
+
+
+.nav-title-icon-information {
+	background-image: url(../image/icon/i-left-information.svg);
+	background-size: 100%;
+	background-position: center center;
+	margin-left: 1px;
+}
+.accordion-menu li.open .dropdownlink .nav-title-icon-information {
+	background-image: url(../image/icon/i-left-information-open.svg);
+}
+
+
+.nav-title-icon-announcement {
+	background-image: url(../image/icon/i-left-announcement.svg);
+	background-size: 100%;
+	background-position: center center;
+	margin-left: 1px;
+}
+.accordion-menu li.open .dropdownlink .nav-title-icon-announcement {
+	background-image: url(../image/icon/i-left-announcement-open.svg);
+}
+
+
+.nav-title-icon-location {
+	background-image: url(../image/icon/i-left-location.svg);
+	background-size: 100%;
+	background-position: center center;
+	margin-left: 1px;
+}
+.accordion-menu li.open .dropdownlink .nav-title-icon-location {
+	background-image: url(../image/icon/i-left-location-open.svg);
+}
+
+.nav-title-icon-qa {
+	background-image: url(../image/icon/i-left-qa.svg);
+	background-size: 100%;
+	background-position: center center;
+	margin-left: 1px;
+}
+.accordion-menu li.open .dropdownlink .nav-title-icon-qa {
+	background-image: url(../image/icon/i-left-qa-open.svg);
+}
+
+.nav-title-icon-contact {
+	background-image: url(../image/icon/i-left-contact.svg?v=1.0.7);
+	background-size: 100%;
+	background-position: center center;
+	margin-left: 1px;
+}
+.accordion-menu li.open .dropdownlink .nav-title-icon-contact {
+	background-image: url(../image/icon/i-left-contact-open.svg?v=1.0.7);
+}
+
+
+.nav-title-icon-ctbclink {
+	background-image: url(../image/icon/i-left-ctbclink.svg);
+	background-size: 100%;
+	background-position: center center;
+	margin-left: 2px;
+}
+.accordion-menu li.open .dropdownlink .nav-title-icon-ctbclink {
+	background-image: url(../image/icon/i-left-ctbclink-open.svg);
+}
+
+.nav-title-icon-logout {
+	background-image: url(../image/icon/i-left-logout.svg);
+	background-size: 100%;
+	background-position: center center;
+}
+
+
+.nav-title-icon-global {
+	background-image: url(../image/icon/i-left-global.svg?v=1.0.7);
+	background-size: 100%;
+	background-position: center center;
+	margin-left: 1px;
+}
+
+.nav-title-icon-transfer {
+	background-image: url(../image/icon/i-left-transfer.svg);
+	background-size: 100%;
+	background-position: center center;
+	margin-left: 2px;
+   }
+
+
+.dropdownlink .fa-angle-right {
+	right: 15px;
+	left: auto;
+}
+.submenuItems {
+	/* display: none; */
+	background: #e9e9e9;
+}
+.submenuItems li {
+/*border-bottom: 1px solid #B6B6B6;*/
+}
+.submenuItems a {
+	font-weight: normal;
+	display: block;
+	color: #243c4f;
+	font-size: 1.6rem;
+	padding: 16px 12px 16px 85px;
+	-webkit-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+}
+.submenuItems a:hover {
+	background-color: #cdcecc;
+	color: #fff;
+}
+
+.side-menu-copyright{
+	font-size: 1.4rem;
+    padding: 20px 30px ;
+    line-height: 1.4rem;
+    font-weight: normal;
+    font-style: normal;
+    text-align: right;
+    color: #353636;
+}
+
+/* // 20180906 側邊欄--------------------------------*/
+/* // 20180906 側邊欄--------------------------------*/
+
+/*  20180909 l2小選單--------------------------------*/
+/*  20180909 l2小選單--------------------------------*/
+
+.dropdown-more-l2 {
+   position: relative;
+    padding: 25px 10px;
+    width: 100%;
+    margin: 0 auto;
+    outline: none;
+    cursor: pointer;
+}
+
+.dropdown-more-l2:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+}
+
+.dropdown-more-l2 .dropdown {
+    position: absolute;
+    width: 100vw;
+    top: 100%;
+    z-index: 999;
+    right: 0;
+    background: #fff;
+    list-style: none;
+    font-weight: normal;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dropdown-more-l2 .dropdown div a {
+    display: block;
+    text-decoration: none;
+    color: #9e9e9e;
+    padding: 10px 20px;
+}
+
+/* Hover state */
+.dropdown-more-l2 .dropdown div:hover a {
+    background: #f3f8f8;
+}
+
+/* Active state */
+.dropdown-more-l2.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+	
+}
+.dropdown-more-l2.active {
+background: #fff;
+height: 50px;
+	
+}
+.dropdown-more-l2.active:after {
+	margin: auto;
+    margin-top: -15px;
+    width: 15px;
+    height: 15px;
+    top: 70%;
+    left: 0;
+    right: 0;
+    border-top: 2px solid #107778;
+    border-right: 2px solid #107778;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(-45deg);
+}
+
+.dropdown-more-l2.active .drop-tag-group {
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+	box-shadow: 0px -1px 2px 0 rgba(61, 73, 83, 0.24), 0px 3px 11px 2px rgba(61, 73, 83, 0.24);
+}
+
+
+
+.drop-tag {
+	padding: 0px 15px;
+    margin: 5px;
+    border: 2px solid #e7e7e7;
+    border-radius: 12px;
+}
+
+.drop-tag.active {
+	background: #dcf2f1;
+    border: 2px solid #9cdbdc;
+}
+
+.dropdown-more-l2:focus .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown-more-l2:focus:after {
+    border-color: #9bc7de transparent;
+    border-width: 6px 6px 0 6px ;
+    margin-top: -3px;
+}
+/* No CSS3 support */
+
+.no-opacity       .dropdown-more-l2 .dropdown,
+.no-pointerevents .dropdown-more-l2 .dropdown {
+    display: none;
+    opacity: 1; /* If opacity support but no pointer-events support */
+    pointer-events: auto; /* If pointer-events support but no pointer-events support */
+}
+
+.no-opacity       .dropdown-more-l2.active .dropdown,
+.no-pointerevents .dropdown-more-l2.active .dropdown {
+    display: block;
+}
+
+
+/* // 20180909 l2小選單--------------------------------*/
+/* // 20180909 l2小選單--------------------------------*/
+
+/*  20180910 最新公告內容頁--------------------------------*/
+/*  20180910 最新公告內容頁--------------------------------*/
+
+.ann-container { padding: 20px 25px; font-size: 1.5rem; line-height: 2rem; }
+.ann-wrap { width: 100%; }
+.ann-title-group {	
+	padding: 3px 0;
+	justify-content: flex-start;
+}
+.ann-tag-wrap {
+    padding: 5px 0;
+    
+}
+span.ann-tag-green {
+    padding: 2px 13px;
+    border: 2px solid #107778;
+    background-color: #ffffff;
+    color: #107778;
+    font-weight: normal;
+    border-radius: 10px;
+    margin-right: 5px;
+    font-size: 1.5rem;
+}
+.ann-date-style {font-size: 1.7rem;
+    margin-left: 10px;}
+
+.ann-content{ padding: 10px 0; }
+.ann-content p { padding: 8px 0 ; }
+.ann-content b { font-weight: bold; }
+.ann-content span { color: #fb4f6e; }
+.ann-content a { color: #0fa1b8; }
+.ann-content img { max-width: 100%; margin: 15px 0; border: none;  }
+
+
+/* // 20180910 最新公告內容頁--------------------------------*/
+/* // 20180910 最新公告內容頁--------------------------------*/
+
+/*  20180911 首頁樣式--------------------------------*/
+/*  20180911 首頁樣式--------------------------------*/
+.index-result { 
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    width: 100%;
+    padding: 10px 30px;
+}
+.index-result ul li div p {
+    color: #ffffff;
+}
+.index-result-title {	
+    font-size: 2.6rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+	margin-top: 5px;
+	margin-bottom: 5px;
+    text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.index-result-li {
+    padding: 3px 0;
+    font-size: 1.5rem;
+}
+.index-result-li-left {
+    max-width: 9em;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.index-result-li-right {
+    max-width: 15em;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.index-result .amount-l2-bold-style .amount-number {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+.index-pop-group-style {
+    position: absolute;
+    top: 60px;
+    left: 25px;
+    right: 25px;
+}
+
+.index-pop-group-style .btn-selectline-pop {
+    border-bottom: #ffffff 2px solid;
+}
+
+.index-pop-group-style .select-pop-content {
+    color: #ffffff;
+}
+.index-pop-group-style .fa-chevron-down {
+    -webkit-text-stroke: 1px #167879;
+    color: #fff;
+}
+
+.chart-ball {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 310px;
+    top: 100px;
+    left: -40px; /*ipad調為left: 0;*/
+    right: 0;
+    margin: auto;
+}
+.chart-ball-title {
+	position: absolute;
+    width: 100%;
+    padding: 0 35px;
+    margin: auto;
+    top: 0;
+    right: 0;
+	left: 40px;
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 7px #232323;
+}
+.chart-ball .chart-circle {     
+	position: relative;
+    top: 38px;
+    left: 0;
+    
+}
+.chart-content-title p {
+	color: #fff;
+    font-size: 2.1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px #333;
+    margin-top: 40px;
+}
+.dl-ball .chart-content-title p {
+	color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px #333;
+    margin-top: 25px;
+}
+.chart-content-amount p {
+	color: #000;
+    font-size: 2.2rem;
+    margin-top: 20px;
+}
+
+/* 帳戶總覽存放比圖表 start */
+.loan-to-deposit-ratio-chart {
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	padding-top: 5px;
+    margin-left: -10px;
+}
+
+.loan-to-deposit-ratio-chart div p {
+	margin: .8em 10px .8em 0;
+}
+
+.loan-to-deposit-ratio-chart div.chartBox {
+	width: 60%;
+    height: 13vh;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loan-to-deposit-ratio-chart div.chartBox div {
+    background-repeat: no-repeat;
+	text-align: right;
+	margin: .5em 0;
+}
+
+.loan-to-deposit-ratio-chart div.chartBox .loanBar {
+	background-color: #fde000;
+}
+
+.loan-to-deposit-ratio-chart div.chartBox .depositBar {
+	background-color: #76eafc;
+}
+/* 帳戶總覽存放比圖表 end */
+
+.chart-ball ul.chart{
+    position: relative;
+    top: 115px;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.chart-ball ul.chart li {
+	position: absolute;
+	-webkit-transition: all .3s linear;
+	-moz-transition: all .3s linear;
+	transition: all .3s linear;
+}
+
+.chart-ball ul.chart li.center.deposit-ball {
+width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    top: -68px;
+    left: 10px;
+    background: url(../image/deposit-ball.png) no-repeat center 0;
+    background-size: 100%;
+	
+}
+.chart-ball ul li.center.loan-ball {
+width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    top: -68px;
+    left: 10px;
+    background: url(../image/loan-ball.png) no-repeat center 0;
+    background-size: 100%;
+	
+}
+.chart-ball ul.chart li.center.dl-ball {
+   width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    top: -68px;
+    left: 10px;
+    background: url(../image/dl-ball.png) no-repeat center 0;
+    background-size: 100%;
+	
+}
+.chart-ball ul.chart li.deposit-dot {
+	width: 40px;
+	height: 40px;
+	background: #62d1f1;
+	background-image: url(../image/icon/i-deposit.svg);
+	background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+	text-align: center;
+	box-shadow: 3px 1px 0px #009ba7;
+}
+.chart-ball ul li.loan-dot {
+	width: 40px;
+	height: 40px;
+	background: #f3df5b;
+	background-image: url(../image/icon/i-loan.svg);
+	background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+	text-align: center;
+	box-shadow: 3px 1px 0px #fbb016;
+}
+.chart-ball ul.chart li.dl-dot {
+    width: 40px;
+    height: 40px;
+    background: #a0dfa4;
+    background-image: url(../image/icon/i-dl-chart.svg);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    text-align: center;
+	box-shadow: 3px 1px 0px #0ca255;
+	z-index: 10;
+
+}
+.chart-ball ul.chart li.deposit-dot.active {
+	width: 50px;
+	height: 50px;
+	top: -10px;
+	background: #62d1f1;
+	background-image: url(../image/icon/i-deposit.svg);
+	background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+	box-shadow: 3px 1px 0px #009ba7;
+	-webkit-filter: drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.5));
+
+}
+.chart-ball ul.chart li.loan-dot.active {
+	width: 50px;
+	height: 50px;
+	top: -5px;
+	background: #f3df5b;
+	background-image: url(../image/icon/i-loan.svg);
+	background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+	text-align: center;
+	box-shadow: 3px 1px 0px #fbb016;
+	-webkit-filter: drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.5));
+
+}
+.chart-ball ul li.dl-dot.active {
+	width: 50px;
+    height: 50px;
+    background: #a0dfa4;
+    background-image: url(../image/icon/i-dl-chart.svg);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 3px 1px 0px #0ca255;
+	-webkit-filter: drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(0px 1px 2px rgba(255, 255, 255, 0.5));
+
+}
+.chart-ball ul.chart li.deposit-dot.active span.point {
+    width: 12px;
+    height: 12px;
+    background: #60d2ea;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: -21px;
+}
+.chart-ball ul.chart li.loan-dot.active span.point {
+    width: 12px;
+    height: 12px;
+    background: #f8e773;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: -13px;
+
+}
+.chart-ball ul.chart li.dl-dot.active span.point {
+    width: 12px;
+    height: 12px;
+    background: #a0dfa4;
+    border-radius: 50%;
+    position: absolute;
+    top: -9px;
+    left: -14px;
+
+}
+.card-index-wrapper {
+    width: 100%;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+	background: #fff;
+}
+.card-dl-result {
+    margin: 10px 10px;
+    background-color: white;
+    border-radius: 10px;
+    border-left: 10px solid #79d580;
+    box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+}
+.card-deposit-result {
+    margin: 10px 10px;
+    background-color: white;
+    border-radius: 10px;
+    border-left: 10px solid #53cce6;
+    box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+}
+.deposit-text-style {
+	max-width: none;
+	line-height: 2rem;
+}
+.card-deposit-result .card-per-style { padding-left: 0;}
+.card-loan-result {
+    margin: 10px 10px;
+    background-color: white;
+    border-radius: 10px;
+    border-left: 10px solid #ffde24;
+    box-shadow: 0.2px 4.5px 6.8px 0.2px rgba(135, 135, 135, 0.2);
+}
+
+.card-per-style { padding-left: 10px; font-size: 1.8rem; }
+
+.info-instruction-group { padding: 10px 15px; font-size: 1.4rem; line-height: 1.6rem;}
+.info-instr-group-50 { width: 50%;}
+
+/* // 20180911 首頁樣式--------------------------------*/
+/* // 20180911 首頁樣式--------------------------------*/
+
+
+
+/*  20180911 利率新版新增樣式--------------------------------*/
+/*  20180911 利率新版新增樣式--------------------------------*/
+
+
+
+.rate-tag-start {
+    padding: 5px 20px;
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.rate-tag-between {
+    padding: 5px 20px;
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.rate-tag-start div, .rate-tag-between div {
+    word-wrap: break-word;
+    overflow: hidden;
+    line-height: 2.5rem;
+}
+.rate-tag-green {
+    min-width: 33%;
+    padding: 3px 0;
+    border: 1.5px solid #9cdbdc;
+    background-color: #ffffff;
+    color: #71b7b8;
+    font-weight: normal;
+    border-radius: 20px;
+    margin-right: 6px;
+    font-size: 1.6rem;
+	text-align: center;
+}
+
+
+.rate-tag-50 { width: 50%;}
+.rate-tag-green.active {
+	min-width: 33%;
+    padding: 3px 0;
+	border: 1.5px solid #9cdbdc;
+    background-color: #dcf2f1;
+    color: #71b7b8; 
+    font-weight: normal;
+    border-radius: 20px;
+    margin-right: 6px;
+    font-size: 1.6rem;
+	text-align: center;
+}
+.rate-tag-green.rate-tag-50.active {
+	width: 50%;
+}
+.rate-tag-green p, .rate-tag-green.active p { color: #71b7b8; }
+
+.rate-selectline {
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    margin-left: 0;
+    background: none;
+    border: none;
+    border-color: transparent;
+    box-shadow: none;
+    background-image: none;
+    border-bottom: 2px solid #71b7b8;
+    border-radius: 0;
+    font-size: 1.6rem;
+    text-align: left;
+    padding-left: 0;
+    padding: 6px 10px;
+    width: 100%;
+    outline: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+.rate-selectline:hover {
+    background: none;
+    border-bottom: 2px solid #71b7b8;
+    box-shadow: none;
+    background-image: none;
+    font-size: 1.6rem;
+    text-align: left;
+    width: 100%;
+    outline: none;
+    color: #71b7b8;
+}
+.rate-selectline.focus, .rate-selectline:focus {
+    color: #71b7b8;
+    background-color: transparent;
+    border-color: #71b7b8;
+}
+.rate-selectline.active, .rate-selectline:active, .open > .dropdown-toggle.rate-selectline {
+    color: #71b7b8;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.rate-selectline.btn-default.active.focus, .rate-selectline.btn-default.active:focus, .rate-selectline.btn-default.active:hover, .rate-selectline.btn-default:active.focus, .rate-selectline.btn-default:active:focus, .rate-selectline.btn-default:active:hover, .open > .dropdown-toggle.rate-selectline.focus, .open > .dropdown-toggle.rate-selectline:focus, .open > .dropdown-toggle.rate-selectline:hover {
+    color: #71b7b8;
+    background-color: transparent;
+    border-bottom: 2px solid #71b7b8;
+}
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open > .dropdown-toggle.btn-default.focus, .open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn-default:hover {
+    color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.btn-selectline-pop.active, .btn-selectline-pop:active, .open > .dropdown-toggle.btn-selectline-pop {
+    color: #979797;
+    background-color: transparent;
+    border-color: transparent;
+}
+.rate-select-content {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #71b7b8;
+}
+.rate-selectline .fa-chevron-down {
+    font-weight: lighter;
+    -webkit-text-stroke: 1px #F0F2F3;
+    color: #71b7b8;
+}
+
+/* // 20180911 利率新版新增樣式--------------------------------*/
+/* // 20180911 利率新版新增樣式--------------------------------*/
+
+/*  20180912 快速登入同意條款樣式--------------------------------*/
+/*  20180912 快速登入同意條款樣式--------------------------------*/
+.provision-frame {
+	background: #fff;
+    padding: 15px 20px;
+}
+.provision-box {
+	font-size: 1.4rem;
+    border: 1px solid #e8e8e8;
+    padding: 12px;
+    overflow: scroll;
+    width: 100%;
+    height: 45vh;
+    
+}
+.provision-box dl dt {
+  padding-bottom: 5px;
+  line-height: 1.7rem;
+}
+.provision-box dl dd {
+  line-height: 1.7rem;
+}
+
+.provision-check-group {
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+	padding: 15px 0 0;
+    font-size: 1.5rem;
+}
+
+.provision-check-group .pop-checkbox {
+    top: -10px;
+}
+
+.bt-center-group.bt-provision-group {
+    text-align: center;
+    padding: 0;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* // 20180912 快速登入同意條款樣式--------------------------------*/
+/* // 20180912 快速登入同意條款樣式--------------------------------*/
+
+/*  20180913 設備確認樣式--------------------------------*/
+/*  20180913 設備確認樣式--------------------------------*/
+
+.device-sub-title {
+    border-bottom: 1px solid #d0d0d0;
+    width: 100%;
+    font-weight: 500;
+}
+.device-sub-title p {
+    font-size: 1.6rem;
+    padding: 15px 20px 6px 20px;
+    word-wrap: break-word;
+	overflow: hidden;
+	font-size: 1.7rem;
+    font-weight: bold;
+	border-bottom: 3px solid #FFD100;
+    padding: 20px 25px 0px 25px;
+}
+/* // 20180913 設備確認樣式--------------------------------*/
+/* // 20180913 設備確認樣式--------------------------------*/
+
+/*  20180914 search-suggestions樣式--------------------------------*/
+/*  20180914 search-suggestions樣式--------------------------------*/
+
+/*now using placeholder property to change color of placholder text and making it consitent accross the browser by use of prefix*/
+input[type="search"]::-webkit-input-placeholder{
+    color:#b1e0de;
+}
+input[type="search"]:-moz-placeholder { /* Firefox 18- */
+   color: #b1e0de;
+}
+input[type="search"]::-moz-placeholder {  /* Firefox 19+ */
+   color: #b1e0de;
+}
+input[type="search"]:-ms-input-placeholder {  /* interner explorer*/
+   color: #b1e0de;
+}
+
+ul.suggestions {
+    position: absolute;
+    background:#ffffff ;/*#fcfcfb*/
+    width: 100%;
+    top: 40px;
+    left: 0;
+    max-height: 400px;
+    overflow-y: scroll;
+    
+    box-shadow: 0px 2px 50px 0px rgba(102, 102, 102, 0.9);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+	z-index: 999;
+}
+    
+ul.suggestions li{
+    overflow:hidden;
+    height:0;
+    -webkit-transition:all 0.3s ease-in-out;
+   -moz-transition:all 0.3s ease-in-out;
+     -o-transition:all 0.3s ease-in-out;
+        transition:all 0.3s ease-in-out;
+	
+}
+ul.suggestions li a{
+    display:block;
+    text-decoration:none; 
+    color: #656b71;
+	font-weight: normal;
+    font-size: 1.4rem;
+    padding:10px 10px 10px 20px; 
+}
+
+ul.suggestions li a:hover{
+    color: #656b71;
+    background: #efefef;
+}
+
+
+input[type="search"]:focus + .suggestions li {
+    height:40px;
+	border-bottom: 1px solid #ccc;
+}
+
+ul.suggestions li strong {
+	font-size: 1.4rem;
+    color: #0FA1B8;
+}
+/*  20180914 search-suggestions樣式--------------------------------*/
+/*  20180914 search-suggestions樣式--------------------------------*/
+
+
+/*  20181006 Onboarding 導覽頁樣式--------------------------------*/
+/*  20181006 Onboarding 導覽頁樣式--------------------------------*/
+
+.swiper-onboarding{border-radius: 0; }
+
+/*.ob-info h2, .ob-info h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}*/
+
+/*body.ob-pages{
+    background-color: #F2FCFF;
+}*/
+.ob-page {
+
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+	top: 0;
+		
+}
+
+.ob-page.image-bg {
+    background-image: url(../image/ob-bg.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+		
+}
+
+.ob-page.blue-bg {
+	background: -webkit-linear-gradient(170deg, #107778, #107778 70%, #ffffff 30%, #ffffff, currentColor calc(70% - 1px), white 30%);
+    background: -o-linear-gradient(170deg, #107778, #107778 70%, #ffffff 30%, #ffffff, currentColor calc(70% - 1px), white 30%);
+    background: -moz-linear-gradient(170deg, #107778, #107778 70%, #ffffff 30%, #ffffff, currentColor calc(70% - 1px), white 30%);
+    background: linear-gradient(170deg, #107778, #107778 70%, #ffffff 30%, #ffffff, currentColor calc(70% - 1px), white 30%);
+
+}
+.ob-page.yellow-bg {
+	background: -webkit-linear-gradient(170deg, #F6C100, #F6C100 70%, #ffffff 30%, #ffffff, currentColor calc(70% - 1px), white 30%);
+    background: -o-linear-gradient(170deg, #F6C100, #F6C100 70%, #ffffff 30%, #ffffff, currentColor calc(70% - 1px), white 30%);
+    background: -moz-linear-gradient(170deg, #F6C100, #F6C100 70%, #ffffff 30%, #ffffff, currentColor calc(70% - 1px), white 30%);
+    background: linear-gradient(170deg, #F6C100, #F6C100 70%, #ffffff 30%, #ffffff, currentColor calc(70% - 1px), white 30%);
+
+}
+.ob-page.green-bg {
+	background: -webkit-linear-gradient(170deg, #2CA941, #2CA941 70%, #ffffff 30%, #ffffff, currentColor calc(70% - 1px), white 30%);
+    background: -o-linear-gradient(170deg, #2CA941, #2CA941 70%, #ffffff 30%, #ffffff, currentColor calc(70% - 1px), white 30%);
+    background: -moz-linear-gradient(170deg, #2CA941, #2CA941 70%, #ffffff 30%, #ffffff, currentColor calc(70% - 1px), white 30%);
+    background: linear-gradient(170deg, #2CA941, #2CA941 70%, #ffffff 30%, #ffffff, currentColor calc(70% - 1px), white 30%);
+
+}
+
+
+.ob-skip-bt{
+    font-size: 1.5rem;
+    color: #F3EFEF;
+    position: absolute;
+    top: 20px;
+    right:20px;
+    cursor: pointer;
+	z-index: 100000;
+	margin-top: constant(safe-area-inset-top);
+    margin-top: env(safe-area-inset-top);
+}
+.ob-skip-bt a p{ text-decoration: none; color: #F3EFEF;}
+
+.ob-skip-bt a:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*導覽頁-手機圖示*/
+
+.phone-img-wrap {
+    width: 100%;
+    z-index: 1;
+    height: 80%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+.phone-img{
+    background-size: auto 90%; 
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 100%;
+
+}
+.phone-img1  {  background-image: url(../image/onboarding-1.png);   }
+.phone-img2A {  background-image: url(../image/onboarding-2A.png);  }
+.phone-img2B {  background-image: url(../image/onboarding-2B.png);  }
+.phone-img2C {  background-image: url(../image/onboarding-2C.png);  }
+.phone-img3A {  background-image: url(../image/onboarding-3A.png);  }
+.phone-img3B {  background-image: url(../image/onboarding-3B.png);  }
+.phone-img4A {  background-image: url(../image/onboarding-4A.png);  }
+.phone-img4B {  background-image: url(../image/onboarding-4B.png);  }
+.phone-img5A {  background-image: url(../image/onboarding-5A.png);  }
+.phone-img5B {  background-image: url(../image/onboarding-5B.png);  }
+
+/*導覽頁-身份選擇按鈕區 */
+
+.phone-btn-wrap {
+    width: 100%;
+    z-index: 1;
+    height: 60%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+.phone-btn-circle-wrap { 
+    width: 70%;
+    margin: auto;
+	display: -webkit-box; 
+    display: -webkit-flex; 
+    display: flex;
+	justify-content: space-between;
+    -webkit-align-items: center;
+            align-items: center;
+} 
+.phone-btn-circle { 
+	color: #ffffff;      
+    background: #10BEBF;
+	width: 105px;
+    height: 105px;
+	text-align: center;
+    border-radius: 50%;
+    padding: 0;
+	transition: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    box-shadow: 0 5px 25px 0 rgba(0,0,0,0.50);
+} 
+.phone-btn-circle span { 
+	font-size: 1.8rem;
+    font-weight: normal;
+    line-height: 2rem;
+}
+
+.phone-btn-wrap .bt-center-group {
+    text-align: center;
+    padding: 50px 0;
+    margin: 0 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.phone-btn-both {
+background: #FFFFFF;
+box-shadow: 0 5px 23px 0 rgba(0,0,0,0.50);
+border-radius: 12px;
+color: #10BEBF;
+letter-spacing: 2px;
+text-align: center;	
+	width: 100%;
+    padding: 15px 0;
+}
+.phone-btn-both span { font-size: 1.8rem;}
+.btn.phone-btn-both.focus, .btn.phone-btn-both:focus, .btn.phone-btn-both:hover {
+    color: #10BEBF;
+    text-decoration: none;
+    background-color:#ffffff;
+}
+
+.btn-apply {
+	position: absolute;
+    background: #299FA0;
+    color: #ffffff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+	border-radius: 0;
+	z-index: 99;
+}
+.btn-apply a p { font-size: 1.8rem; color: #ffffff; }
+.btn.btn-apply.focus, .btn.btn-apply:focus, .btn.btn-apply:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color:#299FA0;
+}
+/*導覽頁-下方說明文字*/
+
+.ob-info-wrap {
+    padding-bottom: 20px;
+    width: 100%;
+	height: 20%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+.ob-page.image-bg .ob-info-wrap {
+    top: 15px;
+
+}
+.ob-info{
+    color: #ffffff;
+    text-align: center;
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; 
+    display: flex;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+            align-items: center;
+    padding-top: 35px;
+}
+.ob-info h2{ font-size: 2.3rem; font-weight: bold; margin-bottom: 10px; margin-top: 25px;}
+.ob-info p{ font-size: 1.6rem; color: #ffffff;}
+.ob-info a{ color: #4A90E2; font-size: 1.8rem; margin-top: 10px;text-decoration: none;}
+.ob-info a:hover{ color: #4A90E2;text-decoration: none;}
+
+/*導覽頁-按鈕*/
+.ob-slider-bt-wrap{
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; 
+    display: flex;
+    -webkit-flex-direction: row;
+            flex-direction: row;
+	padding: 0;
+	margin-bottom: 10pt;
+}
+
+.ob-slider-book{
+    position: relative;
+    top: -70px;
+    z-index: 99;
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; 
+    display: flex;
+    -webkit-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    
+}
+.ob-slider-bt {
+    width:11px;
+    height: 11px;
+    border-radius: 50%;
+	background: rgba(213, 221, 225, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+
+}
+
+.ob-slider-bt.active{ background-color:  #FFD100;}
+
+/*  //20181006 Onboarding 導覽頁樣式--------------------------------*/
+/*  //20181006 Onboarding 導覽頁樣式--------------------------------*/
+
+
+
+/*RWD(共用)----------------------------------------------------------------------------------------------------------*/
+/*RWD(共用)-------------------------------*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+html {
+	font-size: 75%;
+}
+.left_nav_log_welcome, .left_nav_sec_title {
+	background: url(../image/sidemenu-bg.svg) 0 bottom;
+	background-color: #fff;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 19%;
+}
+.sidenav .closebtn {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	top: 0;
+	right: 0;
+	font-size: 50px;
+	margin-left: 0;
+}
+.user-log-info {
+	width: 70%;
+	padding: 60px 15px 0;
+}
+.log-logo {
+	width: 100px;
+	max-width: 100px;
+}
+.log-logo img {
+	width: 90px;
+	height: 90px;
+	display: block;
+}
+.btn-log {
+	padding: 8px 0;
+}
+/* 折行設定*/
+.text-overflow-width-r {
+	max-width: 28em;
+}
+.icon-filter {
+	height: 37px;
+	width: 38px;
+	margin-left: 15px;
+}
+.pop-tag-flex-wrapper {
+	width: 95vw;
+}
+/* pop篩選頁 */
+.pop-li-flex .pop-form-group-30 {
+	width: 35%;
+}
+
+.dropdown-more-l2:after {
+    right: 30px;
+
+}	
+.rate-tag-green, .rate-tag-green.active {
+    min-width: 33.3%;
+	margin-right: 10px
+
+}	
+
+.phone-img {
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 100%;
+}	
+.phone-btn-circle-wrap {
+    width: 50%;	
+	}
+	
+.phone-btn-circle {
+
+    width: 125px;
+    height: 125px;
+	padding-top: 40px;
+	}
+	
+	.phone-btn-wrap .bt-center-group {
+
+		margin: 0 25%;
+	}
+	.phone-btn-both {
+    padding: 20px 0;
+}
+.content-card-m-wrap {
+    width: 83%;
+}
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {
+	padding-top: 15px;
+}
+.sidenav a {
+	font-size: 18px;
+}
+}
+
+@media screen and (max-height: 600px) {
+	.otp-section {
+		margin-top: 30px;
+	}
+	.otp-default-dash, .otp-show-number, .otp-show-number-bk {
+		font-size: 6.6rem;
+	}
+	.cicle-timer-section {
+		height: 90px;
+		margin: 10px 0;
+	}
+}
+
+
+/* 增加高度不夠可滑動css -- start */
+@media screen and (max-height: 610px) {
+	.login-wrap {
+		padding: 0;
+		position: absolute;
+		left: 5%;
+		margin: auto;
+		width: 90%;
+		top: 12vh;
+		height: calc( 100vh - 12vh );
+		overflow: scroll;
+	}
+}
+/* 增加高度不夠可滑動css -- end */
+
+
+@media screen and (min-height: 700px) {
+	.btn-floating.btn-large {
+		position: fixed;
+    	bottom: 25px;
+    	right: 10%;
+	}
+}
+
+@media screen and (min-width : 600px) {
+.phone-btn-circle-wrap {
+    width: 50%;
+}
+.phone-btn-wrap .bt-center-group {
+margin: 0 25%;
+}
+}
+@media only screen and (max-width : 360px) {
+span.card-tag-green {
+	margin-right: 2px;
+	font-size: 15px;
+}
+span.card-tag-yellow {
+	margin-right: 5px;
+	font-size: 15px;
+}
+span.card-tag-red {
+	margin-right: 5px;
+	font-size: 15px;
+}
+/* content-li - basic.css */
+.content-li-text-left.text-overflow-50 {
+	width: 10em;
+	word-break: break-all;
+}
+.content-li-text-right.text-overflow-50 {
+	max-width: 11em;
+	word-break: break-all;
+}
+/* 文字折行設定 */
+.accordion-li-text-l {
+	padding: 0;
+	max-width: 5em;
+	padding-right: 6px;
+}
+.accordion-li-text-l p {
+	word-wrap: break-word;
+	text-align: left;
+}
+.accordion-li-text-r {
+	padding: 0;
+	min-width: 9em;
+	max-width: 11em;
+	padding-right: 5px;
+}
+.accordion-month-title-time {
+	max-width: 14rem;
+}
+.accordion2-inner-detail .accordion-li-text-l {
+	max-width: 6em;
+}
+.drop-tag {
+    padding: 0px 10px;
+}
+	
+.rate-tag-green {
+    min-width: 32%;
+
+}
+
+.rate-tag-green.active {
+	min-width: 32%;
+
+}	
+/******************** 以下style.css ******************** /
+	
+/*卡片內文li文字 文字溢出設定-------------------------------*/
+/*左右有icon-單獨整行 文字溢出設定*/
+.card-li-single-style {
+	max-width: 19em;
+}
+/*左無icon-右有icon 文字溢出設定*/
+.card-li-single-style-max {
+	max-width: 20em;
+}
+/*左右無icon-單獨整行 文字溢出設定*/
+.card-li-single-style-noSelect {
+	max-width: 22em;
+}
+/*左-八字 文字溢出設定*/
+.card-li-style-9 {
+	max-width: 9em;
+}
+/*卡片左右無icon-------------------------------*/
+
+/*卡片-左側內文*/
+
+.card-text-left {
+	text-align: left;
+	max-width: 5em;
+}
+.card-text-right {
+	text-align: right;
+	max-width: 11em;
+	font-size:16px;
+}
+/*卡片右有icon-------------------------------*/
+
+    /*ctbc-card共用版型*/
+
+.card-li-money-left {
+	max-width: 5em;
+}
+.card-li-money-right {
+	max-width: 11em;
+}
+.card-text-left-l2 {
+	max-width: 4em;
+}
+.card-text-right-l2 {
+	max-width: 11em;
+}
+.card-li-money-left-l2 {
+	max-width: 4em;
+}
+.card-li-money-right-l2 {
+	max-width: 11em;
+}
+/*卡片公司名置右-------------------------------*/
+	
+.text-overflow-width-r {
+	max-width: 100vh;
+	text-align: right;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.text-overflow-width-l-all {
+	max-width: 100%;
+	text-align: left;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.text-overflow-width-r-all {
+	max-width: 100%;
+	text-align: right;
+	word-wrap: break-word;
+	overflow: hidden;
+}
+.card-left-icon-wrap {
+	height: 26px;
+	width: 30px;
+	margin-right: 0;
+	text-align: center;
+}
+.card-middle-wrap {
+	min-width: 84%;
+	width: 100%;
+	padding-right: 7px;
+	padding-left: 5px; /* 因應左邊icon的padding*/
+}
+.text-overflow {
+	width: 8em;
+}
+/*子項目標題(淺藍)-左欄註記取消 -------------------------------*/
+/*註記取消title*/
+.bookmark-cancel-title {
+	min-width: 30px;
+	width: 2em;
+	display: block;
+	text-align: center;
+}
+/*尚未使用*/
+
+.info-step-line {
+	display: block;
+	width: 32%; /*因應ipad版型設定成百分比*/
+	height: 2px;
+}
+.info-step-title {
+	width: 2em;
+	font-size: 1.6rem;
+	font-weight: bold;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+/* //尚未使用*/
+	
+/*content-li種類*/
+
+.content-li-name-left {
+	text-align: left;
+	max-width: 12em;
+}
+.content-li-name-right {
+	text-align: left;
+	width: 7em;
+}
+.content-li-name-all {
+	text-align: left;
+	max-width: 20em;
+}
+/* content-li 文字左右寬度設定---------------------------- */
+
+.content-li-text-left {
+	max-width: 8rem;
+}
+/*此css需至於 .content-li-text-left 之後*/
+.content-li-title-style .content-li-text-left {
+	max-width: 100%;
+}
+.content-li-text-right {
+	text-align: right;
+	max-width: 19rem;
+}
+/*此css需至於 .content-li-text-right 之後*/
+.li-text-overflow-r {
+	max-width: 20rem;
+}
+/* //content-li 文字左右寬度設定---------------------------- */
+	
+/* 最新公告 */	
+.news-tag-wrap {
+	max-width: 26rem;
+}
+.news-title {
+	max-width: 15em;
+	white-space: nowrap;
+}
+.news-content {
+	max-width: none;
+}
+
+.content-card-m-wrap {
+	width: 57%;
+}
+}
+/* //RWD(共用)----------------------------------------------------------------------------------------------------------*/
+/* //RWD(共用)-------------------------------*/
+
+
+/* Country selector start */
+.country-selector {
+	width: 100%;
+	height: auto;
+	background: rgba(0, 0, 0, 0);
+	border: none;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+.country-selector:focus {
+	outline: none;
+}
+
+.status-noResult{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.status-noResult p {
+	font-size: 1.5rem;
+	padding: 0 50px;
+}
+
+.status-noResult-image{
+	width: 50%;
+	height: 70px;
+	margin-top: 65px;
+	margin-bottom: 16px;
+
+	background-image: url(../image/status-noResult.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center bottom;
+
+}
+
+.auth-memo-content {
+	font-size: 1.5rem;
+	text-align: justify;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	/* autoprefixer: off */
+	-webkit-box-orient: vertical;
+	/* autoprefixer: on */
+	max-width: none;
+}
+.auth-memo-content_3 {
+	font-size: 1.5rem;
+	text-align: justify;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 3;
+	/* autoprefixer: off */
+	-webkit-box-orient: vertical;
+	/* autoprefixer: on */
+	max-width: none;
+}
+
+.arrow_icon {
+	position: absolute;
+    right: 10px;
+}

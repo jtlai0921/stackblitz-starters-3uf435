@@ -1,0 +1,72 @@
+<!-- 裝置管理員-已註冊裝置 -->
+<!-- 本機註冊資訊 Area Start -->
+<div class="row">
+  <div class="sub-title-46-registered">
+    <!-- 本機註冊資訊 -->
+    <p class="">{{'DEVICE_MANAGE.LOCAL_REGISTERED_INFO' | translate}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="setting-info-wrapper-top">
+    <ul>
+      <li>
+        <!-- 綁定日期 -->
+        <p>{{'DEVICE_MANAGE.BINDING_DATE' | translate}}：<span>{{registerDate | _datetime:'yyyy/MM/dd'}}</span></p>
+      </li>
+      <li>
+        <!-- 裝置名稱 -->
+        <p>{{'DEVICE_MANAGE.DEVICE_NAME' | translate}}：<span>{{registerDeviceName}}</span></p>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- 本機註冊資訊 Area End -->
+
+<!-- 你已註冊之裝置 Area Start -->
+<div class="row">
+  <div class="sub-title-46-registered">
+    <!-- 你已註冊之裝置 -->
+    <p class="">{{'DEVICE_MANAGE.YOU_REGISTERED_DEVICE' | translate}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="setting-info-wrapper-bottom setting-color-change">
+    <!-- Title Area Start -->
+    <div class="setting-list-title">
+    <!-- 註冊日 -->
+    <div class="setting-list-col1"><p>{{'DEVICE_MANAGE.REGISTERED_DATE' | translate}}</p></div>
+    <!-- 裝置 -->
+    <div class="setting-list-col2"><p>{{'DEVICE_MANAGE.DEVICE' | translate}}</p></div>
+    <!-- 狀態 -->
+    <div class="setting-list-col3"><p>{{'DEVICE_MANAGE.STATUS' | translate}}</p></div>
+    <!-- 刪除 -->
+    <div class="setting-list-col4"><span></span></div>
+    </div>
+    <!-- Title Area End -->
+
+    <!-- Data Area Start -->
+    <ul class="setting-list-content" *ngFor="let device of deviceList; let i = index">
+      <li class="">
+        <!-- 註冊日 -->
+        <div class="setting-list-col1"><p>{{device.DisplayTime | _datetime:'yyyy/MM/dd'}}</p></div>
+        <!-- 裝置 -->
+        <div class="setting-list-col2 setting-device-name" (click)="onDeviceTypeClick(i)"><p>{{device.Model}}</p></div>
+        <!-- 狀態 -->
+        <div class="setting-list-col3 setting-device-condition">
+          <p>
+            {{device.DisplayStatus | translate}}
+            <ng-container *ngIf="device.IsOtpDevice">
+                <br/>
+                {{device.DisplayOtpDevice | translate}}
+            </ng-container>
+          </p>
+        </div>
+        <!-- 刪除 -->
+        <div class="setting-list-col4 setting-device-delete" (click)="onDeleteClick(i)"><div class="icon-delete"></div></div>
+      </li>
+    </ul>
+    <!-- Data Area End -->
+  </div>
+
+</div>
+<!-- 你已註冊之裝置 Area End -->

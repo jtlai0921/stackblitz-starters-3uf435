@@ -1,0 +1,13 @@
+<div class="pop_mask" *ngIf="Isopen" style="z-index: 10005;">
+    <div class="pop_mid" >
+        <div class="pop_block">
+            <h3 *ngIf="!(title == '')">{{title | translate}}</h3>
+            <div class="pop_content" [innerHTML]="content">
+            </div>
+            <div class="btn_group" >
+                <div class="cancel" (click)="Cancel()" *ngIf="!(cancelTxt == '')">{{cancelTxt | translate}}</div>
+                <div class="check" (click)="Submit()">{{(checkTxt == '') ? OKBTN() : checkTxt | translate}}</div>
+            </div>
+        </div>
+    </div>
+</div>

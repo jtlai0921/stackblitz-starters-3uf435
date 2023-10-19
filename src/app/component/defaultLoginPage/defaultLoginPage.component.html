@@ -1,0 +1,75 @@
+<!-- Fullscreen root start -->
+<div class="fullscreen">
+  <!-- Root start -->
+  <div class="default-login-page" scrollTop>
+    <!-- Subtitle strart -->
+    <div class="sub-title">
+      <p>{{'DEFALUT_LOGIN_PAGE.SUBTITLE' | translate}}</p>
+    </div>
+    <!-- Subtitle end -->
+
+
+    <!-- Option list start -->
+    <div class="insideScreen">
+      <!-- Option item start -->
+      <ng-container *ngFor="let item of itemList; let i = index;">
+        <!-- Single item start -->
+        <div class="ct-radio-option-group radio-group-style-100 radio-bottom-line" (click)="onOptionClick(item.key)" 
+        *ngIf="item.child == undefined && item.isShow">
+          <span>{{item.title | translate}}</span>
+          <input class="ct-radio" type="radio" name="layout" [id]="i" [value]="item.key" [(ngModel)]="selectedPage" (ngModelChange)="onOptionSelected($event)">
+          <label class="pull-left" [for]="i"></label>
+        </div>
+        <!-- Single item end -->
+
+
+        <!-- Group item start -->
+        <div class="option-list-accordion radio-group-style-100 option-list-bottom-line active" 
+        *ngIf="item.child != undefined && item.isShow">
+          <!-- Title start -->
+          <!-- <div class="align-two-side" (click)="item.isOpen = !item.isOpen"> -->
+              <div class="align-two-side">
+            <div class="list-accordion-left">
+              {{item.title | translate}}
+            </div>
+            
+            <!-- <div class="list-right-icon-wrap right-icon-ellipsis">
+              <i class="fa" [ngClass]="item.isOpen ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+            </div> -->
+            
+          </div>
+          <!-- Title end -->
+
+
+          <!-- Child list start -->
+          <div class="option-list-accordion-inner" [ngClass]="{'active': item.isOpen}">
+            <ng-container *ngFor="let child of item.child; let j = index;">
+              <div class="ct-radio-option-group-l2 radio-group-style-100" *ngIf="child.isShow" (click)="onOptionClick(child.key)">
+                <span>{{child.title | translate}}</span>
+                <input class="ct-radio" type="radio" name="layout" [id]="i + '-' + j" [value]="child.key" [(ngModel)]="selectedPage" (ngModelChange)="onOptionSelected($event)">
+                <label class="pull-left" [for]="i + '-' + j"></label>
+              </div>
+            </ng-container>
+          </div>
+
+          
+          
+          <!-- Child list end -->
+        </div>
+
+        
+        <!-- Group item end -->
+      </ng-container>
+
+      <!-- 最下方留空格 -->
+      <div class="ct-radio-option-group-l2-bottom radio-group-style-100">
+      </div>
+      <div class="ct-radio-option-group-l2-bottom radio-group-style-100">
+      </div>
+      <!-- Option item end -->
+    </div>
+    <!-- Option list end -->
+  </div>
+  <!-- Root end -->
+</div>
+<!-- Fullscreen root end -->

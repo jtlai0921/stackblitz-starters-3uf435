@@ -1,0 +1,171 @@
+.root {
+  height: 100vh;
+  width: 100vw;
+}
+/* 圖形鎖css 勿刪 */
+#pattern_lock_form .pop-box-area {
+  top: 125px;
+  background-color: transparent;
+}
+
+#pattern_lock_form .pop-close-bt {
+  right: 20px;
+  top: -105px;
+}
+
+#pattern_lock_form p {
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+#pattern_lock_form p.pattern_error {
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #ff334c;
+  padding-top: 10px;
+}
+/* 圖形鎖css 勿刪 */
+
+.agreed_account {
+  overflow: scroll;
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  width: 100vw;
+  background-image: url("/assets/ui/images/u117.jpg");
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.title_transfer {
+  display: grid;
+  margin: 10px 5vw 0px 5vw;
+}
+
+.title_transfer p {
+  display: inline-block;
+  width: 40vw;
+  padding: 2px 10px;
+  border-radius: 5px;
+  border: 1px solid #555555;
+  color: #555555;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "微軟正黑體 Bold", "微軟正黑體 Regular", "微軟正黑體";
+}
+
+.title_transfer p.user_name {
+  width: 90vw;
+  padding: 0px;
+  margin: 2vh 0px;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  font-weight: normal;
+  text-align: left;
+}
+
+.inp_box {
+  margin: 0px 5vw 2vh 5vw;
+  width: 90vw;
+  font-size: 16px;
+  text-align: center;
+}
+
+.inp_box div {
+  position: relative;
+  display: flex;
+  padding: 4px;
+  margin: 2vh 0px 0px 0px;
+  border: 1px solid #b1b1b1;
+  background-color: rgba(255, 255, 255);
+}
+
+.inp_box input,
+.inp_box select {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+}
+
+.inp_box span {
+  display: inline-block;
+  width: 90px;
+  color: #666666;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.inp_box div i {
+  position: absolute;
+  display: block;
+  width: 25px;
+  right: 20px;
+  top: 10px;
+}
+
+.inp_box p {
+  margin: 0px;
+  padding: 0px;
+  text-align: right;
+}
+
+.split_line {
+  display: grid;
+  grid-template-columns: auto 25px auto;
+}
+
+.split_line div {
+  border-top: solid 1px rgb(165, 165, 165);
+  margin-top: 12px;
+}
+
+.buttons {
+  margin: 2vh 5vw 0px 5vw;
+}
+.transparent {
+  background-color: transparent;
+}
+
+.buttons th {
+  border-collapse: collapse;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "微軟正黑體 Bold", "微軟正黑體 Regular", "微軟正黑體";
+}
+
+.padding_bottom {
+  height: 5vh;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.errMsg {
+  position: relative;
+  left: 60%;
+  color: red;
+}
+
+#datetimepicker2 {
+  display: flex;
+}
+
+#datetimepicker2 span {
+  color: #989898;
+}
+
+.fullwidth {
+  width: 100%;
+}

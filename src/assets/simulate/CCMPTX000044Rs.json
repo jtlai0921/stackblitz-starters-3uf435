@@ -1,0 +1,22 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000044Rs",
+    "RqUID": "20180709111612",
+    "Timestamp": "20180709111645",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000044Rs",
+      "Result": 4001,
+      "Desc": "Logout successful",
+      "SessionKey": "123456789",
+      "TrustedDevice": "Y",
+      "OTPDevice": "Y",
+      "KeyIndex": "123456789"
+    }
+  }
+}

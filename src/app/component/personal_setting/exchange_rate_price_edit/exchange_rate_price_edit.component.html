@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="questionPage">
+        <div class="area_ex_but">
+            <P>{{ 'EXCESSAMOUNT.ADDNOTIFICATION' | translate}}</P>
+        </div>
+
+
+        <div class="area_ex">
+            <h3>{{ 'EXCESSAMOUNT.NOTIFICATIONHAVESET' | translate}}</h3>
+        </div>
+        <hr style="
+        border: 0;
+        background-color: #ffd100; 
+        height: 4px">
+        <div class="area_ex">
+            <table style="width: 100%;">
+                    <tr>
+                      <td>狀態</td>
+                      <td  style="width: 60%;">
+                            幣別與到價條件
+                        </td>
+                        <td style="width: 15%;">
+                                {{ 'EXCESSAMOUNT.EDIT' | translate}}
+                        </td>
+                    </tr>
+                </table>
+        
+        
+        </div>
+            <div *ngFor="let HotProblem of HotProblem;let recordIndex = index">
+                <div class="inp_box">
+                    <div>
+                        <table style="width: 100%;">
+                            <tr>
+                              <td>{{HotProblem.status}}</td>
+                              <td  style="width: 60%;">
+                                    <span style="background: #ffffff; margin: 10px 10px 10px 10px;">台灣</span><p>{{HotProblem.issuer}}</p>
+                                    <hr align="left">
+                                    <p>{{HotProblem.description}}</p>
+                                </td>
+                                <td style="width: 15%;">
+                                    <span class="edit_img"></span>
+                                </td>
+                            </tr>
+                        </table> 
+                    </div>
+                </div>
+            </div>    
+    </div>    
+</div>
+
+

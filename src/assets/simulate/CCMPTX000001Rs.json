@@ -1,0 +1,20 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000001Rs",
+    "RqUID": "20180709111612",
+    "Timestamp": "20180709111645",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000001Rs",
+      "SessionKey": "h8ozN9p25c/HQWqa+Isej2PlX4WODbBzccpqzdok0u8=",
+      "TimeOffSet": -33830,
+      "TrustedDevice": "N",
+      "OTPDevice": "N"
+    }
+  }
+}

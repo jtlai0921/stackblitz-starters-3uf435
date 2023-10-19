@@ -1,0 +1,14 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000001Rs",
+    "RqUID": "20180709111612",
+    "Timestamp": "20180709111645",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {"TxnId":"CCMPTX000002Rs","Current":"1.0.0","Minimum":"1.0.0"}
+  }
+}

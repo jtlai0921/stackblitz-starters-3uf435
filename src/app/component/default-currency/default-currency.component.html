@@ -1,0 +1,106 @@
+<!-- 預設幣別 -->
+<div class="bg-fixed-208"></div>
+
+<section class="col-xs-12 section-content-sub bg-lightgray currency-setting-pg ">
+  <!-- Image Area Start -->
+  <div class="row">
+    <div class="bg-sub-pic-wrapper">
+      <div class="bg-sub-pic bg-sub-currencysetting"></div>
+    </div>
+  </div>
+  <!-- Image Area End -->
+
+  <!-- Currency Selection Area Start -->
+  <form method="post">    
+    <div class="row">
+      <!-- Subtitle Start-->
+      <div class="sub-title">
+        <!-- 請選擇一種預設幣別 -->
+        <p>{{'DEFAULTCURRENCY.CHOSE_CUR' | translate}}</p>
+      </div>
+      <!-- Subtitle Start-->
+    </div>
+    <!-- Currency list Start -->
+    <div class="row">
+      <div id="radio1" class="form-group ct-radio-outer-wrapper currency-radio-wrapper">          
+        <div class="ct-radio-inner-row align-two-side">             
+          <div class="ct-radio-option-group-row {{ currency.isAddButton? 'currency-add-bt' : '' }} radio-group-style-50" *ngFor="let currency of currencies; let ind = index;" (click)="onCurrencyItemClick(ind)">
+            <span>{{currency.code}}</span>
+            <input class="ct-radio" type="radio" name="layout" id="{{ind}}" value="{{currency.code}}" [checked]="ind === 0">
+            <label class="pull-left" for="{{ind}}" *ngIf="!currency.isAddButton"></label>
+            <b class="currency-add-icon" *ngIf="currency.isAddButton"></b>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Currency list End -->
+  </form>
+  <!-- Currency Selection Area End -->
+
+  <!-- Select Other Currency Button Start -->
+  <div class="row" *ngIf="currencies.length === 10 && !currencies[9].isAddButton">
+    <div class="bt-center-group">
+      <div class="bt-inner-group-xl">
+        <button type="submit" class="btn btn-inner-group-s btn-cancel" (click)="onCurrencyItemClick()">{{'DEFAULTCURRENCY.SELECT_OTHER_CURRENCY' | translate}}</button>
+      </div>
+    </div>
+  </div>
+  <!-- Select Other Currency Button End -->
+</section>
+
+  <!-- Popup -->
+  <!--CT-POPUP 種類3 標題+搜尋bar-->
+  <div class="row" *ngIf="isCurrencyPopupShown">
+    <div class="shadow active"></div>    
+    <div class="pop-box-container active">
+      <div class="pop-box-area">
+        <div class="pop-close-bt" (click)="onPopupCancelClick()">
+            <div class="i-close"></div>
+        </div>
+        <div class="pop-content-wrapper">    
+          <div class="pop-title">
+            <!-- 預設幣別 新增幣別 -->
+            <p>{{'DEFAULTCURRENCY.CURRENCY_ADD' | translate}}</p>
+          </div>    
+          <!--表單popup種類3-1 - 100% - 搜尋單列＋新增幣別特殊樣式 -->
+          <div class="select-pop-group-style pop-input-search-group">
+            <div class="select-pop-form-group pop-form-group pop-form-group-100">
+              <div class="select-date-input-wrapper">
+                <div class="input-group currency-style search-input-group" id="search1">
+                  <span class="input-group-addon select-search-input">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </span>
+                  <input maxlength="255" type="text" class="form-control select-search-input" [(ngModel)]="searchInputValue" placeholder="{{'DEFAULTCURRENCY.SEARCH_LETTER' | translate}}" id="search">    
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 表單popup種類3-1  //End----------------------------------------------------------------------->    
+          <div class="pop-content"><!--pop視窗內容開始-->    
+            <!-- pop-li-section 種類3 - 左側文字+右側打勾 -->    
+            <div class="pop-li-section pop-li-border" *ngFor="let currency of popupFilterCurrencies; let ind = index;" (click)="onPoupCurrencyItemClick(ind)">    
+                <div class="pop-li-l-100">
+                    <div class="pop-li-l-option">
+                        <p>{{currency.code}}</p>
+                    </div>
+                </div>    
+                <div class="pop-right-icon-wrap">
+                    <img class="check-icon" [ngClass]="{'popup_currency_item': true, 'checked': currency.isChecked}" src="assets/design/image/icon/check-icon.png" alt="">
+                </div>    
+            </div>  
+            <!-- //pop-li-section 種類3 - 左側文字+右側打勾 -->    
+          </div><!--pop視窗內容結束-->    
+        </div>    
+        <!--pop-bt-group- 一個 -->    
+        <div class="pop-bt-group">
+          <!--<button type="button" class="btn btn-cancel btn-pop-cancel">重設</button>-->
+          <!-- 確認 -->
+          <button type="submit" class="btn btn-confirm btn-pop-confirm" (click)="onPopupConfirmClick()">
+            {{'BTN.DETERMINE_CHOSE' | translate}}
+          </button>
+        </div>    
+        <!--pop-bt-group- 一個 -->    
+      </div>
+    </div>
+  </div>
+  <!--//CT-POPUP 種類3 標題+搜尋bar-->

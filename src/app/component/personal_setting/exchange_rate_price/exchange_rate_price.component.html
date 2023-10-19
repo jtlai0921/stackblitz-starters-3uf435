@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="questionPage">
+        <div class="area_erp">
+            <div>
+                <h3>{{ 'EXCHAGERATEPRICE.EXCHANGECURRENCY' | translate}}</h3>
+            </div>
+            <p style="padding-left:100px;">2018/3/12 12:32:12</p>
+        </div>
+        <div class="area_erp_select">
+                <select>
+                        <option value="台灣">台灣</option>
+                        <option value="香港">香港</option>                        
+                        <option value="日本">日本</option>
+                        <option value="美國">美國</option>
+                        <option value="中國">中國</option>
+                        <option value="印度">印度</option>
+                        <option value="印尼">印尼</option>
+                        <option value="越南">越南</option>
+                    </select>
+                    <p>從</p>
+                    <select>
+                            <option value="USD">USD</option>
+                            <option value="TWD">TWD</option>                        
+                            <option value="JPY">JPY</option>
+                    </select>
+                    <P>換</P>
+                    <select>
+                            <option value="USD">USD</option>
+                            <option value="TWD">TWD</option>                        
+                            <option value="JPY">JPY</option>
+                    </select>
+                    <br>
+                    <span>參考匯率：29.3121</span>
+        </div>
+        <div class="area_erp">
+                <div>
+                    <h3>到價條件</h3>
+                </div>
+            </div>
+        <div class="area_ex2">
+            <div class="area_erp_column">
+                <input type="checkbox">&nbsp;<span>&nbsp;低於</span>&nbsp;<input type="text" placeholder="{{ 'EXCESSAMOUNT.TYPEINDATA' | translate}}" /> <p style="display: inline-block">{{ 'EXCESSAMOUNT.NOTICEME' | translate}}</p><br>
+                <input type="checkbox">&nbsp;<span>&nbsp;高於</span>&nbsp;<input type="text" placeholder="{{ 'EXCESSAMOUNT.TYPEINDATA' | translate}}" /> <p style="display: inline-block">{{ 'EXCESSAMOUNT.NOTICEME' | translate}}</p>
+ 
+            </div>
+        </div>
+        <div class="area_erp">
+            <div>
+                <h3>通知期間</h3>
+            </div>
+        </div>
+        <div>
+                <div class="inp_box_erp" style="display: inline-block">
+                    <div>
+                        <span style="background:inherit">起日</span>
+                        <input maxlength="255" type="text" placeholder="{{ 'EXCESSAMOUNT.TYPEINDATA' | translate}}" />
+                        <span class="date_img"></span>
+                    </div>  
+                </div>
+                <div class="inp_box_erp" style="display: inline-block">
+                        <div>
+                            <span style="background:inherit">迄日</span>
+                            <input maxlength="255" type="text" placeholder="{{ 'EXCESSAMOUNT.TYPEINDATA' | translate}}" />
+                            <span class="date_img"></span>
+                        </div>  
+                    </div>
+            </div>    
+                    <div class="area_ex_but">
+                        <P>{{ 'EXCESSAMOUNT.SAVESETINGS' | translate}}</P>
+                    </div>
+
+
+
+    </div>    
+</div>
+
+

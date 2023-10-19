@@ -1,0 +1,34 @@
+<div class="ob-page">
+    <div id="swiper1" class="swiper-container" style="height: 100%; width: 100%">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let data of tourData; let i = index">
+                <div class="ob-page {{ data['background'] }}">
+    
+                    <div class="ob-info-wrap">
+                        <div class="ob-info">
+                            <ul class="ob-slider-bt-wrap">
+                                <li *ngFor="let item of tourData; let j = index" 
+                                    class="ob-slider-bt {{ i == j ? 'active' : '' }}" (click)="onPaginationClick(j)"></li>
+                            </ul>
+                            <h2>{{ data['title'] | translate }}</h2>
+                            <p>{{ data['desc'] | translate }}</p>
+                        </div>
+                    </div>
+                    <div class="phone-img-wrap">
+                        <div id="imgSwiper{{i}}" class="swiper-container" style="height: 100%; width: 100%">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" *ngFor="let img of data.imgs;">
+                                    <div class="phone-img {{ img }}"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="tourData.length - 1 == i" class="btn btn-apply" (click)="onStartClick()">
+                        <a><p>{{ 'TOUR.BTN_START' | translate }}</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

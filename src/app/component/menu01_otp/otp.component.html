@@ -1,0 +1,99 @@
+<!-- 產生OTP -->
+<div class="bg-fixed-60"></div>
+<section class="col-xs-12 section-content no-footer">
+  <form method="post">
+    <div class="otp-section">
+      <!-- 標題 Start -->
+      <div class="row">
+        <div>
+          <!-- 請使用下列OTP進行驗證 -->
+          <h2 class="text-center" *ngIf="!isMultipleUsers">{{ 'OTP.USE_OTP_CHECK' | translate }}</h2>
+          <!-- 請選擇產出 OTP 之使用者 -->
+          <h2 class="text-center" *ngIf="isMultipleUsers">{{ 'OTP.SELECT_OTP_USER' | translate }}</h2>
+        </div>
+      </div>
+      <!-- 標題 End -->
+
+      <!-- 一對一時 下拉選單整段隱藏 Start -->
+      <div class="select-pop-group-style" *ngIf="isMultipleUsers">
+        <div (click)="onSelOTPClick()" class="select-pop-form-group pop-form-group-100">
+          <!-- 下拉 Start-->
+          <div class="select-pop-bt-wrapper bt-wrapper-100 btn-select-pop">
+            <!-- <select selectForpop class="btn-select-pop" name="selectId" [(ngModel)]="selectId" [disabled]="disableUserList" (ngModelChange)="onUserListChange()" style="appearance:none;-moz-appearance:none;-webkit-appearance:none;">
+              <option *ngFor="let list of deviceUserData; let listIndex = index;" [value]="listIndex">
+                <span *ngIf="loginStatus else masked">
+                  {{ list.CustomerId }} {{ list.UserId }}
+                </span>
+                <ng-template #masked>
+                  {{ list.CustomerId }} {{ transMask(list.UserId) }}
+                </ng-template>
+              </option>
+            </select> -->
+            <span class="select-pop-content">{{selOTPName}}</span>
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          </div>
+          <!-- 下拉 End -->
+        </div>
+      </div>
+      <!-- 一對一時 下拉選單整段隱藏 End -->
+
+      <!-- 顯示otp密碼區域 Start -->
+      <div class="row">
+        <div class="otp-appear-wrapper">
+          <!-- 一對多 -->
+          <!--<p class="otp-default-dash">-------</p>-->
+          <!--<p class="otp-show-number">9381711</p>-->
+          <!-- 一對一 -->
+          <p class="otp-show {{ !isMultipleUsers ? 'otp-show-number-bk' : 'otp-show-number' }} {{ otpNumber == '-------' ? 'otp-default-dash' : ''}}">{{otpNumber}}</p>
+        </div>
+      </div>
+      <!-- 顯示otp密碼區域 End -->
+
+      <!-- 秒數倒數區 Start -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="cicle-timer-section">
+            <!-- 於 -->
+            <h3 class="timer-text-left">{{ 'OTP.AT' | translate }}</h3>
+            <div class="cicle-timer-wrapper">
+              <div class="cicle-timer {{counterProgress}}">
+                <div class="cicle-timer-content">
+                  <p class="circle-count-text">
+                    <!-- 秒 -->
+                    {{ counterString | translate }}<span>{{ 'OTP.OTP_SEC' | translate }}</span>
+                  </p>
+                </div>
+                <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 內有效 -->
+            <h3 class="timer-text-right">{{ 'OTP.IN_EFFECT' | translate }}</h3>
+          </div>
+        </div>
+      </div>
+      <!-- 秒數倒數區 End -->
+
+      <!-- 產生OTP按鈕 Start -->
+      <div class="row">
+        <div class="bt-center-group">
+          <div class="bt-inner-group-xl">
+            <!-- 一對一 -->
+            <button *ngIf="!isMultipleUsers" (click)="onOTPClick()" type="button" class="btn btn-inner-group-s btn-confirm {{buttonClass}}">
+              <!-- 產生OTP -->
+              {{ 'OTP.TITLE' | translate }}
+            </button>
+            <!-- 一對多 -->
+            <button *ngIf="isMultipleUsers" (click)="onMultiOtpClick(selectId)" type="button" class="btn btn-inner-group-s btn-confirm {{buttonClass}}">
+              <!-- 產生OTP -->
+              {{ 'OTP.TITLE' | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 產生OTP按鈕 End -->
+    </div>
+  </form>
+</section>

@@ -1,0 +1,128 @@
+.questionPage{
+  /* background-image:url('../../../../assets/ui/images/sky.jpg'); */
+  overflow:hidden;
+  position: absolute;
+  padding-top:24vh;
+  width: 100vw;height: 96vh;
+  top:-90px;
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: 50% 0; 
+  background-size:cover;
+}
+.area_erp{
+  margin:10px 10px 10px 30px;
+  width: 100%;
+}
+
+.area_erp div {
+  line-height:0px;/* 行高 */
+  border-width:1px;
+   border-style:solid;
+   padding:5px 20px;
+   width: 75px;
+   display:inline-block;
+  }
+  .area_erp p {
+    line-height:10px;
+    text-align:right;
+    display:inline-block;
+  }
+
+
+  .area_erp_select{
+    margin:15px 10px 30px 30px;
+    width: 80%;
+  }
+
+.area_erp_select select {
+  border: 1px solid #D3D3D3;
+  background: #F5F5F5;
+  height: 45px;
+  font-size: 20px;
+  width: 70px;
+}
+
+.area_erp_select P {
+  margin:10px 20px 10px 20px;
+  font-size: 20px;
+  width: auto;
+  display:inline-block;
+}
+.area_erp_select span {
+float:right;
+color: #c7c7c5;
+display: inline-block;
+}
+
+
+.area_ex2{
+  margin:10px 10px 10px 30px;
+  width: 100%;
+}
+.area_erp_column{
+  margin:10px 10px 10px 35px;
+}
+.area_erp_column span{
+  background-color: rgba(22, 155, 213, 1);
+  color:#ffffff;
+  height:25px; 
+  width:45px; 
+  display:inline-block;
+  border-radius: 5px;
+}
+
+.area_erp_column input[type=text] {
+  border: none;
+  width: 100px;
+  font-size: 16px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.inp_box_erp{
+  margin: 10px 0px 10px 10px;
+  width: 190px;
+  text-align: center;
+}
+.inp_box_erp div{
+  margin: 10px;
+  border: 1px solid #b1b1b1;
+  background-color: rgba(255, 255, 255);
+  display: flex;
+  position: relative;
+}
+.inp_box_erp div input, .inp_box_erp div select{
+  border: none;
+  width: 80%;
+  font-size: 16px;
+  display: inline-block;
+  padding: 10px;
+}
+.inp_box_erp div span{
+  font-weight: bold;
+  width:90px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 40px;
+  color: #666666;
+}
+.area_ex_but{
+  background-color:#1a756c;
+  width: 161px;
+  height: 42px;
+  margin: 0px auto;
+}
+.area_ex_but p{
+  color:#ffffff;
+  text-align: center;
+  font-size:25px;
+}
+
+.date_img{
+  /* background-image:url('../../../assets/ui/images/u4845.png'); */
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center center ;
+  
+}

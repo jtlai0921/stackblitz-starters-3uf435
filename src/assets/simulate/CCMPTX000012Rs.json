@@ -1,0 +1,18 @@
+{
+  "HeaderRs": {
+    "TxnId": "CCMPTX000012Rs",
+    "RqUID": "20180709111612",
+    "Timestamp": "20180709111645",
+    "Result": 4001,
+    "Desc": ""
+  },
+  "BodyRs": {
+    "DataType": 0,
+    "Compressed": 0,
+    "Data": {
+      "TxnId": "CCMPTX000012Rs",
+      "Result": 0,
+      "Desc": "Remove device successful"
+    }
+  }
+}
