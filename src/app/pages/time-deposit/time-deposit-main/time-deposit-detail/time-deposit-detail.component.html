@@ -1,0 +1,46 @@
+<ng-container *ngIf="showData">
+    <ng-container *ngFor="let item of listData">
+        <div class="table_group">
+            <div class="table_list_set">
+                <div class="table_list_set_wrap sub_open flex_row" expandList [openFlag]="expandFlag">
+                    <div class="table_list_set_ul flex_row">
+                        <div class="table_list_set_li table_list_set_li_l">
+                            <p>{{ item | objectField: ['transDate', 'htDate' ,'yyyy-MM-dd'] }}</p>
+                        </div>
+                        <div class="table_list_set_li table_list_set_li_r">
+                            <p class="table_list_3set_li_p">
+                                {{ item | objectField: ['depositAmt', 'currencyMoney' , item.currencyCode] }}</p>
+                            <!-- 幣別先寫死台幣 -->
+                            <p class="table_list_3set_li_p">{{ item | objectField: ['drawAmt', 'currencyMoney' , item.currencyCode] }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="list_icon"></div>
+                </div>
+                <!-- 細項 -->
+                <div class="list_data_inner sub_open_info_frame">
+                    <div class="flex_row list_data_inner_li">
+                        <p>{{ 'TIME_DEPOSIT.TIME_DEPOSIT_DETAIL.ENDDATE' | translate }}</p>
+                        <p>{{ item | objectField: ['endDate', 'htDate' ,'yyyy-MM-dd'] }}</p>
+                    </div>
+                    <div class="flex_row list_data_inner_li">
+                        <p>{{ 'TIME_DEPOSIT.TIME_DEPOSIT_DETAIL.TAX' | translate }}</p>
+                        <p>{{ item | objectField: ['tax', 'currencyMoney' , item.currencyCode] }}</p>
+                    </div>
+                    <div class="flex_row list_data_inner_li">
+                        <p>{{ 'TIME_DEPOSIT.TIME_DEPOSIT_DETAIL.STAMPTAX' | translate }}</p>
+                        <p>{{ item | objectField: ['stampTax', 'currencyMoney' , item.currencyCode] }}</p>
+                    </div>
+                    <div class="flex_row list_data_inner_li">
+                        <p>{{ 'TIME_DEPOSIT.TIME_DEPOSIT_DETAIL.MEMO' | translate }}</p>
+                        <p>{{ item | objectField: ['memo'] }}</p>
+                    </div>
+                    <div class="flex_row list_data_inner_li">
+                        <p>{{ 'TIME_DEPOSIT.TIME_DEPOSIT_DETAIL.NEWTRANS' | translate }}</p>
+                        <p>{{ item | objectField: ['newTrans'] }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</ng-container>

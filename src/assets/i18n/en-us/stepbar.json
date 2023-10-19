@@ -1,0 +1,9 @@
+{
+    "STEP_BAR": {
+        "COMMON": {
+            "EDIT": "輸入資料",
+            "CHECK": "確認資料",
+            "RESULT": "結果"
+        }
+    }
+}

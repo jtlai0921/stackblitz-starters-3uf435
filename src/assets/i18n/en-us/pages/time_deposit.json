@@ -1,0 +1,37 @@
+{
+    "TIME_DEPOSIT": {
+        "TIME_DEPOSIT_MAIN": {
+            "TIME_DEPOSIT_BASIC": "基本資料",
+            "TIME_DEPOSIT_DETAIL": "本金利息明細",
+            "NEWBLAMT": "定存金額",
+            "ENDDATE": "到期日",
+            "NEWAPLAMT": "定存餘額",
+            "INTRAT": "定存利率",
+            "STARTDATE": "起息日",
+            "RATETYPE": "利率方式",
+            "TRANACCT":"約定轉帳帳號",
+            "NEWCONACCT":"印鑑比照帳號",
+            "NEWPERIOD":"付息週期",
+            "NEWCURAMT":"每期存入",
+            "NEWAUTOTRN":"自動轉期約定",
+            "MONTH": "個月"
+        },
+        "TIME_DEPOSIT_DETAIL": {
+            "ENDDATE": "付息截止日",
+            "TAX": "所得稅",
+            "STAMPTAX": "印花稅",
+            "MEMO": "交易摘要",
+            "NEWTRANS": "交易別"
+        },
+        "TIME_DEPOSIT_CONTROL": {
+            "TRANSDATE": "交易日期",
+            "DEPOSIT_AMT": "存入(付息)金額",
+            "PRINCIPAL": "提領本金"
+        },
+        "BTN": {
+            "NEWAUTOTRN": "自動轉期約定",
+            "SETTLE": "定存結清",
+            "TRIAL": "定存質借試算"
+        }
+    }
+}

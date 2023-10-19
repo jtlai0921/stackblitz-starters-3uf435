@@ -1,0 +1,94 @@
+    <!-- section -->
+    <section class="section_area section_hasbtn">
+      <!-- content_invest_2(三行) -->
+      <!-- <ng-container *ngFor="let item of listData"> -->
+      <div class="content_group content_invest_2 bg_d4 ">
+        <div class="content_title">{{setData.fund1}} {{setData.fundName1}}</div>
+        <div class="content_txt">{{ 'FUND_ACCOUNT_BALANCE.LICENNO1' | translate }}：{{ setData | fieldCheck: ['licenno1',{zero_type:false, empty_str:'--'}]}}</div>
+        <div class="content_txt">{{ 'FUND_ACCOUNT_BALANCE.DATE' | translate }}：{{ (setData | fieldCheck: ['date',{zero_type:false, empty_str:'--'}])| htDate:'yyyy-MM-dd'}}</div>
+        <div class="content_txt2">{{ 'FUND_ACCOUNT_BALANCE.FUNDTYPE' | translate }}：{{ setData | fieldCheck: ['fundType',{zero_type:false, empty_str:'--'}]}}</div>
+      </div>
+      <!-- content_invest_2(三行) //End-->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'FUND_ACCOUNT_BALANCE.ACCTPRICE' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['acctPrice',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'FUND_ACCOUNT_BALANCE.PRICEDATE' | translate }}</p>
+          <p>{{ (setData | fieldCheck: ['priceDate',{zero_type:false, empty_str:'--'}])| htDate:'yyyy-MM-dd'}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'FUND_ACCOUNT_BALANCE.totalTotosamt' | translate }}</p>
+          <p>{{ outData | fieldCheck: ['totalTotosamt',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'FUND_ACCOUNT_BALANCE.totalTotprice' | translate }}</p>
+          <p>{{ outData | fieldCheck: ['totalTotprice',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'FUND_ACCOUNT_BALANCE.totalBaochou' | translate }}</p>
+          <p>{{ outData | fieldCheck: ['totalBaochou',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'FUND_ACCOUNT_BALANCE.INTRETN_STRING' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['intretn',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'FUND_ACCOUNT_BALANCE.APDINT' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['apdint',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'FUND_ACCOUNT_BALANCE.REMARK1' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['remark1',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+    <!-- </ng-container> -->
+      <!-- card_list_1 End -->
+  
+    </section>
+    <!-- section End -->
+  
+    <!-- 雙按鈕 -->
+    <div class="btn_group flex_row">
+      <button class="btn_l btn_primary btn_w50">{{ 'FUND_ACCOUNT_BALANCE.redemption' | translate }}</button>
+      <button class="btn_r btn_primary btn_w50">{{ 'FUND_ACCOUNT_BALANCE.Conversion' | translate }}</button>
+    </div>
+    <!-- 雙按鈕 End -->

@@ -1,0 +1,17 @@
+          <!-- card_11 -->
+          <div class="card_group card_11 swiper-container swiper-container_ad">
+              <div class="swiper-wrapper">
+                  <!-- 廣告圖 -->
+                  <ng-container *ngFor="let item of advertData">
+                      <div class="swiper-slide">
+                          <div class="card_11_advertising"></div>
+                      </div>
+                      <ng-template cardSwiper [lastFlag]="true" (backPageEmit)="onSwiperBackEvent($event)">
+                      </ng-template>
+                  </ng-container>
+                  <!-- 廣告圖 //End-->
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination swiper-pagination_ad"></div>
+          </div>
+          <!-- card_11 End -->

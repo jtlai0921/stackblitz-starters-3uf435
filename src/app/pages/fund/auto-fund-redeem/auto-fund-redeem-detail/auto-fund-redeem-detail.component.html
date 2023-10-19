@@ -1,0 +1,30 @@
+ <ng-container *ngFor="let item of listData; let i = index">
+    <div class="content_group content_invest_1 flex_row" (click)="clickdetail(item)" >
+      <div class="content_invest_1_w1">
+        <div class="content_invest_li content_invest_title">{{item.fund1}}{{item.fundName1}}</div>
+        <div class="content_invest_li flex_row">
+          <div class="content_invest_li_p1">{{ 'AUTO_FUND_REDEEM.LICENNO1' | translate }}</div>
+          <div class="content_invest_li_p2">{{ item | fieldCheck: ['licenno1',{zero_type:false, empty_str:'--'}]}}</div>
+        </div>
+        <div class="content_invest_li flex_row">
+          <div class="content_invest_li_p1">{{ 'AUTO_FUND_REDEEM.NOWPRICE' | translate }}</div>
+          <div class="content_invest_li_p2">{{ item | fieldCheck: ['nowPrice',{zero_type:false, empty_str:'--'}]}}</div>
+        </div>
+        <div class="content_invest_li invest_li_tag flex_row">
+          <div class="info_tag_wrap_p1 flex_row">
+            <div class="info_tag tag_outline flex_row">{{ 'AUTO_FUND_REDEEM.SHOWSTOPBENE' | translate }}</div>
+          </div>
+          <div class="content_invest_li_p2_bold_tag">{{ item | fieldCheck: ['showStopBene',{zero_type:false, empty_str:'--'}]}} </div>
+        </div>
+        <div class="content_invest_li invest_li_tag flex_row pad_btm0">
+          <div class="info_tag_wrap_p1 flex_row">
+            <div class="info_tag tag_outline flex_row">{{ 'AUTO_FUND_REDEEM.SHOWSTOPLOSS' | translate }}</div>
+          </div>
+          <div class="content_invest_li_p2_bold_tag">{{ item | fieldCheck: ['showStopLoss',{zero_type:false, empty_str:'--'}]}}</div>
+        </div>
+      </div>
+      <div class="flex_row content_invest_1_w2">
+        <div class="select_i_right"></div>
+      </div>
+    </div>
+  </ng-container>

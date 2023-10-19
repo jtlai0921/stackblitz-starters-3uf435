@@ -1,0 +1,34 @@
+<!-- 廣告底部蓋屏 -->
+<div class="shadow" [ngClass]="{'show': openFlag}"></div>
+<div class="beforeLogin_event_container flex_col row_center" [ngClass]="{'mini': !openFlag}">
+    <!-- 下方活動廣告區塊 - 拖曳handler-->
+    <div class="beforeLogin_event_handler flex_row row_center"  (click)="onClick()">
+        <div class="beforeLogin_event_handler_icon"></div>
+    </div>
+    <!-- 下方活動廣告區塊 - 拖曳handler End -->
+
+    <!-- 下方活動廣告區塊 - 廣告內容 -->
+    <div class="beforeLogin_event_wrapper">
+        <div *ngFor="let ad of adData;let adindex = index;" class="beforeLogin_event login_event_{{ (adindex + 1) }}"
+         (click)="onGoEvent(ad)"
+        >
+
+            <div class="login_event_img login_event_img_1" [ngStyle]="{'background-image': 'url(' + ad.img + ')' }" ></div>
+
+            <div class="login_event_content">
+                <p class="login_event_content_h1">{{ ad.title }}</p>
+                <p class="login_event_content_h2" [innerHtml]=" ad.content | safeHtml"></p>
+            </div>
+
+            <div class="content_btn_group content_btn_6 flex_row" *ngIf="ad.url != ''">
+                <button class="btn_card_event btn_w100 flex_row row_center">
+                    <div class="btn_card_event_txt">{{ ad.url_title | translate }}</div>
+                    <div class="i_next_page"></div>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!-- 下方活動廣告區塊 - 廣告內容 End-->
+
+</div>

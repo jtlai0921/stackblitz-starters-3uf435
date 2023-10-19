@@ -1,0 +1,30 @@
+<ng-container *ngIf="showData">
+    <ng-container *ngFor="let item of listData">
+        <div class="content_group content_invest_1 flex_row" (click)="onSelectDetail(item)">
+            <div class="content_invest_1_w1">
+                <div class="content_invest_li content_invest_title">
+                    {{item.fund}} {{item.fundName}}
+                </div>
+                <div class="content_invest_li flex_row">
+                    <div class="content_invest_li_p1">{{ 'FUND_PROFIT_LOSS.BUYDATE' | translate }}</div>
+                    <div class="content_invest_li_p2">
+                        {{ (item | fieldCheck: ['buyDate',{zero_type:false, empty_str:'--'}])| htDate:'yyyy-MM-dd'}}
+                    </div>
+                </div>
+                <div class="content_invest_li flex_row">
+                    <div class="content_invest_li_p1">{{ 'FUND_PROFIT_LOSS.REMUMRATE' | translate }}</div>
+                    <div class="content_invest_li_p2">
+                        {{ item | fieldCheck: ['remumRate',{zero_type:false, empty_str:'--'}]}}</div>
+                </div>
+                <div class="content_invest_li flex_row">
+                    <div class="info_tag tag_outline flex_row">{{ 'FUND_PROFIT_LOSS.ACCTAMT' | translate }}</div>
+                    <div class="content_invest_li_p2">
+                        {{ item | fieldCheck: ['acctAmt',{zero_type:false, empty_str:'--'}]}}</div>
+                </div>
+            </div>
+            <div class="flex_row content_invest_1_w2">
+                <div class="select_i_right"></div>
+            </div>
+        </div>
+    </ng-container>
+</ng-container>

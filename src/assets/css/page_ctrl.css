@@ -1,0 +1,57 @@
+/**
+ * 頁面控制CSS
+ */
+/* level 1: wifi未開啟 */
+.zIndex_level_1 { z-index: 2147483647; } 
+/* level 2: dialog, progressBar */
+.zIndex_level_2 { z-index: 2147482000; }
+/* level 3: 假首頁 */
+.zIndex_level_3 { z-index: 2147481000; }
+/* level 4: 轉場假畫面 */
+.zIndex_level_4 { z-index: 2147480000; }
+/* level 5: loading */
+.zIndex_level_5 { z-index: 2147479000; }
+.zIndex_level_5_1 { z-index: 2147479010; }
+/* level 6: popup */
+.zIndex_level_6 { z-index: 2147478000; }
+/* level 7: menu, footer */
+.zIndex_level_7 { z-index: 2147477000; }
+/* level 8: bookmark, stepbar  */
+.zIndex_level_8 { z-index: 2147476000; }
+/* level 9 */
+.zIndex_level_9 { z-index: 2147475000; }
+/* level 10 */
+.zIndex_level_10 { z-index: 2147474000; }
+
+/* popup box control with: zIndex_level_6 ~ zIndex_level_7 */
+.cdk-overlay-container { z-index: 2147483647; }
+
+/* @status-bar [safe-area共用] 需搭配 global.css 裡 @status-bar [safe-area 版面共用設定]---------------------------------------*/
+/* 先放在global.css內，後續再整合 */
+/* .container::before {
+    content: '';
+    height: env(safe-area-inset-top);
+    width: 100%;
+    display: block;
+    background: linear-gradient(135deg, #e7373c, #d15b9c 35%, #e95504 67%, #f9be00);
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+  
+/* .container {
+    width: 100%;
+    display: block;
+    position: relative;
+    height: 100%; */
+    /* Status bar height on iOS 11.0 */
+    /* padding-top: constant(safe-area-inset-top);
+    padding-bottom: constant(safe-area-inset-bottom); */
+    /* Status bar height on iOS 11+ */
+    /* padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    background-color: #f5f6f8; */
+/* } */
+  
+/* End @status-bar [safe-area共用] 需搭配 global.css 裡 @status-bar [safe-area 版面共用設定] -----------------------------------*/
+  

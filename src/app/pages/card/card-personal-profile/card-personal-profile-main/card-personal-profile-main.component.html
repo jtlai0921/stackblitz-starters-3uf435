@@ -1,0 +1,93 @@
+<section class="section_area">
+    <div class="content_group credit_card_img flex_row"></div>
+
+    <div class="content_row row_shadow_up mar_btm15">
+        <div class="card_list_group card_list_1">
+            <div class="flex_row card_list_li">
+                <p>{{ 'PROFILE.STMTDATE' | translate }}</p>
+                <p>{{ (infoData | fieldCheck: ['stmtDate',{zero_type:false, empty_str:'--'}]) | htDate: 'yyyy-MM-dd' }}
+                </p>
+            </div>
+        </div>
+
+        <div class="card_list_group card_list_1">
+            <div class="flex_row card_list_li">
+                <p>{{ 'PROFILE.DUEDATE' | translate }}</p>
+                <p>{{ (infoData | fieldCheck: ['dueDate',{zero_type:false, empty_str:'--'}]) | htDate: 'yyyy-MM-dd' }}
+                </p>
+            </div>
+        </div>
+
+        <div class="card_list_group card_list_1">
+            <div class="flex_row card_list_li">
+                <p>{{ 'PROFILE.STMAMT' | translate }}</p>
+                <p>{{ (infoData | fieldCheck: ['stmAmt',{zero_type:false, empty_str:'--'}]) | htMoney: 'TWD' }}</p>
+            </div>
+        </div>
+
+        <div class="card_list_group card_list_1">
+            <div class="flex_row card_list_li">
+                <p>{{ 'PROFILE.MINAMT' | translate }}</p>
+                <p>{{ (infoData | fieldCheck: ['minAmt',{zero_type:false, empty_str:'--'}]) | htMoney: 'TWD' }}</p>
+            </div>
+        </div>
+
+        <div class="card_list_group card_list_1">
+            <div class="flex_row card_list_li">
+                <p>{{ 'PROFILE.TOTALAMT' | translate }}</p>
+                <p>{{ (infoData | fieldCheck: ['totalAmt',{zero_type:false, empty_str:'--'}]) | htMoney: 'TWD' }}</p>
+            </div>
+        </div>
+
+        <div class="card_list_group card_list_1">
+            <div class="flex_row card_list_li">
+                <p>{{ 'PROFILE.AVALLABLE_BALANCE' | translate }}</p>
+                <p>{{ (infoData | fieldCheck: ['avallableBalance',{zero_type:false, empty_str:'--'}]) | htMoney: 'TWD' }}
+                </p>
+            </div>
+        </div>
+
+        <div class="card_list_group card_list_1">
+            <div class="flex_row card_list_li">
+                <p>{{ 'PROFILE.OWNER_PERCENT' | translate }}</p>
+                <p>{{ (infoData | fieldCheck: 'ownerPercent') | htMoney: 'TWD' }}%</p>
+            </div>
+        </div>
+
+        <div class="card_list_group card_list_1">
+            <div class="flex_row card_list_li">
+                <p>{{ 'PROFILE.AUTO_PAYAMT' | translate }}</p>
+                <p>{{ (infoData | fieldCheck: ['autoPayAmt',{zero_type:false, empty_str:'--'}]) | htMoney: 'TWD' }}</p>
+            </div>
+        </div>
+
+        <div class="card_list_group card_list_1">
+            <div class="flex_row card_list_li">
+                <p>{{ 'PROFILE.AUTOPAY_ACCTACCOUNT' | translate }}</p>
+                <p>{{ infoData | fieldCheck: 'autoPayAcctAccount' }}</p>
+            </div>
+        </div>
+
+        <div class="card_list_group card_list_1">
+            <div class="flex_row card_list_li">
+                <p>{{ 'PROFILE.AUTOPAY_RATE' | translate }}％</p>
+                <p>{{ (infoData | fieldCheck: 'autoPayRate') }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row_single">
+        <div class="content_btn_group flex_row content_btn2">
+            <button class="btn_l content_btn btn_w50"
+                (click)="onCardPay()">{{ 'PROFILE.CARD_PAY' | translate }}</button>
+            <button class="btn_r content_btn btn_w50"
+                (click)="onBillQuery()">{{ 'PROFILE.BILL_QUERY' | translate }}</button>
+        </div>
+    </div>
+
+    <div class="row_single">
+        <div class="memo_info">
+            {{ 'PROFILE.MEMO_INFO' | translate }}
+        </div>
+    </div>
+</section>

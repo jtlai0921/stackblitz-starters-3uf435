@@ -1,0 +1,94 @@
+    <!-- 風險屬性區塊 START -->
+    <div class="list_group list_group_3 list_group_3_first">
+        <div class="list_data_3">
+            <div class="list_data_li_3 sub_open flex_row" expandList [openFlag]="expandFlag">
+                <div class="list_data_li_3_title">{{ 'ANALYSIS.RISK_TYPE' | translate }}</div>
+                <div class="list_icon"></div>
+            </div>
+
+            <div class="sub_open_info_frame">
+                <div class="list_data_inner_3 flex_row">
+                    <!-- <div class="list_inner_img_wrap">
+                        <div class="list_inner_img flex_row">
+                        </div>
+                    </div> -->
+                    <!-- <canvas id="myChart" width="120" height="120"></canvas> -->
+                    <app-chart-doughnut [setData]="setData"></app-chart-doughnut>
+                    <div class="list_data_inner_w">
+                        <ng-container *ngFor="let item of riskData">
+                            <div class="list_data_inner_li_3 flex_row">
+                                <div class="list_dot_wrap">
+                                    <div class="list_dot"></div>
+                                </div>
+                                <div class="list_inner_li_p1">{{ item | fieldCheck: 'chiName' }}</div>
+                                <div class="list_inner_li_p2">{{ item | fieldCheck: 'value' }}%</div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 風險屬性區塊 END -->
+
+    <!-- 產品類型區塊 START -->
+    <div class="list_group list_group_3">
+        <div class="list_data_3">
+            <div class="list_data_li_3 sub_open flex_row" expandList [openFlag]="expandFlag">
+                <div class="list_data_li_3_title">{{ 'ANALYSIS.REGION_TYPE' | translate }}</div>
+                <div class="list_icon"></div>
+            </div>
+
+            <div class="sub_open_info_frame">
+                <div class="list_data_inner_3 flex_row">
+                    <div class="list_inner_img_wrap">
+                        <div class="list_inner_img flex_row">
+                        </div>
+                    </div>
+                    <div class="list_data_inner_w">
+                        <ng-container *ngFor="let item of regionData">
+                            <div class="list_data_inner_li_3 flex_row">
+                                <div class="list_dot_wrap">
+                                    <div class="list_dot"></div>
+                                </div>
+                                <div class="list_inner_li_p1">{{ item | fieldCheck: 'chiName' }}</div>
+                                <div class="list_inner_li_p2">{{ item | fieldCheck: 'value' }}%</div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 產品類型區塊 END -->
+
+    <!-- 幣別類型區塊 START -->
+    <div class="list_group list_group_3">
+        <div class="list_data_3">
+            <div class="list_data_li_3 sub_open flex_row" expandList [openFlag]="expandFlag">
+                <div class="list_data_li_3_title">{{ 'ANALYSIS.CURRENCY_TYPE' | translate }}</div>
+                <div class="list_icon"></div>
+            </div>
+
+            <div class="sub_open_info_frame">
+                <div class="list_data_inner_3 flex_row">
+                    <div class="list_inner_img_wrap">
+                        <div class="list_inner_img flex_row">
+                        </div>
+                    </div>
+                    <div class="list_data_inner_w">
+                        <ng-container *ngFor="let item of currencyData">
+                            <div class="list_data_inner_li_3 flex_row">
+                                <div class="list_dot_wrap">
+                                    <div class="list_dot"></div>
+                                </div>
+                                <div class="list_inner_li_p1">{{ item | fieldCheck: 'chiName' }}</div>
+                                <div class="list_inner_li_p2">{{ item | fieldCheck: 'value' }}%</div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 幣別類型區塊 END -->

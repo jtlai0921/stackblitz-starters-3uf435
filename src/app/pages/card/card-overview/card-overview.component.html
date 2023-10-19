@@ -1,0 +1,124 @@
+  <!-- section -->
+  <section class="section_area section_hasbtn">
+      <ng-container *ngIf="!!hasAllData">
+          <!-- 未出帳消費 START -->
+          <div class="card_group card_credit_1 flex_row">
+              <div class="card_credit_1_bg">
+                  <div class="card_credit_1_wrap flex_col">
+                      <div class="card_credit_1_up flex_row">
+                          <div class="card_credit_1_up_w1">{{ 'CARD_OVERVIEW.MAIN.SCSB' | translate }}</div>
+                          <div class="card_credit_1_up_w2">
+                              <div class="card_credit_1_up_txt1">{{ 'CARD_OVERVIEW.MAIN.NOWRANGE' | translate }} </div>
+                              <div class="card_credit_1_up_txt2">
+                                  {{ (showData | fieldCheck: ['nowRange',{zero_type:false, empty_str:'--'}]) | htMoney:'TWD' }}
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card_credit_1_down flex_col">
+                          <div class="card_credit_1_down_wrap flex_row">
+                              <div class="card_credit_1_down_txt1">{{ 'CARD_OVERVIEW.MAIN.UNPAID' | translate }}</div>
+                              <button class="content_btn"
+                                  (click)="onGoDetail()">{{ 'CARD_OVERVIEW.MAIN.DETAIL' | translate }}</button>
+                          </div>
+                          <div class="card_credit_1_down_txt2">
+                              {{ (showData | fieldCheck: ['totalConsume',{zero_type:false, empty_str:'--'}]) | htMoney:'TWD' }}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- 未出帳消費 END -->
+
+          <div class="row_single">
+              <!-- 3按鈕 End -->
+              <div class="content_btn_group flex_row content_btn3">
+                  <button class="btn3_l content_btn btn_w33"
+                      (click)="onCardProfile()">{{ 'CARD_OVERVIEW.MAIN.CARD_PROFILE' | translate }}</button>
+                  <button class="btn3_c content_btn btn_w33"
+                      (click)="onCardPay()">{{ 'CARD_OVERVIEW.MAIN.CARD_PAY' | translate }}</button>
+                  <button class="content_btn btn_w33"
+                      (click)="onCardApply()">{{ 'CARD_OVERVIEW.MAIN.CARD_APPLY' | translate }}</button>
+              </div>
+              <!-- 3按鈕 End -->
+          </div>
+
+          <!-- 本期(各期)帳單查詢 START -->
+          <div class="card_group card_credit_5">
+              <div class="card_credit_bg">
+                  <div class="card_credit_wrap1 flex_row">
+                      <div class="i_bills"></div>
+                      <div class="credit_5_txt_width">
+                          <ng-container *ngIf="monthStr != ''; else monthError">
+                              <div class="credit_5_txt_p1">
+                                  {{ 'CARD_OVERVIEW.MAIN.HAVETOPAID' | translate: {monthStr: monthStr} }}
+                              </div>
+                          </ng-container>
+                          <ng-template #monthError>
+                              <!-- <div class="credit_5_txt_p1">--月份 應繳總金額</div> -->
+                              <div class="credit_5_txt_p1">
+                                  {{ 'CARD_OVERVIEW.MAIN.HAVETOPAID' | translate: {monthStr: '--'} }}
+                              </div>
+                          </ng-template>
+                          <div class="credit_5_txt_p2">
+                              {{ (showData | fieldCheck: ['curBal',{zero_type:false, empty_str:'--'}]) | htMoney:'TWD' }}
+                          </div>
+                          <div class="credit_5_txt_p3">{{ 'CARD_OVERVIEW.MAIN.MINPAY' | translate }} :</div>
+                          <div class="credit_5_txt_p4">
+                              {{ (showData | fieldCheck: ['minPay',{zero_type:false, empty_str:'--'}]) | htMoney:'TWD' }}
+                          </div>
+                          <div class="credit_5_txt_p5_wrap flex_row">
+                              <div class="credit_5_txt_p5">{{ 'CARD_OVERVIEW.MAIN.DUEDATE' | translate }}
+                                  :<br>{{ (showData | fieldCheck: ['dueDate',{zero_type:false, empty_str:'--'}]) | htDate:'yyyy-MM-dd' }}
+                              </div>
+                              <!-- <div class="info_tag tag_outline flex_row">未繳</div> -->
+                              <!-- 繳費狀況資訊 1.prevPay:已繳總金額  2.curBal:本期應繳總額 3.minPay: 最低應繳總額 4.dueDate :繳款截止日-->
+                              <ng-container *ngIf="!!hasBillData">
+                                  <app-payment-status [infoData]="billData" [selectedMonth]="selectMonth">
+                                  </app-payment-status>
+                              </ng-container>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card_credit_wrap2 flex_row" (click)="onGoBillDetail()">
+                      <div class="card_credit_ul">
+                          <div class="card_credit_li flex_row">
+                              <div class="card_credit_line_wrap flex_row">
+                                  <div class="sub_title_line"></div>
+                              </div>
+                              <div class="card_credit_5_p1">{{ 'CARD_OVERVIEW.MAIN.HISTORY_BILL' | translate }}</div>
+                          </div>
+                      </div>
+                      <div class="i_next"></div>
+                  </div>
+              </div>
+          </div>
+          <!-- 本期(各期)帳單查詢 END -->
+
+          <!-- 紅利點數 START -->
+          <div class="card_group card_credit_3">
+              <div class="card_credit_bg flex_row" (click)="onGoBonusPoint()">
+                  <div class="card_credit_ul">
+                      <div class="card_credit_li card_credit_li_pad flex_row">
+                          <div class="card_credit_line_wrap flex_row">
+                              <div class="sub_title_line"></div>
+                          </div>
+                          <div class="card_credit_3_p1">{{ 'CARD_OVERVIEW.MAIN.BONUS_COUNT' | translate }}</div>
+                      </div>
+                      <div class="card_credit_li flex_row">
+                          <div class="card_credit_line_wrap"></div>
+                          <div class="card_credit_3_p2">{{ 'CARD_OVERVIEW.MAIN.ALL_COUNT' | translate }}
+                              {{ (showData | fieldCheck: ['bonusCount',{zero_type:false, empty_str:'--'}]) | htMoney:'TWD' }}
+                              {{ 'CARD_OVERVIEW.MAIN.COUNT' | translate }}</div>
+                      </div>
+                  </div>
+                  <div class="i_next"></div>
+              </div>
+          </div>
+          <!-- 紅利點數 END -->
+
+          <!-- 廣告 START -->
+          <app-advert></app-advert>
+          <!-- 廣告 END -->
+      </ng-container>
+  </section>
+  <!-- section End -->

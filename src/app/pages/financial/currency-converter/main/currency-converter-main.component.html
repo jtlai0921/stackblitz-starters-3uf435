@@ -1,0 +1,153 @@
+<section class="section_area">
+
+    <!-- 僅供參考文案 Start -->
+    <div class="info_group info_8_3">
+        <p>{{'FINANCIAL.EXCHANGE_RATE_INFO' | translate}}</p>
+        <p>{{'FINANCIAL.DATATIME' | translate}}：{{ (dataTime ? dataTime : '--') }}</p>
+    </div>
+    <!-- 僅供參考文案 End -->
+
+    <!-- 標題 & 匯率表按鈕 Start -->
+    <div class="content_group content_27 flex_row">
+        <div class="content_label">{{'FINANCIAL.CONVERSION_AMOUNT' | translate}}</div>
+        <button class="content_btn" (click)="onExchangeRateTableBtnClick()">{{'FINANCIAL.EXCHANGE_RATE_TABLE' | translate}}</button>
+    </div>
+    <!-- 標題 & 匯率表按鈕 End -->
+
+    <!-- 兌出幣別 & 兌入幣別 選單 Start -->
+    <div class="row_single mar_btm20">
+        <div class="form_group form_foreign form_foreign_5 flex_col">
+            <div class="flex_row foreign_li">
+                <div class="flex_col foreign_li_width foreign_li_select">
+                    <!-- 未選擇幣別顯示 Start -->
+                    <div class="flex_row foreign_li_bg" (click)="currencyPopOpen('sell')"
+                        *ngIf="!chooseSellCurrencyObj['currencyCode'];">
+                        <div class="national_flag_wrap">
+                            <div class="national_flag"></div>
+                        </div>
+                        <div class="currency_txt_wrap">
+                            <div class="currency_txt hidden_text">{{'FINANCIAL.PLEASE_SELECT' | translate}}</div>
+                        </div>
+                        <div class="flex_row select_i_down_wrap">
+                            <div class="select_pop_i_down"></div>
+                        </div>
+                    </div>
+                    <!-- 未選擇幣別顯示 End -->
+            
+                    <!-- 已選擇幣別顯示 Start -->
+                    <div class="flex_row foreign_li_bg" (click)="currencyPopOpen('sell')"
+                        *ngIf="!!chooseSellCurrencyObj['currencyCode'];">
+                        <div class="national_flag_wrap">
+                            <div class="national_flag {{chooseSellCurrencyObj['currencyCode'] | iconFlag}}"></div>
+                        </div>
+                        <div class="currency_txt_wrap">
+                            <div class="currency_txt hidden_text">
+                                {{chooseSellCurrencyObj['currencyCode']}}
+                            </div>
+                            <div class="currency_txt hidden_text" *ngIf="is_zh_tw">
+                                {{chooseSellCurrencyObj['currencyName']}}
+                            </div>
+                        </div>
+                        <div class="flex_row select_i_down_wrap">
+                            <div class="select_pop_i_down"></div>
+                        </div>
+                    </div>
+                    <!-- 已選擇幣別顯示 End -->
+            
+                    <!-- 兌出金額 Start -->
+                    <div class="input_inner_group">
+                        <input id="sellAmount" type="text" class="input_inner txt_bold" placeholder="0.00" [(ngModel)]="sellCurrencyAmount" maxlength="16" appRateOnly autocomplete="off" disableautocomplete>
+                    </div>
+                    <!-- 兌出金額 End -->
+                </div>
+                <div class="i_foreign_trade"></div>
+                <div class="flex_col foreign_li_width foreign_li_select">
+                    <!-- 未選擇幣別顯示 Start -->
+                    <div class="flex_row foreign_li_bg" (click)="currencyPopOpen('buy')"
+                        *ngIf="!chooseBuyCurrencyObj['currencyCode'];">
+                        <div class="national_flag_wrap">
+                            <div class="national_flag"></div>
+                        </div>
+                        <div class="currency_txt_wrap">
+                            <div class="currency_txt hidden_text">{{'FINANCIAL.PLEASE_SELECT' | translate}}</div>
+                        </div>
+                        <div class="flex_row select_i_down_wrap">
+                            <div class="select_pop_i_down"></div>
+                        </div>
+                    </div>
+                    <!-- 未選擇幣別顯示 End -->
+            
+                    <!-- 已選擇幣別顯示 Start -->
+                    <div class="flex_row foreign_li_bg" (click)="currencyPopOpen('buy')"
+                        *ngIf="!!chooseBuyCurrencyObj['currencyCode'];">
+                        <div class="national_flag_wrap">
+                            <div class="national_flag {{chooseBuyCurrencyObj['currencyCode'] | iconFlag}}"></div>
+                        </div>
+                        <div class="currency_txt_wrap">
+                            <div class="currency_txt hidden_text">
+                                {{chooseBuyCurrencyObj['currencyCode']}}
+                            </div>
+                            <div class="currency_txt hidden_text" *ngIf="is_zh_tw">
+                                {{chooseBuyCurrencyObj['currencyName']}}
+                            </div>
+                        </div>
+                        <div class="flex_row select_i_down_wrap">
+                            <div class="select_pop_i_down"></div>
+                        </div>
+                    </div>
+                    <!-- 已選擇幣別顯示 End -->
+
+                    <!-- 兌入金額 Start -->
+                    <div class="input_inner_group">
+                        <input id="buyAmount" type="text" class="input_inner txt_bold" placeholder="0.00" [(ngModel)]="buyCurrencyAmount" maxlength="16" appRateOnly autocomplete="off" disableautocomplete>
+                    </div>
+                    <!-- 兌入金額 End -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 幣別交換按鈕 Start -->
+        <div class="content_btn_group flex_row content_btn1">
+            <button class="content_btn" (click)="onCurrencySwapBtnClick()">{{'FINANCIAL.CURRENCY_SWAP' | translate}}</button>
+        </div>
+        <!-- 幣別交換按鈕 End -->
+    </div>
+    <!-- 兌出幣別 & 兌入幣別 選單 End -->
+
+    <!-- 外幣換匯試算 Start -->
+    <div class="row_single">
+        <div class="form_group form_foreign form_foreign_8 flex_col">
+            <div class="foreign_8_title">{{'FINANCIAL.CURRENCY_EXCHANGE_CALCULATE' | translate}}</div>
+            <!-- 虛線 -->
+            <div class="dashed"></div>
+            <!-- 虛線 End -->
+            <div class="foreign_8_wrap_1 flex_row">
+                <div class="foreign_8_w1">
+                    <div class="foreign_8_txt">{{chooseSellCurrencyObj['currencyCode']}}</div>
+                    <div class="foreign_8_txt">{{chooseSellCurrencyObj['currencyName']}}</div>
+                </div>
+                <div class="foreign_8_w2"></div>
+                <div class="foreign_8_w3">
+                    <div class="foreign_8_txt">{{chooseBuyCurrencyObj['currencyCode']}}</div>
+                    <div class="foreign_8_txt">{{chooseBuyCurrencyObj['currencyName']}}</div>
+                </div>
+            </div>
+            <div class="foreign_8_wrap_2 flex_row">
+                <div class="foreign_8_w1">
+                    <div class="foreign_8_txt">1</div>
+                </div>
+                <div class="foreign_8_w2 flex_row">
+                    <div class="i_colon"></div>
+                </div>
+                <div class="foreign_8_w3">
+                    <div class="foreign_8_txt">{{convertRate}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 外幣換匯試算 End -->
+
+    <!-- 注意資訊 Start -->
+    <app-note [options]="notePopupOption"></app-note>
+    <!-- 注意資訊 End -->
+</section>

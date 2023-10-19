@@ -1,0 +1,42 @@
+{
+    "LOAN": {
+        "LOAN_DETAIL": {
+            "LOAN_DETAIL_DETAILS": "Loan detail details",
+            "LOAN_DETAIL_INTEREST": "Loan detail interest"
+        },
+        "DEFAULT_LONG_RANGE": {
+            "12M": "to year",
+            "-12M": "1 year ago",
+            "-24M": "2 year ago",
+            "CUSTOM": "custom"
+        },
+        "INTEREST": {
+            "STARTDATE": "計息起始日",
+            "ENDDATE": "計息截止日",
+            "INTDAY": "計息天數"
+        },
+        "BASIC": {
+            "REPLAY_AMT": "本期還款金額",
+            "AMOUNT": "貸款餘額",
+            "INT_RAT": "貸款利率",
+            "INSTART_DATE": "貸款起始日",
+            "XEND_DATE": "貸款到期日",
+            "XINSTALI": "每期攤還金額",
+            "ACCOUNTID": "自動扣款帳號",
+            "PAYNAM": "還款方式",
+            "XPAY_ALW": "還本寬限期",
+            "XINT_DAY": "每期付息日",
+            "QUERY_BTN": "本金利息明細查詢",
+            "DAY": "日",
+            "MONTH": "個月"
+        },
+        "MAIN": {
+            "DATE": "日期",
+            "PAY_AMOUNT": "還款金額",
+            "LOAN_AMOUNT": "貸款餘額",
+            "REPLAY_DATE": "付息日",
+            "PAY_LIAMOUNT": "繳息金額",
+            "RATE": "計息利率"
+        }
+    }
+}

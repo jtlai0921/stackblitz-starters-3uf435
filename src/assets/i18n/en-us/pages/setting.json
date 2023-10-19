@@ -1,0 +1,8 @@
+{
+    "SETTING": {
+        "MODEL": "Mobile Model",
+        "OS": "Mobile OS",
+        "VERSION": "APP Version",
+        "UDID": "UDID"
+    }
+}

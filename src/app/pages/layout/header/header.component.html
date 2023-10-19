@@ -1,0 +1,46 @@
+<ng-container [ngSwitch]="headerType">
+    <ng-container *ngSwitchCase="'header_menu'">
+        <!-- Heard Type: 功能選單 -->
+        <header class="header_group header_side_menu header_bg flex_row_cb">
+            <h2 class=""></h2>
+            <div class="flex_row side_menu_greeting">
+                <!-- 親愛的客戶，您好 -->
+                <p>{{ 'HOME.HELLO.DEAR' | translate }}</p>
+                <!-- <p><app-greetings></app-greetings></p> -->
+                <div class="side_menu_logout_btn" (click)="onLogoutBtnClick()">{{ ((is_login) ? 'BTN.LOGOUT' : 'BTN.LOGIN') | translate}}
+                    <div class="i_logout"></div>
+                </div>
+            </div>
+        </header>
+    </ng-container>
+    <ng-container *ngSwitchCase="'header_start_home'">
+        <!-- Heard Type: 未登入前首頁 -->
+        <header class="header_group header_bk_transparent flex_row_cb hidden">
+            <h2 class=""></h2>
+        </header>
+    </ng-container>
+    <ng-container *ngSwitchDefault>
+        <!-- Heard Type: 一般功能頁 -->
+        <header class="header_group flex_row_cb" [ngClass]="{'header_bg': (!options.title && options.header == 'header_logo')}">
+            <!-- 左側按鈕 -->
+            <button class="header_btn_l {{leftBtnClass}}" *ngIf="options.leftBtnIcon" (click)="leftBtnClick()">{{leftBtnText | translate}}</button>
+            <!-- 左側按鈕 End -->
+
+            <!-- 中間標題 -->
+            <ng-container *ngIf="!options.title">
+                <!-- LOGO -->
+                <h2 class="{{options.header}}"></h2>
+            </ng-container>
+
+            <ng-container *ngIf="!!options.title">
+                <!-- 預設 -->
+                <h2 class="header_title">{{options.title | translate}}</h2>
+            </ng-container>
+            <!-- 中間標題 End -->
+
+            <!-- 右側按鈕 -->
+            <button class="header_btn_r {{rightBtnClass}}" *ngIf="options.rightBtnIcon" (click)="rightBtnClick()">{{rightBtnText | translate}}</button>
+            <!-- 右側按鈕 End -->
+        </header>
+    </ng-container>
+</ng-container>

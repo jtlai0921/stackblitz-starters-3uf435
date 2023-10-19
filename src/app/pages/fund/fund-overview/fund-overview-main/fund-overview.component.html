@@ -1,0 +1,111 @@
+<ng-container *ngIf="!!hasData">
+    <section class="section_area section_hasbtn">
+
+        <div class="sub_title_group sub_title_list7">{{ 'FUND_OVERVIEW.MY_FUND' | translate }}</div>
+
+        <div class="table_group table_title table_title_2set_1">
+            <div class="flex_row table_title_2set_li">
+                <p class="table_2set_p1">{{ 'FUND_OVERVIEW.CURRENCY' | translate }}</p>
+                <p class="table_2set_p2">{{ 'FUND_OVERVIEW.TOTSAMT' | translate }}</p>
+            </div>
+        </div>
+
+        <ng-container *ngFor="let item of sumupInfo">
+            <div class="card_group card_invest_1">
+                <div class="card_invest_li invest_li_flag flex_row">
+                    <div class="invest_li_flag_w1 flex_row">
+                        <div class="card_national_flag_wrap">
+                            <div class="national_flag"></div>
+                        </div>
+                        <div class="card_national_flag_p">
+                            {{ item | fieldCheck: ['totEngCcy',{zero_type:false, empty_str:'--'}] }}&ensp;{{ item | fieldCheck: ['totChiCcy',{zero_type:false, empty_str:'--'}] }}
+                        </div>
+                    </div>
+                    <div class="invest_li_flag_w2">
+                        {{ (item | fieldCheck: ['totsAmt',{zero_type:false, empty_str:'--'}]) | htMoney: item.totEngCcy }}
+                    </div>
+                </div>
+                <div class="card_invest_li invest_li_tag flex_row">
+                    <div class="info_tag tag_outline flex_row">{{ 'FUND_OVERVIEW.BAOCHOU' | translate }}</div>
+                    <div class="card_invest_1_txt">
+                        {{ item | fieldCheck: ['baoChou',{zero_type:false, empty_str:'--'}] }}%</div>
+                </div>
+                <div class="card_invest_li invest_li_tag flex_row">
+                    <div class="info_tag tag_outline flex_row">{{ 'FUND_OVERVIEW.INTRETN' | translate }}</div>
+                    <div class="card_invest_1_txt">
+                        {{ item | fieldCheck: ['intretn',{zero_type:false, empty_str:'--'}] }}%</div>
+                </div>
+            </div>
+        </ng-container>
+        <div class="row_single"></div>
+
+        <div class="row_single">
+            <div class="content_btn_group flex_row content_btn3">
+                <button class="btn3_l content_btn btn_w33"
+                    (click)="onInvest()">{{ 'FUND_OVERVIEW.BTN.INVEST' | translate }}</button>
+                <button class="btn3_c content_btn btn_w33"
+                    (click)="onAutoRedeem()">{{ 'FUND_OVERVIEW.BTN.AUTO_REDEEM' | translate }}</button>
+                <button class="content_btn btn_w33"
+                    (click)="onInvestHealthy()">{{ 'FUND_OVERVIEW.BTN.INVEST_HEALTHY' | translate }}</button>
+            </div>
+        </div>
+
+        <div class="card_group card_credit_4" (click)="onFundAccountBalance()">
+            <div class="card_credit_bg flex_row">
+                <div class="card_credit_ul">
+                    <div class="card_credit_li flex_row">
+                        <div class="card_credit_line_wrap flex_row">
+                            <div class="sub_title_line"></div>
+                        </div>
+                        <div class="card_credit_4_p1">{{ 'FUND_OVERVIEW.BTN.FUND_ACCOUNT_BALANCE' | translate }}</div>
+                    </div>
+                </div>
+                <div class="i_next"></div>
+            </div>
+        </div>
+
+        <div class="card_group card_credit_4" (click)="onFundInquiryModify()">
+            <div class="card_credit_bg flex_row">
+                <div class="card_credit_ul">
+                    <div class="card_credit_li flex_row">
+                        <div class="card_credit_line_wrap flex_row">
+                            <div class="sub_title_line"></div>
+                        </div>
+                        <div class="card_credit_4_p1">{{ 'FUND_OVERVIEW.BTN.FUND_INQUIRY_MODIFY' | translate }}</div>
+                    </div>
+                </div>
+                <div class="i_next"></div>
+            </div>
+        </div>
+
+        <div class="card_group card_credit_4" (click)="onInvestInformation()">
+            <div class="card_credit_bg flex_row">
+                <div class="card_credit_ul">
+
+                    <div class="card_credit_li flex_row">
+                        <div class="card_credit_line_wrap flex_row">
+                            <div class="sub_title_line"></div>
+                        </div>
+                        <div class="card_credit_4_p1">{{ 'FUND_OVERVIEW.BTN.INVEST_INFORMATION' | translate }}</div>
+                    </div>
+                </div>
+                <div class="i_next"></div>
+            </div>
+        </div>
+
+        <div class="card_group card_credit_4" (click)="onOnlineService()">
+            <div class="card_credit_bg flex_row">
+                <div class="card_credit_ul">
+                    <div class="card_credit_li flex_row">
+                        <div class="card_credit_line_wrap flex_row">
+                            <div class="sub_title_line"></div>
+                        </div>
+                        <div class="card_credit_4_p1">{{ 'FUND_OVERVIEW.BTN.ONLINE_SERVICE' | translate }}</div>
+                    </div>
+                </div>
+                <div class="i_next"></div>
+            </div>
+        </div>
+
+    </section>
+</ng-container>

@@ -1,0 +1,86 @@
+<ng-container *ngIf="showData">
+    <section class="section_area section_tabL1_select1">
+        <div class="content_group content_19 flex_col">
+            <p class="content_p1">{{'TIME_DEPOSIT.TIME_DEPOSIT_MAIN.NEWBLAMT' | translate}}</p>
+            <p class="content_p2">{{ baseData | objectField: ['newBlamt', 'currencyMoney' , baseData.currencyCode] }}</p>
+            <p class="content_p3">{{'TIME_DEPOSIT.TIME_DEPOSIT_MAIN.ENDDATE' | translate}}：
+                {{ baseData | objectField: ['endDate', 'htDate' ,'yyyy-MM-dd'] }}
+            </p>
+        </div>
+
+        <div class="content_row row_shadow_up mar_btm15">
+            <div class="card_list_group card_list_1">
+                <div class="flex_row card_list_li">
+                    <p>{{'TIME_DEPOSIT.TIME_DEPOSIT_MAIN.NEWAPLAMT' | translate}}</p>
+                    <p>{{ baseData | objectField: ['newAplAmt', 'currencyMoney' , baseData.currencyCode] }}</p> <!-- 目前幣別都寫死台幣(無幣別欄位) -->
+                </div>
+            </div>
+
+            <div class="card_list_group card_list_1">
+                <div class="flex_row card_list_li">
+                    <p>{{'TIME_DEPOSIT.TIME_DEPOSIT_MAIN.INTRAT' | translate}}</p>
+                    <p>{{ baseData | objectField: ['intrat'] }}%</p>
+                </div>
+            </div>
+
+            <div class="card_list_group card_list_1">
+                <div class="flex_row card_list_li">
+                    <p>{{'TIME_DEPOSIT.TIME_DEPOSIT_MAIN.STARTDATE' | translate}}</p>
+                    <p>{{ baseData | objectField: ['startDate', 'htDate' ,'yyyy-MM-dd'] }}</p>
+                </div>
+            </div>
+
+            <div class="card_list_group card_list_1">
+                <div class="flex_row card_list_li">
+                    <p>{{'TIME_DEPOSIT.TIME_DEPOSIT_MAIN.RATETYPE' | translate}}</p>
+                    <p>{{ baseData | objectField: ['rateType'] }}</p>
+                </div>
+            </div>
+
+            <div class="card_list_group card_list_1">
+                <div class="flex_row card_list_li">
+                    <p>{{'TIME_DEPOSIT.TIME_DEPOSIT_MAIN.TRANACCT' | translate}}</p>
+                    <p>{{ baseData | objectField: ['tranAcct'] }}</p>
+                </div>
+            </div>
+
+            <div class="card_list_group card_list_1">
+                <div class="flex_row card_list_li">
+                    <p>{{'TIME_DEPOSIT.TIME_DEPOSIT_MAIN.NEWCONACCT' | translate}}</p>
+                    <p>{{ baseData | objectField: ['newConAcct'] }}</p>
+                </div>
+            </div>
+
+            <div class="card_list_group card_list_1">
+                <div class="flex_row card_list_li">
+                    <p>{{'TIME_DEPOSIT.TIME_DEPOSIT_MAIN.NEWPERIOD' | translate}}</p>
+                    <p>{{ baseData | objectField: ['newPeriod'] }}{{ 'TIME_DEPOSIT.TIME_DEPOSIT_MAIN.MONTH' | translate }}</p>
+                </div>
+            </div>
+
+            <div class="card_list_group card_list_1">
+                <div class="flex_row card_list_li">
+                    <p>{{'TIME_DEPOSIT.TIME_DEPOSIT_MAIN.NEWCURAMT' | translate}}</p>
+                    <p>{{ baseData | objectField: ['newCurAmt', 'currencyMoney' , baseData.currencyCode] }}</p>
+                </div>
+            </div>
+
+            <div class="card_list_group card_list_1">
+                <div class="flex_row card_list_li">
+                    <p>{{'TIME_DEPOSIT.TIME_DEPOSIT_MAIN.NEWAUTOTRN' | translate}}</p>
+                    <p>{{ baseData | objectField: ['newAutoTrn'] }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_single mar_btm0">
+            <!-- 3按鈕 End -->
+            <div class="content_btn_group flex_row content_btn3">
+                <button class="btn3_l content_btn btn_w33">{{ 'TIME_DEPOSIT.BTN.NEWAUTOTRN' | translate }}</button>
+                <button class="btn3_c content_btn btn_w33">{{ 'TIME_DEPOSIT.BTN.SETTLE' | translate }}</button>
+                <button class="content_btn btn_w33">{{ 'TIME_DEPOSIT.BTN.TRIAL' | translate }}</button>
+            </div>
+            <!-- 3按鈕 End -->
+        </div>
+    </section>
+</ng-container>

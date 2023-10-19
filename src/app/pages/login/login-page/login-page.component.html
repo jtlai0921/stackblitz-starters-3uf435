@@ -1,0 +1,83 @@
+<section class="section_area section_hasbtn">
+
+    <div class="row_single">
+        <!-- 身分證字號 Start -->
+        <div class="form_group form_group_w100 form_input_1">
+            <div class="input_group flex_col">
+                <div class="form_label">{{'LOGIN.CUSTOMER_ID' | translate}}</div>
+                <div class="input_inner_group" [ngClass]="{'active_error': (invalid_custId)}">
+                    <div class="input_login">
+                        <input type="text" class="input_inner" [(ngModel)]="custId" placeholder="{{'LOGIN.CUSTOMER_ID' | translate}}" autocomplete="off" disableautocomplete>
+                    </div>
+                    <div class="form_error">{{'LOGIN.ERROR' | translate}}</div>
+                </div>
+            </div>
+        </div>
+        <!-- 身分證字號 End -->
+
+        <!-- 使用者代號 Start -->
+        <div class="form_group form_group_w100 form_input_1_2">
+            <div class="input_group flex_col">
+                <div class="form_label">{{'LOGIN.USER_ID' | translate}}</div>
+                <div class="input_inner_group" [ngClass]="{'active_error': (invalid_userId)}">
+                    <div class="input_login flex_row">
+                        <input type="text" class="input_inner" [(ngModel)]="userId" placeholder="{{'LOGIN.USER_ID' | translate}}" [ngClass]="{'input_style_pswd':!seeObj.seeuser}" autocomplete="off" disableautocomplete>
+                        <div class="{{seeObj.seeuser?'i_view':'i_view_off'}}" (click)="switchSee('seeuser')"></div>
+                    </div>
+                    <div class="form_error">{{'LOGIN.ERROR' | translate}}</div>
+                </div>
+            </div>
+        </div>
+        <!-- 使用者代號 End -->
+
+        <!-- 使用者密碼 Start -->
+        <div class="form_group form_group_w100 form_input_1_3">
+            <div class="input_group flex_col">
+                <div class="form_label">{{'LOGIN.LOGIN_PSWD' | translate}}</div>
+                <div class="input_inner_group" [ngClass]="{'active_error': (invalid_pswd)}">
+                    <div class="input_login flex_row">
+                        <input type="text" class="input_inner" [(ngModel)]="pswd" placeholder="{{'LOGIN.LOGIN_PSWD' | translate}}" [ngClass]="{'input_style_pswd':!seeObj.seepswd}" autocomplete="off" disableautocomplete>
+                        <div class="{{seeObj.seepswd?'i_view':'i_view_off'}}" (click)="switchSee('seepswd')"></div>
+                    </div>
+                    <div class="form_error">{{'LOGIN.ERROR' | translate}}</div>
+                </div>
+            </div>
+        </div>
+        <!-- 使用者密碼 End -->
+    </div>
+
+    <!-- 記住我的ID 按鈕 Start -->
+    <div class="row_single">
+        <div class="inner_checkbox">
+            <input type="checkbox" id="inner_checkbox01" name="inner_checkbox" (click)="remember()"
+            [checked]="loginRemember.rememberMe.remcust === '1'">
+            <label for="inner_checkbox01">
+                <span>
+                    <i></i>
+                </span>
+                <b class="inner_checkbox_txt">{{'LOGIN.REMEMBER_MY_ID' | translate}}</b>
+            </label>
+        </div>
+    </div>
+    <!-- 記住我的ID 按鈕 End -->
+
+    <div class="row_single">
+        <!-- 登入 按鈕 Start -->
+        <div class="content_btn_group content_btn_4 flex_row" (click)="loginMethod()">
+            <button class="btn_primary btn_w100">{{'LOGIN.BTN.LOGIN' | translate}}</button>
+        </div>
+        <!-- 登入 按鈕 End -->
+    </div>
+
+    <div class="row_single">
+        <!-- 快速登入 按鈕 Start -->
+        <div class="content_btn_group content_btn_5">
+            <button class="btn_third btn_w100 btn_third_flex flex_row">
+                <div class="i_faceid"></div>
+                <div class="btn_third_txt">{{'LOGIN.BTN.FAST_LOGIN' | translate}}</div>
+            </button>
+        </div>
+        <!-- 快速登入 按鈕 End -->
+    </div>
+
+</section>

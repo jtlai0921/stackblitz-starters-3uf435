@@ -1,0 +1,153 @@
+{
+    "FUNC": {
+        "HOME": {
+            "MAIN": "Home",
+            "LEFT": "Home",
+            "FOOTER": "Home"
+        },
+        "START_HOME": {
+            "LEFT": "Account Opening",
+            "RIGHT": "Login",
+            "BTN1": "Account Overview",
+            "BTN2": "Transfer to Account",
+            "BTN3": "Exchange Rate",
+            "BTN4": "Customer Service"
+        },
+        "FINANCIAL": {
+            "FINANCIAL": "Financial",
+            "CURRENCY_RATE": "Currency Rate",
+            "FOREIGN_CURRENCY_RATE": "Foreign Currency Rate",
+            "FOREIGN_LOAN_CURRENCY_RATE": "Foreign Loan Currency Rate",
+            "OBU_CURRENCY_RATE": "OBU Currency Rate",
+            "LOAN_CALCULATOR": "Loan Calculator",
+            "EXCHANGE_RATE": "Exchange Rate",
+            "EXCHANGE_RATE_HISTORY": "Exchange Rate History",
+            "CURRENCY_CONVERTER": "Currency Converter",
+            "EXCHANGE_RATE_NOTICE": "Exchange Rate Notice",
+            "EXCHANGE_RATE_NOTICE_SETTING": "Exchange Rate Notice Setting"
+        },
+        "DEPOSIT": {
+            "ACCOUNT": "Account",
+            "ACCOUNT_OVERVIEW": "Account Overview",
+            "STATEMENT": "Statement",
+            "INWARD_REMITTANCE": "Inward Remittance"
+        },
+        "TRANSFER": {
+            "FOOTER": "Transfer",
+            "TRANSFER": "Transfer",
+            "TRANSFER_TO_ACCOUNT": "Transfer to Account",
+            "BUY_SELL_FOREIGN_CURRENCY": "Buy/Sell Foreign Currency"
+        },
+        "COMPOSITE_ACCOUNT_SERVICES": {
+            "COMPOSITE_ACCOUNT_SERVICES": "Composite Account Services",
+            "TRANSFER_TO_TIME_DEPOSIT_NOW": "Transfer to Time Deposit Now",
+            "AUTO_TRANSFER_TO_TIME_DEPOSIT": "Auto Transfer to Time Deposit",
+            "TIME_DEPOSITS_BASIC_DETAILS_INQUIRY": "Time Deposits Basic Details Inquiry",
+            "PRINCIPAL_INTEREST_DETAILS": "Principal & Interest Details",
+            "SCHEDULED_AUTOMATIC_ROLLOVER": "Scheduled Automatic Rollover",
+            "CLOSE_OMNIBUS_TIME_DEPOSITS": "Close Omnibus Time Deposits"
+        },
+        "WEALTH_INVEST": {
+            "FOOTER": "Investment",
+            "SUB_TITLE": {
+                "INQUIRIES": "Inquiries",
+                "TRANSACTIONS": "Transactions",
+                "OTHER": "Other"
+            },
+            "WEALTH_INVEST": "Wealth Invest",
+            "OVERVIEW": "Overview",
+            "MY_INVESTMENT_SUMMARY": "My Investment Summary",
+            "ASSET_ACCOUNT_INQUIRY": "Asset Account Inquiry",
+            "REALIZED_GAINS_AND_LOSSES": "Realized Gains and Losses",
+            "TRANSACTIONS": "Transactions",
+            "BUY_FUNDS": "Buy Funds",
+            "REDEMPTION": "Redemption",
+            "SWITCHING": "Switching",
+            "FIXED_NONFIXED_AMOUNT_INVESTMENTS": "Fixed/Non-fixed Amount Investments",
+            "SMART_WEALTH_MANAGER": "Smart Wealth Manager",
+            "FUND_WEB": "Fund Web",
+            "INVESTMENT_RISK_INFO": "Investment Risk Info",
+            "FUND_MODIFY": "修改",
+            "SUSPEND_DEDUCTIONS": "扣款"
+        },
+        "LOANS": {
+            "LOANS": "Loans",
+            "BASIC_DETAILS_INQUIRY": "Basic Details Inquiry",
+            "PRINCIPAL_INTEREST_DETAILS": "Principal & Interest Details",
+            "LOANS_APPLY": "Apply"
+        },
+        "CREDIT_CARDS": {
+            "SUB_TITLE": {
+                "PERSONAL": "Personal",
+                "BONUSES": "Bonuses",
+                "APPLY_SETTINGS": "Apply & Settings",
+                "HISTORY_BILL": "History Bill",
+                "HISTORY_BILL_UNPAID": "History Bil Unpaid"
+            },
+            "CREDIT_CARDS": "Credit Cards",
+            "OVERVIEW": "Overview",
+            "ACCOUNT_OVERVIEW": "Account Overview",
+            "TRANSACTIONS_NOT_YET_BILLED": "Transactions Not Yet Billed",
+            "BILLS_AND_TRANSACTIONS": "Bills and Transactions",
+            "PAY_BILL": "Pay Bill",
+            "BONUS_PURCHASE_HISTORY": "Bonus Purchase History",
+            "PROMOTIONAL_EVENTS": "Promotional Events",
+            "APPLY": "Apply"
+        },
+        "RATES": {
+            "SUB_TITLE": {
+                "INTEREST": "Interest",
+                "EXCHANGE": "Exchange"
+            },
+            "RATES": "Rates",
+            "NTD_INTEREST_RATES": "NTD Interest Rates",
+            "FOREIGN_CURRENCY_INTEREST_RATES": "Foreign Currency Interest Rates",
+            "FOREIGN_CURRENCY_LENDING_RATES": "Foreign Currency Lending Rates",
+            "OBU_DEPOSIT_INTEREST_RATES": "OBU Deposit Interest Rates",
+            "LOAN_CALCULATOR": "Loan Calculator",
+            "EXCHANGE_RATES": "Exchange Rates",
+            "TREND_GRAPH": "Trend Graph",
+            "CURRENCY_CONVERTER": "Currency Converter",
+            "EXCHANGE_RATE_NOTICE": "匯率到價通知",
+            "EXCHANGE_RATE_NOTICE_SETTING": "匯率到價通知設定"
+        },
+        "ONLINE_SERVICE": {
+            "ONLINE_SERVICE": "Online Service",
+            "CUSTOMER_SERVICE": "Customer Service",
+            "FIND_US": "Find Us",
+            "OPENACCOUNT": "線上開立數位存款帳戶"
+        },
+        "MESSAGE_CENTER": "Message Center",
+        "TIME_DEPOSIT": {
+            "TIME_DEPOSIT_MAIN": "定期存款"
+        },
+        "SETTING": {
+            "SUB_TITLE": {
+                "PERSONAL": "Personal",
+                "LOGIN_TRANSACTIONS": "Login & Transactions",
+                "MESSAGE": "Message",
+                "SYSTEM": "System"
+            },
+            "SETTING": "Setting",
+            "ACCOUNT_SETTING": "Account Setting",
+            "FAST_LOGIN_TRANSACTIONS_SETTING": "Fast Login/Transactions Setting",
+            "MESSAGE_SETTING": "Message Setting",
+            "LANGUAGE": "Language Setting",
+            "ABOUT": "About"
+        },
+        "LINK": {
+            "LINK": "企業其他連結",
+            "ONLINEBANK": "網路銀行",
+            "APPOINTMENTTRANSACTION": "預約交易"
+        },
+        "CARD": {
+            "CARD": "Credit Card"
+        },
+        "FUND": {
+            "FUND": "Investment"
+        },
+        "MORE": {
+            "MORE": "More"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+   
+        "FUND-INQUIRY-MODIFY": {
+            "LICENSE": "憑證號碼",
+            "APPLYDATE": "申請日期",
+            "TYPE": "約定方式",
+            "STATUS": "扣款狀況",
+            "STATUS2": "扣款狀態",
+            "AMT": "信託金額",
+            "CHGDATE": "扣款日期",
+            "ACTNO": "扣款帳號",
+            "MODIFY": "修改",
+            "SUSPENDDEDUCTIONS": "暫停扣款"
+        }
+    
+}

@@ -1,0 +1,73 @@
+  <!-- 選擇期間 START -->
+  <app-card-select-month [type]="billType" [defaultMonth]="selectMonthData.selectedMonth" (backPageEmit)="onMonthBackEvent($event)"
+      (errorPageEmit)="onMonthErrorEvent($event)"></app-card-select-month>
+  <!-- 選擇期間 END -->
+
+  <!-- section -->
+  <section class="section_area section_hasbtn section_select1">
+      <ng-container *ngIf="!!hasDetail">
+          <ng-container *ngIf="nowPage != 'unPaid'">
+              <!-- 信用卡資訊 START -->
+              <div class="content_group content_credit_1 flex_col">
+                <p class="content_p1">{{ 'HISTORY_BILL.MAIN.HAVETOPAID' | translate: {monthStr: monthStr} }}</p>
+                  <!-- <p class="content_p1">{{monthStr}}月份 {{ 'HISTORY_BILL.MAIN.CURBAL' | translate }}</p> -->
+                  <p class="content_p2">{{ infoData | objectField: ['curBal', 'currencyMoney' , 'TWD'] }}</p>
+
+                  <div class="flex_row content_credit_1_down">
+                      <div>
+                          <p class="content_credit_p1">{{ 'HISTORY_BILL.MAIN.DUEDATE' | translate }}: {{ infoData | objectField: ['dueDate', 'htDate' ,'yyyy-MM-dd'] }}</p>
+                          <p class="content_credit_p2">{{ 'HISTORY_BILL.MAIN.STMTDATE' | translate }} {{ infoData | objectField: ['stmtDate', 'htDate' ,'yyyy-MM-dd'] }}</p>
+                      </div>
+                      <!-- <div class="info_tag tag_outline flex_row">{{ 'HISTORY_BILL.MAIN.HAS_PAID' | translate }}</div> -->
+                      <!-- 繳費狀況資訊 1.prevPay:已繳總金額  2.curBal:本期應繳總額 3.minPay: 最低應繳總額 4.dueDate :繳款截止日-->
+                      <app-payment-status [infoData]="infoData" [selectedMonth]="selectMonthData.selectedMonth"></app-payment-status>
+                  </div>
+              </div>
+              <!-- 信用卡資訊 END -->
+
+              <!-- tab 選單切換 START -->
+              <div class="tab_group_L2">
+                  <div class="tab_group_L2_set flex_row tab_group_L2_set2">
+                      <div class="tab_btn_L2" (click)="onSelectTag('detail')"
+                          [ngClass]="{ 'active':nowPage == 'detail' }">
+                          {{ 'HISTORY_BILL.MAIN.DETAIL' | translate }}</div>
+                      <div class="tab_btn_L2" (click)="onSelectTag('billInfo')"
+                          [ngClass]="{ 'active':nowPage == 'billInfo' }">{{ 'HISTORY_BILL.MAIN.BILLINFO' | translate }}</div>
+                  </div>
+              </div>
+              <!-- tab 選單切換 END -->
+          </ng-container>
+
+          <!-- Detail START-->
+          <ng-container [ngSwitch]="nowPage">
+              <!-- 交易明細 START -->
+              <ng-container *ngSwitchCase="'detail'">
+                  <app-history-bill-detail [cardData]="cardData" [swiperChangeData]="swiperChangeData" [setData]="data" [selectedMonth]="selectMonthData.selectedMonth">
+                  </app-history-bill-detail>
+              </ng-container>
+              <!-- 交易明細 END -->
+
+              <!-- 帳單資訊 START -->
+              <ng-container *ngSwitchCase="'billInfo'">
+                  <app-history-bill-info [setData]="infoData"></app-history-bill-info>
+              </ng-container>
+              <!-- 帳單資訊 END -->
+
+              <!-- 未出帳消費 START -->
+              <ng-container *ngSwitchCase="'unPaid'">
+                  <app-history-bill-unpaid [cardData]="unCardData" [swiperChangeData]="unSwiperData" [setData]="consumeData" [selectedMonth]="selectMonthData.selectedMonth">
+                  </app-history-bill-unpaid>
+              </ng-container>
+              <!-- 未出帳消費 END -->
+          </ng-container>
+          <!-- Detail END-->
+      </ng-container>
+
+  </section>
+
+  <ng-container *ngIf="!!showCardPay">
+  <div class="btn_group flex_row">
+    <button class="btn_primary btn_w100" (click)="onCardPay()">{{ 'CARD_OVERVIEW.MAIN.CARD_PAY' | translate }}</button>
+  </div>
+</ng-container>
+  <!-- section End -->

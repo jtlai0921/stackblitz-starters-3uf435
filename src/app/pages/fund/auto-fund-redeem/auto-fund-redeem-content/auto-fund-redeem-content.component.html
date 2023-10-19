@@ -1,0 +1,93 @@
+    <!-- section -->
+    <section class="section_area section_hasbtn">
+      <!-- content_invest_2(三行) -->
+      <!-- <ng-container *ngFor="let item of listData"> -->
+      <div class="content_group content_invest_2 bg_d4 ">
+        <div class="content_title">{{setData.fund1}}{{setData.fundName1}}</div>
+        <div class="content_txt">{{ 'AUTO_FUND_REDEEM.LICENNO1' | translate }}：{{ setData | fieldCheck: ['licenno1',{zero_type:false, empty_str:'--'}]}}</div>
+        <div class="content_txt">{{ 'AUTO_FUND_REDEEM.PRICEDATE' | translate }}：{{ (setData | fieldCheck: ['priceDate',{zero_type:false, empty_str:'--'}])| htDate:'yyyy-MM-dd'}}</div>
+        <div class="content_txt2">{{ 'AUTO_FUND_REDEEM.APPOINTDATE' | translate }}：{{ setData | fieldCheck: ['appointDate',{zero_type:false, empty_str:'--'}]}}</div>
+      </div>
+      <!-- content_invest_2(三行) //End-->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'AUTO_FUND_REDEEM.OSAMT' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['osAmt',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'AUTO_FUND_REDEEM.NOWPRICE' | translate }}</p>
+          <p>{{ (setData | fieldCheck: ['nowPrice',{zero_type:false, empty_str:'--'}])| htDate:'yyyy-MM-dd'}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'AUTO_FUND_REDEEM.ACCTPRICE' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['acctPrice',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'AUTO_FUND_REDEEM.SHOWSTOPBENE' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['showStopBene',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'AUTO_FUND_REDEEM.SHOWSTOPLOSS' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['showStopLoss',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'AUTO_FUND_REDEEM.INTRETN' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['intretn',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'AUTO_FUND_REDEEM.APDINT' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['apdint',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'AUTO_FUND_REDEEM.REFPROC' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['refProc',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+    <!-- </ng-container> -->
+      <!-- card_list_1 End -->
+  
+    </section>
+    <!-- section End -->
+  
+      <!-- 單一按鈕 -->
+  <div class="btn_group flex_row">
+    <button class="btn_primary btn_w100">{{ 'FUNC.WEALTH_INVEST.FUND_MODIFY' | translate }}</button>
+  </div>
+  <!-- 單一按鈕 End -->

@@ -1,0 +1,31 @@
+    <!-- 子標題 START-->
+    <div class="table_group table_title_2 table_title_4set_1">
+        <div class="flex_row table_title_4set_li">
+            <p class="table_title_4set_li_p1">{{ 'TOTAL.CURRENCY' | translate }}</p>
+            <p class="table_title_4set_li_p2">{{ 'TOTAL.TOTAL_TOTOSAMT' | translate }}</p>
+        </div>
+        <div class="flex_row table_title_4set_li">
+            <p class="table_title_4set_li_p1">{{ 'TOTAL.INTRETN' | translate }}</p>
+            <p class="table_title_4set_li_p2">{{ 'TOTAL.BAOCHOU' | translate }}</p>
+        </div>
+    </div>
+    <!-- 子標題 END-->
+
+    <!-- 明細 START-->
+    <ng-container *ngFor="let item of showData">
+        <div class="table_group table_list_4set_2">
+            <div class="table_list_set">
+                <div class="table_list_set_wrap">
+                    <div class="flex_row table_list_set_li table_list_4set_li">
+                        <p class="txt_bold">NT$</p>
+                        <p>{{ (item | fieldCheck: ['totsAmt',{zero_type:false, empty_str:'--'}]) | htMoney:'TWD' }}</p>
+                    </div>
+                    <div class="flex_row table_list_set_li table_list_4set_li">
+                        <p>{{ item | fieldCheck: ['intretn',{zero_type:false, empty_str:'--'}] }}%</p>
+                        <p>{{ item | fieldCheck: ['baoChou',{zero_type:false, empty_str:'--'}] }}%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <!-- 明細 End-->

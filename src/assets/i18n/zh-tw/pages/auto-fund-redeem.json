@@ -1,0 +1,18 @@
+{
+   
+        "AUTO_FUND_REDEEM": {
+            "LICENNO1": "憑證號碼",
+            "NOWPRICE": "參考現值",
+            "SHOWSTOPBENE": "停利標準",
+            "SHOWSTOPLOSS": "停損標準",
+
+            "PRICEDATE": "報價日期",
+            "APPOINTDATE": "設定日期",
+            "OSAMT": "信託餘額",
+            "ACCTPRICE": "參考報價",
+            "INTRETN": "參考報酬率",
+            "APDINT": "累計配息金額",
+            "REFPROC": "參考損益"
+        }
+    
+}

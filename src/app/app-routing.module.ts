@@ -1,223 +1,111 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from "@angular/common";
 import { Routes, RouterModule } from '@angular/router';
-// import { ShareModule } from '../app/shared/share.module'; // 全域使用的library
-import { LangTransModule } from './shared/pipe/langTransPipe/lang-trans.module';
-import { StartComponent } from './component/app_start/start.component';
+import { SelectivePreloadingStrategy } from '@systems/route/selective-preloading-strategy';
+import { LoginRequired } from '@systems/system/auth/login-required.service';
 
-import { AnnouncementComponent } from './component/annou/announcement.component';
-import { LanguageComponent } from './component/language/language.component';
-import { PasswordChangeComponent } from './component/password_change/password_change.component';
-
-
-import { ContactUsComponent } from './component/contact-us/contact-us.component';
-import { CommonProblemComponent } from './component/menu_common_problem/common_problem.component';
-import { SelectLocationComponent } from './component/select-location/select-location.component';
-import { DefaultCurrencyComponent } from './component/default-currency/default-currency.component';
-import { QuickLoginComponent } from './component/quick-login/quick-login.component';
-import { DeviceManageComponent } from './component/device-manage/device-manage.component';
-import { UserSettingComponent } from './component/user-setting/user-setting.component';
-import { UserSettingChangeComponent } from './component/user_setting_change/user_setting_change.component';
-import { LogoutComponent } from './component/logout/logout.component';
-import { UserCodeChangeComponent } from './component/user_code_change/user_code_change.component';
-import { OtpComponent } from './component/menu01_otp/otp.component';
-import { PersonalSettingComponent } from './component/personal_setting/personal_setting.component';
-import { CheckNetActivateGuard } from './shared/guard/CheckNetActivate.guard';
-
-
-import {
-  HeaderComponent,
-  FooterComponent,
-  MenuComponent,
-  HomeComponent,
-  TourSwiperComponent
-} from './component/layout';
-import { AppModule } from './app.module';
-import { DefaultLoginPageComponent } from './component/defaultLoginPage/defaultLoginPage.component';
-
-
-export const ROUTE: Routes = [
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: '',
-    redirectTo: '/start',
-    pathMatch: 'full',
+    // == 框架與系統相關其他功能 == //
+    path: 'layout', loadChildren: '@pages/layout/layout.module#LayoutModule'
+    , data: {
+      preload: true
+    }
   },
   {
-    path: 'start',
-    component: StartComponent,
-    data: {}
+    // 首頁
+    path: 'home', loadChildren: '@pages/home/home.module#HomeModule'
+    , data: {
+      preload: true
+    }
   },
   {
-    path: 'login',
-    loadChildren: './component/menu00_login/login.modules#LoginModule'
+    // == 登入頁面 == //
+    path: 'login', loadChildren: '@pages/login/login.module#LoginModule'
+    , data: {
+      preload: true
+    }
   },
   {
-    path: 'do_register_device',
-    canActivate:[CheckNetActivateGuard],
-    loadChildren: './component/menu00_login/do-register-device/do-register-device.modules#DoRegisterDeviceModule'
+    // == Demo == //
+    path: 'demo', loadChildren: '@pages/demo/demo.module#DemoModule'
+    , data: {
+      preload: false
+    }
+  },
+  // ======================================== 業務功能 ======================================== //
+  {
+    // == 帳戶資產查詢 == //
+    path: 'deposit', loadChildren: '@pages/deposit/deposit.module#DepositModule'
+    , data: {
+      preload: false
+    }
   },
   {
-    path: 'do_activite',
-    canActivate:[CheckNetActivateGuard],
-    loadChildren: './component/menu00_login/do-activite/do-activite.modules#DoActiviteModule'
+    // == 定期存款服務 == //
+    path: 'time-deposit', loadChildren: '@pages/time-deposit/time-deposit.module#TimeDepositModule'
+    , data: {
+      preload: false
+    }
   },
   {
-    path: 'do_change_password',
-    canActivate:[CheckNetActivateGuard],
-    component: PasswordChangeComponent,
-    data: {}
+    // == 貸款服務 == //
+    path: 'loan', loadChildren: '@pages/loan/loan.module#LoanModule'
+    , data: {
+      preload: false
+    }
   },
   {
-    path: 'home',
-    component: HomeComponent,
-    canActivate:[CheckNetActivateGuard],
-    data: {}
-  },
-  //Lazy Load Example
-  {
-    path: 'example',
-    loadChildren: './component/example/example.modules#ExampleModule'
+    // == 轉帳交易服務 == //
+    path: 'transfer', loadChildren: '@pages/transfer/transfer.module#TransferModule'
+    , data: {
+      preload: false
+    }
   },
   {
-    path: 'tour',
-    component: TourSwiperComponent,
-    data: {}
+    // == 基金業務 == //
+    path: 'fund', loadChildren: '@pages/fund/fund.module#FundModule'
+    , data: {
+      preload: false
+    }
   },
   {
-    path: 'annou',
-    component: AnnouncementComponent,
-    data: {}
+    // == 信用卡 == //
+    path: 'card', loadChildren: '@pages/card/card.module#CardModule'
+    , data: {
+      preload: false
+    }
+  },
+  // ======================================== 其他功能 ======================================== //
+  {
+    // == 金融資訊 == //
+    path: 'financial', loadChildren: '@pages/financial/financial.module#FinancialModule'
+    , data: {
+      preload: false // 首頁效果要漂亮先載入為佳
+    }
+    // , canActivate: [LoginRequired]
   },
   {
-    path: 'lang',
-    component: LanguageComponent,
-    data: {}
+    // == 其他服務 == //
+    path: 'other', loadChildren: '@pages/other/other.module#OtherModule'
+    , data: {
+      preload: false
+    }
   },
   {
-    path: 'otp',
-    component: OtpComponent,
-    data: {}
-  },
-  {
-    path: 'contact',
-    component: ContactUsComponent,
-    data: {}
-  },
-  {
-    path: 'qa',
-    loadChildren: './component/menu_common_problem/common_problem.modules#CommonProblemModule'
-  },
-  {
-    path: 'location',
-    component: SelectLocationComponent,
-    data: {}
-  },
-  {
-    path: 'default_currency',
-    canActivate:[CheckNetActivateGuard],
-    component: DefaultCurrencyComponent,
-    data: {}
-  },
-  {
-    path: 'quick_login',
-    component: QuickLoginComponent,
-    data: {}
-  },
-  {
-    path: 'device-manage',
-    canActivate:[CheckNetActivateGuard],
-    component: DeviceManageComponent,
-    data: {}
-  },
-  {
-    path: 'user-setting',
-    canActivate:[CheckNetActivateGuard],
-    component: UserSettingComponent,
-    data: {}
-  },
-  {
-    path: 'user-setting-change',
-    canActivate:[CheckNetActivateGuard],
-    component: UserSettingChangeComponent,
-    data: {}
-  },
-  {
-    path: 'logout',
-    component: LogoutComponent,
-    data: {}
-  },
-  {
-    path: 'agreed_account',
-    canActivate:[CheckNetActivateGuard],
-    loadChildren: './component/agreed_account/agreed_account.modules#AgreedAccountModule'
-  },
-  {
-    path: 'user_code_change',
-    canActivate:[CheckNetActivateGuard],
-    component: UserCodeChangeComponent,
-    data: {}
-  },
-  {
-    path: 'personal_setting',
-    canActivate:[CheckNetActivateGuard],
-    loadChildren: './component/personal_setting/personal_setting.modules#PersonalSettingModule'
-  },
-  {
-    path: 'account_enquiry',
-    canActivate:[CheckNetActivateGuard],
-    loadChildren: './component/account-enquiry/account-enquiry.modules#AccountModule'
-  },
-  {
-    path: 'authorization',
-    canActivate:[CheckNetActivateGuard],
-    loadChildren: './component/auth/auth.modules#AuthModule'
-  },
-  {
-    path: 'defaultLoginPage',
-    canActivate:[CheckNetActivateGuard],
-    component: DefaultLoginPageComponent,
-    data: {}
-  },
-  {
-    path: 'finance',
-    canActivate:[CheckNetActivateGuard],
-    loadChildren: './component/finance/finance.module#FinanceModule'
-  },
-  {
-    path: 'notification', 
-    canActivate:[CheckNetActivateGuard],
-    loadChildren: './component/notification/notification.modules#NotificationModule'
-  },
-  {
-    path: 'update', 
-    loadChildren: './component/appUpdate/appUpdate.modules#AppUpdateModule'
+    // == 設定 == //
+    path: 'setting', loadChildren: '@pages/setting/setting.module#SettingModule'
+    , data: {
+      preload: false
+    }
   }
 ];
-//OtpComponent ContactUsComponent CommonProblemComponent SelectLocationComponent
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(ROUTE),
-    LangTransModule
-    //, ShareModule
-    // ==Pie== //
-
-    // ==Directive== //
-
-    // ==Component== //
-
-  ],
-  exports: [
-    RouterModule
-  ],
-  providers: [
-
-  ],
-  declarations: [
-    // OtpComponent,
-    // ContactUsComponent,
-    // SelectLocationComponent
-  ]
+  imports: [RouterModule.forRoot(routes, {
+    useHash: true
+    , preloadingStrategy: SelectivePreloadingStrategy
+  })],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

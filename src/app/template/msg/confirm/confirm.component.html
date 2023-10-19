@@ -1,0 +1,22 @@
+<div class="popup_content_area">
+  <div class="popup_content_wrap">
+    <!-- pop_title_1 -->
+    <div class="pop_group pop_title pop_title_1 flex_row">
+      <div class="simple_title">{{title|translate}}</div>
+    </div>
+    <!-- pop_title_1 //End-->
+    <div class="popup_inner_content">
+      <!-- pop_content_3 -->
+      <div class="pop_group pop_content pop_content_3 flex_row">
+        <div class="pop_content_txt" [innerHtml]="( content | translate:param) | safeHtml"></div>
+      </div>
+      <!-- pop_content_3 -->
+    </div>
+  </div>
+  <!-- 雙按鈕 -->
+  <div class="btn_group flex_row">
+    <button class="btn_l btn_secondary btn_w25" (click)="no()">{{btnNoTitle|translate}}</button>
+    <button class="btn_r btn_primary btn_w70" (click)="yes()">{{btnYesTitle|translate}}</button>
+  </div>
+  <!-- 雙按鈕 End -->
+</div>

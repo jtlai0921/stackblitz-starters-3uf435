@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon/i_select_down</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon/i_select_down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(75.000000, 57.000000) rotate(-90.000000) translate(-75.000000, -57.000000) translate(25.000000, 7.000000)" fill="#3E3E3E" fill-rule="nonzero" stroke="#3E3E3E">
+            <path d="M24.082859,75.4743833 L24.082859,19.445867 C24.082859,16.8362812 21.9911527,14.7389454 19.4109022,14.7389454 C16.8126627,14.7389454 14.7389454,16.846306 14.7389454,19.445867 L14.7389454,80.1113751 L14.7389454,80.1288651 L14.7389454,80.1463401 C14.7389454,81.4396475 15.2610818,82.6029946 16.1061573,83.4453209 C16.9632232,84.298636 18.1265389,84.8182968 19.4109022,84.8182968 L19.4283921,84.8182968 L19.445867,84.8182968 L80.1113751,84.8182968 C82.7209611,84.8182968 84.8182968,82.7265903 84.8182968,80.1463401 C84.8182968,77.5481005 82.7109364,75.4743833 80.1113751,75.4743833 L24.082859,75.4743833 Z" id="Path" transform="translate(49.778621, 49.778621) rotate(45.000000) translate(-49.778621, -49.778621) "></path>
+        </g>
+    </g>
+</svg>

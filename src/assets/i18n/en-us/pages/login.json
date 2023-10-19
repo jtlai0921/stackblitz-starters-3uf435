@@ -1,0 +1,13 @@
+{
+    "LOGIN": {
+        "BTN": {
+            "LOGIN": "Login",
+            "FAST_LOGIN": "Fast Login"
+        },
+        "CUSTOMER_ID": "Customer ID",
+        "USER_ID": "User ID",
+        "LOGIN_PSWD": "Password",
+        "REMEMBER_MY_ID": "Remember my ID",
+        "ERROR": "Invalid"
+    }
+}

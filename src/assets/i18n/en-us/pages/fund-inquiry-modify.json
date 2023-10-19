@@ -1,0 +1,14 @@
+{
+    "FUND-INQUIRY-MODIFY": {
+        "LICENSE": "Certificate Number",
+        "APPLYDATE": "Apply Date",
+        "TYPE": "Purchase Method",
+        "STATUS": "Status",
+        "STATUS2": "Status",
+        "AMT": "Amount",
+        "CHGDATE": "Fixed Investment Dates",
+        "ACTNO": "Account Number",
+        "MODIFY": "修改",
+        "SUSPENDDEDUCTIONS": "暫停扣款"
+    }
+}

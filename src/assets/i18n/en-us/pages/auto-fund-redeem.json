@@ -1,0 +1,16 @@
+{
+    "AUTO_FUND_REDEEM": {
+        "LICENNO1": "Certificate Number",
+        "NOWPRICE": "Current Value",
+        "SHOWSTOPBENE": "Gain % to sell",
+        "SHOWSTOPLOSS": "Loss % to sell",
+
+        "PRICEDATE": "Quotation Date",
+        "APPOINTDATE": "Apply Date",
+        "OSAMT": "Investment Amount",
+        "ACCTPRICE": "Latest Quotation",
+        "INTRETN": "Investment Return Rate",
+        "APDINT": "Accumulated Dividend",
+        "REFPROC": "Reference Profit Or Loss"
+    }
+}

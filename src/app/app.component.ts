@@ -1,28 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { UpdateMobileSessionService } from './shared/service/customize/updateMobileSession.service';
-import { LocalStorageService } from './shared/service/global/localStorage.service';
+import { Logger } from '@systems/system/logger/logger.service';
+import { LanguageChangeService } from '@systems/system/language/language-change.service';
+import { LayoutCtrlService } from '@systems/route/layout/layout-ctrl.service';
+import { InitService } from '@systems/system/init/init.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [LanguageChangeService]
 })
 export class AppComponent implements OnInit {
+  title = 'scsb';
+
   constructor(
-    private updateMobileSession: UpdateMobileSessionService,
-    private storage: LocalStorageService,
+    private languageService: LanguageChangeService,
+    private layoutCtrlService: LayoutCtrlService,
+    private initService: InitService
   ) {
-    // APP程式一啟動，註銷掉isLogin紀錄用以消除前次APP使用未執行登出的情況
-    this.storage.set('isLogin', false);
+    this.languageService.setDefaultLanguage(); // 改語系
+    this.layoutCtrlService.init(); // 畫面控制
   }
 
   ngOnInit() {
-    document.addEventListener("resume", this.updateSession, false);
+    this.initService.init();
   }
-  updateSession = () => {
-    let isLogin = this.storage.get("isLogin");
-    if (isLogin) {
-      this.updateMobileSession.updateMobileSession();
-    }
-  }
+
 }

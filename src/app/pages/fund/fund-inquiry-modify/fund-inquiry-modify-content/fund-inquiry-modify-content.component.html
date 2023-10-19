@@ -1,0 +1,64 @@
+    <!-- section -->
+    <section class="section_area section_hasbtn">
+      <!-- content_invest_2(三行) -->
+      <!-- <ng-container *ngFor="let item of listData"> -->
+      <div class="content_group content_invest_2 bg_d4 ">
+        <div class="content_title">{{setData.fundCode}} {{setData.fundName}}</div>
+        <div class="content_txt">{{ 'FUND-INQUIRY-MODIFY.LICENSE' | translate }}：{{ setData | fieldCheck: ['license',{zero_type:false, empty_str:'--'}]}}</div>
+        <div class="content_txt">{{ 'FUND-INQUIRY-MODIFY.APPLYDATE' | translate }}：{{ (setData | fieldCheck: ['applyDate',{zero_type:false, empty_str:'--'}])| htDate:'yyyy-MM-dd'}}</div>
+        <div class="content_txt2">{{ 'FUND-INQUIRY-MODIFY.TYPE' | translate }}：{{ setData | fieldCheck: ['type',{zero_type:false, empty_str:'--'}]}}</div>
+      </div>
+      <!-- content_invest_2(三行) //End-->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'FUND-INQUIRY-MODIFY.STATUS2' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['status',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'FUND-INQUIRY-MODIFY.AMT' | translate }}</p>
+          <p>{{setData.engCcy}} {{ (setData | fieldCheck: ['amt',{zero_type:false, empty_str:'--'}])| htDate:'yyyy-MM-dd'}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'FUND-INQUIRY-MODIFY.CHGDATE' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['chgDate',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+  
+      <!-- card_list_1 -->
+      <div class="card_list_group card_list_1">
+        <div class="flex_row card_list_li">
+          <p>{{ 'FUND-INQUIRY-MODIFY.ACTNO' | translate }}</p>
+          <p>{{ setData | fieldCheck: ['accountID',{zero_type:false, empty_str:'--'}]}}</p>
+        </div>
+      </div>
+      <!-- card_list_1 End -->
+
+    </section>
+    <!-- section End -->
+    
+  <!-- 雙按鈕 -->
+  <!-- <div class="btn_group flex_row">
+    <button class="btn_r btn_primary btn_w50">{{ 'FUNC.WEALTH_INVEST.SUSPEND_DEDUCTIONS' | translate }}</button>
+    <button class="btn_l btn_primary btn_w50">{{ 'FUNC.WEALTH_INVEST.FUND_MODIFY' | translate }}</button>
+  </div> -->
+  <!-- 雙按鈕 End -->
+
+  <!-- 雙按鈕 -->
+  <div class="btn_group flex_row">
+    <button class="btn_l btn_primary btn_w50">{{ 'FUND-INQUIRY-MODIFY.SUSPENDDEDUCTIONS' | translate }}</button>
+    <button class="btn_r btn_primary btn_w50">{{ 'FUND-INQUIRY-MODIFY.MODIFY' | translate }}</button>
+  </div>
+  <!-- 雙按鈕 End -->

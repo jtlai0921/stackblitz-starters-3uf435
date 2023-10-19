@@ -1,0 +1,24 @@
+  <!-- tab選單 -->
+  <div class="tab_group_L1 flex_row tab_group_set2">
+      <div class="tab_btn_L1" [ngClass]="{ 'active':(selectTag === 'total') }" (click)="onSelectTag('total')">
+          {{ 'TOTAL.TITLE' | translate }}</div>
+      <div class="tab_btn_L1" [ngClass]="{ 'active':(selectTag === 'analysis') }" (click)="onSelectTag('analysis')">
+          {{ 'ANALYSIS.TITLE' | translate }}
+      </div>
+  </div>
+  <!-- tab選單 End -->
+  <ng-container *ngIf="!!hasInfoData">
+      <section class="section_area section_tabL1">
+          <ng-container *ngIf="selectTag == 'total'">
+              <!-- 投資合計 START -->
+              <app-fund-invest-healthy-total [setData]="resultData"></app-fund-invest-healthy-total>
+              <!-- 投資合計 END -->
+          </ng-container>
+
+          <!-- 組合分析 START -->
+          <ng-container *ngIf="selectTag == 'analysis'">
+              <app-fund-invest-healthy-analysis [setData]="resultData"></app-fund-invest-healthy-analysis>
+          </ng-container>
+          <!-- 組合分析 END -->
+      </section>
+  </ng-container>
