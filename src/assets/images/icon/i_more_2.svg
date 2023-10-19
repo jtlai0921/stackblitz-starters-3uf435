@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="150px" height="150px" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-    <title>icon/i_more_2</title>
-    <desc>Created with Sketch.</desc>
-    <g id="icon/i_more_2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="more-icon" transform="translate(75.000000, 75.000000) rotate(-90.000000) translate(-75.000000, -75.000000) translate(58.000000, 0.000000)" fill="#8F8F8F" fill-rule="nonzero">
-            <g id="001-more">
-                <ellipse id="Oval" cx="17" cy="16.6667969" rx="16.8683488" ry="16.6667969"></ellipse>
-                <ellipse id="Oval" cx="17" cy="75" rx="16.8683488" ry="16.6667969"></ellipse>
-                <ellipse id="Oval" cx="17" cy="133.333203" rx="16.8683488" ry="16.6667969"></ellipse>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="150" version="1.1" viewBox="0 0 150 150"><title>icon/i_more_2</title><desc>Created with Sketch.</desc><g id="icon/i_more_2" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g id="more-icon" fill="#8F8F8F" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(-90.000000) translate(-75.000000, -75.000000) translate(58.000000, 0.000000)"><g id="001-more"><ellipse id="Oval" cx="17" cy="16.667" rx="16.868" ry="16.667"/><ellipse id="Oval" cx="17" cy="75" rx="16.868" ry="16.667"/><ellipse id="Oval" cx="17" cy="133.333" rx="16.868" ry="16.667"/></g></g></g></svg>

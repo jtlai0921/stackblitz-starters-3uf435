@@ -1,15 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="150" viewBox="0 0 150 150">
-  <defs>
-    <clipPath id="clip-i_position">
-      <rect width="150" height="150"/>
-    </clipPath>
-  </defs>
-  <g id="i_position" clip-path="url(#clip-i_position)">
-    <g id="icon_i_position" data-name="icon/i_position">
-      <rect id="矩形_9" data-name="矩形 9" width="150" height="150" fill="#fff" opacity="0"/>
-      <g id="_005-compass" data-name="005-compass" transform="translate(147 3) rotate(180)">
-        <path id="Shape" d="M136.655-.466,3.755-54.834A6.041,6.041,0,0,1,4.962-66.369L67.3-77.7l11.334-62.335a6.041,6.041,0,0,1,11.535-1.207l54.368,132.9A6.041,6.041,0,0,1,136.655-.466ZM86.817-117.521,78.436-71.427a6.041,6.041,0,0,1-4.863,4.863L27.479-58.183,127.9-17.1Z" fill="#484848"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="150" viewBox="0 0 150 150"><defs><clipPath id="clip-i_position"><rect width="150" height="150"/></clipPath></defs><g id="i_position" clip-path="url(#clip-i_position)"><g id="icon_i_position" data-name="icon/i_position"><rect id="矩形_9" width="150" height="150" fill="#fff" data-name="矩形 9" opacity="0"/><g id="_005-compass" data-name="005-compass" transform="translate(147 3) rotate(180)"><path id="Shape" fill="#484848" d="M136.655-.466,3.755-54.834A6.041,6.041,0,0,1,4.962-66.369L67.3-77.7l11.334-62.335a6.041,6.041,0,0,1,11.535-1.207l54.368,132.9A6.041,6.041,0,0,1,136.655-.466ZM86.817-117.521,78.436-71.427a6.041,6.041,0,0,1-4.863,4.863L27.479-58.183,127.9-17.1Z"/></g></g></g></svg>
